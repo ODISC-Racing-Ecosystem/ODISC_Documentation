@@ -4,7 +4,7 @@
 
 == Identification Block
 
-[cols="1s,6",options="header"]
+[cols="2s,6",options="header"]
 |===
 |Field|Value
 |Title| Track Design Requirements (TDR) Document Standards

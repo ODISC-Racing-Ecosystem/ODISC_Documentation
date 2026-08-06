@@ -4,7 +4,7 @@
 
 == Identification Block
 
-[cols="1s,6",options="header"]
+[cols="2s,6",options="header"]
 |===
 |Field|Value
 |Title| Global Document Standards
@@ -123,7 +123,7 @@ document title.
 
 ==== Sample Identification Information Table
 
-[cols="1s,6",options="header"]
+[cols="2s,6",options="header"]
 |===
 |Field|Value
 |Title| The title of the document should be clear, concise, and descriptive of the document's content.
@@ -137,7 +137,7 @@ document title.
 
 The following document statuses are used by ODISC to indicate the current state of a document.
 
-[cols="1s,6",options="header"]
+[cols="2s,6",options="header"]
 |===
 |Status|Definition
 |Stub|The document contains headings only and serves as a placeholder for future development.
