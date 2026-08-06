@@ -9,7 +9,7 @@
 |Title| ODISC Documentation License
 |Version| 0.1
 |Status| Draft
-|Maintainer(s)| Martin Noreke
+|Maintainer(s)| Designated Maintainer
 |===
 
 

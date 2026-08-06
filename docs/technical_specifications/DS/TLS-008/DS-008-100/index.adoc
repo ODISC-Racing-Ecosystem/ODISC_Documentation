@@ -1,7 +1,7 @@
 
-:webtitle: DS-008-100 - DS-Name
-:navtitle: {doctitle}
-:doctitle: DS-Name
+:doctitle: DS-008-100 - DS-Name
+:webtitle: {doctitle}
+:navtitle: DS-Name
 :TLS-LOCATION: ../../../TLS/
 [#ds-008-100]
 = {doctitle}

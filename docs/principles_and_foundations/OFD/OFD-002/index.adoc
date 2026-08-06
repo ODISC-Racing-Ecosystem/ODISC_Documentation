@@ -15,7 +15,7 @@
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft
-|Maintainer(s)| Martin Noreke
+|Maintainer(s)| Designated Maintainer
 |===
 
 == Introduction

@@ -13,7 +13,7 @@
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft
-|Maintainer(s)| Martin Noreke
+|Maintainer(s)| Designated Maintainer
 |===
 
 WARNING: TLS-102 is a placeholder, exact location in numbering scheme is TBD.

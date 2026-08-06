@@ -14,7 +14,7 @@
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft
-|Maintainer(s)| Martin Noreke
+|Maintainer(s)| Designated Maintainer
 |===
 
 The items listed below lay out the track design principles for the ODISC Racing Ecosystem

@@ -10,7 +10,7 @@
 |Title| Track Design Principles (TDP) Document Standards
 |Version| 0.1
 |Status| Stub
-|Maintainer(s)| Martin Noreke
+|Maintainer(s)| Designated Maintainer
 |===
 
 == Introduction

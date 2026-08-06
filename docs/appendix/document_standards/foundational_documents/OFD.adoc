@@ -10,7 +10,7 @@
 |Version| 0.1
 |Release Date| TBD
 |Status| Stub
-|Maintainer(s)| Martin Noreke
+|Maintainer(s)| Designated Maintainer
 |===
 
 == Introduction
