@@ -1,0 +1,57 @@
+
+== Workshop Activity Category (WAC) Document Standards
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| Workshop Activity Category (WAC) Document Standards
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+Classification used by competition regulations to define which
+categories of workshop activities are permitted during various
+stages of competition.
+
+Workshop Activity Categories provide a common classification system
+for describing allowable preparation, modification, maintenance,
+and repair activities.
+
+Workshop Activity Categories use the following numbering scheme:
+
+[source,text]
+----
+WAC-NNN
+----
+
+Where:
+
+* `WAC` identifies the classification as a Workshop Activity Category.
+* `NNN` identifies the sequential category number.
+
+Example:
+
+[source,text]
+----
+WAC-001 Vehicle Inspection and Preparation
+----
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

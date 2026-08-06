@@ -1,0 +1,172 @@
+
+[#OFD-001]
+= OFD-001: Overview and Vision for ODISC
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| OFD-001: Overview and Vision for ODISC
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+The goal is not to build a better slot car. The goal is to build better racing. When driver decisions matter, every race tells a story.
+
+Welcome to a new way to race slot vehicles!
+
+We believe that racing should reward good decisions, consistent execution, and strategic thinking rather than simply reacting faster than everyone else. Every significant decision a driver makes should have meaningful consequences that influence the outcome of the race.
+
+We want you to remember the battles that unfolded on track, the overtaking opportunities that were created or lost, the strategic choices that paid off, and the moments that decided the podium. Whether you are a driver, race director, marshal, or spectator, the racing itself should be memorable.
+
+ODISC is an open technical ecosystem built around that philosophy. Rather than focusing solely on making faster vehicles or more complex electronics, the project focuses on creating better racing through open standards, thoughtful engineering, and a shared vision for the future of the hobby.
+
+The project is built upon a simple belief: racing should be accessible to newcomers, rewarding for experienced competitors, and capable of growing from a small club installation to international competition without requiring participants to abandon previous investments whenever the system evolves.
+
+The ODISC ecosystem is built for today while being designed for tomorrow.
+
+== The Problem
+We wanted to get back into slot vehicle racing but found that the current landscape didn't offer what we wanted to get out of it.
+
+Traditional digital slot racing on plastic tracks is primarily an arcade experience, while competitive slot racing on custom-built racecourses often becomes a high-speed blur where outright pace dominates. While both forms of racing are enjoyable, they offer limited opportunities for strategic decision-making throughout a race.
+
+At the same time, the hobby has become fragmented across multiple proprietary ecosystems. Hardware is frequently tied to a single manufacturer, communication protocols are closed, and compatibility between systems is limited. Purchasing into one ecosystem often means remaining within that ecosystem.
+
+Beyond the hardware itself, designing and reproducing custom racetracks remains difficult. Each venue effectively starts from scratch, with little opportunity to validate a design before construction or accurately reproduce a successful circuit elsewhere.
+
+Competition presents a similar challenge. Rules, race management, vehicle preparation, and technical requirements often differ between clubs, making it difficult for racers to transition between venues or compare performances under consistent conditions.
+
+This document is not intended as criticism of existing systems or the people who built them. Every system available today has contributed to the hobby and introduced ideas that continue to inspire innovation.
+
+Instead, this project begins with a simple question:
+
+What if we designed an ecosystem where driver decisions mattered more than hardware limitations, where clubs formed the foundation of the sport, and where open standards allowed the community to build together instead of separately?
+
+== The Vision
+The ODISC ecosystem aims to establish an open, vendor-neutral ecosystem that enables meaningful competition, encourages innovation, and allows clubs, manufacturers, and individuals to participate using a common set of standards.
+
+The objective is not to create another proprietary racing system. Instead, the project defines an interoperable technical foundation upon which compatible hardware, software, vehicles, racetracks, and supporting infrastructure can be developed by anyone.
+
+The ecosystem is designed around custom-built racing circuits that prioritize realistic race operation, strategic decision-making, and scalable competition. Rather than focusing solely on outright vehicle speed, the system seeks to reward consistency, precision, racecraft, and long-term strategic thinking.
+
+The project is built around the belief that club racing is the foundation of the hobby. Every architectural decision should first consider the needs of local clubs, volunteers, and community organizers. Regional, national, and international competition are natural extensions of a healthy club ecosystem, not separate design goals.
+
+The standards are intended to provide a low barrier to entry while allowing participants to progress naturally through increasing levels of competition and certification without unnecessary replacement of equipment. Existing vehicles should remain usable whenever reasonably practical through standardized conversion paths, allowing participants to carry forward previous investments into the new ecosystem.
+
+By publishing open specifications rather than closed implementations, the project encourages collaboration instead of fragmentation. Manufacturers remain free to innovate, clubs remain free to build, and software developers remain free to contribute, while maintaining interoperability through compliance with the published standards.
+
+Ultimately, the vision is to create an ecosystem where technology quietly supports the racing rather than becoming the focus of it—an ecosystem where every component exists for one purpose:
+
+[quote]
+____
+The goal is not to build a better slot vehicle.
+
+The goal is to build better racing.
+
+Everything else is built upon that foundation.
+____
+
+
+== Design Philosophy
+Our philosophy is to add value to the racing experience at every step of the ecosystem. Every standard, subsystem, and architectural decision should contribute to more meaningful competition, greater accessibility, improved interoperability, or a better overall experience for racers, officials, clubs, manufacturers, and spectators.
+
+We achieve this by publishing open standards that anyone can implement while providing a structured path for the ecosystem to evolve as new ideas emerge. Innovation is encouraged, but it should strengthen the ecosystem rather than fragment it. The architecture is therefore designed to be extensible, allowing new capabilities to be introduced without unnecessarily making existing compliant equipment obsolete.
+
+The project is built for today, designed for tomorrow. Solutions should address the needs of today's clubs while providing a clear path for future growth. Technical limitations should be solved wherever practical, but not at any cost. Simplicity, reliability, and maintainability are considered equally important engineering goals alongside innovation.
+
+The ultimate objective is to create racing where driver skill is the defining factor. Vehicle preparation, race strategy, consistency, and decision-making should determine the outcome of competition rather than proprietary technology or hardware advantages.
+
+Finally, the ecosystem is designed to make fair and reproducible competition possible. A club should be able to construct a compliant racetrack, implement the published standards, and confidently host competition using the same technical foundation as any other venue in the world. Open standards make this possible by allowing compatible implementations to be independently developed while producing consistent racing experiences across the ecosystem.
+
+== What makes the ODISC ecosystem different?
+The ODISC ecosystem is not defined by a single piece of hardware or software. It is defined by an ecosystem of open standards that work together to create better racing.
+
+Rather than focusing on maximum vehicle performance, the ecosystem is designed to reward driver skill, consistency, racecraft, and strategic decision-making. Technology exists to support the competition, not to become the competition.
+
+Several principles distinguish ODISC from traditional slot racing systems:
+
+Open Standards::
+The ecosystem is built upon openly published technical standards rather than proprietary interfaces. Anyone may develop compatible hardware, firmware, software, or supporting equipment by implementing the published specifications.
+
+Club-First Design::
+Every major architectural decision begins with the needs of local clubs. Regional, national, and international competition build upon that foundation rather than replacing it.
+
+Meaningful Driver Decisions::
+Vehicle control, race strategy, pit strategy, traffic management, and consistency should have a greater influence on race outcomes than simply driving at the limit every lap.
+
+Interoperable Ecosystem::
+Vehicles, racetracks, software, workshop equipment, and supporting infrastructure are designed as cooperating components of a larger ecosystem rather than isolated products.
+
+Built for Today, Designed for Tomorrow::
+The architecture is intended to evolve over time without unnecessarily making existing compliant equipment obsolete. Where practical, existing vehicles should be capable of being converted into the ecosystem rather than replaced.
+
+Fair and Reproducible Competition::
+Open specifications make it possible for clubs around the world to construct compatible venues and host competition using the same technical foundation, allowing racers to compete under consistent conditions regardless of location.
+
+Protected Core, Open Innovation::
+The core operational software that ensures interoperability across the ecosystem exists as a single canonical implementation. Innovation is encouraged through contributions, extensions, and add-ons that enhance the ecosystem without fragmenting it into incompatible distributions.
+
+These principles are intended to create an ecosystem where clubs can confidently invest in infrastructure, manufacturers can innovate within open standards, developers can contribute without creating fragmentation, and racers can focus on what matters most—the quality of the racing itself.
+
+== Racetracks
+The ODISC ecosystem is designed around custom-built racetracks rather than commercial sectional track systems. This allows clubs to construct racing circuits that best suit their available space, desired racing style, and long-term goals while maintaining interoperability through compliance with the published standards.
+
+The standards define how a compliant racetrack operates, not how it must be physically constructed. Clubs and manufacturers remain free to choose the construction materials, manufacturing methods, and aesthetic design that best meet their needs, provided the resulting racetrack satisfies the applicable technical requirements.
+
+By separating physical construction from operational behavior, the ecosystem enables compatible racetracks to be built using a wide variety of techniques while delivering a consistent racing experience.
+
+Every compliant racetrack shares a common technical foundation that enables vehicles, race management systems, telemetry, and supporting infrastructure to operate together regardless of where the racetrack was constructed.
+
+This approach also enables racetrack designs to be shared, reproduced, and refined by the community. A successful circuit can be recreated elsewhere using the published design information, allowing clubs around the world to host comparable racing on technically equivalent venues.
+
+The goal is not to standardize the appearance of racetracks, but to standardize how they function. This provides clubs with the freedom to innovate while ensuring racers experience consistent operation wherever they compete.
+
+== Race Against the Champion
+One of the long-term goals of the ODISC ecosystem is to make meaningful comparison possible between racers, clubs, and competitions around the world.
+
+By combining standardized racetrack definitions, common competition rules, open telemetry formats, and compatible race management systems, it becomes possible to reproduce racing conditions with a level of consistency that has not previously been practical within the hobby.
+
+Imagine watching a championship event held on the other side of the world, downloading the published racetrack design, building an equivalent circuit, and competing against the same vehicle setup, race format, and recorded race data. While you may not be physically racing alongside the world champion, you can challenge yourself under substantially the same conditions and directly compare your performance.
+
+This concept extends beyond simple lap times. Entire race sessions, including strategic decisions, pit stops, traffic interactions, and race progression, can be recorded and replayed using standardized telemetry. As the ecosystem matures, this creates opportunities for racers to compare not only speed, but consistency, racecraft, and decision-making against competitors from anywhere in the world.
+
+The intention is not to replace live competition, but to extend it. Local clubs remain the heart of the ecosystem, while open standards provide the technical foundation that allows competition to grow beyond the boundaries of a single venue.
+
+== Hardware and Software
+ODISC is built upon the principle that hardware and software should work together through open standards rather than proprietary interfaces. The standards define how components communicate and behave, allowing compatible implementations to be developed by different manufacturers and contributors while maintaining interoperability across the ecosystem.
+
+Where practical, the ecosystem encourages the use of existing vehicles through standardized conversion paths rather than requiring participants to purchase entirely new equipment. This lowers the barrier to entry while protecting previous investments and helping clubs grow their membership.
+
+The ecosystem defines both physical and software components as part of a single integrated architecture. Vehicles, racetracks, controllers, race management systems, firmware, and supporting infrastructure each have clearly defined responsibilities that together create a reliable and deterministic racing experience.
+
+To ensure long-term interoperability, certain core software systems are considered part of the protected core of the ecosystem. These systems provide the authoritative implementation of the published standards and exist as a single canonical implementation. New functionality is encouraged through community contributions, peer review, and extensible add-ons rather than competing distributions that could fragment the ecosystem.
+
+Hardware manufacturers remain free to innovate within the published standards. Software developers remain free to contribute improvements, visualizations, reports, analytics, and other extensions that enhance the ecosystem while preserving compatibility with the protected core.
+
+By separating innovation from interoperability, ODISC seeks to create an ecosystem where competition occurs on the racetrack rather than between incompatible implementations of the underlying technology.
+
+== Looking Forward
+The Open Digital Slot Car Racing System is an ambitious project, and its success will ultimately be measured not by the technology it creates, but by the racing it enables.
+
+No single individual or organization possesses all the answers. The ecosystem is expected to evolve over time as clubs, racers, manufacturers, officials, and developers contribute new ideas and practical experience. Open standards provide the framework that allows this evolution to occur while maintaining interoperability and protecting the investments made by the community.
+
+The standards presented throughout this library are intended to establish a common technical language rather than prescribe every possible implementation. As the ecosystem matures, additional Technical Library Standards (TLS) and Domain Standards (DS) will expand upon this foundation, providing greater detail while remaining consistent with the guiding principles established by the project.
+
+Whether you are interested in building hardware, writing software, designing racetracks, organizing competitions, manufacturing products, or simply enjoying better racing at your local club, there is a place within the ecosystem to contribute.
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

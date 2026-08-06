@@ -1,0 +1,52 @@
+
+
+[#competition_tier4]
+= Tier 4: Club
+
+Club racing is the foundational tier of organized ODISC competition. It 
+establishes a structured environment where competitors can systematically 
+develop driving skills, master official race procedures, and participate in 
+sanctioned events.
+
+Seasonal championship scoring is based on the final finishing position of each 
+sanctioned Club competition. Competition points are calculated utilizing the 
+ODISC Weighted Scoring Model, where total available points are dynamically 
+scaled based on the number of active participants in the event.
+
+[NOTE]
+====
+Each individual club retains complete autonomy over its competitive calendar. 
+Clubs may schedule and implement their championship seasons on any timeline 
+that suits their local membership, completely independent of higher-tier 
+competition schedules.
+====
+
+Competitors may be promoted from the Club tier when they demonstrate consistent 
+performance and technical proficiency against the local field. Promotion 
+decisions are governed by the local organizing body or Member Organization 
+based on a multi-race matrix rather than a single event outcome.
+
+Official promotion criteria include:
+
+* Consistent podium finishes across a single competitive season.
+* Winning or placing highly in a sanctioned Club championship.
+* Demonstrated mastery of ODISC track procedures, marshalling duties, and 
+sportsmanship.
+* Formal promotion recommendation from the host club's race director.
+
+Competitors may remain at the Club tier indefinitely to continue developing 
+their skills, support local club growth, or if higher-tier regional competition 
+is geographically unavailable.
+
+== Competitive Pyramid
+
+As part of the ODISC competitive pyramid, the Club tier acts as the receiving 
+ground for competitors relegated (demoted) from Tier 3 (District) at the 
+conclusion of a season. 
+
+Relegated drivers compete for full championship points at the Club level. 
+However, active higher-tier competitors (Tier 3 or above) who choose to 
+participate in a local Club event outside of relegation may only do so as 
+non-scoring exhibition entries to protect the competitive integrity of the 
+tier.
+

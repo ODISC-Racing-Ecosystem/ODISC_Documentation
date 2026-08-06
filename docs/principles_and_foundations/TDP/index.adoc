@@ -1,0 +1,54 @@
+
+
+
+= Track Design Principles
+The items listed below lay out the track design principles for the ODISC Racing Ecosystem
+
+[quote]
+____
+Without lane choices and decision points, why not just do drag racing?
+____
+
+The design of a racetrack determines the enjoyment of racing on it.
+
+A good design will incorporate some, if not all, of these features:
+* Racing line matters
+** Choosing the right path should be rewarded
+* Lane changers positioned to allow overtaking
+** Choosing lanes may impact future racing line options
+* Straight Line Speed
+** Going fast is fun, but you have to manage that speed for future curves
+* Correct radius curves
+** Tight radius turns require slowing down or taking outside line
+** Wide radius turns allow higher speeds
+* Pit lane penalty
+** The pit lane should never be a shortcut
+
+== Sight Lines Matter
+Drivers need to be able to see their cars at all times. 
+
+While a short over/underpass for a bridge provides a nice scenic element, long tunnels without visibility requires drivers to guess what their vehicle is doing.
+
+== Avoid Single File Sections
+Single file sections of track should be avoided if at all possible.
+
+Certain track elements, such as tight chicanes or S-curves, may require a short distance of track to be single file. Consider still maintaining multiple slots that are side by side so that vehicles can automatically spread out again back to their original lanes once they get through.
+
+== Decision Points
+Racing is more fun when a driver gets to make decisions, so the more decision points that a track offers, the more challenging this becomes.
+
+Common decision points include:
+
+* Lane selection
+* Pit lane usage
+
+== Bank Curves
+If curves are designed with a little bit of bank, about 2-5 degrees - nothing excessive, they are a lot easier for vehicles to travel through without fishtailing.
+
+== Elevation Changes Require Skill
+Instead of doing a long flat straight, consider giving it some height changes so that drivers need to adjust their speed at various sections.
+
+== Design for Reuse
+When designing a track, ensure that it follows the ODISC Hardware requirements for mounting various elements to the track. Doing so will allow others to create the same track layout at another venue with minimal rework required.
+
+

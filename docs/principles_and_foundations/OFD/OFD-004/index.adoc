@@ -1,0 +1,248 @@
+
+[#OFD-004]
+= OFD-004: Reference Designs
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| OFD-004: Reference Designs
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+This document covers the principles and philosophy of the Open Digital Slot (ODISC) 
+Racing Ecosystem as it relates to Reference Designs. This document defines the 
+architectural role, lifecycle, publication, maintenance, and intended use of 
+reference designs within the ODISC ecosystem.
+
+It does not define the technical requirements of individual reference designs 
+or mandate their use. Those requirements shall be defined by the appropriate Domain Standards.
+
+This document establishes the principles governing reference hardware, firmware, software, 
+documentation, and manufacturing designs published by the project. Reference designs exist 
+to encourage adoption, demonstrate compliance with the standards, and provide a foundation 
+for innovation without restricting commercial implementations.
+
+
+== Design Philosophy
+
+Reference designs exist to demonstrate how a standard may be implemented.
+
+They are intended to accelerate adoption, reduce development effort, encourage interoperability, 
+and provide practical examples of compliant implementations.
+
+Reference designs are informative rather than normative. Compliance with the ODISC standards 
+shall never require the use of a specific reference design.
+
+== Design Principles
+
+The development of reference designs shall consider and ensure that designs are:
+
+* Open by default
+* Educational
+* Practical
+* Maintainable
+* Extensible
+* Standards compliant
+* Technology independent where practical
+* Commercially neutral
+
+== Types of Reference Designs
+
+Reference Designs may exist for many different areas of the ODISC Ecosystem. While mainly 
+used to show controllers and components, they can be used to show implementation options for 
+a variety of items.
+
+Such examples may include:
+
+* Hardware
+* PCB Layouts
+* Firmware
+* Software
+* Mechanical
+* Electrical
+* Manufacturing
+* Workshop Equipment
+* Test Fixtures
+
+== Relationship to Standards
+
+A reference design never defines or supersedes a standard. It merely shows a 
+possible implementation of one or more Domain Specifications (DS). If in doubt 
+about the expected behavior or requirement, refer to the DS in question.
+
+In some cases there may be two or more reference designs for the same implementation to 
+highlight options for solving the implementation at hand.
+
+== Relationship to Official Implementations
+
+In most cases, there are no "official" implementations. There are only reference designs 
+that anyone can manufacture and utilize.
+
+The exception to this rule is the collection of official software packages. These are 
+considered "official" as there is only one implementation of them in order to ensure 
+parity across all installations.
+
+While reference designs are open, there is nothing that prevents a manufacturer from
+designing and producing their own version of an implementation that includes a proprietary
+solution that is not open. 
+
+ODISC does however require that the firmware be provided in source code format for 
+validation and to ensure competition integrity. This safeguard further allows for 
+upgrades of firmware to be maintained should the company seize operations.
+
+== Publication
+
+A reference design consists of a collection of published documents.
+
+These include:
+
+* Documentation
+* Source files
+* Bill of Materials (BOM)
+* Manufacturing files
+* Assembly documentation
+* Licensing
+
+== Lifecycle
+
+Reference designs have a lifecycle that consists of the follwing stages:
+
+* Proposed
+** We have identified that we need a reference design.
+* Development
+** The reference design is being developed by one or more people 
+familiar with the technologies required.
+* Review
+** The reference design is being reviewed to ensure that it complies with 
+all Domain Specification documents that affect it.
+* Published
+** The reference design has been published and is ready to be used.
+* Revised
+** A revised reference design has been updated with additional features 
+or methods. In doing so it replaces previous versions of it in its entirety.
+* Deprecated
+** A deprecated reference design has been replaced by a newer and more 
+up to date version that replaces it in its entirety.
+* Archived
+** A previously deprecated design after an amount of time has passed. The 
+policy for this is not yet determined.
+
+== Version Management
+
+Each reference desing shall have a versioning number assigned to it.
+
+// TBD: Define versioning of reference designs
+Further definition of versioning must include
+
+* Design revisions
+* Compatibility
+* Change history
+* Migration guidance
+
+== Certification
+
+Describe the relationship between reference designs and certification.
+
+Topics:
+
+* Reference designs may be certified.
+* Commercial implementations may also be certified.
+* Certification verifies compliance, not origin.
+
+== Commercial Implementations
+
+State that manufacturers are encouraged to develop commercial products based upon or inspired by the standards.
+
+Commercial products are not required to resemble the published reference designs provided they remain compliant with the applicable standards.
+
+== Community Contributions
+
+Describe how community members may contribute improvements.
+
+Topics:
+
+* Pull requests
+* Issue reporting
+* Alternative ideas
+* Technical review
+
+== Manufacturing Files
+
+Introduce manufacturing deliverables.
+
+Examples:
+
+* PCB files
+* Schematics
+* CAD models
+* STL files
+* STEP files
+* DXF files
+* Assembly drawings
+
+== Documentation
+
+Describe documentation expectations.
+
+Examples:
+
+* Assembly guides
+* User guides
+* Calibration procedures
+* Maintenance instructions
+* Test procedures
+
+== Global Registry Integration
+
+High-level overview.
+
+Topics:
+
+* Reference design registration
+* Version tracking
+* Manufacturer references
+* Certification status
+
+== Security Considerations
+
+High level only.
+
+Topics:
+
+* Official publication
+* Digital signatures
+* Authenticity
+* Version verification
+
+Reference TLS-009.
+
+== Extensibility
+
+Future categories of reference designs may be introduced without affecting existing published designs or compliant implementations.
+
+== Discussion
+
+Reference designs are intended to lower the barrier to entry for manufacturers, clubs, and individuals wishing to participate in the ODISC ecosystem.
+
+They provide practical examples of standards-compliant solutions while preserving the freedom for manufacturers and developers to innovate. The standards define interoperability; reference designs simply demonstrate one way to achieve it.
+
+This separation allows the ecosystem to benefit from both open collaboration and commercial innovation without creating dependency on any single design or implementation.
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===

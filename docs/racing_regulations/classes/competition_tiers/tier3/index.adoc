@@ -1,0 +1,47 @@
+
+
+[#competition_tier3]
+= Tier 3: District
+
+District racing represents organized competition between multiple clubs within a 
+defined geographic boundary. It introduces a broader competitive field where 
+drivers must adapt to unfamiliar track layouts and diverse racing environments.
+
+Seasonal championship scoring is based on the final results of sanctioned 
+District competitions. Competition points are awarded using the ODISC Weighted 
+Scoring Model, with points dynamically weighted according to the total number 
+of unique competitors entered in the event.
+
+Competitors may be promoted from the District tier when they demonstrate 
+sustained performance against this broader field. Promotion decisions are 
+subject to final verification by the regional organizing authority.
+
+Official promotion criteria include:
+* Multiple podium or top-tier finishes across sanctioned District events.
+* Winning or placing highly in a sanctioned District championship.
+* Demonstrated ability to compete successfully outside of their home club track.
+* Formal promotion approval from the governing regional authority.
+
+== Competitive Pyramid
+
+As part of the ODISC competitive pyramid, Tier 3 operates a merit-based 
+promotion and relegation relationship with both Tier 4 (Club) and Tier 2 
+(Regional).
+
+Competitors who win or finish highly within the designated promotion zone of 
+the District championship standings earn promotion to Tier 2 (Regional) for the 
+subsequent season. 
+
+Conversely, automatic relegation to Tier 4 (Club) applies to competitors who 
+finish at the bottom of the active season standings, or who no longer meet 
+the minimum seasonal participation requirements defined by the regional 
+organizing authority.
+
+Competitors shall not face automatic relegation solely due to a single 
+difficult or unfortunate racing season, provided they maintain active 
+participation and adhere to regional sporting codes.
+
+Competitors who no longer wish to compete at the District level may request an 
+automatic demotion to the Tier 4 (Club) level, thereby making room for more 
+promotions of qualified drivers.
+

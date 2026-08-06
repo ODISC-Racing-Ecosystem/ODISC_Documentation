@@ -1,0 +1,225 @@
+
+
+[#tls-003]
+= TLS-003: Detection Points
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-003: Detection Points
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+In racing, position is everything.
+
+Detection points are how we know where vehicles are.
+____
+
+Detection points provide continuous awareness of vehicle location on the
+racetrack. They allow vehicle decoders to report their presence as they pass
+detection points, enabling the Race Management System (xref:TLS/TLS-002/index.adoc#tls-002[TLS-002]) to update vehicle
+positions, register partial timing sectors, and support systems such as lane
+changers.
+
+== Philosophy
+
+Accurate race management requires knowledge of vehicle location beyond the
+start/finish line. Detection points provide the distributed awareness required
+to manage racing events safely and fairly.
+
+== Capabilities
+
+=== Receiver
+
+The detection point has a receiver mounted in the guide track. The guide track
+is dimensioned so that the guide pin will not contact the receiver as it passes.
+
+The vehicle decoder contains a transmitter that sends vehicle information to
+the receiver.
+
+=== Controller
+
+The controller receives the signal from the receiver, decodes and processes the
+event, and transmits it to the Race Management System for use within the race
+system.
+
+The controller may also use detection point information locally for time-critical
+functions. An example of this is lane changers using nearby detection points
+to determine whether a path is available.
+
+All detection point events shall be reported to the Race Management System to
+maintain the most accurate available view of vehicle locations and race
+progress.
+
+== Mounting of Sensors
+
+The detection point are mounted to the underside of the track using the 
+standardized "Detection Point Mount" that is defined per the following tables.
+
+Visualizations of these dimensions are provided at the end of this TLS.
+
+=== Detection Point Mount Dimensions
+
+[cols="2,2,2", options="header"]
+|===
+
+| Feature 
+^| Measurement 
+^| Tolerance 
+
+| Total Height ^1^
+^| 36.00mm
+^| +/- 0.50mm
+
+| Total Width ^2^
+^| 24.00mm
+^| +/- 0.50mm
+
+| Hole Spacing Height ^1^
+^| 20.00mm
+^| +/- 0.10mm
+
+| Hole Spacing Width ^2^
+^| 10.00mm
+^| +/- 0.10mm
+
+| Corner Radius
+^| R2.00mm
+^| +/- 0.20mm
+
+| Sensor Viewport Opening ^3^
+^| 12.00mm x 4.00mm
+^|
+
+| Fastener Interface
+^| M3
+^|
+|===
+
+. Measured lengthwise along the slot
+. Measured widthwise across the slot
+. Fully centered, measured with the larger dimension lengthwise along the slot.
+
+=== Standard Detection Point PCB Dimensions
+
+[cols="2,2,2", options="header"]
+|===
+
+| Feature 
+^| Measurement 
+^| Tolerance 
+
+| Total Height ^1^
+^| 27.50mm
+^| +/- 0.20mm
+
+| Total Width ^2^
+^| 17.50mm
+^| +/- 0.20mm
+
+| Hole Spacing Height ^1^
+^| 20.00mm
+^| +/- 0.10mm
+
+| Hole Spacing Width ^2^
+^| 10.00mm
+^| +/- 0.10mm
+
+| Corner Radius
+^| R3.50mm
+^| +/- 0.20mm
+
+| Sensor Placement Area ^3^
+^| 10.00mm x 3.00mm
+^|
+
+| Fastener Interface
+^| M3
+^|
+|===
+
+. Measured lengthwise along the slot
+. Measured widthwise across the slot
+. Fully centered, measured with the larger dimension lengthwise along the slot.
+
+=== Detection Point Hot Swap Mount Dimensions
+
+We envision a manufacturer wanting to come up with a hot-swappable unit for 
+detection points in the future. With this in mind we have expanded the size 
+of the detection point mount to make room for this, and have established the 
+following dimensions for such a hot-swapping unit.
+
+[cols="2,2,2", options="header"]
+|===
+
+| Feature 
+^| Measurement 
+^| Tolerance 
+
+| Maximum Height ^1^
+^| 35.50mm
+^| +0.00mm
+
+| Maximum Width ^2^
+^| 23.50mm
+^| +0.00mm
+
+| Hole Spacing Height ^1^
+^| 20.00mm
+^| +/- 0.10mm
+
+| Hole Spacing Width ^2^
+^| 10.00mm
+^| +/- 0.10mm
+
+| Sensor Placement Area ^3^ ^4^
+^| 10.00mm x 3.00mm
+^|
+
+| Fastener Interface
+^| M3 
+^|
+|===
+
+. Measured lengthwise along the slot
+. Measured widthwise across the slot
+. Position is fully centered, measured with the larger dimension lengthwise along the slot.
+. The combination of the Hot Swap Mount and the custom PCB design shall ensure sensors are 
+located in the same position as a direct mounted PCB.
+
+== Visualization Diagrams
+
+Mounting Point Dimensions::
+
+include::detection_point_mount.adoc[]
+
+Standard PCB Dimensions::
+
+include::detection_point_pcb.adoc[]
+
+Hot Swap Mount Dimensions::
+
+include::detection_point_hot_swap.adoc[]
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

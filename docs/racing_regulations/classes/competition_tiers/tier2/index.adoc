@@ -1,0 +1,63 @@
+[#competition_tier2]
+= Tier 2: Regional
+
+Regional racing brings together the strongest competitors from multiple District 
+boundaries, representing an advanced echelon of organized multi-club 
+competition. 
+
+Seasonal championship scoring is based on the final results of sanctioned 
+Regional competitions. Points are awarded from final event standings utilizing 
+the ODISC Weighted Scoring Model.
+
+Competitors may be promoted from the Regional tier to the Tier 1 (Nationals) 
+level when they demonstrate elite driving mastery and consistent success across 
+the broader regional field. Promotion decisions are subject to final 
+verification by the national organizing authority.
+
+Official promotion criteria include:
+* Winning or placing highly in a sanctioned Regional championship.
+* Achieving multiple podium finishes at the Regional level within a single season.
+* Demonstrated compliance with all national licensing and technical requirements.
+* Formal promotion approval from the governing national authority.
+
+== Grid Capacity and Entry Limits
+
+Unlike Tier 4 (Club) and Tier 3 (District) levels—which permit unlimited driver 
+registrations to foster grassroots growth—Tier 2 (Regional) and above introduce 
+strict caps on grid capacities. 
+
+The maximum number of active driver slots allocated to a Regional championship 
+is determined explicitly by the regional organizing authority based on venue 
+logistics, pit space, and race-day time constraints. Consequently, access to 
+the Regional grid is strictly restricted to drivers who earn entry via formal 
+promotion, ranking, or approved invitation.
+
+== Competitive Pyramid
+
+As part of the ODISC competitive pyramid, Tier 2 maintains a strict 
+promotion and relegation interface with Tier 1 (Nationals) and Tier 3 (District).
+
+Unlike lower tiers, Tier 2 carries no automatic performance-based protection 
+safeguards from single-season declines. Drivers must maintain performance or 
+face automatic relegation to Tier 3 (District) at the end of the season.
+
+Competitors who finish within the designated promotion zone of the Regional 
+championship standings earn promotion to Tier 1 (Nationals) for the subsequent 
+season. Any competitor granted an official promotion retains the right of 
+refusal and may choose to turn down the advancement to remain in their current 
+tier without penalty.
+
+Competitors who no longer wish to compete at the Regional level may request an
+automatic demotion to the Tier 3 (District) level, thereby making room for more 
+promotions of qualified drivers.
+
+=== Field Stabilization
+
+To stabilize grid capacities and balance the ladder, voluntary self-demotions 
+directly alter the relegation and promotion mechanics on a strict 2:1 ratio. 
+For every two (2) approved voluntary self-demotions from Tier 2:
+
+* One (1) additional promotion vacancy is created, allowing an extra qualified 
+driver from Tier 3 (District) to advance, provided they accept the promotion.
+** For an odd number of voluntary approvals, this option is offered first.
+* One (1) automatic, performance-based relegation is canceled.

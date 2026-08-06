@@ -1,0 +1,87 @@
+
+[pass]
+++++
+<svg xmlns="http://w3.org" viewBox="-120 -40 640 460" width="100%" height="auto" style="background-color: #ffffff;">
+  <!-- Styling Context -->
+  <style>
+    .cartridge-outline { stroke: #2d3748; stroke-width: 2.5; fill: #f7fafc; }
+    .sensor-clearance { stroke: #0088cc; stroke-width: 1.5; stroke-dasharray: 3 3; fill: #e6f7ff; }
+    .dimension-line { stroke: #0066cc; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .spacing-dim-line { stroke: #2b6cb0; stroke-width: 1.2; stroke-dasharray: 3 3; }
+    .text-dim { font-family: monospace; font-size: 14px; fill: #0066cc; font-weight: bold; text-anchor: middle; }
+    .text-spacing-dim { font-family: monospace; font-size: 13px; fill: #2b6cb0; font-weight: bold; text-anchor: middle; }
+    .text-label { font-family: sans-serif; font-size: 10px; fill: #0088cc; text-anchor: middle; font-weight: bold; }
+    .text-fastener-label { font-family: sans-serif; font-size: 11px; fill: #4a5568; text-anchor: start; font-weight: bold; }
+    .text-title { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #2d3748; text-anchor: middle; }
+    .center-line-axis { stroke: #ff3333; stroke-width: 1; stroke-dasharray: 2 2; }
+    .clearance-hole { fill: #ffffff; stroke: #2d3748; stroke-width: 2; }
+  </style>
+
+  <!-- Centered Title Label -->
+  <text x="221.88" y="-18" class="text-title">Hot Swap Mount Dimensions</text>
+
+  <!-- NATIVE CARTRIDGE PROFILE (35.50 x 23.50mm outer envelope with square corners) -->
+  <!-- 35.50mm Width = 443.75px | 23.50mm Height = 293.75px -->
+  <path d="M 0,0 
+           L 443.75,0 
+           L 443.75,293.75 
+           L 0,293.75 
+           Z" class="cartridge-outline" />
+
+  <!-- Center Internal Sensor Clearance Area -->
+  <rect x="159.38" y="128.13" width="125" height="37.5" class="sensor-clearance" />
+  <line x1="0" y1="146.88" x2="443.75" y2="146.88" class="center-line-axis" />
+  <line x1="221.88" y1="0" x2="221.88" y2="293.75" class="center-line-axis" />
+  
+  <!-- Symmetrically Balanced Sensor Area Labels -->
+  <text x="221.88" y="139" class="text-label">SENSOR AREA</text>
+  <text x="221.88" y="161" class="text-label">10.00mm x 3.00mm</text>
+
+  <!-- 4x Ø3.40mm Bolt Clearance Holes (Aligned identically to basic 20x10mm grid centers) -->
+  <!-- Symmetrical offsets: X-margin = (443.75-250)/2 = 96.88px | Y-margin = (293.75-125)/2 = 84.38px -->
+  <!-- Top Left (96.88, 84.38) -->
+  <circle cx="96.88" cy="84.38" r="21.25" class="clearance-hole" />
+  <line x1="66.88" y1="84.38" x2="126.88" y2="84.38" class="center-line-axis" />
+  <line x1="96.88" y1="54.38" x2="96.88" y2="114.38" class="center-line-axis" />
+  <text x="55" y="40" class="text-fastener-label">4x Fastener Locations (M3)</text>
+
+  <!-- Top Right (346.88, 84.38) -->
+  <circle cx="346.88" cy="84.38" r="21.25" class="clearance-hole" />
+  <line x1="316.88" y1="84.38" x2="376.88" y2="84.38" class="center-line-axis" />
+  <line x1="346.88" y1="54.38" x2="346.88" y2="114.38" class="center-line-axis" />
+
+  <!-- Bottom Left (96.88, 209.38) -->
+  <circle cx="96.88" cy="209.38" r="21.25" class="clearance-hole" />
+  <line x1="66.88" y1="209.38" x2="126.88" y2="209.38" class="center-line-axis" />
+  <line x1="96.88" y1="179.38" x2="96.88" y2="239.38" class="center-line-axis" />
+
+  <!-- Bottom Right (346.88, 209.38) -->
+  <circle cx="346.88" cy="209.38" r="21.25" class="clearance-hole" />
+  <line x1="316.88" y1="209.38" x2="376.88" y2="209.38" class="center-line-axis" />
+  <line x1="346.88" y1="179.38" x2="346.88" y2="239.38" class="center-line-axis" />
+
+  <!-- Hole Spacing Dimension Lines -->
+  <!-- Horizontal Track (20.00mm Basic) -->
+  <line x1="96.88" y1="325" x2="346.88" y2="325" class="spacing-dim-line" />
+  <line x1="96.88" y1="220" x2="96.88" y2="325" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="346.88" y1="220" x2="346.88" y2="325" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="221.88" y="341" class="text-spacing-dim">Hole Spacing</text>
+  <text x="221.88" y="357" class="text-spacing-dim">20.00mm +/-0.1mm</text>
+
+  <!-- Vertical Track (10.00mm Basic) -->
+  <line x1="-35" y1="84.38" x2="-35" y2="209.38" class="spacing-dim-line" />
+  <line x1="-35" y1="84.38" x2="80" y2="84.38" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="-35" y1="209.38" x2="80" y2="209.38" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="-56" y="146.88" class="text-spacing-dim" style="transform: rotate(-90deg); transform-origin: -56px 146.88px;">Hole Spacing</text>
+  <text x="-40" y="146.88" class="text-spacing-dim" style="transform: rotate(-90deg); transform-origin: -40px 146.88px;">10.00mm +/-0.1mm</text>
+
+  <!-- Global Cartridge Shell Dimensions -->
+  <!-- Total Width (35.50mm) -->
+  <line x1="0" y1="380" x2="443.75" y2="380" class="dimension-line" />
+  <text x="221.88" y="400" class="text-dim">35.50mm +0.0mm</text>
+
+  <!-- Total Height (23.50mm) -->
+  <line x1="465.75" y1="0" x2="465.75" y2="293.75" class="dimension-line" />
+  <text x="483.25" y="146.88" class="text-dim" style="transform: rotate(90deg); transform-origin: 483.25px 146.88px;">23.50mm +0.0mm</text>
+</svg>
+++++

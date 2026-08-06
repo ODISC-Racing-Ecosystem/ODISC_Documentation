@@ -1,0 +1,94 @@
+
+
+[#tls-001]
+= TLS-001: Racetrack with multiple lanes
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-001: Racetrack with multiple lanes
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+Without a track, there is no racing.
+____
+
+This document defines the common physical characteristics
+of an ODISC racetrack. Specialized racetrack components
+that require more detailed specification are defined in
+their own TLS documents.
+
+== Philosophy
+
+Standardization of racetrack dimensions, interfaces, and
+installation practices enables interchangeable hardware,
+predictable vehicle behavior, and consistent competition
+across the ODISC Racing Ecosystem.
+
+== Capabilities
+
+While a racetrack incorporates many standardized components, the
+following are fundamental features of the racetrack itself.
+
+=== Slot
+
+This is the slot that the guide pin of a vehicle uses to constrain its
+trajectory.
+
+The slot shall be manufactured with sufficient depth and clearance to
+prevent the guide pin from contacting sensors or other infrastructure
+installed within the slot.
+
+=== Power Rails
+
+The power rails provide both electrical power and the communication medium
+used to transmit commands to vehicles.
+
+Power rails may use either copper tape or wire braid. If wire braid is used,
+the required cutouts must be incorporated during the manufacturing process.
+
+=== Common Mounting Points
+
+A finished racetrack should provide common mounting points for various types of
+hardware. This includes pockets and cutouts on the underside to simplify wiring
+and installation of physical track infrastructure.
+
+Mounting provisions should not interfere with normal operation when left unused.
+
+NOTE: While the need for common mounting points is mentioned here, the actual
+requirements are specified in the TLS and DS documents for each component.
+
+=== Other Components as Designed
+
+Additional components may be incorporated into a racetrack according
+to the designer's intended use. Requirements for these components are
+defined in their respective TLS documents rather than this document.
+
+== Domain Standards for this TLS
+
+The following DS documents exist for this TLS:
+
+* xref:../../DS/TLS-001/DS-001-100/index.adoc[DS-001-100]: Track Dimensions
+* xref:../../DS/TLS-001/DS-001-110/index.adoc[DS-001-110]: Power Rails
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1
+| 2026-??-??
+| Initial Draft.
+
+|===
+

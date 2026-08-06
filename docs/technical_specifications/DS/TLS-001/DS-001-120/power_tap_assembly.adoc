@@ -1,0 +1,99 @@
+
+
+= Power Tap Assembly Mount Dimensions and Sample Implementation
+
+This diagram shows how a power tap assembly could be implemented with 
+two screw terminals for each pole to allow easy daisy chaining of 
+multiple power taps.
+
+The rendered power tap also has solder pads for attaching the power rail 
+(tape or braid) to the power tap mount.
+
+[pass]
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 560 260" width="100%" height="100%">
+  <!-- Definitions for styling consistency -->
+  <defs>
+    <style>
+      .board { fill: #2c3e50; stroke: #1a202c; stroke-width: 2; }
+      .pcb-power-trace { fill: #27ae60; stroke: #1e8449; stroke-width: 2; opacity: 0.85; }
+      .solder-pad { fill: #f1c40f; stroke: #d35400; stroke-width: 1.5; }
+      .screw-terminal { fill: #bdc3c7; stroke: #7f8c8d; stroke-width: 1.5; }
+      .drop-hole { fill: #111111; stroke: #7f8c8d; stroke-dasharray: 2,2; }
+      .center-line { stroke: #ffffff; stroke-width: 1; stroke-dasharray: 4,4; opacity: 0.3; }
+      .resistor-body { fill: #1a1a1a; stroke: #4a5568; stroke-width: 1; }
+      .resistor-cap { fill: #cbd5e0; }
+      .label-text { font-family: Helvetica, Arial, sans-serif; font-size: 11px; fill: #ffffff; text-anchor: middle; font-weight: bold; }
+      .resistor-label { font-family: Helvetica, Arial, sans-serif; font-size: 10px; fill: #ffffff; text-anchor: start; font-weight: bold; }
+      .radius-pointer { stroke: #cc00cc; stroke-width: 1.2; fill: none; }
+      .dim-text { font-family: monospace; font-size: 11px; fill: #2ecc71; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Main Terminal Board (50mm x 20mm) -->
+  <rect x="30" y="30" width="500" height="200" rx="30" ry="30" class="board" />
+
+  <!-- Alignment Guidelines showing Hole-to-Hole Spacing (40mm x 10mm) -->
+  <line x1="80" y1="80" x2="480" y2="80" class="center-line" />
+  <line x1="80" y1="180" x2="480" y2="180" class="center-line" />
+  <line x1="80" y1="80" x2="80" y2="180" class="center-line" />
+  <line x1="480" y1="80" x2="480" y2="180" class="center-line" />
+
+  <!-- INTERNAL PCB POWER TRACES -->
+  <rect x="110" y="105" width="140" height="50" class="pcb-power-trace" />
+  <rect x="310" y="105" width="140" height="50" class="pcb-power-trace" />
+
+  <!-- Corner Drop Holes (Ø 3mm) -->
+  <circle cx="80" cy="80" r="15" class="drop-hole" />
+  <circle cx="80" cy="80" r="2" fill="#fff" />
+  <circle cx="80" cy="180" r="15" class="drop-hole" />
+  <circle cx="80" cy="180" r="2" fill="#fff" />
+  <circle cx="480" cy="80" r="15" class="drop-hole" />
+  <circle cx="480" cy="80" r="2" fill="#fff" />
+  <circle cx="480" cy="180" r="15" class="drop-hole" />
+  <circle cx="480" cy="180" r="2" fill="#fff" />
+
+  <!-- Solder Pads -->
+  <rect x="110" y="55" width="140" height="50" rx="2" class="solder-pad" />
+  <text x="180" y="85" class="label-text" fill="#000">Solder Pad</text>
+
+  <rect x="310" y="55" width="140" height="50" rx="2" class="solder-pad" />
+  <text x="380" y="85" class="label-text" fill="#000">Solder Pad</text>
+
+  <!-- INTEGRATED SURFACE-MOUNT (SMD) TERMINATION RESISTOR -->
+  <rect x="245" y="117.5" width="70" height="25" class="resistor-body" />
+  <rect x="245" y="117.5" width="10" height="25" class="resistor-cap" />
+  <rect x="305" y="117.5" width="10" height="25" class="resistor-cap" />
+  <text x="280" y="133" class="label-text" font-size="10px" fill="#fff">R1</text>
+
+  <!-- Pointer line and label adjusted cleanly down to the right green power trace zone (Neutral text) -->
+  <path d="M 280,142.5 L 320,131 H 330" class="radius-pointer" />
+  <text x="335" y="134" class="resistor-label">Termination Resistor</text>
+
+  <!-- LEFT SIDE TWO SCREW TERMINALS -->
+  <rect x="105" y="155" width="75" height="50" rx="1" class="screw-terminal" />
+  <circle cx="127.5" cy="180" r="6" fill="#7f8c8d" />
+  <circle cx="157.5" cy="180" r="6" fill="#7f8c8d" />
+  
+  <rect x="180" y="155" width="75" height="50" rx="1" class="screw-terminal" />
+  <circle cx="202.5" cy="180" r="6" fill="#7f8c8d" />
+  <circle cx="232.5" cy="180" r="6" fill="#7f8c8d" />
+  <text x="180" y="220" class="label-text" font-size="10px" fill="#fff">Screw Terminals</text>
+
+  <!-- RIGHT SIDE TWO SCREW TERMINALS -->
+  <rect x="305" y="155" width="75" height="50" rx="1" class="screw-terminal" />
+  <circle cx="327.5" cy="180" r="6" fill="#7f8c8d" />
+  <circle cx="357.5" cy="180" r="6" fill="#7f8c8d" />
+  
+  <rect x="380" y="155" width="75" height="50" rx="1" class="screw-terminal" />
+  <circle cx="402.5" cy="180" r="6" fill="#7f8c8d" />
+  <circle cx="432.5" cy="180" r="6" fill="#7f8c8d" />
+  <text x="380" y="220" class="label-text" font-size="10px" fill="#fff">Screw Terminals</text>
+
+  <!-- Dimension Labels -->
+  <text x="280" y="20" class="dim-text">Example implementation envelope: 50mm x 20mm</text>
+  <text x="110" y="245" class="dim-text">Holes: Ø 3mm +/-0.1mm</text>
+  <text x="400" y="245" class="dim-text">Hole Centers: 40mm x 10mm +/-0.1mm</text>
+</svg>
+++++
+

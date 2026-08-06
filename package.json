@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@asciidoctor/core": "^4.0.8"
+  }
+}

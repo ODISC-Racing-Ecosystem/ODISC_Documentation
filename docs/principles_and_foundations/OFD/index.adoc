@@ -1,0 +1,11 @@
+
+
+= OFD: ODISC Foundational Documents
+Below you will find the various foundational documents that define how and why the ODISC Racing Ecosystem exists. Combined they provide the structure that defines the project and how it evolves into the best and most complete interoperable system that it can be.
+
+* xref:OFD/OFD-001/index.adoc[OFD-001]: Overview and Vision for ODISC
+* xref:OFD/OFD-002/index.adoc[OFD-002]: Introduction to the ODISC Ecosystem!
+* xref:OFD/OFD-003/index.adoc[OFD-003]: Ecosystem Architecture
+* xref:OFD/OFD-004/index.adoc[OFD-004]: Reference Designs
+* xref:OFD/OFD-005/index.adoc[OFD-005]: Governance Framework
+

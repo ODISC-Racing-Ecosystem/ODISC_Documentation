@@ -1,0 +1,136 @@
+
+[#GP-01]
+= GP-01: Racing Intent and Vision
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| GP-01: Racing Intent and Vision
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+The following principles define the intent and vision for racing within the ODISC Racing Ecosystem.
+
+* 01 Better Racing First
+* 02 Driver Decisions Matter
+* 03 Grassroots Racing First
+* 04 Low Barrier to Entry
+* 05 Evolution, Not Replacement
+
+== 01 Better Racing First
+
+____
+The goal is not to build a better slot car. The goal is to build better
+racing.
+____
+
+Every engineering, organizational, and architectural decision should
+ultimately improve the quality, fairness, safety, accessibility, or
+enjoyment of racing.
+
+We want you to remember what happened in a race, on various laps, as
+events unfolded. We don't want it to just be a speedy blur that passes
+by without being seen.
+
+== 02 Driver Decisions Matter
+
+When every driver's decisions matter, every race tells a story.
+
+The system shall reward driver skill, racecraft, consistency, and
+strategic decision-making over hardware advantages or reaction speed
+alone.
+
+Learning a track along with how your vehicle performs should matter.
+Tracks should require skill to pick out the best racing line, when to
+apex, and what lane on the straight provides the best exit three turns
+later because of how you are forced into the S-curves and chicanes that
+follow the high speed straight. When to stay behind, and when to go
+around, these are the decision points drivers will have to make as in
+some cases going around means a slower track farther up as the line
+through a series of curves takes a much wider path allowing for the
+other car to retake that position.
+
+== 03 Grassroots Racing First
+
+Grassroots are the core foundation of the ecosystem. Without them we
+cannot grow.
+
+For clarity's sake, we include enthusiast racers with personal tracks at
+home where they race against friends in a non-organized group as well as
+local clubs in the grassroots category.
+
+Standards shall prioritize practical deployment and operation at the
+grassroots level. Capabilities that extend upon the basic and club level
+standards are rewarded with higher certification levels, but at no point
+shall higher tier standards redefine lower tiers standards in a way that
+investments need to be replaced.
+
+Examples: +
+The difference between club level and district level certification may
+be the number of timing gate sensors and required driver station count.
+Club Certification may only need timing sensors before lane changers to
+support conflict resolution and broad timing, whereas district level may
+need timing gates at a minimum distance of 2 meters apart from each
+other. Beyond that, a club certified racetrack may have 4 driver
+stations, whereas a district requires 6 driver stations.
+
+By adding additional timing gates, driver stations, and similar
+functionality, an existing club certified track can gain district
+certification or beyond without having to rebuild the track.
+
+== 04 Low Barrier to Entry
+
+The project shall maintain low barriers to entry and low barriers to
+progression.
+
+New racers that want their own gear should be able to be up and running
+at their local club or at a friend's track with an off-the-shelf car, a
+decoder, and a controller. By shifting everything else to the club
+startup costs with shared hardware we reduce the cost to get into the
+hobby.
+
+With a small investments clubs and individuals should be able to build
+modest track installations that can grow incrementally as their needs
+evolve.
+
+By utilizing shared designs with hardware matched to the track we offer
+reduced costs for new tracks that can grow and expand over time as the
+needs increase.
+
+Our goal is that a club should be able to build a new track consisting
+of three 8x4' MDF sheets for the base as well as 3 more for the track, 4
+off-the-shelf cars, 4 driver stations, and the electronics to make it
+all work for around 1000-1500 Euro / USD (2026 costs). This is a
+hardware cost calculation and does not include routing or assembly.
+
+== 05 Evolution, Not Replacement
+
+The project shall preserve compatibility with existing ecosystem
+equipment whenever reasonably practical.
+
+Where feasible, existing slot racing equipment, particularly vehicles,
+should be reusable through conversion or adaptation. Legacy
+infrastructure may be replaced where necessary to achieve the project's
+objectives.
+
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

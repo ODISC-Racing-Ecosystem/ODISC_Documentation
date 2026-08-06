@@ -1,0 +1,18 @@
+
+
+= Appendix
+
+
+== Introduction
+
+This appendix provides additional information and resources related to the 
+ODISC Racing Ecosystem. It includes a glossary of terms, document standards, 
+and licensing information to support stakeholders in understanding and 
+implementing the ODISC framework effectively.
+
+NOTE: While this appendix does not maintain a revision number or history, 
+documentation within the appendix may track such information as appropriate. 
+Stakeholders are encouraged to refer to the individual documents for the 
+most up-to-date information.
+
+

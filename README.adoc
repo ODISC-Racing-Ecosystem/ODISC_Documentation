@@ -1,0 +1,72 @@
+= Open Digital Intelligent Slot Cars (ODISC)
+:description: Open specification for a digital slot car ecosystem
+:toc:
+:toclevels: 2
+
+== Overview
+
+ODISC (Open Digital Intelligent Slot Cars) is an open specification
+defining a digital slot car ecosystem.
+
+The goal of ODISC is to provide a common, interoperable foundation
+for digital slot car systems, enabling compatibility between cars,
+track systems, controllers, accessories, and software.
+
+== Project Status
+
+This project is currently under development.
+
+The specification is being developed as a collection of modular
+AsciiDoc documents and published as:
+
+* A browsable HTML documentation site using Antora
+* PDF specification documents using Asciidoctor PDF
+
+== Documentation
+
+The compiled documentation is located link:https://odisc-racing-ecosystem.github.io/ODISC_Documentation/[here].
+
+The published documentation contains:
+
+* Principles and Foundations
+
+Future documents will add:
+* Technical Documents
+* Racing Regulations
+* Appendices
+
+== Building the Documentation
+
+=== Requirements
+
+The documentation build requires:
+
+* Node.js
+* Antora
+* Asciidoctor PDF
+
+=== Generate HTML and PDF documentation
+
+To generate PDFs or Web files locally, run the following script:
+[source,bash]
+----
+utility_scripts/execute_build_process.bat
+----
+
+
+
+== Contributing
+
+Contributions are welcome.
+
+Before submitting changes:
+
+* Ensure spelling checks pass
+* Maintain existing terminology
+* Follow the project documentation guidelines
+* Keep requirements uniquely identifiable
+
+== License
+
+Please view the documentation for the applicable license.
+

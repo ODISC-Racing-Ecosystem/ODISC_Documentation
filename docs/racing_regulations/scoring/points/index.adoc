@@ -1,0 +1,85 @@
+
+
+[#point_scoring_calculations]
+= Point Scoring and Calculations
+
+The following standard point calculations are used for all competitions to ensure consistency and fairness.
+
+== Points Available
+
+The maximum points available for a competition result are determined by the number of competitors participating in that competition.
+
+Larger competitions provide a higher maximum point value because winning against a larger field represents a greater competitive achievement. The increase in available points is intentionally limited to ensure that championship results remain balanced between smaller and larger competitions.
+
+The winning driver receives the maximum points available for the competition. These points are then used as the basis for calculating the points awarded to all other finishing positions.
+
+The maximum points available are:
+
+[cols="1,1",options="header",width="40%"]
+|===
+|Number of Competitors |Maximum Points
+
+|2
+|10
+
+|3-4
+|15
+
+|5-6
+|20
+
+|7-8
+|25
+
+|9-10
+|30
+
+|11-12
+|32
+
+|13-16
+|35
+
+|17-20
+|40
+
+|21+
+|50
+|===
+
+The applicable maximum points value is used as the *Maximum Points* value in the ODISC Weighted Scoring Model.
+
+== Scoring Calculation
+
+The ODISC Weighted Scoring Model calculates points based on the number of competitors and the finishing position achieved.
+
+The model can be applied to individual heats, race results, or championship standings depending on the competition format.
+
+The winner of a competition always receives the maximum available points. Each subsequent finishing position receives fewer points, with the reduction becoming progressively smaller further down the finishing order. This creates a scoring system where winning is significantly more valuable than simply achieving a high finishing position.
+
+The points awarded for a finishing position are calculated using the following formula:
+
+ODISC Weighted Scoring Model::
+
+Points = Maximum Points x ((Number of Competitors - Finishing Position + 1) / Number of Competitors)^2
+
+Where:
+
+* *Maximum Points* is the total points awarded to the winning competitor.
+* *Number of Competitors* is the number of classified competitors participating in the competition.
+* *Finishing Position* is the final finishing position of the competitor.
+
+Any fractional points are removed, and only whole points are awarded.
+
+If the calculated value is less than one point, the competitor receives zero points.
+
+This calculation ensures that:
+
+* Winning provides a significant competitive advantage.
+* Higher finishing positions remain valuable.
+* Larger and smaller competitions can use the same scoring model.
+* The scoring system rewards competitive performance rather than only participation.
+* Results remain comparable across different competition formats.
+
+The scoring model may be adjusted in future revisions of the Racing Rules Specification if competition experience identifies a need for different competitive weighting.
+

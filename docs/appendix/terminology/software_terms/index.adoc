@@ -1,0 +1,20 @@
+
+
+
+= Software Terms
+
+Reference Implementation::
+
+Official Implementation::
+
+Add-on::
+
+Plug-in::
+
+Extension::
+
+API::
+
+Interface::
+
+

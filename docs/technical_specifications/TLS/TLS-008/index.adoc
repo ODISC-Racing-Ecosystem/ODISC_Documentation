@@ -1,0 +1,113 @@
+
+
+[#tls-008]
+= TLS-008: Docking Station
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-008: Docking Station
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+Before a driver can race, the vehicle and driver must first be introduced.
+____
+
+The Docking Station provides the interface used to associate a Vehicle
+Decoder (xref:TLS-010/index.adoc#tls-010[TLS-010]) with a Driver Station
+(xref:TLS-009/index.adoc#tls-009[TLS-009]).
+
+A vehicle needs to be paired with a Driver Station before it can
+participate in a race. Otherwise, the Race Management System
+(xref:TLS-002/index.adoc#tls-002[TLS-002])
+does not transmit vehicle control commands to the decoder for safety
+reasons.
+
+A Docking Station may be dedicated to a single Driver Station or shared
+between multiple Driver Stations.
+
+== Philosophy
+
+The Docking Station provides a controlled environment for validation,
+firmware management, and pairing.
+
+* Validation ensures that the Vehicle Decoder is compatible with the
+current ODISC racetrack.
+* Firmware management updates the Vehicle Decoder to the current ODISC
+firmware as required.
+* Pairing establishes the communication relationship between a Driver
+Station and a Vehicle Decoder.
+
+The Docking Station does not participate in race operation.
+
+== Capabilities
+
+The Docking Station provides the following functional capabilities.
+
+=== Driver Station Association
+
+The Docking Station shall support identification of the Driver Station
+to be associated with a Vehicle Decoder.
+
+The method used to establish the Driver Station association is
+implementation defined.
+
+=== Decoder Validation
+
+The Docking Station shall validate the connected Vehicle Decoder to
+ensure compatibility with the current ODISC racetrack firmware and
+ODISC communication protocols.
+
+The Docking Station shall provide validation status to the user through
+the available status indicators.
+
+=== Firmware Management
+
+The Docking Station shall support firmware updates for connected Vehicle
+Decoders.
+
+=== Vehicle Pairing
+
+The Docking Station shall provide the ability to pair a Vehicle Decoder
+with a Driver Station.
+
+During the pairing process, the Vehicle Decoder shall receive the Driver
+Station identifier used for race communication.
+
+=== Status Indication
+
+The Docking Station shall provide status indication for pairing,
+validation, and firmware operations.
+
+Status indication shall be provided through:
+
+* Indicator lights or display on the Docking Station.
+* Indicator lights on the Vehicle Decoder.
+* Indicator lights or display on the Driver Station.
+
+NOTE: Status indication from all involved components provides confirmation
+that the pairing process completed successfully and that communication
+between the Driver Station, Docking Station, and Vehicle Decoder is
+operational.
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

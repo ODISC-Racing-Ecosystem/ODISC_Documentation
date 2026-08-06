@@ -1,0 +1,9 @@
+
+= Foundational Documents
+
+The following document standards have been established for the various founding documents of the ODISC project.
+
+include::OFD.adoc[leveloffset=+2]
+
+// include::TDP.adoc[]
+

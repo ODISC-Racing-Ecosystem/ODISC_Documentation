@@ -1,0 +1,95 @@
+
+[pass]
+++++
+<svg xmlns="http://w3.org" viewBox="-120 -40 545 375" width="100%" height="auto" style="background-color: #ffffff;">
+  <!-- Styling Context -->
+  <style>
+    .plate-outline { stroke: #000000; stroke-width: 2.5; fill: #f2f4f7; }
+    .sensor-area { stroke: #0088cc; stroke-width: 1.5; stroke-dasharray: 3 3; fill: #e6f7ff; }
+    .dimension-line { stroke: #0066cc; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .spacing-dim-line { stroke: #2b6cb0; stroke-width: 1.2; stroke-dasharray: 3 3; }
+    .text-dim { font-family: monospace; font-size: 14px; fill: #0066cc; font-weight: bold; text-anchor: middle; }
+    .text-spacing-dim { font-family: monospace; font-size: 13px; fill: #2b6cb0; font-weight: bold; text-anchor: middle; }
+    .text-label { font-family: sans-serif; font-size: 10px; fill: #0088cc; text-anchor: middle; font-weight: bold; }
+    .text-hole-label { font-family: sans-serif; font-size: 11px; fill: #4a5568; text-anchor: middle; font-weight: bold; }
+    .text-title { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #2d3748; text-anchor: middle; }
+    .hole-center { stroke: #ff3333; stroke-width: 1; stroke-dasharray: 2 2; }
+    .hole { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .radius-pointer { stroke: #cc00cc; stroke-width: 1.2; fill: none; }
+  </style>
+
+  <!-- Title Label -->
+  <text x="171.88" y="-18" class="text-title">Detection Point PCB Dimensions</text>
+
+  <!-- NATIVE PCB PLATE PROFILE (27.50 x 17.50mm plate with R3.50mm corners) -->
+  <path d="M 43.75,0 
+           L 300,0 
+           A 43.75,43.75 0 0 1 343.75,43.75 
+           L 343.75,175 
+           A 43.75,43.75 0 0 1 300,218.75 
+           L 43.75,218.75 
+           A 43.75,43.75 0 0 1 0,175 
+           L 0,43.75 
+           A 43.75,43.75 0 0 1 43.75,0 
+           Z" class="plate-outline" />
+
+  <!-- Center Sensor Placement Area -->
+  <rect x="109.38" y="90.63" width="125" height="37.5" class="sensor-area" />
+  <line x1="0" y1="109.38" x2="343.75" y2="109.38" class="hole-center" />
+  <line x1="171.88" y1="0" x2="171.88" y2="218.75" class="hole-center" />
+  
+  <!-- Adjusted Sensor Labels (Vertically centered between the lines) -->
+  <text x="171.88" y="103" class="text-label">SENSOR AREA</text>
+  <text x="171.88" y="122" class="text-label">10.00mm x 3.00mm</text>
+
+  <!-- 4x Ø3.00mm Mounting Holes -->
+  <!-- Top Left (46.88, 46.88) -->
+  <circle cx="46.88" cy="46.88" r="18.75" class="hole" />
+  <line x1="21.88" y1="46.88" x2="71.88" y2="46.88" class="hole-center" />
+  <line x1="46.88" y1="21.88" x2="46.88" y2="71.88" class="hole-center" />
+
+  <!-- Top Right (296.88, 46.88) -->
+  <circle cx="296.88" cy="46.88" r="18.75" class="hole" />
+  <line x1="271.88" y1="46.88" x2="321.88" y2="46.88" class="hole-center" />
+  <line x1="296.88" y1="21.88" x2="296.88" y2="71.88" class="hole-center" />
+
+  <!-- Bottom Left (46.88, 171.88) -->
+  <circle cx="46.88" cy="171.88" r="18.75" class="hole" />
+  <line x1="21.88" y1="171.88" x2="71.88" y2="171.88" class="hole-center" />
+  <line x1="46.88" y1="146.88" x2="46.88" y2="196.88" class="hole-center" />
+  <text x="46.88" y="138" class="text-hole-label">4x Ø3.00mm</text>
+
+  <!-- Bottom Right (296.88, 171.88) -->
+  <circle cx="296.88" cy="171.88" r="18.75" class="hole" />
+  <line x1="271.88" y1="171.88" x2="321.88" y2="171.88" class="hole-center" />
+  <line x1="296.88" y1="146.88" x2="296.88" y2="196.88" class="hole-center" />
+
+  <!-- Hole Spacing Dimension Layouts -->
+  <!-- Horizontal Track (20.00mm) -->
+  <line x1="46.88" y1="240.63" x2="296.88" y2="240.63" class="spacing-dim-line" />
+  <line x1="46.88" y1="184.38" x2="46.88" y2="240.63" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="296.88" y1="184.38" x2="296.88" y2="240.63" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="171.88" y="256" class="text-spacing-dim">Hole Spacing</text>
+  <text x="171.88" y="272" class="text-spacing-dim">20.00mm +/-0.1mm</text>
+
+  <!-- Vertical Track (10.00mm) -->
+  <line x1="-35" y1="46.88" x2="-35" y2="171.88" class="spacing-dim-line" />
+  <line x1="-35" y1="46.88" x2="28.13" y2="46.88" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="-35" y1="171.88" x2="28.13" y2="171.88" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="-56" y="109.38" class="text-spacing-dim" style="transform: rotate(-90deg); transform-origin: -56px 109.38px;">Hole Spacing</text>
+  <text x="-40" y="109.38" class="text-spacing-dim" style="transform: rotate(-90deg); transform-origin: -40px 109.38px;">10.00mm +/-0.1mm</text>
+
+  <!-- Global Outer Profile Dimensions -->
+  <!-- Width (27.50mm) -->
+  <line x1="0" y1="295" x2="343.75" y2="295" class="dimension-line" />
+  <text x="171.88" y="315" class="text-dim">27.50mm +/-0.5mm</text>
+
+  <!-- Height (17.50mm) -->
+  <line x1="365.63" y1="0" x2="365.63" y2="218.75" class="dimension-line" />
+  <text x="385" y="109.38" class="text-dim" style="transform: rotate(90deg); transform-origin: 385px 109.38px;">17.50mm +/-0.5mm</text>
+
+  <!-- Corner Radius Dimension -->
+  <path d="M 12.80,205.95 L -55,265 H -15" class="radius-pointer" />
+  <text x="-10" y="269" style="font-family: monospace; font-size: 12px; fill: #cc00cc; font-weight: bold; text-anchor: start;">4x R3.50mm</text>
+</svg>
+++++

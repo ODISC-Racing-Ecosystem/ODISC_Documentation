@@ -1,0 +1,24 @@
+
+
+= Racing Regulations
+
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| Racing Regulations
+|Version| 0.1
+|Status| Draft
+|Release Date| TBD
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+
+[IMPORTANT]
+====
+In the future, this page will contain various documents.
+====

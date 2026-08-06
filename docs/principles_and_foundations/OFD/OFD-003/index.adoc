@@ -1,0 +1,515 @@
+
+[#OFD-003]
+= OFD-003: Ecosystem Architecture
+
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| OFD-003: Ecosystem Architecture
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+This document covers the principles and philosophy of the Open Digital Slot (ODISC) 
+Racing Ecosystem as it relates to architectural design.
+
+We will cover how the architecture decision that are made, the composition 
+of the ODISC Racing Ecosystem, the responsibilities of each component, 
+which components communicate with each other, and how
+scalability is built directly into the ODISC ecosystem.
+
+We will not be covering the actual implementation of how they interact
+as this will be covered in the various technical specification documents that
+define the interfaces between components in much greater detail.
+
+== An overview of the ODISC Ecosystem
+
+The complete ecosystem has many moving parts, so let's walk you through
+them one by one and how they interact with each other. We will cover
+this from the perspective of a new driver arriving at a club for race
+night to tell the story of the ecosystem.
+
+=== Vehicle Requirements - Installation of a Decoder
+
+To race on an ODISC racetrack, each vehicle needs to have a digital
+vehicle decoder installed. 
+
+This is either soldered to the existing pickup leads or can use a replacement 
+guide pin assembly that replaces the original and is preconnected to the 
+decoder. The motor leads need to be connected to the decoder so that it 
+can control the power output to the motor.
+
+This is also an opportunity to perform a safety check to ensure the vehicle
+meets the racetrack requirements for minimum equipment and everything is in
+working order.
+
+=== Loaner Vehicles
+
+Clubs may opt to provide loaner vehicles that are preconfigured with a
+decoder for visitors to "try before you buy".
+
+Ie, it is easier to get someone to buy into the ODISC method of racing
+after they have tried it, so having a few loaner cars ready to go is 
+a great way to greet potential new members and get them interested in
+this new way of slot racing.
+
+=== Race Scheduler
+
+Once the vehicle is ready to go, the driver talks to the race scheduler
+to get onto the track. The race scheduler can cover track rules as well
+as any special club information that is needed to be safe on the track.
+
+The race scheduler (this title is used both for the person and the
+software they use) will then add the driver to a race and let them know
+when they are expected to be ready to go at trackside. 
+
+They will also let them know if they will be assigned as a marshal
+during the time they are there, and what to look out for to see 
+when they need to be somewhere.
+
+=== Race Management
+
+When it is time for a race, the race management system loads the
+information it needs to run the race from the scheduler. After the race
+is completed, it will send the data on race results back to the
+scheduler so that the scheduler can calculate standings and show
+finalized results.
+
+During a race, the race management software ensures that cars are given
+their correct throttle inputs, lane selections are executed, and race
+timings are registered.
+
+=== Driver Stations
+
+It is now time for our driver to connect to a driver station. The driver
+connects their controller to the driver station, verifies their driver
+identity, and syncs their car at the docking station so the car knows
+which driver station to listen to.
+
+NOTE: For safety reasons, the docking procedure is done by all drivers 
+to ensure vehicles are listening to the correct inputs. The system will 
+not send commands to a vehicle that has not been synced for the current 
+race, even if the vehicle ID is the same.
+
+The driver station contains shared controls to adjust the performance of
+the car. These can be adjusted during practice or open races, but for 
+some races the racing ruleset may define "Parc Fermé" conditions which 
+prevent altering vehicles or settings, just like in full scale racing.
+
+The driver station interprets the inputs from the controller, applies
+any mappings (throttle curves, etc.) and sends the requested throttle to
+the race management system which in turn tells the car what to do.
+
+=== Track Infrastructure
+
+An ODISC racetrack can have a lot of moving parts that together make up
+the racetrack.
+
+==== Position and Timing Sensors
+
+These sensors help race control know where the cars are on track and
+assist with determining if a vehicle has been de-slotted (a vehicle that
+has throttle applied and doesn't pass the next sensor when expected is
+considered to have left the control of the system).
+
+==== Lane Selection
+
+To allow overtaking, drivers may select specific racing lines at
+different points on the track. Making that decision will often have
+multiple impacts on the vehicle being driven, as it will determine
+cornering speeds and the line that can be taken through multiple corners
+ahead.
+
+We use sensors to assist in reducing the risk of side swiping and T-bone
+incidents at lane changers on the track. While this system can be seen
+as prevention assistance, it is also up to the drivers to be aware of
+other cars on the racetrack and keep an eye on what they are doing.
+
+==== Pit Lane
+
+The pit lane allows for mandatory fuel or tire stops to be configured,
+as well as swapping drivers for endurance races. If you can think of 
+it for a pit stop, we can probably support it.
+
+==== Start/Finish Line and Grid Control
+
+Every race needs to know how many laps everyone has raced, and the
+timing of those laps. 
+
+This is where the Start/Finish Line controller comes in. 
+
+It has absolute control of the lap times to ensure they are comparative, 
+and it works with race control to ensure that laps are properly recorded 
+and validated.
+
+==== Race Director
+
+The director (both the person and the software once again) is
+responsible for ensuring that the race rules are followed. The director
+can issue cautions, shut down a race with a red flag, or assign other
+penalties based upon driver conduct on the track that violate the rules
+of the current race.
+
+Once a race is finished, the race director finalizes the race results 
+after ensuring all penalties are resolved and requests the 
+race management system publishes the race back to the race scheduler 
+as a completed race.
+
+==== Global Registry
+
+Once racing is completed for the night, certain data such as driver
+profiles are published by the race scheduler to a global registry.
+
+This registry allows racers to race at multiple tracks but retain their
+profile of how they want their setup to be to "travel" with them for use
+anywhere.
+
+The registry also contains details on higher tier races that allow you
+to build a matching track and then race against recorded ghost cars from
+that track to challenge yourself against the top racers at each tier.
+
+== Architectural Goals
+
+The goal of the ODISC ecosystem is to provide a better racing
+experience. Our desire is to create an open system that can grow with
+its users over time, to provide an affordable way to expand over time.
+
+To accomplish this, we have focused on defining how things work and the
+interactions between the various systems. With open interoperability
+standards that provide the ability to expand features over time,
+innovation can occur within various components as new ideas arise and
+are vetted through the established process for new requirements to be
+added to the specifications.
+
+We want the system to be extremely scalable so that it can grow with
+you, whether you are an individual with a racetrack in your house with
+friends, or a club competing at the international level.
+
+The intent is to achieve this by using a certification-aware design that
+can self-validate the certification level and provide you with a
+checklist of what is needed to achieve the next tier of certification
+for your racetrack.
+
+We want the system to have a built-in fault tolerance behavior, as we
+know that things will go wrong. But we want to ensure that it is handled
+gracefully and in a safe manner. Safety is after all a key priority. We
+want the system to operate with a deterministic behavior model, where
+the same inputs at different times results in the same outcomes.
+
+But above all else, we want the ODISC to be a fun racing system where
+the races are memorable, not the troubleshooting of compatibility issues
+between components. So stability of interoperability and assisted
+troubleshooting are hallmarks of the ODISC.
+
+== Distributed Intelligence with Central Authority
+ODISC is built upon keeping decision making close to the action, while 
+authority is centralized.
+
+But what does that mean?
+
+If we look at a timing sensor, its controller contains the intelligence 
+to determine which car passed the sensor, and the time at which that 
+occurred. Once it has the vehicle ID and the timestamp, it submits that 
+data to the race management system which has the authority to register 
+that data into the race results.
+
+Example: +
+For larger tracks there can be many sensors, but only one item within the 
+infrastructure has the authority to commit the data collected into an 
+authoritative source of results.
+
+This ensures that all items are recorded in the same fashion, into the final
+set of data, that defines a set of events. This reduces failures and provides 
+a predetermined way of operating without relying on various implementations 
+such as in our example of sensors.
+
+This allows ODISC to operate in a very deterministic approach, where we can
+ensure that with the same data submitted for events, that the same records of 
+results are created every time.
+
+== Architectural Layers
+
+We have chosen to break the architecture into several layers, with each
+layer adding control over the previous layer.
+
+=== Layer 1 - The Physical Hardware Infrastructure
+
+The first layer consists of the physical racetrack layout. This includes
+the power source and rails, switches for lane changes, the various
+sensors located around the track, any lighting used for race control
+(caution indicators, etc.) as well as the vehicles that race on the
+track.
+
+=== Layer 2 - The Control Infrastructure
+
+The second layer consists of those items that control the movement of
+something. This includes the driver stations and handheld controllers,
+any track controllers that execute a lane change, the decoders in the
+cars, as well as timing logic.
+
+You may notice that while the hardware for certain items is the first
+layer, the control unit is in the second layer. Examples include the
+points controller vs the physical hardware for a lane changer, or the
+sensor for timing gates vs the unit that collects and manages the data.
+
+=== Layer 3 - Race Management
+
+The third layer controls the racing, but not from a driver's
+perspective. This is the brains of the ODISC ecosystem and consists of
+the race management software along with the race director, the
+scheduling, telemetry collected, and similar systems.
+
+=== Layer 4 - Information Services
+
+The fourth layer is what allows racetrack installations to compare
+themselves with each other and share details about themselves.
+
+This includes the global registry of drivers and their profiles,
+firmware versions, ready-to-build racetracks (complete instructions and
+configurations), certification checks, and analytics.
+
+=== Layer 5 - Aesthetic Additions
+
+The last layer we have are the aesthetic additions to a racetrack that
+don't affect racing but make the racetrack come to life. We want to
+allow the creative freedom of racetrack owners to come to life here but
+will have some requirements and suggestions to ensure that there are
+enough valid sightlines from each driver's stations and the race
+director to ensure that a race can be completed in a safe and fair
+manner.
+
+Beyond that, we hope to see the variety of ideas people come up with,
+from a Nordic forest to a Japanese temple themed track. The racing
+should be the same, but the feeling becomes very different.
+
+== Subsystem Responsibilities
+
+As we define subsystems, we will ensure that each subsystem has a stated
+purpose. This shall include what items the system is responsible for,
+and what it is not responsible for.
+
+We will define any interfaces (how it interacts with other subsystems),
+as well as any other system that it is dependent upon such as the pit
+lane controller being dependent upon several lane selection controllers.
+
+For track mounted hardware, we will specify the standardized mounting
+points and passthroughs that are expected to exist in the physical racetrack
+to ensure that hardware from different manufacturers are interchangeable.
+
+NOTE: We want manufacturers to innovate in their implementations, but in 
+order to permit track designers to provide predetermined locations to mount 
+hardware the mounting points are defined by the specification.
+
+We will not be defining implementation methods or requirements but
+rather defining the architecture and expected behavior of the subsystem.
+This allows for innovation on how to approach the problem and the
+solution generated.
+
+Any implementations will instead be listed as reference systems.
+
+== System Boundaries
+
+The ODISC ecosystem does have some boundaries that we have placed on it
+to ensure that it truly is an open system.
+
+We should not dictate the selection of any of the following, unless doing so 
+provides a global benefit to the ODISC Ecosystem:
+
+* Track construction materials
+* Track control hardware such as solenoids or physical points for lane
+changers
+* Electronic hardware such as microcontrollers or board components
+* Programming languages
+* Database engines
+* CAD software
+* Operating systems
+* Manufacturing processes
+
+Example: +
+While we may not define the hardware of a controller, we may define the
+operating system that the race management system software operates on.
+
+Any references to these may exist, but unless stated as required they 
+should be viewed as being examples such as those found in the following 
+or similar locations:
+
+* Estimated cost calculations
+* Reference implementations
+
+== Evolution Strategy
+
+We want the ODISC ecosystem to evolve over time. We don't have all the
+answers, and we don't have all the information.
+
+We want your ideas to improve it!
+
+With this in mind, we have ensured that there is a strategy for how to
+expand the system.
+
+By versioning not only requirements documents, but also software and
+hardware versions we can keep track of what is compatible with various
+items.
+
+By allowing for extensions and additions, new features can be tested
+prior to being fully incorporated into the standards as a "Trial
+Feature".
+
+Our planning ahead includes having reserved fields so that future items
+can be placed where they make sense, allowing for grouping of features
+without the numbering or field patterns dictating where something ends
+up in the specification documents.
+
+We want the ODISC to be "self-certifying" in that it can check what is
+required for a certification level and notify the user either what is
+missing or broken. Broken sensors may result in a graceful deprecation
+of certification level until it is repaired. Adding the additional items
+into the system allows it to increase the certification level
+automatically (highest tiers may still require manual verification).
+
+As the system evolves, it is important that we maintain backwards
+compatibility with previous version of the system. If the feature isn't
+supported, it is bypassed gracefully to ensure that monetary and time
+investments into infrastructure are respected.
+
+At some point in the future, deprecation may be necessary for certain
+features. As much as is feasible this should be managed via graceful
+bypass and firmware upgrades. We do not want end users to throw away
+items they have invested time and money into, even if it is "just" a
+decoder for a vehicle.
+
+== Certification Philosophy
+
+We have touched on certification a few times. Let's dive a bit deeper
+into it now.
+
+We envision a track that is setup with basic sensors for operating lane
+changes and pit lane activities to reach the "club certified" tier. Very
+few requirements are needed for club level other than to ensure safe
+driving.
+
+As we expand through the various tiers, more requirements are added to
+the already defined ones from the lower tiers. At no point should a
+higher tier change a lower tier certification requirement but should
+always start with "Everything from the lower tier plus the following".
+
+There is one exception to this rule though, and that is that higher
+tiers may require certain performance requirements for how long it takes
+for an actuator to trigger to ensure that lane selections and similar
+items are crisp, fast, and can be requested at the last second. Response
+times may also be required for communication to ensure that a race can
+be run with the utmost precision.
+
+Examples of what is added can be a minimum number of driver stations,
+distance between timing gates, and various lights for controlling the
+race.
+
+We believe that the tiers of certification are something along this
+list, although this may change over time:
+
+=== Club
+
+The lowest tier, safety and lap timing requirements only.
+
+=== District
+
+The first real racing tier. This is what people expect when they go to
+an organized local race.
+
+=== Regional
+
+Expanded features for racing to provide greater fidelity and race
+management.
+
+=== National
+
+At the national level, reproducibility starts becoming key. Telemetry
+logging and lots of timing gates to allow replaying a race with ghost
+cars later.
+
+This is also when requirements may start showing up that cover
+performance for lane changers, responsiveness of features, and more.
+
+=== International
+
+At the international level, everything is top notch with safety and
+performance being of the utmost importance.
+
+=== World
+
+World certified tracks will be of a quality tier that exceeds what most
+people will ever experience. If you think of the quality of athletes at
+the top level, that is the quality that we want to expect from world
+certified tracks.
+
+== Security and Trust
+
+To provide both a secure operating environment, as well as trust between
+components, we will utilize multiple methods of validating the
+capabilities of system components.
+
+These may include checksums, firmware validation, identity flags,
+pairing communication checks, version compatibility checks, and overall,
+a safety-critical mindset when evaluating system interactions.
+
+This also provides drivers with the trust that everyone is on a level
+playing field.
+
+== Time Synchronization
+
+With so many systems working together, we need to ensure that time is
+synchronized and we use a deterministic time system.
+
+If we don't know when something happens, we can't review or recreate it.
+So having an accurate timestamp on events allows us not only to
+troubleshoot issues, but also ensure that race timing is accurate, fuel
+stops are correct, and collisions are avoided.
+
+== Failure Philosophy
+
+Things go wrong. There, I said it. 
+
+The question isn't what will go wrong, it is how we handle it when it does.
+
+The architecture and specifications need to consider, and document the
+expected behavior, for how to handle the various error conditions that
+can arise.
+
+We must consider how to manage a sensor failing mid-race, a vehicle that
+is no longer reporting in to race control, firmware signatures that
+don't match the allowed list for the race, a driver disconnecting from
+their station, intermittent power failures, and so many more things.
+
+The specification must define what fail safes are in place, and how the
+system predictably handles every edge case. The system must never fail
+silently but rather contain failures and notify the user (driver, race
+director, marshals, etc.) of the issue via some indication.
+
+The worst thing we can do is nothing at all.
+
+== Future Directions
+
+We want the system architecture to intentionally support future
+expansion. We want to be able to add additional vehicle types
+(motorcycles or trucks for example), VR racing, camera replay for the
+race director to evaluate penalties, advanced telemetry and so many more
+things that we can just dream of today.
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

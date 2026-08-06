@@ -1,0 +1,137 @@
+
+[#GP-03]
+= GP-03: System Design Principles
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| GP-03: System Design Principles
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+The following principles define the ODISC approach to system design.
+
+* 01 Built for Today, Designed for Tomorrow
+* 02 Open by Default
+* 03 Solve Problems, But Not at Any Cost
+* 04 Safety Before Convenience
+* 05 Simplicity Through Modularity
+* 06 Standardize Interfaces, Not Implementations
+* 07 Primary Design Target
+
+== 01 Built for Today, Designed for Tomorrow
+
+The standards and architecture shall support practical, affordable
+implementations today while anticipating future capabilities.
+
+Expansion shall occur through additive improvements rather than
+replacement whenever reasonably practical.
+
+Investing in a track ecosystem is expensive, and we absolutely do not
+want to make that go to waste because we didn't think about a use case
+in advance. We want well thought out flexible solutions to problems, and
+the ability to add to existing solutions as new problems are discovered.
+
+We do not want to paint ourselves into a corner with any decisions, but
+instead make sure that we have multiple exits available allowing future
+expansion.
+
+
+== 02 Open by Default
+
+Standards define interoperability, not implementation of features.
+
+Innovation should occur through competing implementations rather than
+incompatible ecosystems.
+
+
+== 03 Solve Problems, But Not at Any Cost
+
+Technical limitations should be solved, but not at any cost.
+
+Engineering decisions shall balance capability, simplicity, reliability,
+maintainability, manufacturability, and affordability.
+
+
+== 04 Safety Before Convenience
+
+Safety-critical functions always take precedence over convenience,
+performance, or feature completeness.
+
+No capability should compromise safe operation of the racing system.
+
+=== 05 Simplicity Through Modularity
+
+The core functionality must be simple. Additional capabilities can be
+added through modular extensions as required by tiered certifications or
+club needs.
+
+== 06 Standardize Interfaces, Not Implementations
+
+Where mechanical interoperability is required, the standards shall define
+the physical interface between components rather than the internal design
+of those components.
+
+Mechanical interfaces may define mounting points, physical envelopes,
+connection locations, and other externally visible characteristics
+necessary to ensure interoperability. Manufacturers remain free to
+innovate within those constraints, provided their implementations remain
+compatible with the standardized interface.
+
+This approach allows track designs, infrastructure, and hardware from
+multiple manufacturers to remain interchangeable while encouraging
+competition through engineering innovation rather than proprietary
+mechanical designs.
+
+Example: +
+The ATX computer standard defines the mechanical interface between a
+computer case and a motherboard, including mounting hole locations,
+expansion slot positions, connector locations, and overall dimensions.
+It does not define processor architecture, power regulation, cooling
+design, PCB layout, or countless other implementation details.
+
+As a result, manufacturers compete by developing innovative products
+that remain mechanically compatible with the same computer case. ODISC
+adopts the same philosophy by standardizing the interfaces between
+components while allowing manufacturers complete freedom in how they
+implement functionality within those interfaces.
+
+== 07 Primary Design Target
+
+ODISC is primarily designed for racing at 1:32 scale, with support for
+1:24 scale as the upper bound of the intended design target. Larger
+vehicle scales are outside the primary design target, as they introduce
+additional dimensional considerations such as slot size, vehicle
+geometry, and component mounting requirements.
+
+ODISC is designed primarily for routed wooden racetracks. The standards
+are developed with this primary design target in mind, taking advantage
+of the physical space available for mounting components while maintaining
+interoperability between those components.
+
+Nothing in this principle prevents adaptation of ODISC to other vehicle
+scales or racetrack construction methods, such as molded plastic track
+systems, provided those adaptations do not compromise the architecture,
+interoperability, or capabilities of the primary design target.
+
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

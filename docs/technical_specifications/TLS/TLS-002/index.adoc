@@ -1,0 +1,162 @@
+
+
+[#tls-002]
+= TLS-002: Race Management System
+
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-002: Race Management System
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+Every system needs a brain. The Race Management System is
+the central brain of the ODISC Racing Ecosystem.
+____
+
+The Race Management System is the central coordination system of the
+ODISC Racing Ecosystem. It manages race configuration, timing, race state,
+communication with drivers and track components, and the collection of
+race data required to operate and analyze competitions.
+
+
+== Philosophy
+
+The Race Management System provides the central coordination layer for
+ODISC racing operations. It maintains awareness of race state, coordinates
+communication between drivers, vehicles, and track elements, and ensures
+that all participating systems operate using a consistent view of the race.
+
+The Race Management System does not replace the specialized functions of
+individual track elements. Instead, it coordinates these systems by
+receiving events, issuing commands, and maintaining the overall state of
+the competition.
+
+== Capabilities
+
+The Race Management System provides the following functional capabilities.
+
+=== Driver Station Communication
+
+The Race Management System receives input from driver stations representing
+driver intent for vehicle control.
+
+Note: +
+It is the responsibility of the driver station to register inputs, and to 
+submit a data packet to the race management system using the defined protocols.
+
+=== Track Integration
+
+The Race Management System communicates with track elements to receive events
+and provide commands required for race operation.
+
+==== Detection Points
+
+A Racetrack with multiple lanes (xref:TLS-001/index.adoc#tls-001[TLS-001]) uses 
+Detection Points (xref:TLS-003/index.adoc#tls-003[TLS-003]) to identify 
+when vehicles pass defined locations on the track.
+
+The Race Management System uses these events to maintain awareness of vehicle
+positions and apply configured race rules, such as pit lane restrictions and 
+lane change safety requirements.
+
+==== Lane Changers
+
+The Race Management System communicates lane change requests to 
+Lane Changers (xref:TLS/TLS-005/index.adoc#tls-005[TLS-005]) around the track.
+
+==== Pit Lane
+
+The pit lane, while optional during track design, adds depth to racing 
+by allowing fuel and tire degradation to be added to the race setup.
+
+To accommodate this, the system will keep track of vehicles stopped in 
+the pits and apply fuel and tire state changes to their race profile.
+The actual behavior of the pit lane and associated lane changers are 
+managed by the pit lane controller.
+
+=== Race Timing and the Start/Finish Line
+
+While this is a track element, the Start/Finish Line is treated as a
+separate primary capability due to its importance in race timing. The system
+shall ensure that lap timing is accurately recorded and consistently applied
+to all vehicles.
+
+The system will track completed laps, along with their duration, in order 
+to provide a complete race result.
+
+=== Race Results
+
+Once compiled, the system needs to be able to display the finished race results 
+including position, completed laps, fastest lap times, as well as any other data 
+that is deemed important enough to log.
+
+=== Data Repository
+
+The system needs to keep a local data repository that contains information on 
+drivers, races, and more.
+
+The local repository may synchronize with the global repository and contain 
+ecosystem data, including firmware packages required to maintain compatible 
+versions across vehicles and track components.
+
+[#tls-002_race_director]
+=== Race Director Interface
+
+The Race Management System shall provide an interface for race officials to
+monitor race state and apply race control decisions.
+
+The Race Director interface enables:
+* Applying race condition changes
+* Managing penalties
+* Stopping race operation
+* Monitoring vehicle and track state
+
+[#tls-002_venue_management]
+=== Venue Management
+
+The Race Management System needs to be able to manage multiple racetracks within a venue. 
+
+When operating in this mode, the hardware requirements are reduced as it is the software 
+portions that are needed for managing and distributing data to the various racetracks. The 
+racetrack itself will have a local controller that manages the track elements and 
+communicates with the Race Management System.
+
+The following features are required of the Venue Management Mode:
+
+* Driver Registration and Management
+* Race Scheduling
+* Result Calculations
+* Data Repository
+* Racetrack Management
+* Access to the Race Management System via
+** Terminal 
+** Web Access
+
+NOTE: While the Venue Management Mode could be its own TLS, we have chosen 
+to include it here due to the large amount of overlap in functionality 
+and the fact that it is running the same software package.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

@@ -1,0 +1,163 @@
+
+
+[#tls-010]
+= TLS-010: Vehicle Decoder
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-010: Vehicle Decoder
+|Version| 0.1
+|Release Date| TBD
+|Status| Outline
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+The vehicle is the visible part of racing.
+
+The decoder is what enables the vehicle to execute ODISC commands.
+____
+
+The Vehicle Decoder provides the interface between an ODISC vehicle and the
+Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]).
+
+The decoder receives commands from the Race Management System, controls vehicle
+behavior, and provides the interfaces required for vehicle identification
+and detection on the racetrack.
+
+The mechanical design of the vehicle is outside the scope of this
+specification. This specification defines the requirements for the decoder
+and its integration into an ODISC-compatible vehicle.
+
+
+== Philosophy
+
+The Vehicle Decoder translates race control logic into vehicle behavior.
+
+Vehicle behavior shall be determined by commands received from the Race
+Management System and shall not be caused by independent vehicle logic.
+
+This separation ensures that different vehicle platforms can participate in
+ODISC racing while maintaining consistent competition rules and behavior.
+
+== Capabilities
+
+The Vehicle Decoder provides the following functional capabilities.
+
+=== Race System Communication
+
+The Vehicle Decoder shall communicate with the Race Management System using
+the ODISC Communications specifications.
+
+The decoder shall receive commands required to control vehicle operation,
+including:
+
+* Throttle control
+* Brake control
+* Race Status Codes
+
+The decoder shall not independently determine race conditions or apply
+race rules.
+
+=== Decoder Identification
+
+The Vehicle Decoder shall provide a unique identifier allowing the Race
+Management System to distinguish individual decoders during communication
+and race operation.
+
+=== Motor Control
+
+The Vehicle Decoder shall provide a mechanism for controlling the vehicle
+motor.
+
+The decoder shall translate received vehicle commands into motor control
+signals according to the defined ODISC operating specifications.
+
+The motor interface shall prevent commanded vehicle behavior outside of the
+commands received from the Race Management System.
+
+=== Detection Transmitter Interface
+
+The Vehicle Decoder shall provide an interface for vehicle detection on
+ODISC racetracks.
+
+The detection transmitter shall transmit according to the applicable 
+detection protocol.
+
+==== Detection Transmitter Installation
+
+ODISC utilizes a center slot placement for the vehicle detection
+transmitter.
+
+This chosen placement allows reuse of prior investments made when
+purchasing slot cars and provides compatibility with existing vehicle
+platforms, including:
+
+* Slot.it oXigen (Type B & C Universal): 13.5 mm from the guide pivot center.
+* Scalextric Digital (DPR Chassis Plate): 16.5 mm to 17.5 mm from the guide pivot center.
+** This distance varies slightly by vehicle model to provide clearance for
+front axle assemblies.
+
+ODISC recommends minimizing the distance between the guide pivot and the
+detection transmitter.
+
+A shorter distance reduces the risk of detection loss when a vehicle is
+fishtailing or operating at extreme steering angles.
+
+=== Lighting
+
+The decoder shall provide the ability to control at least four (4) lights
+on independent channels.
+
+Lighting channels may be used for normal vehicle lighting functions or
+race status indication.
+
+When used for race status indication, lighting behavior shall operate
+according to race status codes received from the Race Management System.
+
+=== Vehicle Effects
+
+The Vehicle Decoder shall support execution of Vehicle Effect commands
+received through the ODISC Communications specifications.
+
+Vehicle Effects shall only be executed when commanded by the Race
+Management System.
+
+The Vehicle Decoder shall not independently generate Vehicle Effects.
+
+=== Power Interface
+
+The Vehicle Decoder shall provide the required interfaces for receiving
+vehicle power and supplying connected components.
+
+The decoder shall manage power delivery to ensure connected components
+operate within their defined electrical requirements.
+
+=== Firmware and Configuration
+
+The Vehicle Decoder shall support firmware updates using the
+ODISC Docking Station (xref:TLS-008/index.adoc#tls-008[TLS-008]).
+
+Firmware versions shall be identifiable to allow verification of
+compatibility with the current ODISC racetrack firmware and communication
+protocols.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

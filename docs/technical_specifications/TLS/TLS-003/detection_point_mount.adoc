@@ -1,0 +1,91 @@
+
+[pass]
+++++
+<svg xmlns="http://w3.org" viewBox="-120 -40 640 460" width="100%" height="auto" style="background-color: #ffffff;">
+  <!-- Styling Context -->
+  <style>
+    .pocket-outline { stroke: #1a202c; stroke-width: 2.5; fill: #edf2f7; }
+    .viewport-cutout { stroke: #1a202c; stroke-width: 2; fill: #ffffff; }
+    .dimension-line { stroke: #0066cc; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    .spacing-dim-line { stroke: #2b6cb0; stroke-width: 1.2; stroke-dasharray: 3 3; }
+    .text-dim { font-family: monospace; font-size: 14px; fill: #0066cc; font-weight: bold; text-anchor: middle; }
+    .text-spacing-dim { font-family: monospace; font-size: 13px; fill: #2b6cb0; font-weight: bold; text-anchor: middle; }
+    .text-label { font-family: sans-serif; font-size: 10px; fill: #1a202c; text-anchor: middle; font-weight: bold; }
+    .text-fastener-label { font-family: sans-serif; font-size: 11px; fill: #4a5568; text-anchor: start; font-weight: bold; }
+    .text-title { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #2d3748; text-anchor: middle; }
+    .center-line-axis { stroke: #ff3333; stroke-width: 1; stroke-dasharray: 2 2; }
+    .fastener-point { stroke: #2d3748; stroke-width: 2; }
+    .radius-pointer { stroke: #cc00cc; stroke-width: 1.2; fill: none; }
+  </style>
+
+  <!-- Centered Title Label -->
+  <text x="225" y="-18" class="text-title">Detection Point Mount</text>
+
+  <!-- NATIVE POCKET PROFILE (36.00 x 24.00mm envelope with uniform R2.00mm corners) -->
+  <path d="M 25,0 
+           L 425,0 
+           A 25,25 0 0 1 450,25 
+           L 450,275 
+           A 25,25 0 0 1 425,300 
+           L 25,300 
+           A 25,25 0 0 1 0,275 
+           L 0,25 
+           A 25,25 0 0 1 25,0 
+           Z" class="pocket-outline" />
+
+  <!-- Center Sensor Viewport Cutout (12.00mm x 4.00mm) -->
+  <rect x="150" y="125" width="150" height="50" class="viewport-cutout" />
+  <line x1="0" y1="150" x2="450" y2="150" class="center-line-axis" />
+  <line x1="225" y1="0" x2="225" y2="300" class="center-line-axis" />
+  
+  <!-- Re-balanced & Vertically Centered Viewport Labels -->
+  <text x="225" y="142" class="text-label">VIEWPORT CUTOUT</text>
+  <text x="225" y="162" class="text-label">12.00mm x 4.00mm</text>
+
+  <!-- 4x Fastener Crosshair Target Points (+) -->
+  <!-- Top Left (100, 87.5) -->
+  <line x1="85" y1="87.5" x2="115" y2="87.5" class="fastener-point" />
+  <line x1="100" y1="72.5" x2="100" y2="102.5" class="fastener-point" />
+  <text x="55" y="62" class="text-fastener-label">4x Fastener Locations (M3)</text>
+
+  <!-- Top Right (350, 87.5) -->
+  <line x1="335" y1="87.5" x2="365" y2="87.5" class="fastener-point" />
+  <line x1="350" y1="72.5" x2="350" y2="102.5" class="fastener-point" />
+
+  <!-- Bottom Left (100, 212.5) -->
+  <line x1="85" y1="212.5" x2="115" y2="212.5" class="fastener-point" />
+  <line x1="100" y1="197.5" x2="100" y2="227.5" class="fastener-point" />
+
+  <!-- Bottom Right (350, 212.5) -->
+  <line x1="335" y1="212.5" x2="365" y2="212.5" class="fastener-point" />
+  <line x1="350" y1="197.5" x2="350" y2="227.5" class="fastener-point" />
+
+  <!-- Hole Spacing Dimension Lines -->
+  <!-- Horizontal Track (20.00mm) -->
+  <line x1="100" y1="320" x2="350" y2="320" class="spacing-dim-line" />
+  <line x1="100" y1="225" x2="100" y2="320" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="350" y1="225" x2="350" y2="320" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="225" y="336" class="text-spacing-dim">Hole Spacing</text>
+  <text x="225" y="352" class="text-spacing-dim">20.00mm +/-0.1mm</text>
+
+  <!-- Vertical Track (10.00mm) -->
+  <line x1="-35" y1="87.5" x2="-35" y2="212.5" class="spacing-dim-line" />
+  <line x1="-35" y1="87.5" x2="85" y2="87.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="-35" y1="212.5" x2="85" y2="212.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="-56" y="150" class="text-spacing-dim" style="transform: rotate(-90deg); transform-origin: -56px 150px;">Hole Spacing</text>
+  <text x="-40" y="150" class="text-spacing-dim" style="transform: rotate(-90deg); transform-origin: -40px 150px;">10.00mm +/-0.1mm</text>
+
+  <!-- Global Pocket Envelope Dimensions -->
+  <!-- Total Width (36.00mm) -->
+  <line x1="0" y1="375" x2="450" y2="375" class="dimension-line" />
+  <text x="225" y="395" class="text-dim">36.00mm +/-0.5mm</text>
+
+  <!-- Total Height (24.00mm) -->
+  <line x1="472" y1="0" x2="472" y2="300" class="dimension-line" />
+  <text x="490" y="150" class="text-dim" style="transform: rotate(90deg); transform-origin: 490px 150px;">24.00mm +/-0.5mm</text>
+
+  <!-- Corner Radius Dimension (Moved down and centered between Hole Spacing text and the 20mm indicator line) -->
+  <path d="M 7.32,272.68 L -55,340 H -15" class="radius-pointer" />
+  <text x="-10" y="344" style="font-family: monospace; font-size: 12px; fill: #cc00cc; font-weight: bold; text-anchor: start;">4x R2.00mm</text>
+</svg>
+++++

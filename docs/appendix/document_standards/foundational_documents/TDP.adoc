@@ -1,0 +1,28 @@
+
+
+= Track Design Principles (TDP) Document Standards
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| Track Design Principles (TDP) Document Standards
+|Version| 0.1
+|Status| Stub
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

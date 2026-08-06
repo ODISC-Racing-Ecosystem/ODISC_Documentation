@@ -1,0 +1,20 @@
+
+= Technical Specifications
+
+Below you will find the various technical specifications that exist for 
+the ODISC Racing Ecosystem. Combined they provide the structure that 
+defines the interoperability of the ecosystem to ensure that all the moving parts can work together.
+
+== File Types
+
+xref:TLG/index.adoc[TLG]::
+Technical Library Group, a collection of TLS that define a functioning system
+
+xref:TLS/index.adoc[TLS]::
+Technical Library Standards, specifications for how a single system works
+
+DS::
+Domain Specification, the detailed specifications for how a TLS is implemented
+
+
+

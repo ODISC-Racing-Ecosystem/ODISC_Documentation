@@ -1,0 +1,100 @@
+
+= Introduction to the ODISC Ecosystem!
+
+== Introduction
+
+The ODISC standards are intended for a wide range of audiences, from racers and club organizers to manufacturers, software developers, and hardware designers. Depending on your interests, the following guide provides a recommended starting point.
+
+Not every participant needs to understand every standard. ODISC has been intentionally structured so that readers can focus on the areas most relevant to their role while still understanding how their part fits into the larger ecosystem.
+
+== New to ODISC?
+
+If you are new to ODISC and would like to understand what the project is about, begin with the ODISC Foundational Documents (OFD). It explains why ODISC exists, the problems it aims to solve, and the vision for the ecosystem.
+
+The guiding principles are also found in the OFD documents. These define the philosophy behind the project and explain the reasoning used when making architectural and engineering decisions.
+
+Whenever you find yourself wondering "Why was it designed this way?", the answer can almost always be found in the OFD section of documentation.
+
+You don't need to dive into the Domain Standards (DS) unless you want a deeper understanding of how specific systems operate, such as the internal workings of the Venue Management or Track Management systems, or if you intend to design, develop, or implement them yourself.
+
+A good way to think about the documentation is the following groupings.
+
+Conceptual::
+"Why does it work this way?"
++
+Found in the ODISC Foundational Documents (OFD) +
+These define the vision, principles, and conceptual model behind ODISC.
+
+Architectural::
+"What systems exist and how do they fit together?"
++
+Found in the the Technical Library Groups (TLG) and Technical Library Standards (TLS) +
+These define the boundaries, responsibilities, and interactions of ODISC systems. TLG documents group 
+multiple TLS into broader working systems such as a racetrack.
+
+Technical::
+"How does this subsystem actually work?"
++
+Found in the Domain Standards (DS) +
+These define detailed technical requirements and implementation specifications.
+
+////
+Workshop Activities::
+"What maintenance and preparation activities are permitted when racing?"
++
+Found in the Workshop Activity Categories (WAC) +
+These define permitted workshop operations, maintenance activities, and competition preparation practices.
+
+Racing Rules::
+"How are races conducted and governed?"
++
+Found in the Racing Rules Specification (RRS) +
+These define the rules that govern races at different levels, from club races to international competitions.
+////
+
+== The Reasoning behind Document Types
+
+A new developer might ask: +
+"Why not put everything in one standard?"
+
+The answer is simple:
+
+* OFD prevents philosophy and governance from polluting technical requirements.
+* GP ensures we all have the same guiding principles when working with ODISC.
+* TLS prevents architecture from being tied to one implementation.
+* DS prevents implementation details from becoming ecosystem requirements.
+* WAC prevents workshop/racing procedures from being confused with engineering specifications.
+
+== Interested in Racing?
+
+If your goal is simply to participate in races, you only need a working understanding of a small portion of the standards.
+The documents most relevant to racers include:
+
+* OFD-001 through OFD-003 (Introduction to ODISC) 
+* Venue Management (high-level overview)
+* Driver Stations
+* Vehicle Requirements
+* Pairing
+* Competition Rules
+* Race Formats
+// * Workshop Activity Categories (WAC)
+
+== Interested in Building an ODISC Racetrack?
+
+Begin with the Technical Library Groups (TLG) and Technical Library Standards (TLS).
+The TLG documents describe how TLS documents work together, while TLS documents describe the 
+overall architecture of the ecosystem at the major system level and explain how the major systems 
+interact with one another. They provide the framework upon which the detailed 
+Domain Standards (DS) are built. 
+
+== Interested in Developing Software or Firmware?
+
+Start with the Technical Library Standards (TLS) to understand the responsibilities of each subsystem.
+Then refer to the relevant Domain Standards (DS), which define the detailed behavior, interfaces, 
+and requirements for each subsystem being implemented.
+
+== Interested in Manufacturing Products?
+
+Begin with the Technical Library Standards (TLS) to understand how your products fit into the ecosystem.
+Once you understand the architectural requirements, continue with the appropriate Domain Standards (DS) 
+for the products you intend to design or manufacture.

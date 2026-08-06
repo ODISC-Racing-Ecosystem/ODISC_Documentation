@@ -1,0 +1,5 @@
+
+
+== Future Reserved Terms
+Placeholder for future terminology to avoid collisions.
+

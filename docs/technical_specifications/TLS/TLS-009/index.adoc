@@ -1,0 +1,172 @@
+
+
+[#tls-009]
+= TLS-009: Driver Station
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-009: Driver Station
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+Shared hardware allows reduced costs.
+____
+
+Without drivers, only autonomous vehicles would race.
+
+Shared driver station hardware reduces cost while allowing each driver 
+to bring their preferred controller and personal driving configuration.
+
+A driver station is more than a controller interface. It provides the 
+processing required to interpret controller input, apply permitted 
+driver-specific configuration, communicate with the Race Management 
+System (xref:TLS-002/index.adoc#tls-002[TLS-002]), and present race information to the driver.
+
+== Philosophy
+
+The Driver Station provides a standardized interface between the driver
+and the Race Management System.
+
+Driver preference is separated from physical controller hardware.
+Controllers provide input, while the Driver Station applies permitted
+configuration, validates the resulting commands, and communicates with
+the Race Management System.
+
+This separation allows drivers to use different controllers while
+maintaining fair competition through centralized enforcement of race
+rules and Parc Fermé restrictions.
+
+== Capabilities
+The following items need to be provided by each driver station.
+
+=== Driver Identification
+
+The Driver Station shall support identification of the current driver.
+
+NOTE: The method for this is TBD.
+
+=== Controller Connections
+
+Each driver station must provide connections where a driver plugs in their 
+controller. A driver station may provide a second set of connections to 
+enable driver swapping mid-race, such as for endurance racing, or to 
+connect a backup controller in case of control issues.
+
+=== Controller Calibration
+
+Variations in controller hardware shall not provide a competitive 
+advantage. The Driver Station shall support controller calibration 
+by determining the minimum and maximum throttle positions and mapping 
+them to the standardized operating range.
+
+Calibration may also verify that supported controller inputs operate correctly.
+
+=== Handheld Controller
+
+The Driver Station shall provide a common interface for communication 
+with compliant handheld controllers. The interface shall include a 
+method to validate controller capabilities to ensure compliance with 
+ODISC racing regulations.
+
+The compliant controller interface intentionally limits available controller
+features. This ensures that differences in controller hardware do not create
+an unintended competitive advantage and allows low-cost controllers to remain
+competitive with higher-cost alternatives.
+
+==== Compliant Handheld Controller
+
+A compliant controller shall provide the following inputs:
+
+* Throttle Control
+** No curve adjustments may be made by the controller
+* Lane Selection
+** Must support Left, Straight, and Right indications
+
+A compliant controller may provide the following additional inputs:
+
+* Brake Initiation (on/off)
+* Vehicle Effect Controls
+
+A compliant controller may provide the following feedback features:
+
+* Race Status Lights
+* Rumble Feedback
+
+Feedback features shall only present information received from the 
+Driver Station through the defined interface and shall not generate 
+independent race information nor maintain internal counters.
+
+WARNING: Any features not listed in this specification shall not be present
+to comply with Parc Fermé rules during racing.
+
+==== Vehicle Effects
+
+Vehicle Effects may be used for non-competitive vehicle
+functions such as:
+
+* Horn activation
+* High beam activation
+* Turn Signals
+** Tied to lane selection actions
+* Other approved vehicle accessory functions
+
+Available Vehicle Effects and communication requirements are defined by
+the applicable ODISC Data Specifications.
+
+Any Vehicle Effects shall not affect vehicle performance, 
+race outcome, or provide competitive advantage.
+
+=== Driver Configuration
+
+The driver station provides the ability to adjust throttle curves based 
+upon driver preference to move away from a purely linear throttle curve. 
+Any such curves are applied prior to sending the throttle request to the 
+Race Management System.
+
+Throttle curve adjustments may be locked out due to Parc Fermé rules.
+
+=== Display and Feedback
+
+The Driver Station shall provide feedback allowing the driver to verify 
+identity, configuration, and race-related information appropriate to 
+the current session.
+
+=== Race Management Communication
+
+The Driver Station communicates with the Race Management System using
+the ODISC Communications specifications.
+
+The Driver Station shall transmit validated driver inputs and receive
+race information required to provide driver feedback and enforce race
+rules.
+
+=== Input Validation
+
+The Driver Station shall validate received controller inputs before
+transmitting commands to the Race Management System.
+
+Invalid, unsupported, or out-of-range inputs shall be rejected or handled
+according to the ODISC Communications specification.
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

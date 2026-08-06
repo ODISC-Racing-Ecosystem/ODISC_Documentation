@@ -1,0 +1,76 @@
+
+[#GP-04]
+= GP-04: Engineering Principles
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| GP-04: Engineering Principles
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+The following principles define the ODISC approach to engineering design.
+
+* 01 Single Responsibility
+* 02 Backward Compatibility
+* 03 Validate Before Expanding
+
+== 01 Single Responsibility
+
+Every document, subsystem, and component should have a single, clearly
+defined responsibility.
+
+When a concept begins to answer multiple questions or serve multiple
+audiences, it should be divided into smaller, focused parts rather than
+expanded into a broader one.
+
+Keeping responsibilities narrowly defined improves readability,
+maintainability, testability, and long-term evolution while reducing
+unnecessary coupling throughout the ecosystem.
+
+== 02 Backward Compatibility
+
+Changes to ODISC implementations, specifications, and protocols should
+preserve compatibility with existing compliant systems whenever
+practical.
+
+Breaking changes shall only be introduced when the benefits clearly
+outweigh the impact on existing users, implementations, and deployed
+systems.
+
+Where compatibility cannot be maintained, migration paths should be
+clearly defined and documented.
+
+== 03 Validate Before Expanding
+
+Designs should be proven through practical implementation before they
+become foundations for additional complexity.
+
+The ecosystem should evolve through tested experience rather than
+theoretical completeness. Capabilities should be validated on a small
+scale before being expanded into broader standards or higher
+certification levels.
+
+
+
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

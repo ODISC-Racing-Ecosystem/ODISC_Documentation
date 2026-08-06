@@ -1,0 +1,175 @@
+
+[#ds-001-100]
+= DS-001-100: Track Dimensions
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| DS-001-100: Track Dimensions
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+This DS defines the minimum dimensional requirements for racetrack 
+geometry to support competitive racing.
+
+== Physical Requirements
+
+The following dimensions define the minimum track geometry required 
+to support vehicle clearance, passing where permitted, and controlled 
+vehicle movement including limited drift.
+
+.Track Dimensions
+[cols="3,3,2,2", options="header"]
+|===
+
+| Dimension 
+| Notes 
+^| 1/32 Scale 
+^| 1/24 Scale
+
+| Slot Size
+| Width x depth
+2+^| 4mm x 10mm
+
+| Maximum Width
+| Vehicle Size
+| 68 mm
+| 83 mm
+
+.3+| Slot CC ^1^
+| For straights
+^| 70mm
+^| 85mm
+
+| For curves ^2^
+^| 75mm
+^| 95mm
+
+| Non-passing sections ^3^
+2+^| 25mm
+
+.3+| Track Edge Clearance Minimums
+| Straight
+^| 40mm
+^| 45mm
+
+| Curve, inside radius edge
+^| 45mm
+^| 50mm
+
+| Curve, outside radius edge
+^| 75mm
+^| 90mm
+
+|===
+
+. Slot CC (Center-to-Center) distance measurements are taken perpendicular 
+to the direction of travel at the track surface for straight sections, and 
+radially from the curve center for curved sections.
+. Applies where side-by-side racing is permitted.
+. For sections of the track that do not permit passing, but still allow vehicles to use multiple racing lines.
+
+NOTE: All dimensions listed define the required racing clearance for racetrack geometry, but 
+do not include space for guardrails, light fixtures, or scenery. Any such additions must be 
+calculated and added in addition to the listed dimensions.
+
+=== Total Track Width
+
+To get the minimum total track width required in a given location, the following formula 
+can be used. The value of Edges is the sum of all required track edge clearances 
+for the section being calculated.
+
+Straight Section Calculation::
+
+Slot CC: Use slot CC for straights +
+Edges: Use Straight Edge Clearance * 2
+
+Curved Section Calculation::
+
+Slot CC: Use slot CC for curves +
+Edges: Inner Curve Clearance + Outer Curve Clearance
+
+Non-Passing Section Calculation::
+
+Slot CC: Use slot CC for non-passing sections +
+Edges: Use Straight Edge Clearance * 2 for straight sections, or Inner Curve Clearance + Outer Curve Clearance for curved sections.
+
+____
+
+( (Lanes - 1) * Slot CC ) + Edges
+____
+
+=== Lane Changer Angles
+
+The following angles are provided as a reference for track designers to 
+ensure that lane changers can operate without derailing cars or risking 
+overlap between power rails during the lane change.
+
+[cols="3,4,2,2", options="header"]
+|===
+
+| Dimension 
+| Notes 
+^| 1/32 Scale 
+^| 1/24 Scale
+
+| Minimum Entry Angle
+| To maintain track compactness
+^| 8°
+^| 6°
+
+| Maximum Entry Angle
+| To prevent deslotting/guide binding
+^| 15°
+^| 12°
+
+| Ideal Diverging Angle
+| Optimum balance of speed and space
+^| 10°
+^| 8°
+
+| Ideal Transition Length
+| Linear space required at the ideal entry angle ^1^
+^| 397 mm
+^| 605 mm
+
+| High-Speed Transition Length
+| Linear space required at the minimum entry angle ^1^
+^| 498 mm
+^| 809 mm
+
+|===
+
+. Calculated based on the Straight Section Slot CC dimensions using the formula: Length = Slot CC / tan(Ideal Angle).
+
+== Functional Requirements
+
+No additional functional requirements.
+
+== Visualizations
+
+include::lane_changer_angle_visualization.adoc[leveloffset=+2]
+
+== Requirements Checklist
+
+No checklist items defined.
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

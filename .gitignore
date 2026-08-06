@@ -1,0 +1,31 @@
+# --- AsciiDoc / Asciidoctor Build Outputs ---
+*.html
+*.pdf
+*.epub
+*.mobi
+*.xml
+
+# --- Antora & Tooling Caches ---
+/.asciidoctor/
+/node_modules/
+/build/
+/.cache/
+/dist/
+/out/
+/target/
+
+# --- IDE & Editor Settings ---
+.vscode/
+.idea/
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Environment & Local Configs ---
+_secret.yml
+.env
+.secrets
+
+migration

@@ -1,0 +1,105 @@
+
+[#DS-002-501]
+= DS-002-501: Race Director
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| DS-002-101: DS-Name
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+== Physical Requirements (Optional)
+
+List any physical mounting points or other size restrictions.
+
+== Functional Requirements
+
+=== Race Director Interface
+==== Capabilities
+
+The Race Director station has two primary elements:
+
+* A computer terminal (screen, keyboard, mouse)
+* A physical representation of the track with switches to quickly trigger flag events.
+
+===== Computer Terminal
+
+There isn't much to say about a computer terminal. It allows viewing data and 
+inputting decisions that affect the race. Please review the terminal specifications 
+for more information on the functionality of this component.
+
+===== Physical Representation
+
+Each track is different, and as such, part of the track design is to provide a panel that can be used to create a race directors overview. The size depends on the track size, but should be able to quickly reach all the buttons if something happens. It should be aligned in accordance with the race track so that things that are near on track are near on the panel. Things that are left are to the left, and so on.
+
+====== Required Switches
+
+The following switches should be present on the race directors racetrack view:
+
+* Sector Caution
+** These switches are placed every so often and are mapped to place a section of track (not too small, not too big) into a single flag caution. The system will apply race rules accordingly.
+** Triggering any two of these switches will automatically trigger a full track double caution (determined by two separate events).
+* Full Track Caution
+** A single switch that is easily accessible to immediately put the entire track into a caution state.
+* Full Track Red Flag
+** A single switch that is easily accessible to immediately put the entire track into a hazard state.
+** Location must be chosen so as to reduce the risk of accidentally triggering this switch.
+* Emergency Stop
+** When activated all power is immediately cut from the entire system.
+*** This is to be used when critical failures have occurred that require all activities to stop immediately.
+** Due to the nature of how this occurs, any ongoing race is null and void and must be rerun.
+** Location must be chosen so as to prevent the risk of accidentally triggering this switch.
+
+The selection of the type of switches (push button or toggle) are up to the racetrack builder. Switches should have protection so as to not trigger accidentally.
+
+== Requirements Checklist
+
+.Checklist to ensure all requirements are met
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| Requirement Example 1
+| Short description of the specific technical requirement to be verified.
+| ✅
+| ☐
+
+| Requirement Example 2
+| Short description of another technical requirement to be verified.
+| 
+| ☐
+
+| 
+| 
+| 
+| ☐
+
+| 
+| 
+| 
+| ☐
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

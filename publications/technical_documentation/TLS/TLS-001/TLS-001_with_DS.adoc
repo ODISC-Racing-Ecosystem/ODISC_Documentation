@@ -1,0 +1,17 @@
+= ODISC Ecosystem TLS-001
+:toc:
+:sectnums:
+:toclevels: 2
+:doctype: book
+:docsdir: ../../../../docs/technical_specifications/modules/ROOT/pages
+:licensedir: ../../../../docs/appendix/modules/ROOT/pages/licenses
+:pdf-themesdir: resources/themes/pdf-themes
+:pdf-theme: pdf-for-technical-library
+
+include::{docsdir}/TLS/TLS-001/index.adoc[leveloffset=1]
+include::{docsdir}/DS/TLS-001/DS-001-100/index.adoc[leveloffset=1]
+include::{docsdir}/DS/TLS-001/DS-001-110/index.adoc[leveloffset=1]
+include::{docsdir}/DS/TLS-001/DS-001-120/index.adoc[leveloffset=1]
+
+// Last item in file
+include::{licensedir}/documentation_license.adoc[leveloffset=1]

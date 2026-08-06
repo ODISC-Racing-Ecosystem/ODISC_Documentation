@@ -1,0 +1,40 @@
+
+
+[#competition_tier_invite]
+= Tier: International Invitationals
+
+International Invitationals represent prestige, non-pyramid showcase events 
+bringing together the absolute top-ranked competitors from multiple sovereign 
+national member organizations. Due to the logistical constraints of long-distance 
+travel, these events are organized as standalone tournaments rather than ongoing 
+seasonal championship schedules.
+
+No global championship league points are tracked across Invite-tier events, and 
+they exist completely independent of the domestic promotion and relegation ladder. 
+
+Participation in an Invitational event is strictly restrictive and accessible by 
+invitation only. Drivers cannot qualify directly via points accumulation within this tier; 
+instead, grid allocation is determined by peak performance metrics achieved at the 
+Tier 1 (Nationals) level.
+
+Official invitational criteria include:
+* Winning or placing as a top-ranked finalist in a sanctioned Tier 1 National 
+championship season.
+* Formal selection or endorsement by the driver's respective national governing 
+authority.
+* Full compliance with international technical specifications, hardware sizing, 
+and digital signaling standards defined for the host venue.
+
+== Competitive Pyramid
+
+As a standalone prestige classification sitting at the apex of the ODISC framework, 
+the International tier does not participate in the regular promotion or relegation matrix. 
+
+Drivers who participate in an International Invitational return to their 
+rightful domestic tier (typically Tier 1) at the conclusion of the event. 
+
+Poor performance or failure to attend an invitation carries zero negative 
+relegation penalties toward a driver's domestic standing, ensuring that elite 
+racers can accept or decline international invitations without sporting risk.
+
+

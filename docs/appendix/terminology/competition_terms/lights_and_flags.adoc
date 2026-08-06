@@ -1,0 +1,349 @@
+
+
+
+[#flag_colors]
+= Lights and their Flag Meanings
+
+The following standard colors are used for lighting within 
+the ODISC Ecosystem. Each color has a specific meaning and 
+is used to communicate the status of a race or event.
+
+The shown examples of lights on the various displays are 
+shown as representative of the pattern, not to indicate exact light placement.
+
+== White
+
+Uses: +
+* General Lighting: Look how pretty! +
+* Racing Conditions: Race is underway.
+
+=== Race is underway
+
+For general lighting, white is used to indicate that the race is underway. This is indicated by all lights being fully on and white without any other color visible.
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Racing Underway</text>
+  <!-- All 4 Lights ON (White) -->
+  <circle cx="200" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="400" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="600" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="800" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+</svg>
+++++
+
+=== White Flag
+
+A white flag indicates that there is one lap left in the current heat or race.
+
+Indication::
+This event covers the full racetrack and is indicated by white lights without 
+any other color visible. Every other light should be alternating on and off 
+to create an increased flashing effect.
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">White Flag - Phase 1</text>
+  <!-- Alternating Lights: 1 & 3 ON (White), 2 & 4 OFF (Dim Gray) -->
+  <circle cx="200" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="400" cy="145" r="50" fill="#4a4a4a" stroke="#222" stroke-width="4"/>
+  <circle cx="600" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="800" cy="145" r="50" fill="#4a4a4a" stroke="#222" stroke-width="4"/>
+</svg>
+++++
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">White Flag - Phase 2</text>
+  <!-- Alternating Lights: 1 & 3 OFF (Dim Gray), 2 & 4 ON (White) -->
+  <circle cx="200" cy="145" r="50" fill="#4a4a4a" stroke="#222" stroke-width="4"/>
+  <circle cx="400" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="600" cy="145" r="50" fill="#4a4a4a" stroke="#222" stroke-width="4"/>
+  <circle cx="800" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+</svg>
+++++
+
+== Green
+
+Uses: +
+* General Lighting: N/A +
+* Racing conditions: Race has started or resumed.
+
+=== Green Flag
+
+A green flag is issued to indicate that the race has started or resumed.
+
+Indication::
+The green flag is indicated by all lights being fully on and green without any 
+other color visible. +
+After a green indication for a number of seconds (configurable), indicators 
+change to white or extinguish as appropriate.
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Green Flag</text>
+  <!-- All 4 Lights ON (Green) -->
+  <circle cx="200" cy="145" r="50" fill="#00cc44" stroke="#fff" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#00cc44" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="145" r="50" fill="#00cc44" stroke="#fff" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#00cc44" stroke-width="3" opacity="0.4"/>
+  <circle cx="600" cy="145" r="50" fill="#00cc44" stroke="#fff" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#00cc44" stroke-width="3" opacity="0.4"/>
+  <circle cx="800" cy="145" r="50" fill="#00cc44" stroke="#fff" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#00cc44" stroke-width="3" opacity="0.4"/>
+</svg>
+++++
+
+
+== Blue
+
+Uses: +
+* General lighting: Race is being configured or is in pre-race stages. +
+* Racing conditions: You are being overtaken by another vehicle that is at least 1 lap in front of you. Give way when able.
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Blue Flag - Phase 1</text>
+  <!-- All 4 Lights ON (Blue) -->
+  <circle cx="200" cy="145" r="50" fill="#0066ff" stroke="#fff" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#0066ff" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="145" r="50" fill="#0066ff" stroke="#fff" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#0066ff" stroke-width="3" opacity="0.4"/>
+  <circle cx="600" cy="145" r="50" fill="#0066ff" stroke="#fff" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#0066ff" stroke-width="3" opacity="0.4"/>
+  <circle cx="800" cy="145" r="50" fill="#0066ff" stroke="#fff" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#0066ff" stroke-width="3" opacity="0.4"/>
+</svg>
+++++
+
+
+== Yellow
+
+Uses: +
+* General Lighting: N/A +
+* Racing Conditions: Yellow and Double Yellow Flags +
+
+=== Yellow Flag
+
+A single yellow caution is used when a car has stopped moving or another 
+hazard exists on the track. When triggered, the system evaluates the incoming 
+data and flags a section of the track, including approach areas, as being 
+"under caution" and applies any specific race rules to it.
+
+Indication::
+The racetrack displays solid yellow on all lights without any other color visible, 
+alternating with lights being fully off to create a fast flashing indicator. 
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Yellow Flag - Phase 1</text>
+  <!-- All 4 Lights ON -->
+  <circle cx="200" cy="145" r="50" fill="#ffcc00" stroke="#fff" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#ffcc00" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="145" r="50" fill="#ffcc00" stroke="#fff" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#ffcc00" stroke-width="3" opacity="0.4"/>
+  <circle cx="600" cy="145" r="50" fill="#ffcc00" stroke="#fff" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#ffcc00" stroke-width="3" opacity="0.4"/>
+  <circle cx="800" cy="145" r="50" fill="#ffcc00" stroke="#fff" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#ffcc00" stroke-width="3" opacity="0.4"/>
+</svg>
+++++
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Yellow Flag - Phase 2</text>
+  <!-- All 4 Lights OFF -->
+  <circle cx="200" cy="145" r="50" fill="#4a3b00" stroke="#222" stroke-width="4"/>
+  <circle cx="400" cy="145" r="50" fill="#4a3b00" stroke="#222" stroke-width="4"/>
+  <circle cx="600" cy="145" r="50" fill="#4a3b00" stroke="#222" stroke-width="4"/>
+  <circle cx="800" cy="145" r="50" fill="#4a3b00" stroke="#222" stroke-width="4"/>
+</svg>
+++++
+
+=== Double Yellow Flag indication
+
+If more than one yellow flag caution event is triggered, even if within the same 
+section (such as two cars derailing together), a full track caution is triggered. 
+This works similar to the partial caution, but applies to the entire track.
+
+Indication::
+The racetrack displays solid yellow on every other light without any other color visible. 
+The lights alternate on and off to create an increased flashing effect (configurable timing).
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Double Yellow Flag - Phase 1</text>
+  <!-- Alternating Lights: 1 & 3 ON, 2 & 4 OFF -->
+  <circle cx="200" cy="145" r="50" fill="#ffcc00" stroke="#fff" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#ffcc00" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="145" r="50" fill="#4a3b00" stroke="#222" stroke-width="4"/>
+  <circle cx="600" cy="145" r="50" fill="#ffcc00" stroke="#fff" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#ffcc00" stroke-width="3" opacity="0.4"/>
+  <circle cx="800" cy="145" r="50" fill="#4a3b00" stroke="#222" stroke-width="4"/>
+</svg>
+++++
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Double Yellow Flag - Phase 2</text>
+  <!-- Alternating Lights: 1 & 3 OFF, 2 & 4 ON -->
+  <circle cx="200" cy="145" r="50" fill="#4a3b00" stroke="#222" stroke-width="4"/>
+  <circle cx="400" cy="145" r="50" fill="#ffcc00" stroke="#fff" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#ffcc00" stroke-width="3" opacity="0.4"/>
+  <circle cx="600" cy="145" r="50" fill="#4a3b00" stroke="#222" stroke-width="4"/>
+  <circle cx="800" cy="145" r="50" fill="#ffcc00" stroke="#fff" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#ffcc00" stroke-width="3" opacity="0.4"/>
+</svg>
+++++
+
+
+== Red
+
+Uses: +
+* General Lighting: N/A +
+* Racing conditions: Red Flag, session stopped.
+
+=== Red Flag
+
+A red flag indicates an unsafe condition, and as such, racing may not continue. 
+Racing stops immediately. This is handled by shutting down all data transmission 
+to the track and removing power from the rails. 
+
+Indication::
+Full red without any other color visible alternating in the same manner as double yellow lights, 
+alternating with fully off to create a slow flashing indicator (configurable timing).
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Red Flag - Phase 1</text>
+  <!-- Alternating Lights: 1 & 3 ON, 2 & 4 OFF -->
+  <circle cx="200" cy="145" r="50" fill="#ff0000" stroke="#fff" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#ff0000" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="145" r="50" fill="#4a0000" stroke="#222" stroke-width="4"/>
+  <circle cx="600" cy="145" r="50" fill="#ff0000" stroke="#fff" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#ff0000" stroke-width="3" opacity="0.4"/>
+  <circle cx="800" cy="145" r="50" fill="#4a0000" stroke="#222" stroke-width="4"/>
+</svg>
+++++
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Red Flag - Phase 2</text>
+  <!-- Alternating Lights: 1 & 3 OFF, 2 & 4 ON -->
+  <circle cx="200" cy="145" r="50" fill="#4a0000" stroke="#222" stroke-width="4"/>
+  <circle cx="400" cy="145" r="50" fill="#ff0000" stroke="#fff" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#ff0000" stroke-width="3" opacity="0.4"/>
+  <circle cx="600" cy="145" r="50" fill="#4a0000" stroke="#222" stroke-width="4"/>
+  <circle cx="800" cy="145" r="50" fill="#ff0000" stroke="#fff" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#ff0000" stroke-width="3" opacity="0.4"/>
+</svg>
+++++
+
+
+== Purple (Replaces Black)
+
+Uses: +
+* General Lighting: N/A +
+* Racing conditions: Session finished or a Black Flag has been issued.
+
+NOTE: As black is not a visible color, ODISC uses purple to indicate black when using lighting systems.
+
+=== Black Flag
+
+A warning, penalty, or disqualification has been issued for a vehicle.
+
+Indication::
+This is the only event that is not shown on track, but is instead indicated on the 
+driver station for the appropriate vehicle, and may be indicated on the controller 
+of the driver as well. +
+Advanced vehicle decoders may also indicate this on the vehicle itself.
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Black Flag - Phase 1</text>
+  <!-- All 4 Lights ON (Purple) -->
+  <circle cx="200" cy="145" r="50" fill="#b300b3" stroke="#fff" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#b300b3" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="145" r="50" fill="#b300b3" stroke="#fff" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#b300b3" stroke-width="3" opacity="0.4"/>
+  <circle cx="600" cy="145" r="50" fill="#b300b3" stroke="#fff" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#b300b3" stroke-width="3" opacity="0.4"/>
+  <circle cx="800" cy="145" r="50" fill="#b300b3" stroke="#fff" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#b300b3" stroke-width="3" opacity="0.4"/>
+</svg>
+++++
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Black Flag - Phase 2</text>
+  <!-- All 4 Lights OFF (Dim Purple) -->
+  <circle cx="200" cy="145" r="50" fill="#330033" stroke="#222" stroke-width="4"/>
+  <circle cx="400" cy="145" r="50" fill="#330033" stroke="#222" stroke-width="4"/>
+  <circle cx="600" cy="145" r="50" fill="#330033" stroke="#222" stroke-width="4"/>
+  <circle cx="800" cy="145" r="50" fill="#330033" stroke="#222" stroke-width="4"/>
+</svg>
+++++
+
+
+=== Checkered Flag
+
+Indicates completion of a session. This can be winning a race, end of practice, end of a heat, etc.
+
+Indication::
+The checkered flag is indicated by alternating lights of purple and white, with the lights 
+alternating color to create a flashing effect (configurable timing). 
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Checkered Flag - Phase 1</text>
+  <!-- Alternating Lights: 1 & 3 ON (Purple), 2 & 4 ON (White) -->
+  <circle cx="200" cy="145" r="50" fill="#b300b3" stroke="#fff" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#b300b3" stroke-width="3" opacity="0.4"/>
+  <circle cx="400" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="600" cy="145" r="50" fill="#b300b3" stroke="#fff" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#b300b3" stroke-width="3" opacity="0.4"/>
+  <circle cx="800" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+</svg>
+++++
+
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 1000 250" width="400" height="100">
+  <rect width="1000" height="250" rx="15" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  <text x="500" y="45" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Checkered Flag - Phase 2</text>
+  <!-- Alternating Lights: 1 & 3 ON (White), 2 & 4 ON (Purple) -->
+  <circle cx="200" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="200" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="400" cy="145" r="50" fill="#b300b3" stroke="#fff" stroke-width="4"/>
+  <circle cx="400" cy="145" r="65" fill="none" stroke="#b300b3" stroke-width="3" opacity="0.4"/>
+  <circle cx="600" cy="145" r="50" fill="#ffffff" stroke="#eee" stroke-width="4"/>
+  <circle cx="600" cy="145" r="65" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  <circle cx="800" cy="145" r="50" fill="#b300b3" stroke="#fff" stroke-width="4"/>
+  <circle cx="800" cy="145" r="65" fill="none" stroke="#b300b3" stroke-width="3" opacity="0.4"/>
+</svg>
+++++
+
+

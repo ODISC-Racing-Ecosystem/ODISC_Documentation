@@ -1,0 +1,72 @@
+
+[#racing_classes]
+= Racing Classes
+
+ODISC Racing Classes are determined by pairing the selected racing class 
+options which together form a unique defined racing class with a 
+specific ruleset.
+
+== Racing Class Options
+
+A racing class is made up by selecting a single definition from 
+each one of these options.
+
+=== Tier
+
+The tier is the level of competition. 
+
+Higher tiers will be tailored towards drivers with more 
+experience and will usually have fiercer competition on track.
+
+=== Manufacturer Category
+
+The allowed categories of manufacturers for this racing class.
+
+=== Performance
+
+The performance level dictates what can be done to modify a vehicle prior to raceday.
+
+=== Vehicle Type
+
+The vehicle type defines the body type, as well as dimensions that must be adhered to based upon the chosen scale.
+
+[#scale]
+=== Scale
+
+The scale of an ODISC racing class is directly dictated by the design of the racetrack layout, as tracks are engineered with specific lane spacing requirements to accommodate varying vehicle widths.
+
+ODISC officially sanctions racing exclusively in two scales:
+
+* 1/32 Scale is the primary scale natively supported by ODISC.
+* 1/24 Scale is the secondary scale supported by ODISC.
+
+The ODISC Technical Specifications are fundamentally optimized for 1/32 scale racing. 
+
+1/24 scale is however fully supported as its implementation requires no changes 
+to core mechanical or sporting regulations; the only variation occurs in track 
+footprint and lane spacing during the track design stage. 
+
+All other scales are strictly unsanctioned until the ODISC Technical 
+Specifications are expanded to support them.
+
+[NOTE]
+====
+While a smaller-scale vehicle (e.g., 1/32) can be safely operated and raced 
+on a track layout designed for a larger scale (e.g., 1/24), larger vehicles 
+cannot be raced on smaller tracks. Insufficient lane clearance on smaller 
+tracks removes virtually all opportunities for safe overtaking and increases 
+the risk of catastrophic collisions.
+====
+
+
+== Example Racing Class
+
+The following is an example of a racing class listing:
+
+* Tier: Club
+* Manufacturer Category: Toy
+* Performance: Modified
+* Vehicle Type: Vintage Formula 1 (1960-1975)
+* Scale: 1/32
+
+

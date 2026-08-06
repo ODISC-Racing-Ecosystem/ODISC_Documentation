@@ -1,0 +1,55 @@
+
+
+[#template_vehicle_spec]
+= Vehicle Type Specification Template
+
+When publishing a sanctioned class definition, the organizing authority must 
+populate the template table below. Missing parameters will render the class 
+configuration unapproved for official ODISC ranking events.
+
+== Class Name: [ 1/32 Scale OR 1/24 Scale ] [ Official class name ] 
+
+[cols="1,2,5",options="header"]
+|===
+
+|Category |Specification |Definition
+
+.4+| Body
+| Target Era or Series
+|[ e.g., 1960-1975 Formula 1 ]
+
+| Wheel Style
+|[ Specify: Open Wheel OR Closed Wheel ]
+
+| Aesthetic Restrictions
+|[ e.g., Molded front and rear wing elements must be present ]
+
+| Shell Medium
+|[ Specify: Hardbody OR Performance Polyurethane OR Lexan OR Any ]
+
+.2+| Interior
+| Tray Standard
+|[ Specify: Full Scale Plastic OR Lightweight Vac-Formed OR None OR N/A ]
+
+| Driver Figure Requirement
+|[ Specify: Mandatory OR Optional ]
+
+.3+| Dimensions
+| Maximum Rear Track Width
+|[ Specify value in mm, e.g., 58.00 mm ]
+
+| Maximum Front Track Width
+|[ Specify value in mm, e.g., 54.00 mm ]
+
+| Minimum Ride Height
+|[ Specify value in mm, e.g., 1.50 mm ]
+
+.2+| Weights
+| Minimum Body Weight
+|[ Specify value in grams ]
+
+| Minimum Total Weight
+|[ Specify value in grams ]
+|===
+
+

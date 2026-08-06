@@ -1,0 +1,351 @@
+
+
+:TLS-LOCATION: ../../../TLS/
+[#ds-001-110]
+= DS-001-110: Power Rails
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+
+|Field|Value
+|Title| DS-001-110: Power Rails
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+This DS defines the requirements for implementing power rails that deliver 
+electrical power to vehicles on the track, while also providing a 
+communication medium for the Race Management System 
+(xref:../../../TLS/TLS-002/index.adoc[TLS-002]) to exchange data with 
+Vehicle Decoders (xref:../../../TLS/TLS-010/index.adoc[TLS-010]).
+
+== Material Choice
+
+ODISC recognizes two common industry approaches for power delivery and 
+therefore provides implementation guidance for both.
+
+=== Copper Tape
+
+.Pros
+* *Low cost* -- Very inexpensive to purchase and easy to budget for long 
+tracks.
+* *Easy installation* -- Sticks directly to the wood surface without needing a 
+deep recess or routing step.
+* *Simple repairs* -- Broken sections can be quickly overlaid with a new piece 
+of tape.
+* *Smooth surface* -- Ultra-thin profile ensures a completely flat racing 
+surface.
+
+.Cons
+* *Low durability* -- Easily tears or lifts if cars deslot aggressively or 
+tires spin.
+* *Oxidation issues* -- Tarnishes quickly, requiring regular cleaning to 
+maintain good electrical conductivity.
+* *Low power capacity* -- Higher electrical resistance compared to thick wire, 
+which can cause power drops on large tracks.
+
+=== Braided Wire
+
+.Pros
+* *High durability* -- Made of woven metal that withstands years of heavy 
+racing and impact.
+* *Excellent conductivity* -- Delivers consistent, high-amperage power with 
+minimal voltage drop.
+* *Traction boost* -- Magnetic braid allows the use of traction magnets in 
+cars, mimicking plastic track behavior.
+* *Low maintenance* -- Resists corrosion and requires very little cleaning 
+over its lifespan.
+
+.Cons
+* *High cost* -- Significantly more expensive per foot than copper tape.
+* *Complex installation* -- Requires routing a special shallow shelf (recess) 
+on both sides of the slot.
+* *Difficult repairs* -- Glueing, recessing, and splicing damaged braid is 
+labor-intensive and time-consuming.
+
+Alternative power delivery methods are permitted by the ODISC specification. 
+However, until they are incorporated into the standard, they may not be 
+compatible with standardized track cutouts or mounting interfaces.
+
+== Physical Requirements
+
+A power rail is the conductive element installed adjacent to the slot that 
+provides both electrical power and communication signals to vehicles.
+
+The power rails shall be isolated from each other in a manner that prevents 
+short circuits between rails, whether they are for the same slot or different 
+rails for neighboring slots.
+
+=== Power Rail Length Considerations
+
+As the length of a power rail increases, electrical resistance also increases, 
+resulting in greater voltage drop along the rail. To maintain consistent power 
+delivery, long rails should be divided into shorter electrically connected 
+segments using power taps.
+
+NOTE: The maximum recommended rail length is currently under evaluation and 
+will be defined in a future revision of this specification.
+
+=== Power Taps and Drop Holes
+
+At the start of each track power rail section, the track shall provide power 
+tap locations to allow connection of the common power source to the rails.
+
+==== Power Drop Hole
+
+Power rail drop holes shall have two rectangular openings measuring 7.5 mm x 5 mm, 
+with the 7.5 mm dimension aligned across the direction of track travel.
+
+This opening supports both copper tape and braided wire power rail 
+implementations.
+
+==== Power Tap Interface
+
+The underside of the track shall provide mounting points compatible with the 
+standardized power tap footprint defined in 
+xref:../DS-001-120/index.adoc#ds-001-120[DS-001-120].
+
+Track-side mounting provisions shall use M3 mounting hardware layout spacing 
+matching a 40 mm x 10 mm array pattern.
+
+=== Power Rail Wiring Topology (Non-Looping)
+
+Data transmission over the DC power rails utilizes Pulse Width Modulation 
+(PWM). Symmetrical propagation delays and single-source paths are critical to 
+maintaining signal integrity.
+
+Isolation Requirement::
+All power rail sections must be electrically isolated from one another. This 
+prevents data signal interference caused by packets entering a single 
+destination terminal from multiple directions simultaneously.
+
+Topology Clearance::
+Power distribution to the racetrack layout *may* utilize a radial branching 
+tree structure.
+
+[WARNING, caption="CRITICAL"]
+====
+*The power delivery network shall not contain any closed electrical loops.* 
+
+Wiring loops create parallel paths that allow data packets to arrive at a 
+single point with phase variance. This propagation skew shifts data packet 
+timing and corrupts signal content.
+====
+
+== Functional Requirements
+
+=== Power Delivery and Data Transmission
+
+The power rails shall simultaneously deliver electrical power and transmit PWM 
+data packets using the same electrical conductors.
+
+=== Track Amperage Allocation Guidelines
+
+To calculate the maximum planned current draw for a racetrack layout, designers 
+should multiply the maximum number of vehicles running simultaneously on a 
+single power network hub by the peak current allocation specified for their 
+target scale and ODISC Performance Level. Track designers should always use the 
+maximum value in the listed range to build an appropriate engineering safety 
+margin.
+
+.Suggested Vehicle Current Draw Estimations by Scale and Performance Level
+[cols="3,2,2,4", options="header"]
+|===
+
+| ODISC Performance Level
+^| 1/32 Scale
+^| 1/24 Scale
+| Typical Vehicle Specification Target
+
+| Level 1: Stock / Level 2: Tuned
+^| 0.5-0.8 A
+^| 0.8-1.2 A
+| Out-of-the-box factory configurations or vehicles with mild drop-in 
+drivetrain component upgrades.
+
+| Level 3: Modified
+^| 0.8-1.2 A
+^| 1.2-2.0 A
+| Open structural platforms featuring 3D-printed or metal aftermarket 
+chassis assemblies with high-RPM club motors.
+
+| Level 4: Unlimited
+^| 1.5-2.5 A
+^| 2.0-3.5 A
+| Open prototype classifications featuring unrestricted custom motor 
+configurations and high-current rewound power plants.
+|===
+
+=== Power Distribution Wire Sizing Standards
+
+To maintain stable track voltage under peak load, and to preserve the sharp 
+square-wave rise times required for data packet integrity, power distribution 
+wiring should adhere to the following distance-scaled guidelines. 
+
+The optimal wire thickness depends on your track's maximum planned current 
+draw (amperage) and the path distance from the power supply to the drop point.
+
+Main Power Trunk Lines (Power Base to Distribution Hubs)::
+All cabling running directly from the central track power base out to primary 
+under-table distribution hubs or terminal barrier strips should select a size 
+matching the maximum target track amperage capacity listed in the tables below.
+
+Segment Drop Branch Lines (Distribution Hubs to Power Taps)::
+All individual cabling running from an under-table distribution hub to a single 
+power tap assembly module on the track should select a size matching the 
+target track amperage capacity listed in the tables below.
+
+NOTE: If multiple track segments are wired in series using serial loop-through 
+connections (daisy-chaining), any conductor segment that serves more than 
+one individual power tap assembly module shall be classified as a main power 
+trunk line and sized based on the continuous path distance from the power supply 
+to that segment.
+
+.Standard Distance Sizing ^1^
+[cols="3,1,1,1,1", options="header"]
+|===
+
+| Line Type and Location
+^| 0-5 A
+^| 5-10 A
+^| 10-20 A
+| AWG Equivalent
+
+| Main Power Trunk Lines +
+(Power Base to Distribution Hubs)
+^| 1.5 mm²
+^| 2.5 mm²
+^| 4.0 mm²
+^| 16 / 14 / 12
+
+| Segment Drop Branch Lines +
+(Distribution Hubs to Power Taps)
+^| 0.75 mm²
+^| 1.5 mm²
+^| 2.5 mm²
+^| 18 / 16 / 14
+|===
+
+.Extended Distance Sizing ^2^
+[cols="3,1,1,1,1", options="header"]
+|===
+
+| Line Type and Location
+^| 0-5 A
+^| 5-10 A
+^| 10-20 A
+| AWG Equivalent
+
+| Main Power Trunk Lines +
+(Power Base to Distribution Hubs)
+^| 2.5 mm²
+^| 4.0 mm²
+^| 6.0 mm²
+^| 14 / 12 / 10
+
+| Segment Drop Branch Lines +
+(Distribution Hubs to Power Taps)
+^| 1.5 mm²
+^| 2.5 mm²
+^| 4.0 mm²
+^| 16 / 14 / 12
+|===
+
+. Distance Footnotes:
+1. Power Supply to Power Drop distance under 10 Meters
+2. Power Supply to Power Drop distance 10 Meters and Greater
+
+NOTE: For racetrack infrastructures with a calculated peak current draw 
+exceeding 20 A, an engineering review by a licensed electrical professional 
+should be conducted prior to system installation.
+
+[WARNING, caption="CRITICAL"]
+====
+*Reducing power distribution wire sizing below the recommended cross-sectional 
+minimums introduces high system performance and safety risks.*
+
+Under-sized cabling suffers from elevated linear resistance, resulting in 
+severe line voltage drops under peak racing loads. This line restriction drops 
+the supply voltage down enough to cause motor starvation, erratic braking, and 
+unpredictable vehicle decoder brown-out resets. 
+
+Furthermore, thin conductors attenuate high-frequency signals by rounding off 
+the sharp voltage edges of the data packets, causing critical data stream 
+corruption and packet loss.
+====
+
+Stranding Requirement::
+All power distribution cabling shall utilize high-strand-count flexible copper 
+wire. Solid-core wire is prohibited, as high-frequency data signals travel 
+primarily on the outer skin of conductors (skin effect). High-strand wire 
+maximizes conductive surface area and prevents signal attenuation.
+
+
+
+
+== Visualizations
+
+The following visualizations show the differences between using braided wire 
+versus using copper tape.
+
+Power Drop Mounting Point::
+
+include::../DS-001-120/power_tap_mount_dimensions.adoc[]
+
+
+Guide Slot with Braids Cross-Section::
+
+include::guide_slot_crosssection_braid.adoc[]
+
+
+Guide Slot with Tape Cross-Section::
+
+include::guide_slot_crosssection_tape.adoc[]
+
+== Requirements Checklist
+
+.Track Design Checklist to ensure all requirements and design considerations are addressed
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| Rail Length
+| Long rails are divided to ensure power delivery is constant over the entire 
+track.
+| ✅
+| ☐
+
+| Drop Holes
+| Drop holes are provided at each required power tap location.
+| ✅
+| ☐
+
+| Power Tap Mounting Points
+| Power tap mounting points are provided for each drop hole.
+| ✅
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking 
+data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

@@ -1,0 +1,104 @@
+
+= Lane Changer Angles
+
+The following diagram shows the various angles to be evaluated when designing 
+a lane changer section on track. Depending on the scale, different values are 
+used to the requirements of the vehicles.
+
+[pass]
+++++
+<svg xmlns="http://w3.org" viewBox="0 0 650 550" width="100%" height="100%" style="background-color: #ffffff;">
+  <!-- Background Grid (Light Theme optimized) -->
+  <defs>
+    <pattern id="grid_light" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow_spec_light" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 10 L 5 0 L 10 10 z" fill="#b0b0b0"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <rect width="100%" height="100%" fill="url(#grid_light)" />
+
+  <!-- GLOBAL FOOTER METADATA -->
+  <text x="325" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#666666">Direction of Travel: Bottom to Top (↑)</text>
+
+  <!-- ========================================== -->
+  <!-- 1/32 SCALE SYSTEM BLOCK (LEFT SIDE)        -->
+  <!-- ========================================== -->
+  <text x="150" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">Scale: 1/32</text>
+
+  <!-- Track Base Lines (70mm Spacing Simulation) -->
+  <line x1="50" y1="500" x2="50" y2="50" stroke="#cccccc" stroke-width="6" stroke-linecap="round" />
+  <line x1="50" y1="500" x2="50" y2="50" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="250" y1="500" x2="250" y2="50" stroke="#cccccc" stroke-width="6" stroke-linecap="round" />
+  <line x1="250" y1="500" x2="250" y2="50" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Lane Changer Pivot & Axis -->
+  <circle cx="50" cy="450" r="3" fill="#1a1a1a" stroke="#ffffff" stroke-width="1" />
+  <line x1="50" y1="450" x2="50" y2="95" stroke="#888888" stroke-width="1.5" stroke-dasharray="5,5" />
+
+  <!-- Trajectory Paths -->
+  <path d="M 50 450 L 160 100" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="3,3" />
+  <circle cx="160" cy="100" r="4" fill="#ef4444" />
+  <path d="M 50 450 L 205 100" fill="none" stroke="#10b981" stroke-width="4" />
+  <circle cx="205" cy="100" r="5" fill="#10b981" />
+  <path d="M 50 450 L 250 100" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="3,3" />
+  <circle cx="250" cy="100" r="4" fill="#3b82f6" />
+
+  <!-- Geometry Calculation Arcs -->
+  <path d="M 50 300 A 150 150 0 0 1 101 309" fill="none" stroke="#3b82f6" stroke-width="1.5" />
+  <path d="M 50 330 A 120 120 0 0 1 87 339" fill="none" stroke="#10b981" stroke-width="2" />
+  <path d="M 50 360 A 90 90 0 0 1 74 368" fill="none" stroke="#ef4444" stroke-width="1.5" />
+
+  <!-- Text Labels -->
+  <text x="105" y="450" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#555555" text-anchor="middle">Lane Changer</text>
+  <text x="110" y="80" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">Minimum Angle: 8°</text>
+  <text x="110" y="95" font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">High Speed Entry</text>
+  <text x="210" y="80" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">IDEAL: 10°</text>
+  <text x="180" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Maximum Angle: 15°</text>
+  <text x="180" y="365" font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">Binding Limit Threshold</text>
+  <text x="50" y="520" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#666666" text-anchor="middle">LANE 1</text>
+  <text x="250" y="520" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#666666" text-anchor="middle">LANE 2</text>
+
+
+  <!-- ========================================================== -->
+  <!-- 1/24 SCALE SYSTEM BLOCK (LINED UP AT X=350 GRID BOUNDARY) -->
+  <!-- ========================================================== -->
+  <text x="465" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">Scale: 1/24</text>
+
+  <!-- Track Base Lines (Proportionally Widened for 85mm Slot CC Simulation: 350 to 580) -->
+  <line x1="350" y1="500" x2="350" y2="50" stroke="#cccccc" stroke-width="7" stroke-linecap="round" />
+  <line x1="350" y1="500" x2="350" y2="50" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="580" y1="500" x2="580" y2="50" stroke="#cccccc" stroke-width="7" stroke-linecap="round" />
+  <line x1="580" y1="500" x2="580" y2="50" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Lane Changer Pivot & Axis -->
+  <circle cx="350" cy="450" r="3" fill="#1a1a1a" stroke="#ffffff" stroke-width="1" />
+  <line x1="350" y1="450" x2="350" y2="95" stroke="#888888" stroke-width="1.5" stroke-dasharray="5,5" />
+
+  <!-- Trajectory Paths (Calculated from X=350 baseline base for 6°, 8°, 12°) -->
+  <path d="M 350 450 L 433 100" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="3,3" />
+  <circle cx="433" cy="100" r="4" fill="#ef4444" />
+  <path d="M 350 450 L 483 100" fill="none" stroke="#10b981" stroke-width="4" />
+  <circle cx="483" cy="100" r="5" fill="#10b981" />
+  <path d="M 350 450 L 530 100" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="3,3" />
+  <circle cx="530" cy="100" r="4" fill="#3b82f6" />
+
+  <!-- Geometry Calculation Arcs -->
+  <path d="M 350 300 A 150 150 0 0 1 396 309" fill="none" stroke="#3b82f6" stroke-width="1.5" />
+  <path d="M 350 330 A 120 120 0 0 1 387 339" fill="none" stroke="#10b981" stroke-width="2" />
+  <path d="M 350 360 A 90 90 0 0 1 374 368" fill="none" stroke="#ef4444" stroke-width="1.5" />
+
+  <!-- Text Labels (Shifted to match new X=350 anchor system cleanly) -->
+  <text x="405" y="450" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#555555" text-anchor="middle">Lane Changer</text>
+  <text x="410" y="80" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">Minimum Angle: 6°</text>
+  <text x="410" y="95" font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">High Speed Entry</text>
+  <text x="500" y="80" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">IDEAL: 8°</text>
+  <text x="475" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Maximum Angle: 12°</text>
+  <text x="475" y="365" font-family="Arial, sans-serif" font-size="10" fill="#666666" text-anchor="middle">Binding Limit Threshold</text>
+  <text x="350" y="520" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#666666" text-anchor="middle">LANE 1</text>
+  <text x="580" y="520" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#666666" text-anchor="middle">LANE 2</text>
+</svg>
+++++
+

@@ -1,0 +1,2 @@
+
+include::../../../resources/includes/licenses/documentation_license.adoc[]

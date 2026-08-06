@@ -1,0 +1,24 @@
+= ODISC Ecosystem Technical Library Standards
+:toc:
+:sectnums:
+:toclevels: 2
+:doctype: book
+:docsdir: ../../../docs/technical_specifications/modules/ROOT/pages
+:licensedir: ../../../docs/appendix/modules/ROOT/pages/licenses
+:pdf-themesdir: resources/themes/pdf-themes
+:pdf-theme: pdf-for-technical-library
+
+include::{docsdir}/TLS/index.adoc[leveloffset=1]
+include::{docsdir}/TLS/TLS-001/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-002/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-003/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-004/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-005/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-006/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-007/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-008/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-009/index.adoc[leveloffset=2]
+include::{docsdir}/TLS/TLS-010/index.adoc[leveloffset=2]
+
+// Last item in file
+include::{licensedir}/documentation_license.adoc[leveloffset=1]

@@ -1,0 +1,176 @@
+
+
+[#tls-006]
+= TLS-006: Pit Lane
+
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-006: Pit Lane
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+When to pit is a strategic decision: 
+
+Are you sure now is the right time?
+____
+
+
+The pit lane enables additional race strategies by allowing 
+competitions to simulate factors such as fuel consumption 
+and tire wear. Drivers must manage vehicle performance and 
+decide when a pit stop provides a competitive advantage.
+
+== Philosophy
+
+A pit lane extends racing beyond pure speed by introducing strategic choices.
+The design shall support both simple and advanced race formats while maintaining
+predictable vehicle movement and fair competition.
+
+== Capabilities
+
+=== Controller / Integration
+
+The pit lane controller manages pit lane operations and communicates with the
+Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]). It processes 
+Detection Points (xref:TLS-003/index.adoc#tls-003[TLS-003]) events, manages 
+configured pit lane behavior, and coordinates Lane Changers 
+(xref:TLS-005/index.adoc#tls-005[TLS-005]) within the pit lane.
+
+=== Detection Points
+
+Detection Points define the active areas within 
+the pit lane where configured pit operations may occur, such as simulated 
+refueling and tire changes.
+
+Detection points are also used to control lane changers and pit exits to
+prevent collisions.
+
+Advanced detection logic may be used to coordinate pit exit merging and
+determine right-of-way when vehicles return to the racing surface.
+
+=== Lane Changers
+
+If pit entry crosses active racing lanes, additional validation is required 
+to prevent unsafe crossing conditions.
+
+Additional Lane Changers may be used internally within the pit lane for
+automated box selection, ensuring vehicles enter their assigned pit box or
+correctly execute a drive-through penalty.
+
+=== Configuration
+
+The Race Management System shall maintain awareness of vehicle location within
+the pit lane and process configured pit lane behavior.
+
+Applicable rules may include:
+* Speed Limits
+* Refueling
+* Tire State
+* Driver Swaps
+
+== Design
+
+The design of a pit lane impacts how it can be used during races.
+
+=== Simple
+
+In its simplest form, a pit lane is a bypass lane with an entry and exit 
+Detection Point, as well as a pair of detection points for where a 
+vehicle should stop.
+
+=== Advanced
+
+For a more advanced pit lane, each competing vehicle may have an assigned 
+pit box. Each box has a pair of detection points for the simulated 
+refueling and tire service operations.
+
+[kroki-ditaa, slot_car_track, svg]
+----
+Entry Detection Point
+  ⏱️            
+  |  Lane
+  |  Changer
+  |\        
+  | \       
+  |  \      
+  |   \     
+  |    \    
+  |     \   
+  |      \  
+  |       \ 
+  |        \
+  |         \
+  |          \
+  |           \
+  |            \
+  |             \
+  |              |
+  |              | ⏱️ Start Work Zone Detection Point
+  |              |
+  |              | [ PIT WORK ZONE ]
+  |              |   (Vehicle Stop Track)
+  |              |
+  |              | ⏱️ End Work Zone Detection Point
+  |             /   
+  |            /    
+  |           /   
+  |          /    
+  |         /     
+  |        /      
+  |       /       
+  |      /        
+  |     /         
+  |    /          
+  |   /           
+  |  /            
+  | /             
+  |/
+  |            
+  ⏱️            
+Exit Detection Point         
+----
+
+Once a vehicle passes the end fueling detection point, it shall not merge into
+the active pit lane or racing surface until the required path is available.
+
+== Start/Finish Line
+
+The pit lane must incorporate a detection point that aligns with the
+Start/Finish Line and Race Timing (xref:TLS-004/index.adoc#tls-004[TLS-004]).
+
+Any detection point used for start/finish timing shall be connected to the
+start/finish line controller and not the pit lane controller, ensuring that
+lap timing and race progress are registered by the correct system.
+
+== Advanced Features
+
+Additional features that may be considered and added to the specification in the future include:
+
+* Pit Lane Closure
+** Adds the ability to close the pit lane for various reasons as determined by racing regulations
+* Pit Lane Status Indicators
+** Lights (red or green) that indicate whether the pit lane is open or closed
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

@@ -1,0 +1,90 @@
+
+
+[#tls-007]
+= TLS-007: Track Lighting and flag signals
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-007: Track Lighting and flag signals
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+If you can't see, how do you know what happened?
+
+Light it up!
+____
+
+Track lighting provides visual communication between the race system,
+drivers, and spectators. It improves visibility of the racetrack while
+providing a standardized method to communicate race conditions and events.
+
+== Philosophy
+
+ODISC uses lighting as a primary method of communicating race conditions.
+The implementation of lighting may vary between venues, but the meaning
+of each indication shall remain consistent.
+
+A venue may implement lighting through full track illumination, dedicated
+race condition indicator panels, or a combination of both.
+
+== Capabilities
+
+The Track Lighting System consists of one or more lighting systems that work
+together to provide visibility and race status information.
+
+=== General Track Lighting
+
+General track lighting provides illumination of the racing surface and
+surrounding areas.
+
+The default state of general track lighting is white unless overridden by
+a race condition indication.
+
+=== Race Condition Indicators
+
+The Track Lighting System shall support visual indication of race conditions
+received from the Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]).
+
+Race conditions may apply to the entire racetrack or to a defined section
+of the racetrack.
+
+Example: +
+Sector B = Yellow Flag
+
+The Track Lighting System shall not determine race conditions. It shall only
+present the current state received from the Race Management System.
+
+A venue may implement race condition indicators using:
+
+* Dedicated light panels positioned around the racetrack.
+* Changes to the color or behavior of general track lighting.
+* A combination of both methods.
+
+The displayed meaning of each lighting state shall conform to the ODISC
+Flag and Light Color definitions.
+
+NOTE: Refer to "Flag and Light Colors" in the appendices for the definition
+of colors and patterns associated with race events.
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

@@ -1,0 +1,17 @@
+
+
+[#guiding_principles]
+= Guiding Principles
+
+== Introduction
+
+This document lists the guiding principles that we adhere to when developing 
+the standards and specifications that define the ODISC Racing Ecosystem.
+
+== Guiding Principles
+
+* GP-01 Racing Intent and Vision
+* GP-02 Documentation and Governance Principles
+* GP-03 System Design Principles
+* GP-04 Engineering Principles
+

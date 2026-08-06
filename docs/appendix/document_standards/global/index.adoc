@@ -1,0 +1,197 @@
+
+= Global Document Standards
+
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| Global Document Standards
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+
+== Introduction
+
+The global document standards apply to all documents within the ODISC Racing Ecosystem.
+
+include::reserved_terminology.adoc[leveloffset=1]
+
+== Cross References
+
+The first occurrence of a defined ODISC item within a document shall
+include a reference to the applicable document identifier.
+
+The reference shall be placed immediately after the item name using the
+format:
+
+"Item Name (DOCUMENT-NNN)"
+
+Example:
+
+"Race Management System (TLS-002)"
+
+Each document shall provide a reference anchor to enable consistent linking
+between documents.
+
+All references shall link to the original document.
+
+Document references shall not be manually duplicated where an existing
+document reference can be used.
+
+Subsequent references within the same document may omit the document identifier
+unless clarification is required.
+
+=== References and Anchors to Sections
+
+References to sections within another document may link directly to the
+applicable section anchor rather than the document root anchor.
+
+Section anchors shall use the format:
+
+"document-identifier_Section_Name"
+
+Where:
+
+* "document-identifier" identifies the source document.
+* "Section_Name" identifies the referenced section using a normalized
+  section name with underscores replacing spaces.
+
+Example:
+
+"tls-002_Race_Director"
+
+references the "Race Director" section within TLS-002.
+
+=== References in Lists
+
+For lists containing document references, the document identifier shall be used
+as the link target.
+
+The document title shall be displayed as plain text following the linked
+document identifier.
+
+Example:
+
+* xref:TLS-002/index.adoc#tls-002[TLS-002]: Race Management System
+* xref:TLS-003/index.adoc#tls-003[TLS-003]: Detection Points
+
+References to sections within lists may use the section anchor directly when
+the referenced section is not a standalone document.
+
+== Standardized Formatting of Data
+
+To ensure consistency and clarity across all documents, the following formatting 
+standards are applied to all data presented in ODISC documents.
+
+=== Date Format
+
+ODISC uses the ISO 8601 date format (YYYY-MM-DD) for all dates in documents. This format is
+unambiguous and avoids confusion between different date formats used in various regions.
+
+=== Number Format
+
+ODISC uses the European number format for all numerical values in documents. This format 
+uses a comma (,) as the decimal separator and a period (.) as the thousands separator. 
+
+Example: +
+One thousand is written as 1.000. +
+One thousand and twenty-five point five is written as 1.025,5.
+
+include::si_units.adoc[leveloffset=+2]
+
+== Requirements by Document Family
+
+The following requirements define which sections are mandatory for each
+document family. Individual document family standards may define
+additional requirements where necessary.
+
+=== Identification Information Table
+
+Required by: Foundational Documents and Technical Documents
+
+Documents within these document families shall include an identification
+information table. It provides essential information about the document, including
+its title, version, release date, status, and maintainer(s).
+
+The identification information table shall always appear immediately after the
+document title.
+
+==== Sample Identification Information Table
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| The title of the document should be clear, concise, and descriptive of the document's content.
+|Version| The version of the document should be clearly indicated.
+|Release Date| The date this version was released on.
+|Status| The status of the document should be clearly indicated (see below).
+|Maintainer(s)| The maintainer(s) of the document should be clearly indicated.
+|===
+
+==== Document Status
+
+The following document statuses are used by ODISC to indicate the current state of a document.
+
+[cols="1s,6",options="header"]
+|===
+|Status|Definition
+|Stub|The document contains headings only and serves as a placeholder for future development.
+|Outline|The document contains headings and outlines describing the intended content but does not yet contain the complete document content.
+|Draft|The document is in the early stages of development and may be incomplete or subject to significant changes.
+|Review|The document is under review by relevant stakeholders and may be subject to changes based on feedback.
+|Approved|The document has been reviewed and approved by relevant stakeholders and is considered final.
+|===
+
+=== Introduction
+
+Required by: Foundational Documents and Technical Documents
+
+The introduction should clearly state the objectives of the document and
+any relevant background information that may help the reader understand
+the context of the document.
+
+
+=== Revision History
+
+Required by: Foundational Documents and Technical Documents
+
+Documents within these document families shall include a revision
+history labeled "Document Revision History" that tracks changes made to
+the document over time.
+
+The revision history shall include the document version, date of change,
+and a brief description of the changes introduced in that revision.
+
+The revision history provides traceability of document evolution and
+allows previous decisions, changes, and document states to be understood.
+
+The revision history shall always be placed as the last section in
+a document.
+
+==== Sample Revision History Table
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+| 0.1 | 2026-05-01 | Initial draft of document standards.
+| 0.2 | 2026-06-15 | Added revision history section.
+| 0.3 | 2026-12-20 | Updated identification block requirements.
+|===
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

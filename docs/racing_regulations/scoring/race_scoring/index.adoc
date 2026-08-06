@@ -1,0 +1,352 @@
+
+
+[#race_scoring]
+= Race Scoring
+
+Race scoring defines how individual heat results are converted into race results.
+
+ODISC separates heat scoring from championship scoring. Heat scoring determines the outcome of individual race events, while championship scoring determines standings across multiple events.
+
+== Heat Scoring
+
+Heat scoring is designed to reward competitive racing throughout the entire finishing order.
+
+Every classified finisher receives heat points. This ensures that every position remains valuable and that competitors continue fighting for position throughout the race.
+
+The objectives of heat scoring are:
+
+* Winning a heat should provide a significant advantage.
+* Finishing ahead of another competitor should always provide additional value.
+* A single poor result should not eliminate a competitor from contention.
+* Non-finishing competitors should not receive competitive points.
+
+Competitors that do not receive a classified finish due to a DNF or DNS receive zero points.
+
+== ODISC Weighted Heat Scoring Model
+
+The ODISC Weighted Heat Scoring Model calculates heat points based on:
+
+* The number of competitors in the heat.
+* The finishing position achieved.
+* A weighting curve that rewards higher finishing positions more strongly.
+
+The maximum points available for the winner are calculated as:
+
+----
+Maximum Points = Number of Competitors x 2.5
+----
+
+The winner of a heat receives the maximum available points.
+
+The initial scoring curve uses an exponent of 1.5:
+
+----
+Raw Points =
+Maximum Points x
+((Number of Competitors - Finishing Position + 1)
+ / Number of Competitors)^1.5
+----
+
+The calculated values are adjusted to ensure the ODISC heat scoring requirements are always met:
+
+* The winner receives the maximum available points.
+* The last classified finisher receives exactly one point.
+* Each finishing position receives at least one more point than the position below it.
+* Intermediate positions are adjusted only when required to maintain these requirements.
+
+The final published scoring tables are the authoritative reference for manual scoring.
+
+== Heat Scoring Examples
+
+The following tables demonstrate the intended scoring curve.
+
+=== Six Competitor Heat
+
+A six competitor heat provides a maximum winner score of:
+
+----
+6 x 2.5 = 15 points
+----
+
+[cols="1,1,1",options="header"]
+|===
+|Position |Points |Difference From Position Below
+
+|1
+|15
+|+4
+
+|2
+|11
+|+3
+
+|3
+|8
+|+3
+
+|4
+|5
+|+2
+
+|5
+|3
+|+2
+
+|6
+|1
+|-
+|===
+
+The larger difference between the highest positions ensures that winning a heat provides a meaningful advantage.
+
+=== Ten Competitor Heat
+
+A ten competitor heat provides a maximum winner score of:
+
+----
+10 x 2.5 = 25 points
+----
+
+[cols="1,1,1",options="header"]
+|===
+|Position |Points |Difference From Position Below
+
+|1
+|25
+|+5
+
+|2
+|20
+|+4
+
+|3
+|16
+|+3
+
+|4
+|13
+|+3
+
+|5
+|10
+|+3
+
+|6
+|7
+|+2
+
+|7
+|5
+|+2
+
+|8
+|3
+|+2
+
+|9
+|2
+|+1
+
+|10
+|1
+|-
+|===
+
+=== Twenty Competitor Heat
+
+A twenty competitor heat provides a maximum winner score of:
+
+----
+20 x 2.5 = 50 points
+----
+
+[cols="1,1",options="header"]
+|===
+|Position |Points
+
+|1
+|50
+
+|2
+|43
+
+|3
+|37
+
+|4
+|32
+
+|5
+|27
+
+|6
+|23
+
+|7
+|19
+
+|8
+|16
+
+|9
+|13
+
+|10
+|10
+
+|11
+|8
+
+|12
+|7
+
+|13
+|6
+
+|14
+|5
+
+|15
+|4
+
+|16
+|3
+
+|17
+|2
+
+|18
+|1
+
+|19
+|1
+
+|20
+|1
+|===
+
+The published tables shall be reviewed during future competition experience to ensure that the scoring curve continues to provide the intended competitive balance.
+
+== Multiple Heat Events
+
+When a race event consists of multiple heats, each heat is scored independently using the ODISC Weighted Heat Scoring Model.
+
+The final race standings are determined by combining the applicable heat results.
+
+For events with multiple qualifying heats, dropped heat rules may be applied to ensure that a single incident does not determine the final result.
+
+== Dropped Heat Results
+
+Dropped heat results allow competitors to recover from unsuccessful heats while still rewarding consistent performance.
+
+The final race standings are calculated using the highest scoring heat results from each competitor.
+
+The number of counted results is determined as follows:
+
+[cols="1,1,1",options="header"]
+|===
+|Qualifying Heats |Counted Results |Dropped Results
+
+|1
+|1
+|0
+
+|2
+|2
+|0
+
+|3
+|3
+|0
+
+|4
+|3
+|1
+
+|5
+|3
+|2
+
+|6
+|3
+|3
+
+|7
+|3
+|4
+
+|8
+|4
+|4
+
+|10
+|5
+|5
+
+|12
+|6
+|6
+|===
+
+The following rules apply:
+
+* All completed heats are counted when three or fewer heats are completed.
+* When four or more heats are completed, the lowest scoring results are excluded.
+* A minimum of three heat results shall count whenever three or more heats are completed.
+
+Excluded heat results remain part of the official race record and may be used for tie resolution.
+
+Example:
+
+A competitor completing six qualifying heats will have their three highest scoring heats counted toward the final race standings. The remaining three results are excluded from the primary score calculation.
+
+== Heat Result Tie Resolution
+
+If two or more competitors have equal final scores after applying dropped heat rules, the following tie-breaking procedures shall be applied in order.
+
+=== Dropped Heat Comparison
+
+Excluded heat results are compared first.
+
+Excluded results are added back one at a time, beginning with the highest remaining excluded score.
+
+The competitor with the higher restored score is ranked ahead.
+
+This continues until the tie is resolved or all excluded results have been considered.
+
+=== Finishing Position Countback
+
+If competitors remain tied after all heat results have been considered, finishing positions are compared.
+
+The competitor with the greater number of higher finishing positions is ranked ahead.
+
+The comparison is performed in the following order:
+
+* Most first-place finishes.
+* Most second-place finishes.
+* Most third-place finishes.
+* Continue through all finishing positions until the tie is resolved.
+
+=== Fastest Lap Time
+
+If competitors remain tied after all heat results and finishing positions have been compared, the fastest valid lap time recorded during the competition shall be used as the final tie-breaker.
+
+The fastest lap time shall be taken from the official race results.
+
+Any lap completed according to the applicable racing regulations may be considered, regardless of race conditions at the time the lap was recorded.
+
+A lap shall not be considered valid for fastest lap purposes if the vehicle deslots and requires reslotting before completing that lap.
+
+A lap affected by a deslot and reslot remains valid for race classification purposes and may contribute toward:
+
+* Completed laps.
+* Race distance.
+* Finishing position.
+
+The competitor with the fastest valid lap time shall be ranked ahead.
+
+=== Final Tie Resolution
+
+If competitors remain tied after all defined tie-breaking procedures have been applied, the competition regulations shall define the final method of resolution.
+
+

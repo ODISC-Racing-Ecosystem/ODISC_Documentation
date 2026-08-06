@@ -1,0 +1,163 @@
+
+
+[#performance_level]
+= Performance Levels
+
+ODISC establishes four distinct Performance Levels to regulate the mechanical 
+allowance and tuning scope of a vehicle. These levels dictate exactly which 
+components may be adjusted, modified, or replaced, ensuring a predictable 
+and balanced competitive environment across different manufacturer types.
+
+[cols="1,1,6",options="header"]
+|===
+
+|Level |Name |Core Definition
+
+|Level 1
+|Stock
+|Strict factory architecture. +
+The vehicle must retain its original out-of-the-box components and 
+mechanical design.
+
+|Level 2
+|Tuned
+|Original structural platform with open running gear. +
+The factory chassis and body shell must remain intact, but mechanical 
+drivetrain components may be upgraded.
+
+|Level 3
+|Modified
+|Open structural and mechanical platform. +
+The factory body shell must retain its original silhouette, but the 
+underlying chassis architecture, motor configurations, and guiding systems 
+are entirely open to replacement (including 3D-printed or metal aftermarket 
+chassis).
+
+|Level 4
+|Unlimited
+|Open prototype classification. +
+Virtually all restrictions on body materials, chassis composition, weight, 
+and motor configurations are removed.
+|===
+
+== Level 1: Stock
+
+The Stock level focuses on driver skill, basic maintenance, and maximizing 
+the performance of a vehicle as delivered by the manufacturer.
+
+=== Technical Allowances
+
+Maintenance::
+Periodic replacement of braids, motor leads, and guide blades with identical 
+factory or spec replacements is permitted.
+
+Tires::
+Original equipment manufacturer (OEM) tires may be glued to the stock rims 
+and trued (sanded) to ensure roundness.
+
+Lubrication::
+Standard cleaning, oiling of bushings, and greasing of gears is permitted.
+
+Factory Adjustments::
+If the manufacturer included built-in tuning mechanisms (such as body float 
+screws, adjustable front axle height screws, or interchangeable motor pods), 
+these may be adjusted using the original factory parts.
+
+=== Technical Prohibitions
+
+* No aftermarket mechanical parts (motors, axles, gears, or wheels) may be 
+  introduced.
+* No alterations to the physical structure of the chassis or body (sanding, 
+  cutting, or melting) are permitted.
+
+== Level 2: Tuned
+
+The Tuned level preserves the original chassis engineered by the manufacturer 
+but permits racers to eliminate factory defects, vibrations, and performance 
+bottlenecks by upgrading the spinning and moving components.
+
+=== Technical Allowances
+
+Drivetrain::
+Axles, bushings, bearings, crown gears, and pinions may be replaced with 
+high-precision aftermarket components.
+
+Wheels and Tires::
+Plastic push-fit wheels may be replaced with precision-machined aluminum or 
+magnesium wheels secured via grub screws. Tires are open to approved 
+aftermarket compounds (e.g., urethane or rubber).
+
+Motors::
+Motors may be swapped, provided they adhere to the specific RPM, torque, or 
+casing dimensions defined by the class regulations.
+
+Chassis Preparation::
+Minor flashing or molding imperfections may be scraped or sanded off the edges 
+of the original chassis to allow the body to float freely.
+
+=== Technical Prohibitions
+
+* The original factory chassis must be retained in its entirety. 
+* No modification to the motor orientation (e.g., converting an inline 
+  chassis to an anglewinder configuration) is permitted unless supported by 
+  the factory chassis design.
+
+== Level 3: Modified
+
+The Modified level allows complete re-engineering of the vehicle's mechanical 
+platform. This level is specifically designed to allow rigid or low-performance 
+factory vehicles to become highly competitive by adapting them to advanced 
+racing architectures.
+
+=== Technical Allowances
+
+Chassis Replacement::
+The original manufacturer chassis may be completely discarded and replaced with 
+an aftermarket alternative. This explicitly legalizes 3D-printed chassis 
+(e.g., SLS nylon, carbon-composite), metal plate chassis, or modular 
+sub-chassis systems.
+
+Motor Pods::
+Mechanical layouts are completely open. Vehicles may utilize floating, 
+multi-piece motor pods to tune chassis torsional flex and weight distribution.
+
+Body Alterations::
+Minor internal sanding or material removal from the inside of the body shell 
+is permitted exclusively to allow clearance for the new chassis, front axles, 
+or larger motor configurations.
+
+=== Technical Prohibitions
+
+* The exterior silhouette, scale dimensions, and material of the original 
+  factory body shell must remain intact. Lightweight vacuum-formed bodies are 
+  prohibited unless explicitly permitted by the vehicle type rules.
+
+== Level 4: Unlimited
+
+The Unlimited level represents the absolute pinnacle of raw slot car 
+performance, where regulations are minimized to encourage scratch-building, 
+extreme engineering, and experimental designs.
+
+NOTE: Even in the Unlimited level, ODISC recognizes that the driver must remain 
+the ultimate decider of race results, rather than the lightest chassis or the 
+fastest motor. Vehicle Type rules must balance raw speed with control limits 
+to ensure driver skill dictates the outcome on the track.
+
+=== Technical Allowances
+
+Body Shells::
+Bodies are entirely open. Lightweight vacuum-formed polycarbonate (lexan) or 
+paper-thin composite bodies are permitted.
+
+Chassis Construction::
+Custom scratch-built chassis made from brass wire, steel plate, carbon fiber, 
+or multi-material 3D prints are permitted.
+
+Motors and Electronics::
+Open motor limits, including specialized strap motors, neo-magnet 
+configurations, and onboard custom telemetry or capacitor chips, are permitted.
+
+Tires::
+Open tire regulations, explicitly permitting silicone, sponge, or 
+liquid-treated tires depending on track surface compatibility.
+

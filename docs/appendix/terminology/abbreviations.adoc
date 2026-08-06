@@ -1,0 +1,86 @@
+
+
+
+== Commonly Used Abbreviations
+
+[cols="1,4,2,3", options="header"]
+|===
+| Abbreviation | Definition | Category | Source
+
+| API
+| Application Programming Interface
+| Technical Term
+| General Computing
+
+| BOM
+| Bill of Materials
+| Technical Term
+| Engineering
+
+| DS
+| Domain Standard
+| Document Type
+| ODISC
+
+| ECU
+| Electronic Control Unit
+| Technical Term
+| Automotive
+
+| GDPR
+| EU General Data Protection Regulation
+| Regulation
+| EU Regulation 2016/679
+
+| GP
+| Guiding Principle
+| Document Type
+| ODISC
+
+| GUID
+| Microsoft's implementation of a UUID
+| Technical Term
+| Software Engineering
+
+| ODISC
+| Open Digital Intelligent Slot Car Ecosystem
+| Ecosystem Term
+| ODISC
+
+| OFD
+| ODISC Foundational Documentation
+| Document Type
+| ODISC
+
+| RRS
+| Racing Rules Specification
+| Document Type
+| ODISC
+
+| TDR
+| Track Design Requirement
+| Document Type
+| ODISC
+
+| TLG
+| Technical Library Group
+| Document Type
+| ODISC
+
+| TLS
+| Technical Library Standard
+| Document Type
+| ODISC
+
+| UUID
+| A standardized 128-bit identifier designed to be globally unique
+| Technical Term
+| RFC 9562
+
+| WAC
+| Workshop Activity Category
+| Document Type
+| ODISC
+
+|===
+

@@ -1,0 +1,139 @@
+
+
+[#tls-005]
+= TLS-005: Lane Changers
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-005: Lane Changers
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+Change lanes all you want, just don't cause a collision!
+____
+
+Changing lanes introduces strategic choices that make racing more dynamic 
+by allowing drivers to select different racing lines. ODISC is built 
+to support this.
+
+== Philosophy
+
+A competitive race is not only determined by speed but by the decisions made
+while competing. Lane changers provide opportunities for strategic choices while
+maintaining safe and predictable vehicle movement.
+
+== Capabilities
+
+A lane changer consists of multiple components working together.
+
+A lane changer receives lane change requests from the Race Management System
+and determines whether the requested path can be safely executed.
+
+=== Controller
+
+The controller manages the operation of the lane changer. It receives a request
+from the Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]) and evaluates whether the requested lane change
+can be performed safely.
+
+=== Detection Points
+
+A lane changer uses position Detection Points (xref:TLS-003/index.adoc#tls-003[TLS-003]) to determine whether
+the lane change area is occupied. Each lane involved in the lane change requires
+detection points before and after the lane change area to determine vehicle
+occupancy. The lane changer shall have sufficient advance detection distance to
+determine whether a requested lane change can be safely executed.
+
+Example: +
+The distance between the entry detection points and the lane changer is determined 
+by the expected speed of the vehicles on the track at the location of the 
+lane changer. For sections with higher speeds, more distance is needed for 
+the system to evaluate whether the other lane is occupied before the vehicle 
+reaches the lane changer. In slow sections such as immediately following a 
+chicane, less distance is needed as speeds are much lower.
+
+[kroki-ditaa, slot_car_track, svg]
+----
+Entry          Entry
+Detection      Detection
+Point          Point
+  ⏱️            ⏱️
+  |              |
+  |              |
+  |              |
+  |              |
+  |              |
+  |  Lane        |
+  |  Changer     |   Direction
+  |\             |   of Travel
+  | \            |    |
+  |  \           |    👇
+  |   \          |
+  |    \         |
+  |     \        |
+  |      \       |
+  |       \      |
+  |        \     |
+  |         \    |
+  |          \   |
+  |           \  |
+  |            \ |
+  |             \|
+  |              |
+  |              |
+  ⏱️            ⏱️
+Exit           Exit
+Detection      Detection
+Point          Point
+----
+
+A lane is considered occupied once a vehicle passes the entry detection 
+point and remains occupied until the vehicle passes the exit detection 
+point. In the case of a derailment, a timer is also started (based on 
+track configuration) so that the occupancy status is cleared if no exit 
+is recorded after a configurable timeout period.
+
+When a lane change request is received from the Race Management System, the
+controller verifies that the destination lane is available and, if so, activates
+the points actuator to perform the lane change.
+
+=== Actuator(s)
+
+The actuator, or actuators if there are more than two directions a car
+can choose to travel, is commanded by the controller to move the points,
+thereby changing the trajectory of the vehicle in question.
+
+=== Points
+
+The points are moved by the actuator. Similar to a train track, they redirect
+the guide pin of the vehicle into the requested direction if available. If the 
+requested direction is unavailable, the points maintain the default direction 
+of travel.
+
+=== Reporting
+
+Detection point events shall be reported to the Race Management System for
+tracking race state, telemetry, and post-race analysis.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

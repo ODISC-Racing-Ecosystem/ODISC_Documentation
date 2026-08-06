@@ -1,0 +1,41 @@
+
+
+
+[#race_scoring]
+= Race Scoring
+
+Scoring of races allows multi-heat events to take place in order to determine the winner.
+
+== Single Heat Races
+
+Single heat races are simple, the race results determine the winner of the race as well as standings for all other drivers.
+
+No further calculations are needed.
+
+== Multiple Heat Races
+When a race event is divided into multiple heats, the final championship result shall reward drivers who consistently achieve strong results across their heats. Winning a heat should be more valuable than simply finishing higher in a single race, while all competitive finishes should contribute toward the overall result.
+
+ODISC uses a championship points system inspired by Formula 1, where the highest finishing positions receive a progressively larger share of points. The number of points awarded is based on the number of competitors participating in the heat.
+
+The winner of a heat receives the maximum available points. Each following position receives fewer points, with the difference between positions becoming smaller further down the finishing order. This ensures that victory is clearly rewarded while still recognizing consistent performance.
+
+The scoring system follows these principles:
+
+* A heat win is worth significantly more than a lower finishing position.
+* Finishing ahead of another competitor always provides a championship advantage.
+* Larger grids reward deeper finishing positions.
+* Smaller grids do not create artificial advantages through unused positions.
+
+The race event points awarded for each finishing position are calculated using the ODISC Weighted Scoring Model. This model replaces a fixed table and allows the scoring system to scale automatically as the number of competitors changes.
+
+The final event result is determined by combining the points earned from all completed heats according to the applicable race format.
+
+== Season Results
+
+When season championships are calculated, each completed race event contributes points based on the final event standings.
+
+The ODISC Weighted Scoring Model is reused to calculate season points, with the competition finishing position replacing the heat finishing position and the number of competition entrants replacing the number of heat competitors.
+
+This ensures that winning a larger competition provides a greater championship reward while maintaining the same scoring principles used throughout ODISC racing.
+
+

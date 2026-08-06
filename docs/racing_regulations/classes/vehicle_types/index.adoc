@@ -1,0 +1,78 @@
+
+[#vehicle_type_requirements]
+= Vehicle Type Requirements
+
+ODISC categorizes vehicles based on both historical theme and physical 
+architecture. When establishing a sanctioned racing class, the organizing 
+authority must explicitly define the Vehicle Type boundary using the following 
+four structural pillars.
+
+NOTE: To enable common categorization of vehicles, any racing done at the 
+Tier 3 (District) and above must be conducted on approved and published vehicle 
+types included in the ODISC Racing Regulations. Organizers may submit a 
+proposed vehicle type to the ODISC Racing Committee for review to be included 
+in the ODISC Racing Regulations.
+
+== Structural Pillars of Vehicle Type
+
+=== 1. Body Style Configuration
+
+Classes must be designated as either Open Wheel or Closed Wheel. 
+Mixed-style grids are strictly prohibited to prevent catastrophic 
+wheel-interlock accidents.
+
+Open Wheel::
+Vehicles have exposed tires with independent axle structures.
+
+Closed Wheel::
+Vehicles have integrated fenders encompassing the entirety of the 
+running gear.
+
+=== 2. Dimensional Boundaries
+
+The type definition must enforce hard maximums and minimums for track dimensions:
+
+* Maximum Track Width
+** The absolute outer distance between the left and right tyre walls.
+** Measured across the widest axle on a standard tech inspection block.
+
+WARNING: See DS-001-100 for absolute maximums allowed for each scale.
+
+* Minimum Ride Height
+** The clearance distance between the flat track surface and the chassis underbelly.
+** Measured at the lowest mechanical point under the car while stationary.
+
+=== 3. Body Material Composition
+
+Regulations must dictate the acceptable manufacturing medium of the shell:
+
+* Hardbody
+** Constructed from rigid injection-molded ABS plastic or heavy resin.
+** Prioritizes scale weight, visual realism, and high crash durability.
+
+* Performance Polyurethane
+** Constructed from ultra-thin, highly flexible plastic variants.
+** Engineered specifically to reduce top-heavy weight and minimize body roll.
+
+* Vacuum-Formed Lexan
+** Constructed from paper-thin, transparent polycarbonate sheets.
+** Designed exclusively for low weight reduction classes and raw speed.
+
+=== 4. Historical / Aesthetic Era
+
+The category must specify a chronological or series-specific boundary to 
+maintain visual harmony, scale realism, and thematic integrity across the 
+starting grid.
+
+Example Eras:
+* 1960-1975 Vintage Formula 1
+* Modern GT3
+* 1970s Le Mans
+
+NOTE: To maintain a functional competitive ladder, a sanctioned event at a
+tier higher than Tier 4 (Club) cannot utilize a vehicle type unless that 
+same vehicle type is actively utilized in sanctioned competition at the 
+tier immediately below it. Higher-tier utilization does not mandate that 
+any individual club or district must run the class, but it guarantees that 
+a promotional pathway exists from the grassroots level upward.
+

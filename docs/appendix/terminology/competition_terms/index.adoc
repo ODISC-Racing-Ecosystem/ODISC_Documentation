@@ -1,0 +1,28 @@
+
+
+== Competition Terminology
+
+The following terms are used in the context of ODISC competitions. These 
+terms are defined to ensure consistent understanding and communication 
+among participants, organizers, and officials.
+
+
+Penalty::
+
+An assessment applied to a competitor or team for violating competition regulations. 
+Penalties may result in point deductions, time penalties, disqualification, or 
+other consequences as defined by the competition's rules.
+
+Driver Station::
+
+The physical location used by the driver to connect their hand-held controller in order 
+to control the vehicle during a competition. The driver station also provides the ability 
+to pair the vehicle with the hand-held controller, and to adjust settings for the driver.
+
+
+ODISC Weighted Scoring Model::
+
+A standardized scoring calculation used by ODISC competitions to award points based on the number of competitors and finishing position. The model ensures that higher finishing positions are rewarded more significantly while allowing scoring to scale fairly across different competition sizes. +
+The ODISC Weighted Scoring Model may be applied at different competition levels, including individual heats, race results, and season championship standings.
+
+

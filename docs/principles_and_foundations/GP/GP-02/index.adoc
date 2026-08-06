@@ -1,0 +1,103 @@
+
+[#GP-02]
+= GP-02: Documentation and Governance Principles
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| GP-02: Documentation and Governance Principles
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+The following principles define the ODISC approach to documentation and governance.
+
+* 01 Write for Understanding
+* 02 Terminology
+* 03 Document Tracking
+* 04 Transparent Decision Making
+* 05 Community Stewardship
+* 06 Data Ownership and Stewardship
+
+== 01 Write for Understanding
+
+ODISC documentation shall be written so that it can be understood by a 
+broad audience. As a general goal, written information should be 
+understandable by readers aged 12-15.
+
+Technical terminology may be used when it provides necessary precision 
+or avoids ambiguity. When technical terms are required, they should be 
+explained when first introduced and used consistently throughout the documentation.
+
+The goal is not to remove technical depth, but to make knowledge accessible 
+to people without requiring unnecessary specialist knowledge.
+
+== 02 Terminology
+
+Terminology shall evolve through refinement rather than reinvention.
+When introducing a new term, prefer expanding an existing definition
+over inventing a new word unless the existing terminology would reduce
+clarity.
+
+== 03 Document Tracking
+
+Every specification document shall maintain a document identification
+block and a revision history.
+
+The identification block shall provide sufficient information to
+uniquely identify the document, including its current version number,
+title, status, and other required metadata.
+
+The revision history shall record significant changes to the document,
+including the revision identifier, date, and summary of changes.
+
+Document tracking ensures that specifications can be referenced,
+reviewed, maintained, and evolved in a controlled and transparent
+manner.
+
+== 04 Transparent Decision Making
+
+Decisions affecting ODISC standards, specifications, and ecosystem direction 
+should be documented, understandable, and traceable. Changes should be based 
+on clearly stated requirements and considerations rather than individual preference.
+
+== 05 Community Stewardship
+
+ODISC is maintained as an open ecosystem. Changes to standards should consider 
+the needs of current users, future adopters, and contributors while protecting 
+interoperability and long-term stability.
+
+== 06 Data Ownership and Stewardship
+
+Every managed data object shall have one authoritative owner at any
+given time.
+
+Ownership defines which subsystem is responsible for validating,
+committing, and maintaining the integrity of a data object. Authority
+to create, modify, approve, or consume an object is defined separately
+by the object's specification.
+
+Ownership may transfer between subsystems as part of an object's
+lifecycle, but only through explicitly defined processes.
+
+Separating ownership from authority allows distributed systems to
+cooperate while maintaining a single source of truth for every managed
+data object.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1
+| 2026-??-??
+| Initial Draft.
+|===

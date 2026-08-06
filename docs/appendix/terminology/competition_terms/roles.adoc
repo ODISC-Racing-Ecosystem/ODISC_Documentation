@@ -1,0 +1,58 @@
+
+
+[#competition_roles]
+= Competition Roles
+
+Below are the defined roles within the ODISC competition ecosystem. These roles are essential for the organization, management, and participation in ODISC competitions. Each role has specific responsibilities and expectations to ensure a fair and enjoyable experience for all participants.
+
+== Organizer Roles
+
+The following roles are responsible for the planning, execution, and oversight of ODISC competitions.
+
+=== Technical Inspector
+
+The Technical Inspector is responsible for ensuring that all vehicles and equipment comply with the 
+competition's technical regulations. This role involves inspecting vehicles for safety, performance, 
+and adherence to the rules.
+
+=== Race Scheduler
+
+The race scheduler is responsible for creating and managing the competition schedule, including heats,
+qualifying rounds, and finals. This role coordinates with other organizers and officials to
+ensure a smooth flow of events.
+
+=== Race Director
+
+The race director oversees the entire competition, making decisions on race procedures, resolving
+disputes, and ensuring that the event runs according to the established rules and regulations. 
+
+=== Marshal
+
+The marshal is responsible for maintaining safety on the track during competitions. This role 
+involves monitoring the race, assisting drivers in case of incidents, and enforcing safety protocols.
+
+== Team Roles
+
+The following roles are associated with the teams participating in ODISC competitions. 
+
+While each team is expected to have members fulfilling these roles to ensure effective 
+participation, a single individual fulfilling multiple roles.
+
+=== Team Manager or Manager
+
+The Manager is responsible for registering the team for competitions, communicating with officials, 
+and ensuring that the team is properly organized for all aspects of the competition. 
+
+=== Team Driver or Driver
+
+The Driver is responsible for operating the team's vehicle during competitions. This role requires
+skill, precision, and adherence to the competition's rules and regulations.
+
+=== Team Mechanic or Mechanic
+
+The Mechanic is responsible for maintaining and repairing the team's vehicle. This role involves
+ensuring that the vehicle is in optimal condition for competition, performing repairs, and making 
+adjustments as necessary.
+
+
+

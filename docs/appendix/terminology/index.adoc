@@ -1,0 +1,49 @@
+
+
+
+= Glossary and Terminology
+
+== Introduction
+
+This document provides a comprehensive list of terms and definitions used within the 
+ODISC ecosystem. It serves to ensure consistent understanding and communication across 
+all stakeholders, including engineers, software developers, manufacturers, and 
+competition organizers.
+
+NOTE: This document is a living document and will be updated as new terms are introduced
+and existing terms are refined. Stakeholders are encouraged to contribute to the list of 
+terms to maintain clarity and consistency throughout the ODISC ecosystem.
+
+== Terminology Philosophy
+
+* Common language improves communication.
+* A term should have one meaning throughout the ecosystem.
+* Avoid synonyms where practical.
+* Prefer human-readable terminology over implementation-specific terminology.
+* Definitions in this document take precedence over informal usage.
+
+== Purpose
+
+Consistent terminology improves communication between engineering,
+software, manufacturing, and competition disciplines.
+
+Every mature engineering ecosystem develops a controlled vocabulary
+to prevent ambiguity and ensure that requirements, designs, and
+implementations describe the same concepts.
+
+This document serves as the authoritative terminology reference for
+the ODISC ecosystem.
+
+include::abbreviations.adoc[]
+
+
+include::core_concepts/index.adoc[leveloffset=2]
+include::architectural_terms/index.adoc[leveloffset=2]
+include::competition_terms/index.adoc[leveloffset=2]
+include::vehicle_terms/index.adoc[leveloffset=2]
+include::infrastructure_terms/index.adoc[leveloffset=2]
+include::software_terms/index.adoc[leveloffset=2]
+include::certification_terms/index.adoc[leveloffset=2]
+include::reserved_terms/index.adoc[leveloffset=2]
+include::future_reserved_terminology.adoc[leveloffset=2]
+

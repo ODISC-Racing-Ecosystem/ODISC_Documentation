@@ -1,0 +1,103 @@
+
+[pass]
+++++
+<svg xmlns="http://w3.org" viewBox="-120 -160 640 500" width="100%" height="auto" style="background-color: #ffffff;">
+  <!-- Styling Context -->
+  <defs>
+    <style>
+      .envelope-profile { fill: #f8fafc; stroke: #a0aec0; stroke-width: 1.5; stroke-dasharray: 4 4; }
+      .drop-hole-cutout { fill: #edf2f7; stroke: #1a202c; stroke-width: 2.5; }
+      .dimension-line { stroke: #0066cc; stroke-width: 1.5; stroke-dasharray: 4 4; }
+      .spacing-dim-line { stroke: #2b6cb0; stroke-width: 1.2; stroke-dasharray: 3 3; }
+      .text-dim { font-family: monospace; font-size: 11px; fill: #0066cc; font-weight: bold; text-anchor: middle; }
+      .text-spacing-dim { font-family: monospace; font-size: 11px; fill: #2b6cb0; font-weight: bold; text-anchor: middle; }
+      .text-label { font-family: sans-serif; font-size: 9px; fill: #1a202c; text-anchor: middle; font-weight: bold; }
+      .text-title { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #2d3748; text-anchor: middle; }
+      .center-line-axis { stroke: #ff3333; stroke-width: 1; stroke-dasharray: 2 2; opacity: 0.6; }
+      .mounting-point { fill: #ffffff; stroke: #2d3748; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Title Label -->
+  <text x="200" y="-135" class="text-title">Power Tap Mount Dimensions</text>
+
+  <!-- NATIVE COMPONENT ENVELOPE (50mm x 20mm -> 500px x 200px) -->
+  <rect x="-50" y="5" width="500" height="200" rx="30" ry="30" class="envelope-profile" />
+  <line x1="-50" y1="105" x2="450" y2="105" class="center-line-axis" />
+  <line x1="200" y1="-160" x2="200" y2="250" class="center-line-axis" />
+
+  <!-- TWIN POWER RAIL HOLES (Each 7.50mm Width x 5.00mm Height -> 75px x 50px) -->
+  <!-- Bounds locked from y=-85 to y=-35 -->
+  <!-- Separated symmetrically by a 4mm (40px) gap at the central X=200 vertical axis line -->
+  
+  <!-- Left Power Rail Hole -->
+  <rect x="85" y="-85" width="75" height="50" class="drop-hole-cutout" />
+  <text x="122.5" y="-63" class="text-label">POWER RAIL</text>
+  <text x="122.5" y="-51" class="text-label">HOLE</text>
+  <text x="122.5" y="-39" class="text-label" font-size="8px" fill="#4a5568">7.50x5.00mm</text>
+
+  <!-- Right Power Rail Hole -->
+  <rect x="240" y="-85" width="75" height="50" class="drop-hole-cutout" />
+  <text x="277.5" y="-63" class="text-label">POWER RAIL</text>
+  <text x="277.5" y="-51" class="text-label">HOLE</text>
+  <text x="277.5" y="-39" class="text-label" font-size="8px" fill="#4a5568">7.50x5.00mm</text>
+
+  <!-- 4x Ø3.00mm Standard Mounting Points -->
+  <!-- Top Left (0, 55) -->
+  <circle cx="0" cy="55" r="15" class="mounting-point" />
+  <line x1="-30" y1="55" x2="30" y2="55" class="center-line-axis" />
+  <line x1="0" y1="25" x2="0" y2="85" class="center-line-axis" />
+
+  <!-- Top Right (400, 55) -->
+  <circle cx="400" cy="55" r="15" class="mounting-point" />
+  <line x1="370" y1="55" x2="430" y2="55" class="center-line-axis" />
+  <line x1="400" y1="25" x2="400" y2="85" class="center-line-axis" />
+
+  <!-- Bottom Left (0, 155) -->
+  <circle cx="0" cy="155" r="15" class="mounting-point" />
+  <line x1="-30" y1="155" x2="30" y2="155" class="center-line-axis" />
+  <line x1="0" y1="125" x2="0" y2="185" class="center-line-axis" />
+  <text x="15" y="195" class="text-label" style="text-anchor: start;">4x Ø 3mm +/-0.1mm</text>
+
+  <!-- Bottom Right (400, 155) -->
+  <circle cx="400" cy="155" r="15" class="mounting-point" />
+  <line x1="370" y1="155" x2="430" y2="155" class="center-line-axis" />
+  <line x1="400" y1="125" x2="400" y2="185" class="center-line-axis" />
+
+  <!-- Structural Clearances & Dimension Tracks -->
+  <!-- 4mm Symmetrical Gap Dimension Between Cutouts -->
+  <line x1="160" y1="-55" x2="240" y2="-55" class="spacing-dim-line" />
+  <line x1="160" y1="-62" x2="160" y2="-48" stroke="#2b6cb0" stroke-width="1" />
+  <line x1="240" y1="-62" x2="240" y2="-48" stroke="#2b6cb0" stroke-width="1" />
+  <text x="200" y="-42" class="text-spacing-dim">4mm</text>
+
+  <!-- Compressed Vertical Clearance Dimension to Envelope Edge (Approx. 3 mm) -->
+  <line x1="200" y1="-35" x2="200" y2="5" class="spacing-dim-line" />
+  <line x1="190" y1="-35" x2="210" y2="-35" stroke="#2b6cb0" stroke-width="1" />
+  <line x1="190" y1="5" x2="210" y2="5" stroke="#2b6cb0" stroke-width="1" />
+  <text x="215" y="-12" class="text-spacing-dim" style="text-anchor: start;">Approx. 3 mm</text>
+
+  <!-- Horizontal Mounting Hole Spacing Track (40mm) -->
+  <line x1="0" y1="225" x2="400" y2="225" class="spacing-dim-line" />
+  <line x1="0" y1="170" x2="0" y2="230" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="400" y1="170" x2="400" y2="230" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="200" y="240" class="text-spacing-dim">Hole Centers: 40mm +/-0.1mm</text>
+
+  <!-- Vertical Mounting Hole Spacing Track (10mm) -->
+  <line x1="-70" y1="55" x2="-70" y2="155" class="spacing-dim-line" />
+  <line x1="-70" y1="55" x2="-15" y2="55" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="-70" y1="155" x2="-15" y2="155" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="-80" y="105" class="text-spacing-dim" style="transform: rotate(-90deg); transform-origin: -80px 105px;">10mm +/-0.1mm</text>
+
+  <!-- Reference Envelope Outline Dimensions -->
+  <!-- Envelope Width (50mm) -->
+  <line x1="-50" y1="275" x2="450" y2="275" class="dimension-line" />
+  <line x1="-50" y1="205" x2="-50" y2="280" stroke="#0066cc" stroke-width="1" />
+  <line x1="450" y1="205" x2="450" y2="280" stroke="#0066cc" stroke-width="1" />
+  <text x="200" y="292" class="text-dim">Example Envelope Width: 50mm</text>
+
+  <!-- Envelope Height (20mm) -->
+  <line x1="465" y1="5" x2="465" y2="205" class="dimension-line" />
+  <text x="477" y="105" class="text-dim" style="transform: rotate(90deg); transform-origin: 477px 105px;">Example Envelope Height: 20mm</text>
+</svg>
+++++

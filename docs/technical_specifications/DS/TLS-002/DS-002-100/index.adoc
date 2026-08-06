@@ -1,0 +1,64 @@
+
+[#ds-002-100]
+= DS-002-100: Race Management System Hardware
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| DS-002-100: Race Management System
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+
+== Physical Requirements
+
+== Functional Requirements
+
+=== CAN-Bus
+
+The system shall implement a CAN-Bus network to communicate with various controllers 
+and systems connected to the network.
+
+=== Power Controller with Data Modulation
+
+The system shall implement controls of the "Power Controller with Data Modulation" 
+as defined in xref:../DS-002-110/index.adoc[DS-002-110].
+
+== Visualizations
+
+== Requirements Checklist
+
+.Race Management System Checklist
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| ITEM_NAME
+| ITEM_DESCRIPTION
+| ✅ / ℹ️
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

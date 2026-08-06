@@ -1,0 +1,127 @@
+
+
+= Technical Library Specification (TLS) Document Standards
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| Technical Library Specification (TLS) Document Standards
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+Technical Library Standards define high-level requirements for the
+architecture, behavior, and interfaces of major parts of the ODISC
+ecosystem.
+
+Technical Library Standards establish the foundational technical
+framework that is extended by Domain Standards (DS) and implemented
+by compatible systems.
+
+== Relationship to Global Document Standards
+
+This document defines additional requirements specific to Technical
+Library Standards.
+
+All Technical Library Standards shall also comply
+with the Global Document Standards.
+
+== Numbering Scheme
+
+Technical Library Standards use the following numbering scheme:
+
+[source,text]
+----
+TLS-###
+----
+
+Where:
+
+* `TLS` identifies the document as a Technical Library Standard.
+* `###` identifies the sequential Technical Library Standard number.
+
+Example:
+
+[source,text]
+----
+TLS-001 Sample Name
+----
+
+== Writing Style
+
+Documents should be written using clear and simple language. Complex ideas
+should be explained in a way that allows a technically interested reader
+with limited prior context, including younger readers, to understand the
+intent, reasoning, and expected behavior described in the document.
+
+Technical terminology may be used when necessary for precision, but terms
+that are not commonly understood should be explained when they are first
+introduced.
+
+=== Writing Style Test
+
+The "12-15 year old" guideline is a practical test for clarity:
+
+* Can a motivated teenager understand what problem this document solves?
+* Can they understand why the design choices were made?
+* Can they follow the basic concept without requiring outside explanation?
+* Are technical terms explained when they are unavoidable?
+
+== Document Section Requirements
+
+Sections defined by the Global Document Standards shall be included as
+applicable to Technical Library Standards.
+
+This document defines additional requirements for sections specific to
+Technical Library Standards.
+
+Sections with the same name as the Global Document Standards provide
+additional detail for that section (example: Introduction).
+
+See the Global Document Standards for requirements that apply to all
+Technical Library Standards.
+
+=== Introduction
+
+The introduction provides a high-level overview of the document,
+including its purpose, philosophy, scope, and context within the ODISC 
+ecosystem. It should also include any relevant background information,
+definitions, and references to related documents.
+
+== Capabilities
+
+The capabilities section defines the capabilities and behaviors 
+that the system shall exhibit. The section should explain why 
+those capabilities are necessary, and the trade-offs that were
+considered. 
+
+Examples should be provided in this section to illustrate practical
+application without introducing new requirements.
+
+Standards should prioritize clear, concise language over unnecessary
+technical complexity. 
+
+The objective is not to produce documents that merely satisfy 
+compliance, but documents that encourage understanding and 
+continued reading.
+
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

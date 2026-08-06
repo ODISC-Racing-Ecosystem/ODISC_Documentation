@@ -1,0 +1,66 @@
+
+
+= Core Concepts
+Define each concept used throughout ODISC.
+
+Examples:
+
+Authority::
+
+Ownership::
+
+Identity::
+
+Registry Object::
+
+Registry Domain::
+
+Data Quality::
+
+Lifecycle::
+
+Metadata::
+
+Synchronization::
+
+Version::
+
+Certification::
+
+Compliance::
+
+Compatibility::
+
+Pairing::
+
+Vehicle::
+
+Driver::
+
+Venue::
+
+Racetrack::
+
+Competition::
+
+Race::
+
+Session::
+
+Heat::
+
+Championship::
+
+Event::
+
+Workshop::
+
+Workshop Equipment::
+
+Workshop Activity::
+
+Technical Inspection::
+
+Parc Fermé::
+
+

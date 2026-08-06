@@ -1,0 +1,55 @@
+
+
+[#tlg-002]
+= TLG-002: Multi-Racetrack Venue
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLG-002: Multi-Racetrack Venue
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+A multi-racetrack venue provides additional hardware and software
+capabilities to allow multiple racetracks to operate in a single
+location and combine their results into a championship. This allows 
+for larger events, such as tournaments, to be held at a single location.
+
+== Functional Areas
+
+A multi-racetrack venue consists of two or more racetracks in accordance
+with the Racetrack Installation (xref:TLG/TLG-001.adoc#tlg-001[TLG-001]).
+
+A multi-racetrack venue may include Venue Management capabilities as
+defined by the Race Management System
+(xref:page$TLS/TLS-002.adoc#tls-002_venue_management[TLS-002]).
+
+Venue Management is not a requirement for a multi-racetrack venue, but is
+highly recommended for managing multiple racetracks.
+
+=== Venue Management Subsystem
+
+The Venue Management subsystem uses the same software package and hardware
+platform as the Race Management System, but requires fewer hardware
+connections.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

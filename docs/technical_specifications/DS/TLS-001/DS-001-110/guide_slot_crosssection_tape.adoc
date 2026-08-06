@@ -1,0 +1,31 @@
+
+[pass]
+++++
+<svg width="600" height="240" viewBox="0 0 600 240" xmlns="http://w3.org" style="background:#ffffff; font-family:sans-serif;">
+  <!-- Flat Track Surface with Slot -->
+  <!-- Adjusted slot width to 4mm and slot depth to 10mm by moving coordinates -->
+  <line x1="20" y1="60" x2="280" y2="60" stroke="#333333" stroke-width="3" />
+  <line x1="280" y1="60" x2="280" y2="190" stroke="#333333" stroke-width="2" />
+  <line x1="280" y1="190" x2="320" y2="190" stroke="#333333" stroke-width="2" />
+  <line x1="320" y1="190" x2="320" y2="60" stroke="#333333" stroke-width="2" />
+  <line x1="320" y1="60" x2="580" y2="60" stroke="#333333" stroke-width="3" />
+  
+  <!-- Conductive Copper Tape Layers -->
+  <rect x="228" y="56" width="40" height="4" fill="#d97724" stroke="#b05612" rx="1" />
+  <rect x="332" y="56" width="40" height="4" fill="#d97724" stroke="#b05612" rx="1" />
+  <text x="248" y="46" font-size="10" fill="#d97724" text-anchor="middle">Copper Tape</text>
+  <text x="352" y="46" font-size="10" fill="#d97724" text-anchor="middle">Copper Tape</text>
+  
+  <!-- Labels & Space Vectors -->
+  <text x="100" y="40" font-size="12" fill="#666666" text-anchor="middle">Track Surface</text>
+  
+  <!-- Width Dimension -->
+  <path d="M 280 205 L 320 205" stroke="#00bcd4" stroke-width="1.5" />
+  <text x="300" y="222" font-size="11" fill="#00bcd4" text-anchor="middle">Width: 4mm</text>
+  
+  <!-- Depth Dimension -->
+  <path d="M 335 60 L 335 190" stroke="#00bcd4" stroke-width="1.5" />
+  <text x="345" y="125" font-size="11" fill="#00bcd4">Slot Depth: 10mm</text>
+</svg>
+++++
+

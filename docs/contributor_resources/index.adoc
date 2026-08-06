@@ -1,0 +1,6 @@
+
+= Contributor Resources
+
+
+include::asciidoc/best_practices.adoc[leveloffset=+1]
+

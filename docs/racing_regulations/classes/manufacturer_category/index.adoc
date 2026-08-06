@@ -1,0 +1,42 @@
+= Manufacturer Category
+
+ODISC recognizes that some manufacturers produce vehicles that are affordable and simple to operate, while others engineer highly customizable racing machines. 
+
+ODISC groups manufacturers into the following categories to level the playing field. Put simply: it is not fair to line up a bone-stock daily driver against a purpose-built race car.
+
+== Toy Manufacturer
+
+ODISC defines these as mass-market brands focused primarily on the home hobbyist and family market. While these cars can absolutely be raced, they lack advanced mechanical tuning adjustments out of the box. They typically feature rigid, one-piece plastic chassis, press-fit plastic wheels, and rely heavily on traction magnets for grip.
+
+Examples:
+* Artin
+* Carrera
+* Policar (Specifically their "Classic F1" line out-of-the-box)
+* Scalextric
+
+== Crossover Brands
+
+These brands bridge the gap between hobby play and competition. They often prioritize high-end scale visual detail and historically accurate body shapes. While their out-of-the-box performance and internal engineering resemble toy brands, they serve as excellent platforms for high-level tuning and modification.
+
+Examples:
+* Fly / Flyslot
+* Revell / Monogram
+
+== Entry-Level Competition Brands (Hobby-Grade)
+
+This tier marks the beginning of dedicated club racing. These manufacturers design vehicles to be raced without traction magnets on wood or plastic tracks. They feature modular, multi-piece adjustable chassis, floating motor pods, lightweight bodies, and aluminum wheels secured with grub screws for precision tuning.
+
+Examples:
+* Slot.it
+* Sideways
+
+== Competition Manufacturer
+
+These manufacturers produce top-tier racing machines engineered for absolute performance straight out of the box. Scale detail is secondary to weight distribution, chassis torsional flex, and raw track speed. They feature ultra-lightweight, flexible plastics or specialized composite/metal chassis, high-torque motors, and professional-grade racing components.
+
+Examples:
+* NSR
+* RevoSlot
+* Scaleauto
+* Thunderslot
+

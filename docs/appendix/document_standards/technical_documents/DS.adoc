@@ -1,0 +1,160 @@
+
+= Domain Specification (DS) Document Standards
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| Domain Specification (DS) Document Standards
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+Detailed standards defining individual domains, components, objects,
+interfaces, and implementation requirements that support a Technical
+Library Standard (TLS).
+
+Domain Standards provide the detailed specifications required to
+implement specific capabilities defined by a TLS.
+
+Domain Standards use the following numbering scheme:
+
+[source,text]
+----
+DS-NNN-XXX
+----
+
+Where:
+
+* `DS` identifies the document as a Domain Standard.
+* `NNN` identifies the TLS that the Domain Standard supports.
+* `XXX` identifies the sequential Domain Standard number within that TLS.
+
+Example:
+
+[source,text]
+----
+DS-001-010 Race Management System Hardware
+----
+
+=== Numbering Convention
+
+Within a Domain Standard that contains sufficient detail to warrant
+multiple documents, the following numbering ranges are used:
+
+* 0xx documents are reserved.
+* 1xx documents define hardware requirements.
+* 2xx documents define software requirements.
+* 3xx documents define communication requirements.
+
+The tens and ones digits identify the sequential document number within
+the assigned requirement range.
+
+For example:
+
+* DS-001-100: First hardware requirements document for TLS-001.
+* DS-001-110: Second hardware requirements document within the same category.
+
+For Domain Standards consisting of a single document, that document
+shall be assigned document number 100.
+
+Additional ranges may be assigned as required for future system components.
+
+== Required 
+
+== Required Sections
+
+See the Global Document Standards for the additional required items.
+
+=== Introduction
+
+The Introduction section provides a high-level overview of the
+document, including its purpose, scope, and context within the 
+ODISC ecosystem. It should also include any relevant background 
+information, definitions, and references to related documents.
+
+=== Physical Requirements (Optional)
+
+If the Domain Specification (DS) needs to define any physical mounting 
+points or other size restrictions, these are listed prior to any 
+functional requirements.
+
+=== Functional Requirements
+
+Domain Specification (DS) documents are the first tier that establishes 
+firm requirements. While a TLS document defines the broad strokes 
+goal of components ("The component should..."), the DS defines the 
+actual requirements ("The feature shall...").
+
+==== Diagrams and Reference Materials
+
+All diagrams and any reference materials, shall be placed in a separate 
+file within the same directory as the DS adoc file. This provides the 
+ability to reference diagrams from multiple documents.
+
+NOTE: Certain diagrams and reference material can be promoted to the 
+global appendix on a case by case basis.
+
+==== Protocol definitions
+
+Each protocol definition shall be elevated to its own DS document.
+
+== Requirements Checklist
+
+Each DS document shall provide a checklist of the requirements it generates
+to assist implementers to ensure they have met all the requirements.
+
+NOTE: While this table exists to assist implementers, the DS document as a 
+whole entity defines the total set of requirements.
+
+Example:
+
+.Sample requirements checklist
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| CAN-Bus Hardware
+| Ensure hardware supports CAN-Bus
+| ✅
+| ☐
+
+| Implement protocol
+| Ensure protocol for communication is implemented. +
+See DS-???-3?? for specification.
+| ✅
+| ☐
+
+| Implement optional feature
+| Ensure feature works. Optional features use the informational emoji instead of the checkbox.
+| ℹ️
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+
+Exemptions to this rule apply in those cases that a DS document defines a 
+standard that is used by other DS implementations, such as a 
+communication protocol.
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+
+

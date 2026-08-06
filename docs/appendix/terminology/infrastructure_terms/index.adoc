@@ -1,0 +1,18 @@
+
+
+
+= Infrastructure Terms
+
+Segment::
+
+Segment Controller::
+
+Timing Gate::
+
+Lane Changer::
+
+Pairing Dock::
+
+Power Segment::
+
+

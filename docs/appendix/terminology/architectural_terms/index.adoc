@@ -1,0 +1,45 @@
+
+
+= Architectural Terms
+
+Ecosystem::
+The complete collection of subsystems that contribute to the ODISC environment.
+
+System::
+A collection of subsystems that combine to create a working system within the ODISC Ecosystem. This includes hardware, software, and other items as defined in these specifications. +
+Examples: Race Management System or Venue Management System
+
+Subsystem::
+A collection of parts that combine to create a working subsystem. This includes the hardware, firmware, software, and other items as defined in these specifications. +
+Example: The "Lane Changer Subsystem" may consists of multiple sensors and controllers working together.
+
+Component::
+A singular part or unit that  provides a single feature.
+Example: A timing sensor
+
+Controller::
+When used in reference to electronics, a hardware controller is the brains of the operation that aids in communication with other components and determines what actions need to be taken.
+Example: A lane change controller evaluates data to ensure a lane change can occur without a collision.
+
+Service::
+A data provider subsystem that allows other subsystems to perform CRUD (Create, Read, Update, Delete) operations on data. +
+Note: Not all operations are valid for all data types.
+
+Registry::
+A collection of data that tracks events within the ODISC Racing Environment. This includes information on drivers, races, rulesets, and results.
+
+Registry, Local::
+The local copy of the registry that has the data needed for a single racetrack. The local registry syncs with either the venue or the global registry to ensure data is current.
+Note: Single racetrack installations will contact the global registry, whereas multi-track installations will contact the venue registry instead.
+
+Registry, Venue::
+The local copy of the registry that has the data needed for a venue with multiple racetracks. The venue registry syncs with the global registry to ensure data is current, and provides synchronization services for local registry copies.
+Note: Venue registries generally only exist for multi-racetrack installations.
+
+Registry, Global::
+The master copy of the registry that has all of the data contained within the ODISC Ecosystem. The global registry provides synchronization services for venue and local registry copies. 
+
+Infrastructure::
+The physical hardware that a racetrack is composed of.
+Example: Power rails for each lane, lane changers, timing sensors, etc.
+

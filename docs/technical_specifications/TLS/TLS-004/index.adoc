@@ -1,0 +1,96 @@
+
+
+[#tls-004]
+= TLS-004: Start/Finish Line and Race Timing
+
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| TLS-004: Start/Finish Line and Race Timing
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+== Introduction
+
+[quote]
+____
+Without timing, you aren't racing.
+
+You are just driving.
+____
+
+The start/finish line has a unique role in the ODISC racing ecosystem. This 
+is the authoritative source for determining when a vehicle crosses the line 
+and establishing race order.
+
+== Philosophy
+
+Fair competition requires a trusted and consistent method of measuring progress.
+The start/finish line provides the reference point from which all lap timing and
+race results are derived.
+
+== Capabilities
+
+The start/finish line is composed by multiple components that work together.
+
+=== Detection Points
+
+Detection Points (xref:TLS-003/index.adoc#tls-003[TLS-003]) must be placed 
+on the start/finish line for each lane. These are used to register when a 
+vehicle passes the line and triggers the process that records a completed lap,
+the timing of that lap, and the associated vehicle progress.
+
+=== Controller
+
+The controller registers when sensors are tripped, and by what vehicle. It 
+works with the Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]) 
+to record the completed lap.
+
+[WARNING]
+====
+Accurate timing is critical to fair competition within ODISC.
+
+The achievable timing accuracy must be tested and verified to determine the
+practical resolution that can be reliably supported for lap times. 
+
+The system may have a theoretical timing capability beyond the level that 
+can be guaranteed in competition.
+====
+
+=== Start Lights (optional)
+
+The controller can optionally control the lights for starting a race, similar to an F1 race with 5 lights coming on one after another to notify drivers of the pending start.
+
+=== Additional Lanes (optional)
+
+For larger tracks with many drivers, there may be additional lanes used only for the start that run parallel to the main track. After some distance, these can then merge into the other lanes.
+
+====
+Example: +
+For a large track with 4 racing lanes normally with a heat of 16 drivers, there may be 4 additional lanes added with one merging into each of the others. This allows more cars to get a jump off the line to emulate a good start.
+====
+
+Grid spacing should not be altered when using additional lanes, but rather distance to the merge should be equal compared to the original grid placement. This provides an opportunity for drivers to gain an advantage through a better start.
+
+Note: +
+Drivers are responsible for completing merges safely and avoiding collisions.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

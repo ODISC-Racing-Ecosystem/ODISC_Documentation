@@ -1,0 +1,151 @@
+
+= ODISC Documentation License
+
+== Identification Block
+
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| ODISC Documentation License
+|Version| 0.1
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
+
+== Version
+
+This license is version 0.1.
+
+Any version prior to 1.0 shall be considered a pre-release version and may be
+changed as part of the review and development process.
+
+Pre-release versions may add, remove, or modify permissions and restrictions,
+including changes that may affect previous interpretations of this license.
+
+Version 1.0 shall represent the first stable release of this license.
+All prior versions shall be considered pre-release versions and superseded by
+Version 1.0.
+
+== Purpose
+
+The ODISC Documentation License defines the rights granted to users of ODISC documentation.
+
+The purpose of this license is to allow broad access, use, implementation, and
+distribution of ODISC documentation while preserving the integrity and identity
+of official ODISC documents.
+
+== Definitions
+
+ODISC Documentation::
+
+Any document published by the ODISC Project, including specifications,
+technical documents, design documents, architecture documents, guides,
+manuals, reference materials, and other official documentation.
+
+Official ODISC Documentation::
+
+ODISC Documentation published by the ODISC Project and identified as an
+official document.
+
+Derivative Documentation::
+
+A work based on ODISC Documentation that has been modified, adapted, extended,
+translated, or otherwise changed from the original document.
+
+== Granted Rights
+
+Permission is granted to:
+
+* Access and read ODISC Documentation.
+* Copy and redistribute unmodified copies of ODISC Documentation.
+* Use ODISC Documentation for the development of hardware, software, firmware,
+  services, educational materials, and other implementations.
+* Use ODISC Documentation for commercial and non-commercial purposes.
+* Quote portions of ODISC Documentation with appropriate attribution.
+* Translate ODISC Documentation into other languages and redistribute those
+  translations.
+
+No royalty, licensing fee, or other payment is required for these permissions.
+
+== Document Integrity
+
+Official ODISC Documentation represents the authoritative publication of ODISC
+requirements, recommendations, and information.
+
+Derivative Documentation may be created for purposes such as:
+
+* Internal Use
+* Analysis
+* Education
+* Implementation Guidance
+* Development Activities
+* Event Documents
+* Operational Procedures
+
+Derivative Documentation shall not be represented as official ODISC Documentation.
+
+== Distribution of Derivative Documentation
+
+Derivative Documentation that is distributed publicly shall:
+
+* Clearly identify that it is a derivative work.
+* Identify the original ODISC Documentation from which it was derived.
+* Not use ODISC document identifiers, revision numbers, or publication status
+  in a manner that implies official status.
+* Not imply endorsement, approval, or certification by the ODISC Project.
+
+== Translations
+
+Translations of ODISC Documentation are permitted.
+
+The official English-language version published by the ODISC Project remains the
+authoritative reference.
+
+In the event of any discrepancy, ambiguity, or conflict between a translation
+and the official English-language version, the official English-language
+version shall prevail.
+
+== Attribution
+
+Redistributed copies of ODISC Documentation shall retain:
+
+* Title
+* Numbering
+* Copyright notices
+* License notices
+* Original Attribution Information
+
+== Trademarks
+
+This license does not grant permission to use ODISC trademarks, logos,
+certification marks, or other protected identifiers except where explicitly
+permitted by separate trademark policies.
+
+== Warranty and Liability
+
+ODISC Documentation is provided "as is" without warranty of any kind, whether
+express or implied.
+
+The ODISC Project and contributors shall not be liable for any damages, claims,
+or losses arising from the use, implementation, or interpretation of ODISC
+Documentation.
+
+== License Acceptance
+
+Accessing, using, redistributing, or implementing ODISC Documentation
+constitutes acceptance of the terms of this license.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

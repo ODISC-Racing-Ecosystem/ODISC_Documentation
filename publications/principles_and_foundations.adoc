@@ -1,0 +1,29 @@
+
+= ODISC Ecosystem Principles & Foundations
+:toc:
+:sectnums:
+:toclevels: 3
+:doctype: book
+:docsdir: ../docs/principles_and_foundations/modules/ROOT/pages
+:licensedir: ../docs/appendix/modules/ROOT/pages/licenses
+:pdf-themesdir: resources/themes/pdf-themes
+:pdf-theme: pdf
+
+include::{docsdir}/overview.adoc[leveloffset=1]
+include::{docsdir}/OFD/index.adoc[leveloffset=1]
+include::{docsdir}/OFD/OFD-001/index.adoc[leveloffset=2]
+include::{docsdir}/OFD/OFD-002/index.adoc[leveloffset=2]
+include::{docsdir}/OFD/OFD-003/index.adoc[leveloffset=2]
+include::{docsdir}/OFD/OFD-004/index.adoc[leveloffset=2]
+include::{docsdir}/OFD/OFD-005/index.adoc[leveloffset=2]
+
+include::{docsdir}/GP/index.adoc[leveloffset=1]
+include::{docsdir}/GP/GP-01/index.adoc[leveloffset=2]
+include::{docsdir}/GP/GP-02/index.adoc[leveloffset=2]
+include::{docsdir}/GP/GP-03/index.adoc[leveloffset=2]
+include::{docsdir}/GP/GP-04/index.adoc[leveloffset=2]
+
+
+
+// Last item in file
+include::{licensedir}/documentation_license.adoc[leveloffset=1]
