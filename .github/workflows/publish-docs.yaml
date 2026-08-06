@@ -30,14 +30,8 @@ jobs:
       - name: Install Project Workspace Dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Validate Cross Document Links and Includes
-        run: node utility_scripts/verify-links.js
-
-      - name: Compile Site HTML Artifacts
-        run: node utility_scripts/build-html.js
-
-      - name: Render Reference Publications to PDF
-        run: node utility_scripts/build-pdf.js
+      - name: Execute Build All Script
+        run: node utility_scripts/build-all.js --prod
 
       # NEW REQUIREMENT 1: Copy PDFs directory into Web output before website packaging
       - name: Inject PDFs into Website Directory Structure
