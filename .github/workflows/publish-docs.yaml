@@ -55,3 +55,8 @@ jobs:
           name: odisc-documentation-website
           path: build/web/
           retention-days: 7
+
+      # NEW STEP: Automatically publish the compiled web directory live to GitHub Pages
+      - name: Deploy Unified Web Target to GitHub Pages
+        uses: actions/deploy-pages@v4          
+        
