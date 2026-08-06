@@ -13,6 +13,12 @@ jobs:
   validate-and-build:
     name: Execute Verification and Asset Compilation
     runs-on: ubuntu-latest
+    
+    # REQUIRED FIX: Grant the necessary permissions for GitHub Pages deployment
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout Repository Context
@@ -60,5 +66,4 @@ jobs:
 
       # NEW STEP: Automatically publish the compiled web directory live to GitHub Pages
       - name: Deploy Unified Web Target to GitHub Pages
-        uses: actions/deploy-pages@v4          
-        
+        uses: actions/deploy-pages@v4

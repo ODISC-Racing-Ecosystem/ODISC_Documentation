@@ -1,5 +1,4 @@
 # --- AsciiDoc / Asciidoctor Build Outputs ---
-*.html
 *.pdf
 *.epub
 *.mobi
