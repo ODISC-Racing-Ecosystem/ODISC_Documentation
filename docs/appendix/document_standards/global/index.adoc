@@ -77,8 +77,8 @@ document identifier.
 
 Example:
 
-* xref:TLS-002/index.adoc#tls-002[TLS-002]: Race Management System
-* xref:TLS-003/index.adoc#tls-003[TLS-003]: Detection Points
+* include:TLS-002/index.adoc#tls-002[TLS-002]: Race Management System
+* include:TLS-003/index.adoc#tls-003[TLS-003]: Detection Points
 
 References to sections within lists may use the section anchor directly when
 the referenced section is not a standalone document.

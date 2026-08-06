@@ -62,8 +62,8 @@ and provide commands required for race operation.
 
 ==== Detection Points
 
-A Racetrack with multiple lanes (xref:TLS-001/index.adoc#tls-001[TLS-001]) uses 
-Detection Points (xref:TLS-003/index.adoc#tls-003[TLS-003]) to identify 
+A Racetrack with multiple lanes (xref:../TLS-001/index.adoc#tls-001[TLS-001]) uses 
+Detection Points (xref:../TLS-003/index.adoc#tls-003[TLS-003]) to identify 
 when vehicles pass defined locations on the track.
 
 The Race Management System uses these events to maintain awareness of vehicle
@@ -73,7 +73,7 @@ lane change safety requirements.
 ==== Lane Changers
 
 The Race Management System communicates lane change requests to 
-Lane Changers (xref:TLS/TLS-005/index.adoc#tls-005[TLS-005]) around the track.
+Lane Changers (xref:../TLS-005/index.adoc#tls-005[TLS-005]) around the track.
 
 ==== Pit Lane
 

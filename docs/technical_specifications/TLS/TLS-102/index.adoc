@@ -25,11 +25,6 @@ NOTE: Much of this content should be moved to Racing Regulations (TBD location).
 
 == References
 
-* xref:..\TLS-001_Governance\TLS-001_index.adoc[TLS-001] - Governance
-* xref:..\TLS-002_Ecosystem_Architecture\TLS-002_index.adoc[TLS-002] - Ecosystem Architecture
-* xref:..\TLS-003_Global_Registry\TLS-003_index.adoc[TLS-003] - Global Registry
-* xref:..\TLS-004_Venue_Infrastructure\TLS-004_index.adoc[TLS-004] - Venue Infrastructure
-* xref:..\TLS-005_Racetrack_Infrastructure\TLS-005_index.adoc[TLS-005] - Racetrack Infrastructure
 
 
 == Competition Management Philosophy

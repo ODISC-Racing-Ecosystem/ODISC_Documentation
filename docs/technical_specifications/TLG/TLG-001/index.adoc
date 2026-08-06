@@ -25,24 +25,24 @@ system able to race your friends at home or organize an international competitio
 
 A racetrack installation consists of the following components:
 
-* xref:TLS/TLS-001/index.adoc#tls-001[TLS-001]: Racetrack with multiple lanes
-* xref:TLS/TLS-002/index.adoc#tls-002[TLS-002]: Race Management System
+* xref:../../TLS/TLS-001/index.adoc[TLS-001]: Racetrack with multiple lanes
+* xref:../../TLS/TLS-002/index.adoc[TLS-002]: Race Management System
 ** Hardware and software that controls the active race
 ** Contains the local repository of firmware updates, race results, and
 driver profiles.
-* xref:TLS/TLS-003/index.adoc#tls-003[TLS-003]: Detection Points
-* xref:TLS/TLS-004/index.adoc#tls-004[TLS-004]: Start/Finish Line and Race Timing
-* xref:TLS/TLS-005/index.adoc#tls-005[TLS-005]: Lane Changers
-* xref:TLS/TLS-006/index.adoc#tls-006[TLS-006]: Pit Lane
-* xref:TLS/TLS-007/index.adoc#tls-007[TLS-007]: Track Lighting and flag signals
-* xref:TLS/TLS-008/index.adoc#tls-008[TLS-008]: Docking Station
-* xref:TLS/TLS-009/index.adoc#tls-009[TLS-009]: Driver Station
+* xref:../../TLS/TLS-003/index.adoc[TLS-003]: Detection Points
+* xref:../../TLS/TLS-004/index.adoc[TLS-004]: Start/Finish Line and Race Timing
+* xref:../../TLS/TLS-005/index.adoc[TLS-005]: Lane Changers
+* xref:../../TLS/TLS-006/index.adoc[TLS-006]: Pit Lane
+* xref:../../TLS/TLS-007/index.adoc[TLS-007]: Track Lighting and flag signals
+* xref:../../TLS/TLS-008/index.adoc[TLS-008]: Docking Station
+* xref:../../TLS/TLS-009/index.adoc[TLS-009]: Driver Station
 
 The following optional items can be added at a later time to expand the
 functionality and appearance of a racetrack installation and may be required
 for higher tiers of racing:
 
-* Race Director Interface (defined within xref:page$TLS/TLS-002.adoc#tls-002_race_director[TLS-002])
+* Race Director Interface (defined within xref:../../TLS/TLS-002/index.adoc#tls-002_race_director[TLS-002])
 * Additional Driver Stations
 * Scenery
 
@@ -52,7 +52,7 @@ The following items are not considered part of the racetrack installation,
 even if they are needed to conduct a race:
 
 * Vehicles
-* xref:TLS/TLS-010/index.adoc#tls-010[TLS-010]: Vehicle Decoder
+* xref:../../TLS/TLS-010/index.adoc[TLS-010]: Vehicle Decoder
 
 == Document Revision History
 

@@ -1,0 +1,63 @@
+name: Documentation Build & Validation Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch: # ALLOWS MANUAL TRIGGERING VIA GITHUB UI
+
+jobs:
+  validate-and-build:
+    name: Execute Verification and Asset Compilation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Context
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install System Asciidoctor and PDF Engines
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y asciidoctor ruby-asciidoctor-pdf
+
+      - name: Install Project Workspace Dependencies
+        run: npm ci
+
+      - name: Validate Cross Document Links and Includes
+        run: node utility_scripts/verify-links.js
+
+      - name: Compile Site HTML Artifacts
+        run: node utility_scripts/build-html.js
+
+      - name: Render Reference Publications to PDF
+        run: node utility_scripts/build-pdf.js
+
+      # NEW REQUIREMENT 1: Copy PDFs directory into Web output before website packaging
+      - name: Inject PDFs into Website Directory Structure
+        run: |
+          mkdir -p build/web/PDFs
+          cp -r build/PDFs/. build/web/PDFs/
+          echo "Merged build/PDFs content into build/web/PDFs/"
+
+      # NEW REQUIREMENT 2: Publish individual PDF files as discrete GitHub Artifacts
+      - name: Upload Individual PDF Documents
+        uses: actions/upload-artifact@v4
+        with:
+          name: individual-publication-pdfs
+          path: build/PDFs/**/*.pdf
+          retention-days: 14
+
+      # Final step packages the unified build folder (Website + injected PDFs directory)
+      - name: Upload Complete Web Server Bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: odisc-documentation-website
+          path: build/web/
+          retention-days: 7

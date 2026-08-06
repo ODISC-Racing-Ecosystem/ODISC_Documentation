@@ -42,12 +42,12 @@ and determines whether the requested path can be safely executed.
 === Controller
 
 The controller manages the operation of the lane changer. It receives a request
-from the Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]) and evaluates whether the requested lane change
+from the Race Management System (xref:../TLS-002/index.adoc#tls-002[TLS-002]) and evaluates whether the requested lane change
 can be performed safely.
 
 === Detection Points
 
-A lane changer uses position Detection Points (xref:TLS-003/index.adoc#tls-003[TLS-003]) to determine whether
+A lane changer uses position Detection Points (xref:../TLS-003/index.adoc#tls-003[TLS-003]) to determine whether
 the lane change area is occupied. Each lane involved in the lane change requires
 detection points before and after the lane change area to determine vehicle
 occupancy. The lane changer shall have sufficient advance detection distance to

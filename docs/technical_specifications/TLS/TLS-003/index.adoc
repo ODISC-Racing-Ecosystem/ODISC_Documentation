@@ -26,7 +26,7 @@ ____
 
 Detection points provide continuous awareness of vehicle location on the
 racetrack. They allow vehicle decoders to report their presence as they pass
-detection points, enabling the Race Management System (xref:TLS/TLS-002/index.adoc#tls-002[TLS-002]) to update vehicle
+detection points, enabling the Race Management System (xref:../TLS-002/index.adoc#tls-002[TLS-002]) to update vehicle
 positions, register partial timing sectors, and support systems such as lane
 changers.
 

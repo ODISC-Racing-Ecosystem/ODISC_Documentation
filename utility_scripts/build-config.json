@@ -1,1 +1,30 @@
  
+{
+  "paths": {
+    "docsDir": "./docs",
+    "publicationsDir": "./publications",
+    "htmlOutputDir": "./build/web",
+    "pdfOutputDir": "./build/PDFs"
+  },
+  "html": {
+    "entryFile": "website.adoc",
+    "asciidocOptions": {
+      "safe": "unsafe",
+      "header_footer": true,
+      "attributes": {
+        "icons": "font",
+        "sectnums": true
+      }
+    }
+  },
+  "pdf": {
+    "asciidocOptions": {
+      "safe": "unsafe",
+      "backend": "pdf",
+      "attributes": {
+        "icons": "font",
+        "sectnums": true
+      }
+    }
+  }
+}

@@ -6,6 +6,6 @@ The Technical Library Groups (TLG) provide groupings of Technical Library Standa
 
 This allows TLS documents to be included by reference into multiple TLGs based upon various use cases and system interactions.
 
-* xref:TLG/TLG-001/index.adoc[TLG-001]: Racetrack Installation
-* xref:TLG/TLG-002/index.adoc[TLG-002]: Multi-Racetrack Venue
+* xref:TLG-001/index.adoc[TLG-001]: Racetrack Installation
+* xref:TLG-002/index.adoc[TLG-002]: Multi-Racetrack Venue
 

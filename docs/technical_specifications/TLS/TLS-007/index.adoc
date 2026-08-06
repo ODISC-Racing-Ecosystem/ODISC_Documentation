@@ -53,7 +53,7 @@ a race condition indication.
 === Race Condition Indicators
 
 The Track Lighting System shall support visual indication of race conditions
-received from the Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]).
+received from the Race Management System (xref:../TLS-002/index.adoc#tls-002[TLS-002]).
 
 Race conditions may apply to the entire racetrack or to a defined section
 of the racetrack.

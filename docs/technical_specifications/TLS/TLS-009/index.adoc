@@ -30,7 +30,7 @@ to bring their preferred controller and personal driving configuration.
 A driver station is more than a controller interface. It provides the 
 processing required to interpret controller input, apply permitted 
 driver-specific configuration, communicate with the Race Management 
-System (xref:TLS-002/index.adoc#tls-002[TLS-002]), and present race information to the driver.
+System (xref:../TLS-002/index.adoc#tls-002[TLS-002]), and present race information to the driver.
 
 == Philosophy
 

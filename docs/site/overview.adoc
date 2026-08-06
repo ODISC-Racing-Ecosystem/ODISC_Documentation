@@ -13,19 +13,19 @@ If you are new to ODISC and want to find out the vision and reasoning behind ODI
 
 == Documentation Areas
 
-xref:principles_and_foundations:ROOT:index.adoc[ODISC Principles and Foundations]::
+xref:../principles_and_foundations/index.adoc[ODISC Principles and Foundations]::
 
 If want to know more about ODISC principles and governance, you want to start here.
 
-xref:technical_specifications:ROOT:index.adoc[ODISC Technical Specifications]::
+xref:../technical_specifications/index.adoc[ODISC Technical Specifications]::
 
 If you want to know how ODISC works, the technical requirements, or how to develop products for ODISC, then start with the technical specifications.
 
-xref:racing_regulations:ROOT:index.adoc[Racing Regulations] - Future Content::
+xref:../racing_regulations/index.adoc[Racing Regulations] - Future Content::
 
 If you want to race within the ODISC Ecosystem, the racing regulations will tell you all about how racing classes are structured and races are managed.
 
 
-xref:contributor_resources:ROOT:index.adoc[Contributor Internal Resources] - Future Content::
+xref:../contributor_resources/index.adoc[Contributor Internal Resources] - Future Content::
 For authors and technical editors, please review our resource for various help and suggestions to get started building documentation, as well as expectations on formatting prior to submitting revisions.
 

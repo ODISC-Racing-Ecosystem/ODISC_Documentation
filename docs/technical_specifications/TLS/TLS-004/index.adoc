@@ -41,7 +41,7 @@ The start/finish line is composed by multiple components that work together.
 
 === Detection Points
 
-Detection Points (xref:TLS-003/index.adoc#tls-003[TLS-003]) must be placed 
+Detection Points (xref:../TLS-003/index.adoc#tls-003[TLS-003]) must be placed 
 on the start/finish line for each lane. These are used to register when a 
 vehicle passes the line and triggers the process that records a completed lap,
 the timing of that lap, and the associated vehicle progress.
@@ -49,7 +49,7 @@ the timing of that lap, and the associated vehicle progress.
 === Controller
 
 The controller registers when sensors are tripped, and by what vehicle. It 
-works with the Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]) 
+works with the Race Management System (xref:../TLS-002/index.adoc#tls-002[TLS-002]) 
 to record the completed lap.
 
 [WARNING]

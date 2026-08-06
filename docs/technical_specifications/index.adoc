@@ -1,9 +1,8 @@
 
 
 
-
-
 include::overview.adoc[]
 
 include::print_specifications.adoc[leveloffset=+1]
+
 

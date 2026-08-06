@@ -219,10 +219,6 @@ commitments to future implementation.
 This document incorporates and abides by the principles and architecture
 set forth in the following documents:
 
-* xref:..\TLS-001_Governance\TLS-001_index.adoc[TLS-001] - Governance
-* xref:..\TLS-002_Ecosystem_Architecture\TLS-002_index.adoc[TLS-002] - Ecosystem Architecture
-* xref:..\TLS-005_Racetrack_Infrastructure\TLS-005_index.adoc[TLS-005] - Racetrack Infrastructure
-
 
 == Document Revision History
 

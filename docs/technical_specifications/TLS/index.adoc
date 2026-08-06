@@ -10,16 +10,16 @@ Ecosystem.
 Each TLS covers a broad architectural scope while remaining narrowly focused
 on its specific area of responsibility.
 
-* xref:TLS/TLS-001/index.adoc[TLS-001]: Racetrack with multiple lanes
-* xref:TLS/TLS-002/index.adoc[TLS-002]: Race Management System
-* xref:TLS/TLS-003/index.adoc[TLS-003]: Detection Points
-* xref:TLS/TLS-004/index.adoc[TLS-004]: Start/Finish Line and Race Timing
-* xref:TLS/TLS-005/index.adoc[TLS-005]: Lane Changers
-* xref:TLS/TLS-006/index.adoc[TLS-006]: Pit Lane
-* xref:TLS/TLS-007/index.adoc[TLS-007]: Track Lighting and flag signals
-* xref:TLS/TLS-008/index.adoc[TLS-008]: Docking Station
-* xref:TLS/TLS-009/index.adoc[TLS-009]: Driver Station
-* xref:TLS/TLS-010/index.adoc[TLS-010]: Vehicle Decoder
+* xref:TLS-001/index.adoc[TLS-001]: Racetrack with multiple lanes
+* xref:TLS-002/index.adoc[TLS-002]: Race Management System
+* xref:TLS-003/index.adoc[TLS-003]: Detection Points
+* xref:TLS-004/index.adoc[TLS-004]: Start/Finish Line and Race Timing
+* xref:TLS-005/index.adoc[TLS-005]: Lane Changers
+* xref:TLS-006/index.adoc[TLS-006]: Pit Lane
+* xref:TLS-007/index.adoc[TLS-007]: Track Lighting and flag signals
+* xref:TLS-008/index.adoc[TLS-008]: Docking Station
+* xref:TLS-009/index.adoc[TLS-009]: Driver Station
+* xref:TLS-010/index.adoc[TLS-010]: Vehicle Decoder
 
 == Future Documents
 
@@ -27,5 +27,5 @@ The following documents are included within the TLS document set but are
 still under development. Their content may change significantly before
 reaching a finalized state.
 
-* xref:TLS/TLS-100/index.adoc[TLS-100]: Racing Regulation Options
+* xref:TLS-100/index.adoc[TLS-100]: Racing Regulation Options
 

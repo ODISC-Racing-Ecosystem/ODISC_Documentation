@@ -42,10 +42,10 @@ predictable vehicle movement and fair competition.
 === Controller / Integration
 
 The pit lane controller manages pit lane operations and communicates with the
-Race Management System (xref:TLS-002/index.adoc#tls-002[TLS-002]). It processes 
-Detection Points (xref:TLS-003/index.adoc#tls-003[TLS-003]) events, manages 
+Race Management System (xref:../TLS-002/index.adoc#tls-002[TLS-002]). It processes 
+Detection Points (xref:../TLS-003/index.adoc#tls-003[TLS-003]) events, manages 
 configured pit lane behavior, and coordinates Lane Changers 
-(xref:TLS-005/index.adoc#tls-005[TLS-005]) within the pit lane.
+(xref:../TLS-005/index.adoc#tls-005[TLS-005]) within the pit lane.
 
 === Detection Points
 
@@ -147,7 +147,7 @@ the active pit lane or racing surface until the required path is available.
 == Start/Finish Line
 
 The pit lane must incorporate a detection point that aligns with the
-Start/Finish Line and Race Timing (xref:TLS-004/index.adoc#tls-004[TLS-004]).
+Start/Finish Line and Race Timing (xref:../TLS-004/index.adoc#tls-004[TLS-004]).
 
 Any detection point used for start/finish timing shall be connected to the
 start/finish line controller and not the pit lane controller, ensuring that
