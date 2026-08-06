@@ -1,14 +1,16 @@
 
-
+:doctitle: TLG-002 - Multi-Racetrack Venue
+:webtitle: {doctitle}
+:navtitle: Multi-Racetrack Venue
 [#tlg-002]
-= TLG-002: Multi-Racetrack Venue
+= {doctitle} Multi-Racetrack Venue
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLG-002: Multi-Racetrack Venue
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

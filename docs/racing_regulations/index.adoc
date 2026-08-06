@@ -1,6 +1,8 @@
 
-
-= Racing Regulations
+:doctitle: Racing Regulations
+:webtitle: {doctitle}
+:navtitle: Racing Regulations
+= {doctitle}
 
 
 == Identification Block
@@ -8,7 +10,7 @@
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| Racing Regulations
+|Title| {doctitle}
 |Version| 0.1
 |Status| Draft
 |Release Date| TBD

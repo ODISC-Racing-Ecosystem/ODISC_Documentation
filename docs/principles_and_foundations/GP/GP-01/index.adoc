@@ -1,13 +1,15 @@
-
-[#GP-01]
-= GP-01: Racing Intent and Vision
+:doctitle: GP-01 - Racing Intent and Vision
+:webtitle: {doctitle}
+:navtitle: Racing Intent and Vision
+[#gp-01]
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| GP-01: Racing Intent and Vision
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

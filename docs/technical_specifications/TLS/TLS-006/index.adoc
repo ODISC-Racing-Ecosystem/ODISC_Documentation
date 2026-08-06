@@ -1,15 +1,15 @@
-
-
+:doctitle: TLS-006 - Pit Lane
+:webtitle: {doctitle}
+:navtitle: Pit Lane
 [#tls-006]
-= TLS-006: Pit Lane
-
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-006: Pit Lane
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

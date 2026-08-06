@@ -1,6 +1,8 @@
-
+:doctitle: Racing Classes
+:webtitle: {doctitle}
+:navtitle: Racing Classes
 [#racing_classes]
-= Racing Classes
+= {doctitle}
 
 ODISC Racing Classes are determined by pairing the selected racing class 
 options which together form a unique defined racing class with a 

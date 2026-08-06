@@ -1,14 +1,15 @@
-
-
+:doctitle: TLS-010 - Vehicle Decoder
+:webtitle: {doctitle}
+:navtitle: Vehicle Decoder
 [#tls-010]
-= TLS-010: Vehicle Decoder
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-010: Vehicle Decoder
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

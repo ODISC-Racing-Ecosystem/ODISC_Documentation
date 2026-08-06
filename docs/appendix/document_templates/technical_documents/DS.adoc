@@ -1,13 +1,17 @@
 
-[#DS-???-???]
-= DS-???-???: DS-Name
+:doctitle: DS-???-??? - DS-Name
+:webtitle: {doctitle}
+:navtitle: DS Name
+[#ds-???-???]
+= {doctitle}
+
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| DS-???-???: DS-Name
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

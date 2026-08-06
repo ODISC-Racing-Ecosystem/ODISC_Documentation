@@ -1,13 +1,15 @@
-
-[#GP-03]
-= GP-03: System Design Principles
+:doctitle: GP-03 - System Design Principles
+:webtitle: {doctitle}
+:navtitle: System Design
+[#gp-03]
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| GP-03: System Design Principles
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

@@ -1,14 +1,15 @@
-
-
+:doctitle: TLS-009 - Driver Station
+:webtitle: {doctitle}
+:navtitle: Driver Station
 [#tls-009]
-= TLS-009: Driver Station
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-009: Driver Station
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

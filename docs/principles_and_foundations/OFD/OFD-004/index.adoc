@@ -1,13 +1,15 @@
-
-[#OFD-004]
-= OFD-004: Reference Designs
+:doctitle: OFD-004 - Reference Designs
+:webtitle: {doctitle}
+:navtitle: Reference Designs
+[#ofd-004]
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| OFD-004: Reference Designs
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

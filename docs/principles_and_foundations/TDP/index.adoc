@@ -1,7 +1,22 @@
 
+:doctitle: TDP-??? - Track Design Principles
+:webtitle: {doctitle}
+:navtitle: Track Design Principles
+[#tdp-???]
+= {doctitle}
 
+== Identification Block
 
-= Track Design Principles
+[cols="1s,6",options="header"]
+|===
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Martin Noreke
+|===
+
 The items listed below lay out the track design principles for the ODISC Racing Ecosystem
 
 [quote]
@@ -51,4 +66,16 @@ Instead of doing a long flat straight, consider giving it some height changes so
 == Design for Reuse
 When designing a track, ensure that it follows the ODISC Hardware requirements for mounting various elements to the track. Doing so will allow others to create the same track layout at another venue with minimal rework required.
 
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
 

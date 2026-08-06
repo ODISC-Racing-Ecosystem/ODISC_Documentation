@@ -1,14 +1,15 @@
-
-
+:doctitle: TLS-005 - Lane Changer
+:webtitle: {doctitle}
+:navtitle: Lane Changer
 [#tls-005]
-= TLS-005: Lane Changers
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-005: Lane Changers
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

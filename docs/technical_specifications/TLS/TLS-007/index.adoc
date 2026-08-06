@@ -1,14 +1,15 @@
-
-
+:doctitle: TLS-007 - Track Lighting and flag signals
+:webtitle: {doctitle}
+:navtitle: Track Lighting and flag signals
 [#tls-007]
-= TLS-007: Track Lighting and flag signals
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-007: Track Lighting and flag signals
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

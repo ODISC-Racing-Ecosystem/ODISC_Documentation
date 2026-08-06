@@ -1,13 +1,16 @@
 
+:doctitle: DS-001-100 - Track Dimensions
+:webtitle: {doctitle}
+:navtitle: Track Dimensions
 [#ds-001-100]
-= DS-001-100: Track Dimensions
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| DS-001-100: Track Dimensions
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft
@@ -155,7 +158,7 @@ No additional functional requirements.
 
 == Visualizations
 
-include::lane_changer_angle_visualization.adoc[leveloffset=+2]
+include::../../../../../resources/diagrams/technical_specifications/DS/TLS-001/DS-001-100/lane_changer_angle_visualization.adoc[leveloffset=+2]
 
 == Requirements Checklist
 

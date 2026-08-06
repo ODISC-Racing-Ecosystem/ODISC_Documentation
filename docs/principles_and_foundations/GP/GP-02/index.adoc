@@ -1,13 +1,15 @@
-
-[#GP-02]
-= GP-02: Documentation and Governance Principles
+:doctitle: GP-02 - Documentation and Governance Principles
+:webtitle: {doctitle}
+:navtitle: Documentation and Governance
+[#gp-02]
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| GP-02: Documentation and Governance Principles
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

@@ -1,13 +1,15 @@
-
+:doctitle: DS-002-100: Race Management System Hardware
+:webtitle: {doctitle}
+:navtitle: Race Management System Hardware
 [#ds-002-100]
-= DS-002-100: Race Management System Hardware
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| DS-002-100: Race Management System
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

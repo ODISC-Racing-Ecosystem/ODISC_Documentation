@@ -1,13 +1,15 @@
-
-[#GP-04]
-= GP-04: Engineering Principles
+:doctitle: GP-04 - Engineering Principles
+:webtitle: {doctitle}
+:navtitle: Engineering
+[#gp-04]
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| GP-04: Engineering Principles
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

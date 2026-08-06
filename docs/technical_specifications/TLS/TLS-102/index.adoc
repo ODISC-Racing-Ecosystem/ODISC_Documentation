@@ -1,13 +1,15 @@
-
+:doctitle: TLS-102: Competition Management
+:webtitle: {doctitle}
+:navtitle: Competition Management
 [#tls-102]
-= TLS-102: Competition Management
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-102: Competition Management
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

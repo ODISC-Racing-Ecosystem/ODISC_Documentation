@@ -79,11 +79,11 @@ For the following items, we use a consistent pattern for creating reference link
 
 They are defined as follows:
 
-* [#GP-???] GP Name +
+* [#gp-???] GP Name +
 where ??? is the Guiding Principal number
 * [#TLS-???] TLS Name +
 where ??? is the Technical Library Standard number
-* [#DS-???-???] DS Name +
+* [#ds-???-???] DS Name +
 where the first ??? is the TLS number and the second ??? is the Domain Specification number
 * [#WAC-???] WAC Name +
 where ??? is the Workshop Activity Categories number

@@ -1,8 +1,10 @@
 
-
+:doctitle: DS-001-120 - Power Tap Assembly
+:webtitle: {doctitle}
+:navtitle: Power Tap Assembly
 :TLS-LOCATION: ../../../TLS/
 [#ds-001-120]
-= DS-001-120: Power Tap Assembly
+= {doctitle}
 
 == Identification Block
 
@@ -10,7 +12,7 @@
 |===
 
 |Field|Value
-|Title| DS-001-120: Power Tap Assembly
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft
@@ -84,7 +86,7 @@ termination components.
 
 == Visualizations
 
-include::power_tap_assembly.adoc[leveloffset=+2]
+include::../../../../../resources/diagrams/technical_specifications/DS/TLS-001/DS-001-120/power_tap_assembly.adoc[leveloffset=+2]
 
 == Requirements Checklist
 

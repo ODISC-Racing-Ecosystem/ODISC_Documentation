@@ -1,13 +1,15 @@
-
+:doctitle: DS-002-501 - Race Director
+:webtitle: {doctitle}
+:navtitle: Race Director
 [#DS-002-501]
-= DS-002-501: Race Director
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| DS-002-101: DS-Name
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft
@@ -23,6 +25,7 @@ List any physical mounting points or other size restrictions.
 == Functional Requirements
 
 === Race Director Interface
+
 ==== Capabilities
 
 The Race Director station has two primary elements:

@@ -1,7 +1,9 @@
 
-
-[#OFD-002]
-= OFD-002: Introduction to the ODISC Ecosystem!
+:doctitle: OFD-002 - Introduction to the ODISC Ecosystem
+:webtitle: {doctitle}
+:navtitle: Introduction
+[#ofd-002]
+= {doctitle}
 
 
 == Identification Block
@@ -9,7 +11,7 @@
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| OFD-002: Introduction to the ODISC Ecosystem
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

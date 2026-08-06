@@ -1,14 +1,15 @@
-
-
+:doctitle: TLS-008 - Docking Station
+:webtitle: {doctitle}
+:navtitle: Docking Station
 [#tls-008]
-= TLS-008: Docking Station
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-008: Docking Station
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

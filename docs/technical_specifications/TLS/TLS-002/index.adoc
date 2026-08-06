@@ -1,15 +1,15 @@
-
-
+:doctitle: TLS-002 - Race Management System
+:webtitle: {doctitle}
+:navtitle: Race Management System
 [#tls-002]
-= TLS-002: Race Management System
-
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-002: Race Management System
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

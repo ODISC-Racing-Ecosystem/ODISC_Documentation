@@ -1,14 +1,15 @@
-
-
+:doctitle: TLS-001 - Racetrack with multiple lanes
+:webtitle: {doctitle}
+:navtitle: Racetrack with multiple lanes
 [#tls-001]
-= TLS-001: Racetrack with multiple lanes
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-001: Racetrack with multiple lanes
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

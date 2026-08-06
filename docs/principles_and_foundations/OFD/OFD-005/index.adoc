@@ -1,14 +1,16 @@
 
-
+:doctitle: OFD-005 - Governance Framework
+:webtitle: {doctitle}
+:navtitle: Governance Framework
 [#ofd-005]
-= OFD-005: Governance Framework
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| OFD-005: Governance Framework
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

@@ -1,13 +1,15 @@
-
-[#OFD-001]
-= OFD-001: Overview and Vision for ODISC
+:doctitle: OFD-001 - Overview and Vision for ODISC
+:webtitle: {doctitle}
+:navtitle: Overview and Vision
+[#ofd-001]
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| OFD-001: Overview and Vision for ODISC
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

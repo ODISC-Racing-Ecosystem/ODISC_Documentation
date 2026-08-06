@@ -1,13 +1,15 @@
-
+:doctitle: DS-001-200 - Race Management System Software
+:webtitle: {doctitle}
+:navtitle: Race Management System Software
 [#ds-001-200]
-= DS-001-200: Race Management System Software
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| DS-001-200: Race Management System Software
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

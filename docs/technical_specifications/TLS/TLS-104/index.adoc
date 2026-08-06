@@ -1,13 +1,15 @@
-
+:doctitle: TLS-104 - Global Registry 
+:webtitle: {doctitle}
+:navtitle: Global Registry 
 [#tls-104]
-= TLS-104: Global Registry
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-104: Global Registry
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

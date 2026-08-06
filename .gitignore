@@ -27,4 +27,3 @@ _secret.yml
 .env
 .secrets
 
-migration

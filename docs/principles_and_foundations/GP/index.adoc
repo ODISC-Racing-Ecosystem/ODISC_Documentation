@@ -10,8 +10,9 @@ the standards and specifications that define the ODISC Racing Ecosystem.
 
 == Guiding Principles
 
-* GP-01 Racing Intent and Vision
-* GP-02 Documentation and Governance Principles
-* GP-03 System Design Principles
-* GP-04 Engineering Principles
+* xref:GP-01/index.adoc[GP-01]: Racing Intent and Vision
+* xref:GP-02/index.adoc[GP-02]: Documentation and Governance Principles
+* xref:GP-03/index.adoc[GP-03]: System Design Principles
+* xref:GP-04/index.adoc[GP-04]: Engineering Principles
+
 

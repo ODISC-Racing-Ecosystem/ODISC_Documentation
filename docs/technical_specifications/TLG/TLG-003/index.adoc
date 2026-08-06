@@ -1,14 +1,16 @@
 
-
+:doctitle: TLG-003 - Global Website
+:webtitle: {doctitle}
+:navtitle: Global Website
 [#tlg-003]
-= TLG-003: Global Website
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLG-003: Global Website
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

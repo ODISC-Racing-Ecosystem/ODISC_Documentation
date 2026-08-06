@@ -1,14 +1,15 @@
-
-
+:doctitle: TLS-003 - Detection Points
+:webtitle: {doctitle}
+:navtitle: Detection Points
 [#tls-003]
-= TLS-003: Detection Points
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-003: Detection Points
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft
@@ -200,15 +201,15 @@ located in the same position as a direct mounted PCB.
 
 Mounting Point Dimensions::
 
-include::detection_point_mount.adoc[]
+include::../../../../resources/diagrams/technical_specifications/TLS/TLS-003/detection_point_mount.adoc[]
 
 Standard PCB Dimensions::
 
-include::detection_point_pcb.adoc[]
+include::../../../../resources/diagrams/technical_specifications/TLS/TLS-003/detection_point_pcb.adoc[]
 
 Hot Swap Mount Dimensions::
 
-include::detection_point_hot_swap.adoc[]
+include::../../../../resources/diagrams/technical_specifications/TLS/TLS-003/detection_point_hot_swap.adoc[]
 
 
 == Document Revision History

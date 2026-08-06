@@ -1,6 +1,8 @@
-
-[#OFD-003]
-= OFD-003: Ecosystem Architecture
+:doctitle: OFD-003 - Ecosystem Architecture
+:webtitle: {doctitle}
+:navtitle: Ecosystem Architecture
+[#ofd-003]
+= {doctitle}
 
 
 == Identification Block
@@ -8,7 +10,7 @@
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| OFD-003: Ecosystem Architecture
+|Title| = {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

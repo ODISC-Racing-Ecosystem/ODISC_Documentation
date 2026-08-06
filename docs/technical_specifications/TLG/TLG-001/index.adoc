@@ -1,14 +1,16 @@
 
-
+:doctitle: TLG-001 - Racetrack Installation
+:webtitle: {doctitle}
+:navtitle: Racetrack Installation
 [#tlg-001]
-= TLG-001: Racetrack Installation
+= {doctitle}
 
 == Identification Block
 
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLG-001: Racetrack Installation
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

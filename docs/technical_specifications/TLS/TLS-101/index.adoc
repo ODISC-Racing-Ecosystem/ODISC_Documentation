@@ -1,6 +1,8 @@
-
+:doctitle: TLS-001 - Venue Infrastructure
+:webtitle: {doctitle}
+:navtitle: Venue Infrastructure
 [#tls-101]
-= TLS-001: Venue Infrastructure
+= {doctitle}
 
 
 == Identification Block
@@ -8,7 +10,7 @@
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-101: Venue Infrastructure
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

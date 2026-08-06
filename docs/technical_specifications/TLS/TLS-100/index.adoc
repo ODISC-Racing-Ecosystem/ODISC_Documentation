@@ -1,6 +1,8 @@
-
+:doctitle: TLS-100 - Racing Regulation Options
+:webtitle: {doctitle}
+:navtitle: Racing Regulation Options
 [#tls-100]
-= TLS-100: Racing Regulation Options
+= {doctitle}
 
 
 == Identification Block
@@ -8,7 +10,7 @@
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-100: Racing Regulation Options
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

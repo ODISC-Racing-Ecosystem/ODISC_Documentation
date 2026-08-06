@@ -1,7 +1,8 @@
-
-
+:doctitle: TLS-004 - Start/Finish Line and Race Timing
+:webtitle: {doctitle}
+:navtitle: Start/Finish Line and Race Timing
 [#tls-004]
-= TLS-004: Start/Finish Line and Race Timing
+= {doctitle}
 
 
 == Identification Block
@@ -9,7 +10,7 @@
 [cols="1s,6",options="header"]
 |===
 |Field|Value
-|Title| TLS-004: Start/Finish Line and Race Timing
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft

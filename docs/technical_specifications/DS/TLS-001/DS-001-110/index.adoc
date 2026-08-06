@@ -1,8 +1,10 @@
 
-
+:doctitle: DS-001-110 - Power Rails
+:webtitle: {doctitle}
+:navtitle: Power Rails
 :TLS-LOCATION: ../../../TLS/
 [#ds-001-110]
-= DS-001-110: Power Rails
+= {doctitle}
 
 == Identification Block
 
@@ -10,7 +12,7 @@
 |===
 
 |Field|Value
-|Title| DS-001-110: Power Rails
+|Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
 |Status| Draft
@@ -296,17 +298,17 @@ versus using copper tape.
 
 Power Drop Mounting Point::
 
-include::../DS-001-120/power_tap_mount_dimensions.adoc[]
+include::../../../../../resources/diagrams/technical_specifications/DS/TLS-001/DS-001-120/power_tap_mount_dimensions.adoc[]
 
 
 Guide Slot with Braids Cross-Section::
 
-include::guide_slot_crosssection_braid.adoc[]
+include::../../../../../resources/diagrams/technical_specifications/DS/TLS-001/DS-001-110/guide_slot_crosssection_braid.adoc[]
 
 
 Guide Slot with Tape Cross-Section::
 
-include::guide_slot_crosssection_tape.adoc[]
+include::../../../../../resources/diagrams/technical_specifications/DS/TLS-001/DS-001-110/guide_slot_crosssection_tape.adoc[]
 
 == Requirements Checklist
 
