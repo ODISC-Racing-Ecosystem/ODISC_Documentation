@@ -1,4 +1,4 @@
-= ODISC Ecosystem Technical Library Standards
+= ODISC Technical Library Standards
 :toc:
 :sectnums:
 :toclevels: 2
@@ -16,5 +16,23 @@ include::../../../docs/technical_specifications/TLS/TLS-008/index.adoc[leveloffs
 include::../../../docs/technical_specifications/TLS/TLS-009/index.adoc[leveloffset=2]
 include::../../../docs/technical_specifications/TLS/TLS-010/index.adoc[leveloffset=2]
 
+include::../../../docs/technical_specifications/DS/index.adoc[leveloffset=1]
+include::../../../docs/technical_specifications/DS/TLS-001/DS-001-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-001/DS-001-110/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-001/DS-001-120/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-002/DS-002-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-002/DS-002-110/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-002/DS-002-200/index.adoc[leveloffset=2]
+
+include::../../../docs/technical_specifications/DS/TLS-003/DS-003-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-004/DS-004-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-005/DS-005-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-006/DS-006-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-007/DS-007-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-008/DS-008-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-009/DS-009-100/index.adoc[leveloffset=2]
+include::../../../docs/technical_specifications/DS/TLS-010/DS-010-100/index.adoc[leveloffset=2]
+
+
 // Last item in file
-include:: ../../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]
+include::../../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

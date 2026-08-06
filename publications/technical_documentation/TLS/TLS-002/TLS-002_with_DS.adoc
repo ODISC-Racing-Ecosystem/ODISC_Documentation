@@ -1,10 +1,12 @@
-= ODISC Ecosystem TLS-002
+= ODISC Technical Specification TLS-002
 :toc:
 :sectnums:
 :toclevels: 2
 :doctype: book
 
 include::../../../../docs/technical_specifications/TLS/TLS-002/index.adoc[leveloffset=1]
+include::../../../../docs/technical_specifications/DS/TLS-002/DS-002-100/index.adoc[leveloffset=1]
+include::../../../../docs/technical_specifications/DS/TLS-002/DS-002-110/index.adoc[leveloffset=1]
 include::../../../../docs/technical_specifications/DS/TLS-002/DS-002-200/index.adoc[leveloffset=1]
 
 // Last item in file

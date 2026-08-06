@@ -5,6 +5,16 @@
 
 Prefer reading offline or printing hard copies for the track? Download the latest specification books:
 
-* link:/resources/PDFs/principles_and_foundations.pdf[ODISC Principles & Foundations PDF]
-* link:/resources/PDFs/technical_specifications.pdf[ODISC Technical Specifications PDF]
+* link:/PDFs/principles_and_foundations.pdf[ODISC Principles & Foundations PDF]
+* link:/PDFs/technical_specifications.pdf[ODISC Technical Specifications PDF]
+
+
+* link:/PDFs/technical_specifications/TLS/TLS-Library.pdf[ODISC Technical Library Specifications PDF]
+** link:/PDFs/technical_specifications/TLS/TLS-001.pdf[TLS-001]: Racetrack with multiple lanes
+** link:/PDFs/technical_specifications/TLS/TLS-001_with_DS.pdf[TLS-001 with DS]: Racetrack with multiple lanes, includes all DS-001-???
+** link:/PDFs/technical_specifications/TLS/TLS-002.pdf[TLS-002]: Race Management System
+** link:/PDFs/technical_specifications/TLS/TLS-002_with_DS.pdf[TLS-002 with DS]: Race Management System, includes all DS-002-???
+
+
+
 

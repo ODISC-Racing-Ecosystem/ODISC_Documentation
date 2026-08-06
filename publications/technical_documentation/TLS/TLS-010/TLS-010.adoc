@@ -1,10 +1,10 @@
-= ODISC Technical Specification TLS-002
+= ODISC Technical Specification TLS-010
 :toc:
 :sectnums:
 :toclevels: 2
 :doctype: book
 
-include::../../../../docs/technical_specifications/TLS/TLS-002/index.adoc[leveloffset=1]
+include::../../../../docs/technical_specifications/TLS/TLS-010/index.adoc[leveloffset=1]
 
 // Last item in file
 include::../../../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

@@ -1,4 +1,4 @@
-= ODISC Ecosystem TLS-001
+= ODISC Technical Specification TLS-001
 :toc:
 :sectnums:
 :toclevels: 2
