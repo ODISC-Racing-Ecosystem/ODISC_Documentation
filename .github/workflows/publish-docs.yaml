@@ -26,9 +26,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y asciidoctor ruby-asciidoctor-pdf
-
+         
       - name: Install Project Workspace Dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Validate Cross Document Links and Includes
         run: node utility_scripts/verify-links.js

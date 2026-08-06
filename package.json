@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@asciidoctor/core": "^3.0.4",
-    "asciidoctor-pdf": "^1.0.0-alpha.16",
     "glob": "^13.0.6"
   }
 }
