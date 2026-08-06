@@ -1,11 +1,13 @@
 name: Documentation Build & Validation Pipeline
 
 on:
+  workflow_dispatch: # Enables the manual run button
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
-  workflow_dispatch: # ALLOWS MANUAL TRIGGERING VIA GITHUB UI
+    branches:
+      - main  
 
 jobs:
   validate-and-build:
