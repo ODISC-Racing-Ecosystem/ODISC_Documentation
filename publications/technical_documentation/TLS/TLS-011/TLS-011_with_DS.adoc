@@ -1,0 +1,15 @@
+:doctitle: ODISC TLS-011 with DS Details
+:output_file_name: {doctitle}
+:toc:
+:sectnums:
+:toclevels: 2
+:doctype: book
+= {doctitle}
+
+
+include::../../../../docs/technical_specifications/TLS/TLS-011/index.adoc[leveloffset=1]
+include::../../../../docs/technical_specifications/DS/TLS-011/DS-011-300/index.adoc[leveloffset=1]
+include::../../../../docs/technical_specifications/DS/TLS-011/DS-011-310/index.adoc[leveloffset=1]
+
+// Last item in file
+include::../../../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

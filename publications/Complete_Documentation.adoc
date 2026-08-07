@@ -40,6 +40,7 @@ include::../docs/technical_specifications/TLS/TLS-007/index.adoc[leveloffset=3]
 include::../docs/technical_specifications/TLS/TLS-008/index.adoc[leveloffset=3]
 include::../docs/technical_specifications/TLS/TLS-009/index.adoc[leveloffset=3]
 include::../docs/technical_specifications/TLS/TLS-010/index.adoc[leveloffset=3]
+include::../docs/technical_specifications/TLS/TLS-011/index.adoc[leveloffset=3]
 
 include::../docs/technical_specifications/DS/index.adoc[leveloffset=2]
 include::../docs/technical_specifications/DS/TLS-001/DS-001-100/index.adoc[leveloffset=3]
@@ -58,6 +59,9 @@ include::../docs/technical_specifications/DS/TLS-007/DS-007-100/index.adoc[level
 include::../docs/technical_specifications/DS/TLS-008/DS-008-100/index.adoc[leveloffset=3]
 include::../docs/technical_specifications/DS/TLS-009/DS-009-100/index.adoc[leveloffset=3]
 include::../docs/technical_specifications/DS/TLS-010/DS-010-100/index.adoc[leveloffset=3]
+
+include::../docs/technical_specifications/DS/TLS-011/DS-011-300/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-011/DS-011-310/index.adoc[leveloffset=2]
 
 // Last item in file
 include::../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

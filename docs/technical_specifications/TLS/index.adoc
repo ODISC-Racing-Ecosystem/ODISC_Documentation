@@ -20,6 +20,7 @@ on its specific area of responsibility.
 * xref:TLS-008/index.adoc[TLS-008]: Docking Station
 * xref:TLS-009/index.adoc[TLS-009]: Driver Station
 * xref:TLS-010/index.adoc[TLS-010]: Vehicle Decoder
+* xref:TLS-011/index.adoc[TLS-011]: Data Standards and Protocols
 
 Future Documents::
 
