@@ -66,7 +66,6 @@ function buildHtml() {
     }
 
     // --- DYNAMIC PATH CALCULATION FOR BUILD OUTPUT ---
-    // Calculate the jump distance from the file's output directory back to build/web/
     const relativeFromOutputRoot = path.relative(absoluteOutputDir, targetDir);
     const levelsDeep = relativeFromOutputRoot ? relativeFromOutputRoot.split(path.sep).length : 0;
     const backToRoot = levelsDeep > 0 ? '../'.repeat(levelsDeep) : './';
@@ -86,7 +85,6 @@ function buildHtml() {
         ...(config.html.asciidocOptions?.attributes || {}),
         "outfilesuffix": currentFileSuffix,
         "relfileprefix": currentFilePrefix,
-        // Overwrite the local :imagesdir: path with our computed production location
         "imagesdir": dynamicImagesDir
       }
     };
@@ -99,10 +97,10 @@ function buildHtml() {
 
         // Force a total path correction for GitHub Pages assets
         if (isGitHubCI) {
-          // This safely transforms any src="[anything]resources/..."
-          // to point strictly to the GitHub deployment subfolder absolute path
+          // This safely catches: src="./resources/", src="resources/", src="../../resources/" etc.
+          // and converts them to the correct base root repository endpoint.
           processedOutput = processedOutput.replace(
-            /src="[^"]*resources\//g,
+            /src="(?:\.\/|\.\.\/)*resources\//g,
             'src="/ODISC_Documentation/resources/'
           );
         }
