@@ -46,7 +46,9 @@ jobs:
 
       - name: Inject PDFs into Website Directory Structure
         run: |
-          mkdir -p build/web/PDFs
+          # Create the full nested directory path safely
+          mkdir -p build/web/resources/PDFs/
+          # Copy the compiled PDFs into the correct location
           cp -r build/PDFs/. build/web/resources/PDFs/
           echo "Merged build/PDFs content into build/web/resources/PDFs/"
 
