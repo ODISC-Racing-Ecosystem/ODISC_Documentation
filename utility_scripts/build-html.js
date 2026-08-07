@@ -18,6 +18,7 @@ function buildHtml() {
 
   const absoluteOutputDir = path.resolve(htmlOutputDir);
 
+  // Clean the build directory before building
   if (fs.existsSync(absoluteOutputDir)) {
     console.log(`${COLORS.yellow}Cleaning HTML output directory:${COLORS.reset} ${path.normalize(absoluteOutputDir)}`);
     fs.rmSync(absoluteOutputDir, { recursive: true, force: true });
@@ -31,6 +32,7 @@ function buildHtml() {
     return;
   }
 
+  // Intercept stderr to add color coding to warnings/errors
   const originalStderrWrite = process.stderr.write;
   process.stderr.write = function (chunk, encoding, callback) {
     const output = chunk.toString();
@@ -44,7 +46,6 @@ function buildHtml() {
   files.forEach(file => {
     let relativePath = path.relative(docsDir, file);
 
-    // Default behaviors for deep-nested links
     let currentFilePrefix = "";
     let currentFileSuffix = ".html";
 
@@ -52,12 +53,8 @@ function buildHtml() {
     const isSiteFile = pathParts[0] === 'site';
 
     if (isSiteFile) {
-      pathParts.shift(); // Remove the 'site' parent folder segment
+      pathParts.shift(); // Remove the 'site' parent folder segment from destination path
       relativePath = pathParts.join(path.sep);
-
-      // NATIVE FIX: For files flattened out of /site, any cross reference
-      // containing an exit token like "../" needs to be dynamically rewritten
-      // by stripping the step-up behavior from the output HTML string.
       currentFileSuffix = ".html";
     }
 
@@ -68,6 +65,15 @@ function buildHtml() {
       fs.mkdirSync(targetDir, { recursive: true });
     }
 
+    // --- DYNAMIC PATH CALCULATION FOR BUILD OUTPUT ---
+    // Calculate the jump distance from the file's output directory back to build/web/
+    const relativeFromOutputRoot = path.relative(absoluteOutputDir, targetDir);
+    const levelsDeep = relativeFromOutputRoot ? relativeFromOutputRoot.split(path.sep).length : 0;
+    const backToRoot = levelsDeep > 0 ? '../'.repeat(levelsDeep) : './';
+
+    // Point the production build directly to the copied global resources root
+    const dynamicImagesDir = `${backToRoot}resources`;
+
     const options = {
       ...config.html.asciidocOptions,
       to_dir: targetDir,
@@ -76,20 +82,23 @@ function buildHtml() {
       attributes: {
         ...(config.html.asciidocOptions?.attributes || {}),
         "outfilesuffix": currentFileSuffix,
-        "relfileprefix": currentFilePrefix
+        "relfileprefix": currentFilePrefix,
+        // Overwrite the local :imagesdir: path with our computed production location
+        "imagesdir": dynamicImagesDir
       }
     };
 
-    // Extension to dynamically rewrite the compiled cross references on the fly
-    if (isSiteFile) {
-      options.extension_registry = asciidoctor.Extensions.create();
-      options.extension_registry.postprocessor(function () {
-        this.process(function (document, output) {
-          // Removes '../' strictly from the beginning of relative paths in your compiled anchors
+    // Instantiate extension registry for custom postprocessing
+    options.extension_registry = asciidoctor.Extensions.create();
+    options.extension_registry.postprocessor(function () {
+      this.process(function (document, output) {
+        if (isSiteFile) {
+          // Removes '../' from relative cross-references on flattened site files
           return output.replace(/(href=")\.\.\//g, '$1');
-        });
+        }
+        return output;
       });
-    }
+    });
 
     try {
       asciidoctor.convertFile(path.resolve(file), options);
@@ -100,9 +109,6 @@ function buildHtml() {
       process.exitCode = 1;
     }
   });
-
-
-
 
   process.stderr.write = originalStderrWrite;
   console.log(`${COLORS.cyan}--- HTML Build Complete ---${COLORS.reset}\n`);

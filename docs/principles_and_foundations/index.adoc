@@ -25,7 +25,8 @@ future documents sets will be added such as the Track Design Principles (TDP).
 
 * xref:TDP/index.adoc[TDP]: Track Design Principles (Future Content)
 
-* xref:../site/pdf_specifications.adoc[PDF Specifications]: PDF versions of all ODISC documents.
+ifdef::backend-html5[]
+* xref:../site/pdf_documentation.adoc[PDF Specifications]: PDF versions of all ODISC documents.
 * xref:license/index.adoc[License]: Provides the current license for these documents.
-
+endif::[]
 

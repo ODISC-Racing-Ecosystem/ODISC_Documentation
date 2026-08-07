@@ -14,6 +14,8 @@ defines the interoperability of the ecosystem to ensure that all the moving part
 * xref:TLS/index.adoc[TLS]: Technical Library Standards, specifications for how a single system works
 * xref:DS/index.adoc[DS]: Domain Specification, the detailed specifications for how a TLS is implemented
 
-* xref:../site/pdf_specifications.adoc[PDF Specifications]: PDF versions of all ODISC documents.
-* xref:license/index.adoc[License]: Provides the current license for these documents.
 
+ifdef::backend-html5[]
+* xref:../site/pdf_documentation.adoc[PDF Specifications]: PDF versions of all ODISC documents.
+* xref:license/index.adoc[License]: Provides the current license for these documents.
+endif::[]
