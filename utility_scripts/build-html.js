@@ -65,14 +65,20 @@ function buildHtml() {
       fs.mkdirSync(targetDir, { recursive: true });
     }
 
-    // --- DYNAMIC PATH CALCULATION FOR BUILD OUTPUT ---
+        // --- DYNAMIC PATH CALCULATION FOR BUILD OUTPUT ---
     // Calculate the jump distance from the file's output directory back to build/web/
     const relativeFromOutputRoot = path.relative(absoluteOutputDir, targetDir);
     const levelsDeep = relativeFromOutputRoot ? relativeFromOutputRoot.split(path.sep).length : 0;
     const backToRoot = levelsDeep > 0 ? '../'.repeat(levelsDeep) : './';
 
-    // Point the production build directly to the copied global resources root
-    const dynamicImagesDir = `${backToRoot}resources`;
+    // Check if building inside a GitHub Actions environment
+    const isGitHubCI = process.env.GITHUB_ACTIONS === 'true';
+
+    // Set a root-relative path for production hosting, fallback to relative path locally
+    const dynamicImagesDir = isGitHubCI
+      ? '/ODISC_Documentation/resources'
+      : `${backToRoot}resources`;
+
 
     const options = {
       ...config.html.asciidocOptions,
