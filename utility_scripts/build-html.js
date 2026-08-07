@@ -65,20 +65,17 @@ function buildHtml() {
       fs.mkdirSync(targetDir, { recursive: true });
     }
 
-        // --- DYNAMIC PATH CALCULATION FOR BUILD OUTPUT ---
+    // --- DYNAMIC PATH CALCULATION FOR BUILD OUTPUT ---
     // Calculate the jump distance from the file's output directory back to build/web/
     const relativeFromOutputRoot = path.relative(absoluteOutputDir, targetDir);
     const levelsDeep = relativeFromOutputRoot ? relativeFromOutputRoot.split(path.sep).length : 0;
     const backToRoot = levelsDeep > 0 ? '../'.repeat(levelsDeep) : './';
 
-    // Check if building inside a GitHub Actions environment
+    // Establish environment variables for safe cross-platform environments
     const isGitHubCI = process.env.GITHUB_ACTIONS === 'true';
 
-    // Set a root-relative path for production hosting, fallback to relative path locally
-    const dynamicImagesDir = isGitHubCI
-      ? '/ODISC_Documentation/resources'
-      : `${backToRoot}resources`;
-
+    // Point the production build directly to the copied global resources root
+    const dynamicImagesDir = `${backToRoot}resources`;
 
     const options = {
       ...config.html.asciidocOptions,
@@ -98,11 +95,24 @@ function buildHtml() {
     options.extension_registry = asciidoctor.Extensions.create();
     options.extension_registry.postprocessor(function () {
       this.process(function (document, output) {
+        let processedOutput = output;
+
+        // Force a total path correction for GitHub Pages assets
+        if (isGitHubCI) {
+          // This safely transforms any src="[anything]resources/..."
+          // to point strictly to the GitHub deployment subfolder absolute path
+          processedOutput = processedOutput.replace(
+            /src="[^"]*resources\//g,
+            'src="/ODISC_Documentation/resources/'
+          );
+        }
+
         if (isSiteFile) {
           // Removes '../' from relative cross-references on flattened site files
-          return output.replace(/(href=")\.\.\//g, '$1');
+          return processedOutput.replace(/(href=")\.\.\//g, '$1');
         }
-        return output;
+
+        return processedOutput;
       });
     });
 
