@@ -97,11 +97,11 @@ function buildHtml() {
 
         // Force a total path correction for GitHub Pages assets
         if (isGitHubCI) {
-          // This removes any relative prefix path nesting strings entirely
-          // and routes assets directly to the root of your deployed domain
+          // This safely catches: src="./resources/", src="resources/", src="../../resources/" etc.
+          // and converts them to your explicit repository subdirectory target path.
           processedOutput = processedOutput.replace(
             /src="(?:\.\/|\.\.\/)*resources\//g,
-            'src="/resources/'
+            'src="/ODISC_Documentation/resources/'
           );
         }
 
@@ -113,7 +113,6 @@ function buildHtml() {
         return processedOutput;
       });
     });
-
 
     try {
       asciidoctor.convertFile(path.resolve(file), options);
