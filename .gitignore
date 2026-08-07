@@ -27,3 +27,4 @@ _secret.yml
 .env
 .secrets
 
+**/DRAFT/**

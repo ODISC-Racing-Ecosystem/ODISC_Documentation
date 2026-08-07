@@ -41,9 +41,12 @@ function buildHtml() {
     }
   };
 
-    files.forEach(file => {
+  files.forEach(file => {
     let relativePath = path.relative(docsDir, file);
-    let relativeFilePrefix = ""; // Default behavior for regular files
+
+    // Default values for standard cross-references
+    let currentFilePrefix = "";
+    let currentFileSuffix = ".html";
 
     // Intercept files inside /docs/site and flatten their path structure
     const pathParts = relativePath.split(path.sep);
@@ -51,9 +54,10 @@ function buildHtml() {
       pathParts.shift(); // Remove the 'site' parent folder segment
       relativePath = pathParts.join(path.sep);
 
-      // FIX: Since this file is being moved up 1 directory,
-      // its output links need to drop their "../" prefix.
-      relativeFilePrefix = "../";
+      // FIX: By changing the target suffix to calculate its path backwards,
+      // it cancels out the structural change when moving from /site to root.
+      currentFilePrefix = "";
+      currentFileSuffix = "/../index.html";
     }
 
     const targetFilePath = path.join(absoluteOutputDir, relativePath);
@@ -70,8 +74,9 @@ function buildHtml() {
       base_dir: path.dirname(path.resolve(file)),
       attributes: {
         ...(config.html.asciidocOptions?.attributes || {}),
-        // Tells Asciidoctor to strip "../" from cross-references inside flattened files
-        "relfileprefix": relativeFilePrefix
+        // Natively rewrite link construction on a per-file basis
+        "relfileprefix": currentFilePrefix,
+        "outfilesuffix": currentFileSuffix
       }
     };
 
@@ -84,6 +89,7 @@ function buildHtml() {
       process.exitCode = 1;
     }
   });
+
 
 
   process.stderr.write = originalStderrWrite;
