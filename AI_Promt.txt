@@ -14,7 +14,7 @@ Documentation Requirements:
 -- TLS, Technical Library Standards, specifications for how a single system works
 -- DS, Domain Specification, the detailed specifications for how a TLS is implemented
 - Each document has its own template to follow
--- Please ask me for the template if unsure
+-- Templates will be provided on an as needed basis prior to starting a document.
 - CRITICAL PRESERVATION RULE: Do not modify, add, or append lines to the 
   "Document Revision History" table under any circumstances. It must remain exactly as 
   written in the template (Version: 0.1, Date: 2026-??-??, Description: Initial Draft.).

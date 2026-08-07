@@ -1,0 +1,244 @@
+:doctitle: DS-002-300 - Track Definition Standard
+:webtitle: {doctitle}
+:webicon: /navigation/document/DOCUMENT_STATUS
+:navtitle: Track Definition Standard
+[#ds-002-300]
+= {doctitle}
+
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+This Domain Specification defines the core logical data model used to represent 
+racetracks within the ODISC Racing Ecosystem database layer. The track is 
+structured as a highly normalized, relational directed graph where normal tracks, 
+lane changers, and pit work areas share identical spatial sector primitives. 
+
+To ensure ecosystem interoperability, all schemas adhere strictly to the 
+foundational camelCase and text encoding rules established in the Global Data 
+Basics specification 
+(xref:../../DS/TLS-011/DS-011-300/index.adoc[DS-011-300]).
+
+== Functional Requirements
+
+=== Relational Database Schema
+
+The track layout maps all surface trajectories through a streamlined structural 
+pairing: a `lane` identifier table and a branching `lanePath` vector table.
+
+==== The Track Table (`track`)
+Acts as the root record for an independent racetrack installation and holds 
+all top-level distributed replication metadata. Operational status and sync 
+states are managed externally via centralized tables defined in DS-011-320.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| trackId | VARCHAR(36) | NOT NULL | PK | Universally Unique ID (UUIDv7 format).
+| name | VARCHAR(100) | NOT NULL | - | Human-readable name of the racetrack.
+| description | TEXT | NULLABLE | - | Optional details or location notes.
+| releaseVersion | VARCHAR(20) | NOT NULL | - | Publication release version string (e.g., '1.0.0').
+| releaseDate | DATE | NOT NULL | - | Authoritative publication calendar date stamp.
+| lifecycleId | INTEGER | NOT NULL | FK | References global publication lifecycle table in DS-011-320.
+|===
+
+==== The Track Contributor Table (`trackContributor`)
+Maps individual designers and organizing entities to a specific track layout.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| trackContributorId | INTEGER | NOT NULL | PK | Auto-incrementing relational row index.
+| trackId | VARCHAR(36) | NOT NULL | FK | Links to the parent track master record.
+| designerId | VARCHAR(36) | NULLABLE | FK | References the master designer registry record.
+| organizationId | VARCHAR(36) | NULLABLE | FK | References the master organization registry record.
+| roleId | VARCHAR(30) | NOT NULL | - | ID representing their contribution type.
+|===
+
+Note: +
+To preserve data accountability, a row constraint shall enforce that `designerId` 
+and `organizationId` cannot both be NULL simultaneously.
+
+==== The Sector Table (`sector`)
+Breaks the track into discrete logical zones. Sequential continuity is not 
+implied across sector transitions.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| sectorId | INTEGER | NOT NULL | PK | Auto-incrementing relational row index.
+| trackId | VARCHAR(36) | NOT NULL | FK | Links to the parent track master record.
+| sectorNumber | INTEGER | NOT NULL | - | Sequential order marker within this track instance.
+| isPitLane | BOOLEAN | NOT NULL | - | Flag declaring whether the sector runs inside the pits.
+|===
+
+Note: +
+A composite unique key constraint shall enforce that the combination of `trackId` 
+and `sectorNumber` remains distinct across the dataset.
+
+==== The Lane Table (`lane`)
+Declares the entry presence of a drivable track slot within a specific sector.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| laneId | INTEGER | NOT NULL | PK | Auto-incrementing relational row index.
+| sectorId | INTEGER | NOT NULL | FK | Links to the parent sector record.
+| laneIndex | INTEGER | NOT NULL | - | Lane position index starting at 1 (innermost).
+|===
+
+Note: +
+A composite unique key constraint shall enforce that the combination of `sectorId` 
+and `laneIndex` remains distinct across the dataset.
+
+==== The Lane Path Table (`lanePath`)
+Defines the explicit downstream trajectories available from any lane entry slot. 
+Active lane changers map multiple unique direction records out of a single `laneId`.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| pathId | INTEGER | NOT NULL | PK | Auto-incrementing relational row index.
+| laneId | INTEGER | NOT NULL | FK | Links to the originating lane entry record.
+| directionChoiceId | INTEGER | NOT NULL | FK | References directionChoices lookup table.
+| destLaneId | INTEGER | NOT NULL | FK | Explicit target downstream laneId primary key destination.
+| distanceMeters | DECIMAL(6,3) | NOT NULL | - | Physical travel length of this path trajectory.
+| throttleConstraint | INTEGER | NULLABLE | - | Performance duty cycle ceiling scaled from 0-100; NULL if open.
+|===
+
+==== The Pit Action Table (`pitAction`)
+Maps specialized functional behaviors explicitly to specific path vectors 
+running within pit-designated sectors.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| pitActionId | INTEGER | NOT NULL | PK | Auto-incrementing relational row index.
+| pathId | INTEGER | NOT NULL | FK | Links to the target lanePath record.
+| pitActionTypeId | INTEGER | NOT NULL | FK | References the validated pitActionType registry.
+|===
+
+=== Enumeration Tables
+
+==== The Direction Choice Table (`directionChoice`)
+A global lookup table restricting valid vehicle branching paths. The integer 
+primary key serves directly as the evaluation code within application logic.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| directionChoiceId | INTEGER | NOT NULL | PK | Unique integer key identifier.
+| name | VARCHAR(15) | NOT NULL | - | Human-readable choice designation (e.g., 'STRAIGHT', 'LEFT', 'RIGHT').
+|===
+
+
+==== The Pit Action Type Table (`pitActionType`)
+A global lookup dictionary containing validated behavioral keywords.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| pitActionTypeId | INTEGER | NOT NULL | PK | Unique integer key identifier.
+| name | VARCHAR(30) | NOT NULL | - | System action identifier enum pool (e.g., 'WORK_ALLOWED' keys TBD).
+| description | TEXT | NULLABLE | - | Architectural explanation of the behavior ruleset.
+|===
+
+=== Operational Graph Query Logic
+
+==== Unified Traversal Logic
+To advance a vehicle through the track layout, the software tracking engine 
+shall evaluate a uniform relational lookup query targeting the primary key 
+destination:
+[source,sql]
+----
+SELECT destLaneId 
+FROM lanePath 
+WHERE laneId = :currentLaneId 
+AND directionChoiceId = :driverDirectionChoiceId;
+----
+
+
+
+== Requirements Checklist
+
+.Checklist to ensure all requirements are met
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| TRACK_DB_SINGULAR
+| All table entities and references utilize strict singular naming configurations.
+| ✅
+| ☐
+
+| TRACK_DB_HOMOGENEOUS
+| Racetracks and pit lanes utilize identical sector, lane, and path table primitives.
+| ✅
+| ☐
+
+| TRACK_DB_LOOKUP_ENUM
+| Structural variables (choices, states, actions) are validated via strict integer foreign key lookups.
+| ✅
+| ☐
+
+| TRACK_DB_NARROW_KEYS
+| Secondary entities swap bulky string formats for optimized auto-incrementing integer key rows.
+| ✅
+| ☐
+
+| TRACK_DB_DATE_NATIVE
+| Publication timestamps are converted to optimized native calendar types instead of string blobs.
+| ✅
+| ☐
+
+| TRACK_DB_ID_IS_CODE
+| Direction choice tables eliminate redundant text code columns, using the integer PK directly as the logic code.
+| ✅
+| ☐
+
+| TRACK_DB_COMPOSITE_UK
+| Layout tables enforce rigid database-level composite unique keys on sequential placement indexes.
+| ✅
+| ☐
+
+| TRACK_DB_CAMELCASE
+| All database columns and table identifiers conform strictly to camelCase conventions.
+| ✅
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+
+| Version | Date | Description
+
+| 0.1
+| 2026-??-??
+| Initial Draft.
+|===
