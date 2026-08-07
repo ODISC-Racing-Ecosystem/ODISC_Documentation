@@ -16,6 +16,7 @@ components and capabilities defined by the Technical Library Standards
 ** xref:./TLS-002/DS-002-110/index.adoc[DS-002-110]: Power Controller with Data Modulation
 ** xref:./TLS-002/DS-002-120/index.adoc[DS-002-120]: Hardware Identification Dolly
 ** xref:./TLS-002/DS-002-200/index.adoc[DS-002-200]: Race Management System Software
+** xref:./TLS-002/DS-002-300/index.adoc[DS-002-300]: Track Definition Standard
 * TLS-003: Detection Points
 * TLS-004: Start/Finish Line and Race Timing
 * TLS-005: Lane Changers
@@ -27,5 +28,8 @@ components and capabilities defined by the Technical Library Standards
 * TLS-011: Data Standards and Protocols
 ** xref:./TLS-011/DS-011-300/index.adoc[DS-011-300]: Global Data Basics
 ** xref:./TLS-011/DS-011-310/index.adoc[DS-011-310]: JSON Format and Schema Standards
+** xref:./TLS-011/DS-011-320/index.adoc[DS-011-320]: Global Database Tables
+* TLS-012: Global Data Repository
+** xref:./TLS-011/DS-012-100/index.adoc[DS-012-100]: Registry Objects
 
 

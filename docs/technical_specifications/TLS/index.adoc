@@ -1,7 +1,10 @@
 
-:current-dir: .
-[#TLS]
-= Technical Library Standards
+:doctitle: Technical Library Standards
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: {doctitle}
+[#tls]
+= {doctitle}
 
 The Technical Library Standards (TLS) define the standardized components,
 capabilities, interactions, and responsibilities within the ODISC Racing
@@ -21,6 +24,7 @@ on its specific area of responsibility.
 * xref:TLS-009/index.adoc[TLS-009]: Driver Station
 * xref:TLS-010/index.adoc[TLS-010]: Vehicle Decoder
 * xref:TLS-011/index.adoc[TLS-011]: Data Standards and Protocols
+* xref:TLS-012/index.adoc[TLS-012]: Global Data Repository
 
 Future Documents::
 

@@ -1,7 +1,7 @@
-:doctitle: TLS-104 - Global Registry 
+:doctitle: TLS-012 - Global Registry 
 :webtitle: {doctitle}
 :navtitle: Global Registry 
-[#tls-104]
+[#tls-012]
 = {doctitle}
 
 == Identification Block
@@ -12,11 +12,11 @@
 |Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
-|Status| Draft
+|Status| Outline
 |Maintainer(s)| Designated Maintainer
 |===
 
-WARNING: TLS-104 is a placeholder, exact location in numbering scheme is TBD.
+// TODO: Ensure we follow document standards.
 
 == Purpose
 

@@ -1,0 +1,159 @@
+
+:doctitle: DS-012-100 - Registry Objects
+:webtitle: {doctitle}
+:webicon: /navigation/document/DOCUMENT_STATUS
+:navtitle: DS Name
+[#ds-012-100]
+= {doctitle}
+
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Outline
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+This standard establishes how Registry Objects are identified, owned,
+versioned, related, synchronized, classified, and ultimately retired. It
+provides the common information model that all downstream Domain
+Standards shall follow.
+
+== Functional Requirements
+
+A Registry Object is any item that is tracked within the ecosystem.
+
+Some Registry Objects represent physical items, while others represent
+logical concepts, software releases, competition records, or
+administrative information. Every Registry Object exists because it has
+value to one or more systems within the ecosystem.
+
+Examples of Registry Objects include, but are not limited to:
+
+* Organization
+** Venues
+** Manufacturers
+* Person
+** Driver
+** Venue Contact
+** Manufacturer Contact
+* Racetrack
+** Reference Files (references document specification version)
+** Venue Racetrack (references Venue and document specification version)
+* Competition +
+Competition-related Registry Objects contain numerous relationships to
+other Registry Objects. Only the primary object types are listed here
+for clarity.
+** Race
+** Race Session
+** Race Result
+* Vehicles
+** Vehicle Model (references Manufacturer)
+** Driver Vehicle (References Vehicle Model)
+* Specifications and Implementations
+** Document specification version
+** Firmware (references document specification version)
+** Software Release (references document specification version)
+** Workshop Equipment Definition
+
+Everything within the Competition domain contains numerous relationships
+to other Registry Objects. For clarity, these relationships are
+intentionally omitted from the examples above.
+
+Registry Objects form the common language of the ecosystem. Every
+subsystem exchanges information through Registry Objects rather than
+implementation-specific data structures.
+
+
+=== Global Shared Information
+
+The global information includes the driver profiles, manufacturer
+information and the hardware they have created for the ecosystem,
+firmware, and more.
+
+=== Venue Information
+
+Each venue may have a profile that contains the location, facilities,
+and similar details that are publicly available.
+
+Private venues may choose to list their track with a "private" flag set
+so that they don't get unexpected visitors, while still gaining the
+benefits of being connected to the global registry for updates.
+
+=== Racetrack Information
+
+Each racetrack is linked to the venue it is at. This contains the track
+layout, the certification level (updates over time), and similar data.
+Since the shared systems that are configured at a venue have all this
+information already, it can be automatically updated as things change
+over time.
+
+=== Race Results
+
+Public venues have the option to share race results with the global
+registry. Certain restrictions may be placed on this data transfer to
+require track certification or competition levels (such as district or
+above) or number of drivers that competed to reduce the risk of flooding
+the database with excess information.
+
+=== Local Information
+
+While there is a lot of information that is shared with the global
+registry, there is even more that instead kept locally.
+
+This data is available via terminals and displays at the venue, and
+while useful, are not needed at the global level. This allows venues to
+keep local leaderboards of race results or fastest lap times current,
+without requiring it to be shared with the world.
+
+
+== Requirements Checklist
+
+.Checklist to ensure all requirements are met
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| Requirement Example 1
+| Short description of the specific technical requirement to be verified.
+| ✅ / ℹ️
+| ☐
+
+| Requirement Example 2
+| Short description of another technical requirement to be verified.
+| ✅ / ℹ️
+| ☐
+
+| 
+| 
+| ✅ / ℹ️
+| ☐
+
+| 
+| 
+| ✅ / ℹ️
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1
+| 2026-??-??
+| Initial Draft.
+|===
+
