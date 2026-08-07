@@ -41,15 +41,19 @@ function buildHtml() {
     }
   };
 
-  files.forEach(file => {
+    files.forEach(file => {
     let relativePath = path.relative(docsDir, file);
+    let relativeFilePrefix = ""; // Default behavior for regular files
 
-    // FIX: Intercept files inside /docs/site and flatten their path structure
-    // e.g., converts "site/index.adoc" or "site/about.adoc" to just "index.adoc" or "about.adoc"
+    // Intercept files inside /docs/site and flatten their path structure
     const pathParts = relativePath.split(path.sep);
     if (pathParts[0] === 'site') {
       pathParts.shift(); // Remove the 'site' parent folder segment
       relativePath = pathParts.join(path.sep);
+
+      // FIX: Since this file is being moved up 1 directory,
+      // its output links need to drop their "../" prefix.
+      relativeFilePrefix = "../";
     }
 
     const targetFilePath = path.join(absoluteOutputDir, relativePath);
@@ -65,7 +69,9 @@ function buildHtml() {
       mkdirs: true,
       base_dir: path.dirname(path.resolve(file)),
       attributes: {
-        ...(config.html.asciidocOptions?.attributes || {})
+        ...(config.html.asciidocOptions?.attributes || {}),
+        // Tells Asciidoctor to strip "../" from cross-references inside flattened files
+        "relfileprefix": relativeFilePrefix
       }
     };
 
@@ -78,6 +84,7 @@ function buildHtml() {
       process.exitCode = 1;
     }
   });
+
 
   process.stderr.write = originalStderrWrite;
   console.log(`${COLORS.cyan}--- HTML Build Complete ---${COLORS.reset}\n`);
