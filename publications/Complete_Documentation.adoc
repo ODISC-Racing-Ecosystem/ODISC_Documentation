@@ -49,6 +49,7 @@ include::../docs/technical_specifications/DS/TLS-001/DS-001-120/index.adoc[level
 
 include::../docs/technical_specifications/DS/TLS-002/DS-002-100/index.adoc[leveloffset=3]
 include::../docs/technical_specifications/DS/TLS-002/DS-002-110/index.adoc[leveloffset=3]
+include::../docs/technical_specifications/DS/TLS-002/DS-002-120/index.adoc[leveloffset=3]
 include::../docs/technical_specifications/DS/TLS-002/DS-002-200/index.adoc[leveloffset=3]
 
 include::../docs/technical_specifications/DS/TLS-003/DS-003-100/index.adoc[leveloffset=3]

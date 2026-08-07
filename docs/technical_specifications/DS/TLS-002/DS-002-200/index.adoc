@@ -141,6 +141,15 @@ The Race Management System shall store race data required for review, reporting,
 Stored data shall include all data types listed in DS-001-110.
 
 
+== Notes to consider:
+
+Vector Geometry Support: The software shall support the creation or import of continuous vector-based track layouts to accurately represent custom wood-routed track lanes.
+
+Logical Sectoring: The software shall allow users to place virtual markers on the track layout representing physical Detection Points, automatically dividing the track into calculated logical sectors.
+
+Junction Mapping Interface: The configuration interface shall allow a user to bind an actuated CAN-bus node ID to an explicit coordinate junction on the vector map by clicking the corresponding graphic element.
+
+
 == Document Revision History
 
 [cols="2,3,8",options="header"]

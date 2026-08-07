@@ -15,7 +15,7 @@
 |Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
-|Status| Stub
+|Status| Draft
 |Maintainer(s)| Designated Maintainer
 |===
 

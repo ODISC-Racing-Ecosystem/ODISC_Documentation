@@ -51,6 +51,7 @@ multiple documents, the following numbering ranges are used:
 * 1xx documents define hardware requirements.
 * 2xx documents define software requirements.
 * 3xx documents define communication requirements.
+* 4xx documents define data structures.
 
 The tens and ones digits identify the sequential document number within
 the assigned requirement range.
