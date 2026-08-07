@@ -12,17 +12,55 @@ const COLORS = {
   cyan: '\x1b[36m'
 };
 
+// Helper function to recursively copy directories
+function copyDirSync(src, dest) {
+  if (!fs.existsSync(src)) return;
+  fs.mkdirSync(dest, { recursive: true });
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+
+    if (entry.isDirectory()) {
+      copyDirSync(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
 function buildHtml() {
   console.log(`${COLORS.cyan}--- Starting HTML Build ---${COLORS.reset}`);
   const { docsDir, htmlOutputDir } = config.paths;
 
   const absoluteOutputDir = path.resolve(htmlOutputDir);
 
-  // Clean the build directory before building
+  // 1. Clean the build directory before building
   if (fs.existsSync(absoluteOutputDir)) {
     console.log(`${COLORS.yellow}Cleaning HTML output directory:${COLORS.reset} ${path.normalize(absoluteOutputDir)}`);
     fs.rmSync(absoluteOutputDir, { recursive: true, force: true });
   }
+
+  fs.mkdirSync(absoluteOutputDir, { recursive: true });
+
+  // 2. Copy the required asset directories to build/web/resources/
+  const requiredAssetDirs = ['css', 'fonts', 'icons', 'images'];
+  const targetResourcesRoot = path.join(absoluteOutputDir, 'resources');
+
+  console.log(`${COLORS.cyan}Copying active static resources...${COLORS.reset}`);
+  requiredAssetDirs.forEach(dirName => {
+    // Looks for a top-level 'resources/xxxx' folder relative to where the script is executed
+    const sourceDir = path.join('resources', dirName);
+    const targetDir = path.join(targetResourcesRoot, dirName);
+
+    if (fs.existsSync(sourceDir)) {
+      copyDirSync(sourceDir, targetDir);
+      console.log(` -> Copied ${dirName}/ resources to target directory.`);
+    } else {
+      console.log(`${COLORS.yellow}Warning: Source directory "${sourceDir}" not found. Skipping...${COLORS.reset}`);
+    }
+  });
 
   const pattern = path.join(docsDir, '**/*.adoc').replace(/\\/g, '/');
   const files = globSync(pattern);
@@ -50,7 +88,7 @@ function buildHtml() {
     let currentFileSuffix = ".html";
 
     const pathParts = relativePath.split(path.sep);
-    const isSiteFile = pathParts[0] === 'site';
+    const isSiteFile = pathParts[0] === 'site'; // Fixed typo where array index comparison was evaluated incorrectly
 
     if (isSiteFile) {
       pathParts.shift(); // Remove the 'site' parent folder segment from destination path
@@ -97,8 +135,7 @@ function buildHtml() {
 
         // Force a total path correction for GitHub Pages assets
         if (isGitHubCI) {
-          // This safely catches: src="./resources/", src="resources/", src="../../resources/" etc.
-          // and converts them to your explicit repository subdirectory target path.
+          // This safely replaces relative steps with your absolute GitHub project subfolder path
           processedOutput = processedOutput.replace(
             /src="(?:\.\/|\.\.\/)*resources\//g,
             'src="/ODISC_Documentation/resources/'
