@@ -1,5 +1,6 @@
 :doctitle: GP-01 - Racing Intent and Vision
 :webtitle: {doctitle}
+:webicon: /navigation/document/DOCUMENT_STATUS
 :navtitle: Racing Intent and Vision
 [#gp-01]
 = {doctitle}
@@ -12,7 +13,7 @@
 |Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
-|Status| Draft
+|Status| Review
 |Maintainer(s)| Designated Maintainer
 |===
 

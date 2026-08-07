@@ -1,7 +1,19 @@
 
+:doctitle: Technical Specifications
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: Technical Specifications
+[#technical_specifications]
+= {doctitle}
 
-include::overview.adoc[]
+Below you will find the various technical specifications that exist for 
+the ODISC Racing Ecosystem. Combined they provide the structure that 
+defines the interoperability of the ecosystem to ensure that all the moving parts can work together.
 
-include::print_specifications.adoc[leveloffset=+1]
+* xref:TLG/index.adoc[TLG]: Technical Library Group, a collection of TLS that define a functioning system
+* xref:TLS/index.adoc[TLS]: Technical Library Standards, specifications for how a single system works
+* xref:DS/index.adoc[DS]: Domain Specification, the detailed specifications for how a TLS is implemented
 
+* xref:../site/pdf_specifications.adoc[PDF Specifications]: PDF versions of all ODISC documents.
+* xref:license/index.adoc[License]: Provides the current license for these documents.
 

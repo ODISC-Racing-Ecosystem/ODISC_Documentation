@@ -1,1 +1,8 @@
- 
+:doctitle: ODISC Racing Regulations
+:output_file_name: {doctitle}
+:toc:
+:sectnums:
+:toclevels: 2
+:doctype: book
+= {doctitle}
+

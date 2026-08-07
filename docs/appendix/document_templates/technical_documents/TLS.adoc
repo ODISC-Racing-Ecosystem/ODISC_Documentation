@@ -1,6 +1,7 @@
 
 :doctitle: TLS-??? - TLS Name
 :webtitle: {doctitle}
+:webicon: /navigation/document/DOCUMENT_STATUS
 :navtitle: TLS Name
 [#tls-???]
 = {doctitle}
@@ -13,7 +14,7 @@
 |Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
-|Status| Draft
+|Status| Stub
 |Maintainer(s)| Designated Maintainer
 |===
 

@@ -1,8 +1,11 @@
-= ODISC Technical Specification TLS-004
+:doctitle: ODISC TLS-004 with DS Details
+:output_file_name: {doctitle}
 :toc:
 :sectnums:
 :toclevels: 2
 :doctype: book
+= {doctitle}
+
 
 include::../../../../docs/technical_specifications/TLS/TLS-004/index.adoc[leveloffset=1]
 include::../../../../docs/technical_specifications/DS/TLS-004/DS-004-100/index.adoc[leveloffset=1]

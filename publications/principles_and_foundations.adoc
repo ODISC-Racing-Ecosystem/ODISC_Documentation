@@ -1,10 +1,12 @@
-= ODISC Ecosystem Principles & Foundations
+:doctitle: ODISC Principles and Foundations
+:output_file_name: {doctitle}
 :toc:
 :sectnums:
 :toclevels: 3
 :doctype: book
+= {doctitle}
 
-include::../docs/principles_and_foundations/overview.adoc[leveloffset=1]
+include::../docs/principles_and_foundations/index.adoc[leveloffset=1]
 include::../docs/principles_and_foundations/OFD/index.adoc[leveloffset=1]
 include::../docs/principles_and_foundations/OFD/OFD-001/index.adoc[leveloffset=2]
 include::../docs/principles_and_foundations/OFD/OFD-002/index.adoc[leveloffset=2]

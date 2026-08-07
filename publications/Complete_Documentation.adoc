@@ -1,11 +1,13 @@
-= ODISC Complete Documentation
+:doctitle: ODISC Complete Documentation
+:output_file_name: {doctitle}
 :toc:
 :sectnums:
 :toclevels: 3
 :doctype: book
+= {doctitle}
 
 
-include::../docs/principles_and_foundations/overview.adoc[leveloffset=1]
+include::../docs/principles_and_foundations/index.adoc[leveloffset=1]
 include::../docs/principles_and_foundations/OFD/index.adoc[leveloffset=2]
 include::../docs/principles_and_foundations/OFD/OFD-001/index.adoc[leveloffset=3]
 include::../docs/principles_and_foundations/OFD/OFD-002/index.adoc[leveloffset=3]
@@ -20,7 +22,7 @@ include::../docs/principles_and_foundations/GP/GP-03/index.adoc[leveloffset=3]
 include::../docs/principles_and_foundations/GP/GP-04/index.adoc[leveloffset=3]
 
 
-include::../docs/technical_specifications/overview.adoc[leveloffset=1]
+include::../docs/technical_specifications/index.adoc[leveloffset=1]
 
 include::../docs/technical_specifications/TLG/index.adoc[leveloffset=2]
 include::../docs/technical_specifications/TLG/TLG-001/index.adoc[leveloffset=3]

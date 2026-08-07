@@ -1,8 +1,9 @@
 
-:doctitle: TDP-??? - Track Design Principles
+:doctitle: TDP - Track Design Principles
 :webtitle: {doctitle}
+:webicon: /navigation/folder/green
 :navtitle: Track Design Principles
-[#tdp-???]
+[#tdp]
 = {doctitle}
 
 == Identification Block

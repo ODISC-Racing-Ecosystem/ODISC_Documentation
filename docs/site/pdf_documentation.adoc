@@ -1,0 +1,45 @@
+
+:doctitle: PDF Documentation
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: PDF Documentation
+[#tdp]
+= {doctitle}
+
+Prefer reading offline or printing hard copies for the track? The following PDF collections are available.
+
+ODISC Complete Documentation [link:pass:[../resources/PDFs/ODISC Complete Documentation.pdf][PDF]]::
+This contains the complete set of documentation for ODISC.
+
+ODISC Principles and Foundations [link:pass:[../resources/PDFs/ODISC Principles and Foundations.pdf][PDF]]::
+This contains the complete set of documents from the Principles and Foundations category.
+
+ODISC Complete Technical Specifications [link:pass:[../resources/PDFs/ODISC Complete Technical Specifications.pdf][PDF]]::
+This contains the complete technical specifications for ODISC.
+
+ODISC TLS Documents::
+The following consist of individual TLS documents. + 
+TLS-001 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-001.pdf][pdf]] +
+TLS-002 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-002.pdf][pdf]] +
+TLS-003 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-003.pdf][pdf]] +
+TLS-004 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-004.pdf][pdf]] +
+TLS-005 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-005.pdf][pdf]] +
+TLS-006 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-006.pdf][pdf]] +
+TLS-007 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-007.pdf][pdf]] +
+TLS-008 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-008.pdf][pdf]] +
+TLS-009 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-009.pdf][pdf]] +
+TLS-010 [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-010.pdf][pdf]] +
+
+ODISC TLS Documents with Domain Specification Details::
+The following consist of individual TLS documents along with any DS that match the TLS with their numbering. + 
+TLS-001 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-001 with DS Details.pdf][pdf]] +
+TLS-002 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-002 with DS Details.pdf][pdf]] +
+TLS-003 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-003 with DS Details.pdf][pdf]] +
+TLS-004 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-004 with DS Details.pdf][pdf]] +
+TLS-005 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-005 with DS Details.pdf][pdf]] +
+TLS-006 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-006 with DS Details.pdf][pdf]] +
+TLS-007 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-007 with DS Details.pdf][pdf]] +
+TLS-008 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-008 with DS Details.pdf][pdf]] +
+TLS-009 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-009 with DS Details.pdf][pdf]] +
+TLS-010 with DS [link:pass:[../resources/PDFs/technical_specifications/TLS/ODISC TLS-010 with DS Details.pdf][pdf]] +
+

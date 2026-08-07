@@ -1,7 +1,9 @@
-
-
+:doctitle: Guiding Principles
+:webtitle: {doctitle}
+:webicon: /navigation/folder/green
+:navtitle: Guiding Principles
 [#guiding_principles]
-= Guiding Principles
+= {doctitle}
 
 == Introduction
 

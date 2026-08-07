@@ -1,5 +1,6 @@
 :doctitle: GP-02 - Documentation and Governance Principles
 :webtitle: {doctitle}
+:webicon: /navigation/document/DOCUMENT_STATUS
 :navtitle: Documentation and Governance
 [#gp-02]
 = {doctitle}
@@ -12,7 +13,7 @@
 |Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
-|Status| Draft
+|Status| Review
 |Maintainer(s)| Designated Maintainer
 |===
 

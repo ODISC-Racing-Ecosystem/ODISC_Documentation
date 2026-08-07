@@ -1,7 +1,31 @@
 
+:doctitle: Principles and Foundations
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: Principles and Foundations
+[#tdp]
+= {doctitle}
+
+While there are only the OFD and GP set of documents that are published today, 
+future documents sets will be added such as the Track Design Principles (TDP).
+
+* xref:OFD/index.adoc[OFD]: ODISC Foundational Documents
+** xref:OFD/OFD-001/index.adoc[OFD-001]: Overview and Vision for ODISC
+** xref:OFD/OFD-002/index.adoc[OFD-002]: Introduction to the ODISC Ecosystem!
+** xref:OFD/OFD-003/index.adoc[OFD-003]: Ecosystem Architecture
+** xref:OFD/OFD-004/index.adoc[OFD-004]: Reference Designs
+** xref:OFD/OFD-005/index.adoc[OFD-005]: Governance Framework
+
+* xref:GP/index.adoc[GP]: Guiding Principles
+** xref:GP/GP-01/index.adoc[GP-01]: Racing Intent and Vision
+** xref:GP/GP-02/index.adoc[GP-02]: Documentation and Governance Principles
+** xref:GP/GP-03/index.adoc[GP-03]: System Design Principles
+** xref:GP/GP-04/index.adoc[GP-04]: Engineering Principles
 
 
-include::overview.adoc[]
+* xref:TDP/index.adoc[TDP]: Track Design Principles (Future Content)
 
-include::print_specifications.adoc[leveloffset=+1]
+* xref:../site/pdf_specifications.adoc[PDF Specifications]: PDF versions of all ODISC documents.
+* xref:license/index.adoc[License]: Provides the current license for these documents.
+
 

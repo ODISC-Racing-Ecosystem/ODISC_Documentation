@@ -42,12 +42,72 @@ function buildPdf() {
       fs.mkdirSync(targetDir, { recursive: true });
     }
 
-    const outputPdfName = path.basename(file, '.adoc') + '.pdf';
+    // Read file and parse headers
+    const fileContent = fs.readFileSync(file, 'utf8');
+    const lines = fileContent.split(/\r?\n/);
+
+    const attributes = {};
+    let hasOutputFileAttribute = false;
+    let rawOutputFileNameValue = '';
+
+    // Step 1: Scan and map all declared attributes in the document
+    for (const line of lines) {
+      // Matches standard ':attribute-name: value' entries
+      const attrMatch = line.match(/^:([^:]+):\s*(.*)$/);
+      if (attrMatch) {
+        const key = attrMatch[1].trim();
+        const value = attrMatch[2].trim();
+        attributes[key] = value;
+
+        if (key === 'output_file_name') {
+          hasOutputFileAttribute = true;
+          rawOutputFileNameValue = value;
+        }
+      }
+    }
+
+    // Rule 1: Fail if attribute is completely missing
+    if (!hasOutputFileAttribute) {
+      console.error(`${COLORS.red}Error: "${path.basename(file)}" is missing the required ":output_file_name:" attribute in its header.${COLORS.reset}`);
+      process.exit(1);
+    }
+
+    // Step 2: Resolve AsciiDoc attribute substitutions recursively (e.g. {doctitle})
+    let customName = rawOutputFileNameValue;
+    const maxIterations = 10; // Prevent infinite substitution loops
+    let iterations = 0;
+
+    while (customName.includes('{') && customName.includes('}') && iterations < maxIterations) {
+      const updatedName = customName.replace(/\{([^}]+)\}/g, (match, attrName) => {
+        // If the referenced attribute exists, substitute it; otherwise leave it intact
+        return attributes[attrName] !== undefined ? attributes[attrName] : match;
+      });
+
+      if (updatedName === customName) break; // Break if no substitutions changed anything
+      customName = updatedName;
+      iterations++;
+    }
+
+    // Rule 2: Cross-platform illegal character validation (Windows & Linux)
+    const illegalCharsRegex = /[\\/:*?"<>|\x00-\x1F]/;
+    if (illegalCharsRegex.test(customName)) {
+      console.error(`${COLORS.red}Error: Invalid character in resolved ":output_file_name:" ("${customName}") inside "${path.basename(file)}". Filenames cannot contain: \\ / : * ? " < > | ${COLORS.reset}`);
+      process.exit(1);
+    }
+
+    // Rule 3: Case-insensitive check and capitalization enforcement
+    let outputPdfName;
+    if (customName.toUpperCase().startsWith('ODISC')) {
+      const dynamicSuffix = customName.slice(5);
+      outputPdfName = `ODISC${dynamicSuffix}.pdf`;
+    } else {
+      outputPdfName = `ODISC ${customName}.pdf`;
+    }
+
     const finalPdfPath = path.join(targetDir, outputPdfName);
 
     try {
-      // FIX: Removed -B and -a docroot so the CLI natively resolves relative to the input file
-      const command = `asciidoctor-pdf -r asciidoctor-pdf -D "${targetDir}" "${path.resolve(file)}"`;
+      const command = `asciidoctor-pdf -r asciidoctor-pdf -o "${finalPdfPath}" "${path.resolve(file)}"`;
 
       execSync(command, { stdio: 'inherit' });
       console.log(`${COLORS.green}Rendered PDF:${COLORS.reset} ${relativePath} -> ${finalPdfPath}`);

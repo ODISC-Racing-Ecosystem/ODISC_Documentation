@@ -1,9 +1,0 @@
-:fragment: 
-
-
-= Print Specifications (PDF)
-
-Prefer reading offline or printing hard copies for the track? Download the latest specification books:
-
-* link:/resources/PDFs/principles_and_foundations.pdf[ODISC Principles & Foundations PDF]
-

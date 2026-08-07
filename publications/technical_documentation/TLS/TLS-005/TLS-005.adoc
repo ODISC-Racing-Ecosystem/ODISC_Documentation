@@ -1,8 +1,10 @@
-= ODISC Technical Specification TLS-005
+:doctitle: ODISC TLS-005
+:output_file_name: {doctitle}
 :toc:
 :sectnums:
 :toclevels: 2
 :doctype: book
+= {doctitle}
 
 include::../../../../docs/technical_specifications/TLS/TLS-005/index.adoc[leveloffset=1]
 
