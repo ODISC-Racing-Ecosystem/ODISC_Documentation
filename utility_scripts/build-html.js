@@ -44,20 +44,21 @@ function buildHtml() {
   files.forEach(file => {
     let relativePath = path.relative(docsDir, file);
 
-    // Default values for standard cross-references
+    // Default behaviors for deep-nested links
     let currentFilePrefix = "";
     let currentFileSuffix = ".html";
 
-    // Intercept files inside /docs/site and flatten their path structure
     const pathParts = relativePath.split(path.sep);
-    if (pathParts[0] === 'site') {
+    const isSiteFile = pathParts[0] === 'site';
+
+    if (isSiteFile) {
       pathParts.shift(); // Remove the 'site' parent folder segment
       relativePath = pathParts.join(path.sep);
 
-      // FIX: By changing the target suffix to calculate its path backwards,
-      // it cancels out the structural change when moving from /site to root.
-      currentFilePrefix = "";
-      currentFileSuffix = "/../index.html";
+      // NATIVE FIX: For files flattened out of /site, any cross reference
+      // containing an exit token like "../" needs to be dynamically rewritten
+      // by stripping the step-up behavior from the output HTML string.
+      currentFileSuffix = ".html";
     }
 
     const targetFilePath = path.join(absoluteOutputDir, relativePath);
@@ -74,11 +75,21 @@ function buildHtml() {
       base_dir: path.dirname(path.resolve(file)),
       attributes: {
         ...(config.html.asciidocOptions?.attributes || {}),
-        // Natively rewrite link construction on a per-file basis
-        "relfileprefix": currentFilePrefix,
-        "outfilesuffix": currentFileSuffix
+        "outfilesuffix": currentFileSuffix,
+        "relfileprefix": currentFilePrefix
       }
     };
+
+    // Extension to dynamically rewrite the compiled cross references on the fly
+    if (isSiteFile) {
+      options.extension_registry = asciidoctor.Extensions.create();
+      options.extension_registry.postprocessor(function () {
+        this.process(function (document, output) {
+          // Removes '../' strictly from the beginning of relative paths in your compiled anchors
+          return output.replace(/(href=")\.\.\//g, '$1');
+        });
+      });
+    }
 
     try {
       asciidoctor.convertFile(path.resolve(file), options);
@@ -89,6 +100,7 @@ function buildHtml() {
       process.exitCode = 1;
     }
   });
+
 
 
 
