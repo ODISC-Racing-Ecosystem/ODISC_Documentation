@@ -29,7 +29,7 @@ lane changers, and pit work areas share identical spatial sector primitives.
 To ensure ecosystem interoperability, all schemas adhere strictly to the 
 foundational camelCase and text encoding rules established in the Global Data 
 Basics specification 
-(xref:../../DS/TLS-011/DS-011-300/index.adoc[DS-011-300]).
+(xref:../../TLS-011/DS-011-300/index.adoc[DS-011-300]).
 
 == Functional Requirements
 

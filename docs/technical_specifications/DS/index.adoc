@@ -30,6 +30,6 @@ components and capabilities defined by the Technical Library Standards
 ** xref:./TLS-011/DS-011-310/index.adoc[DS-011-310]: JSON Format and Schema Standards
 ** xref:./TLS-011/DS-011-320/index.adoc[DS-011-320]: Global Database Tables
 * TLS-012: Global Data Repository
-** xref:./TLS-011/DS-012-100/index.adoc[DS-012-100]: Registry Objects
+** xref:./TLS-012/DS-012-100/index.adoc[DS-012-100]: Registry Objects
 
 

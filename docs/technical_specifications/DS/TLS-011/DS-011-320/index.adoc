@@ -30,7 +30,7 @@ guarantees complete transactional normalization and consistent global entity ref
 To ensure ecosystem interoperability, all schemas adhere strictly to the 
 foundational camelCase and text encoding rules established in the Global Data 
 Basics specification 
-(xref:../../DS/TLS-011/DS-011-300/index.adoc[DS-011-300]).
+(xref:../DS-011-300/index.adoc[DS-011-300]).
 
 == Functional Requirements
 
