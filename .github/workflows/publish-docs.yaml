@@ -14,7 +14,6 @@ jobs:
     name: Execute Verification and Asset Compilation
     runs-on: ubuntu-latest
     
-    # REQUIRED FIX: Grant the necessary permissions for GitHub Pages deployment
     permissions:
       contents: read
       pages: write
@@ -41,14 +40,12 @@ jobs:
       - name: Execute Build All Script
         run: node utility_scripts/build-all.js --prod
 
-      # NEW REQUIREMENT 1: Copy PDFs directory into Web output before website packaging
       - name: Inject PDFs into Website Directory Structure
         run: |
           mkdir -p build/web/PDFs
           cp -r build/PDFs/. build/web/PDFs/
           echo "Merged build/PDFs content into build/web/PDFs/"
 
-      # NEW REQUIREMENT 2: Publish individual PDF files as discrete GitHub Artifacts
       - name: Upload Individual PDF Documents
         uses: actions/upload-artifact@v4
         with:
@@ -56,13 +53,11 @@ jobs:
           path: build/PDFs/**/*.pdf
           retention-days: 14
 
-      # RECOMMENDED FIX: Use the dedicated Pages uploading action
       - name: Upload Complete Web Server Bundle
         uses: actions/upload-pages-artifact@v3
         with:
           path: build/web/
           retention-days: 7
 
-      # Automatically publish the compiled web directory live to GitHub Pages
       - name: Deploy Unified Web Target to GitHub Pages
         uses: actions/deploy-pages@v4
