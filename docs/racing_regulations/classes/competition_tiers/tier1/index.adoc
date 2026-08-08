@@ -1,7 +1,10 @@
 
-
+:doctitle: Tier 1 - Nationals
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Nationals
 [#competition_tier1]
-= Tier 1: Nationals
+= {doctitle}
 
 Nationals racing represents the pinnacle tier of ongoing seasonal ODISC 
 competition within a recognized member organization. It brings together the 

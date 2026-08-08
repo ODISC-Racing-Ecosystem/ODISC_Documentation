@@ -1,7 +1,10 @@
 
-
+:doctitle: Performance Levels
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Performance Levels
 [#performance_level]
-= Performance Levels
+= {doctitle}
 
 ODISC establishes four distinct Performance Levels to regulate the mechanical 
 allowance and tuning scope of a vehicle. These levels dictate exactly which 

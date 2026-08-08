@@ -1,6 +1,13 @@
 
-= Contributor Resources
+:doctitle: Contributor Resources
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: Contributor Resources
+[#contributor_resources]
+= {doctitle}
 
 
-include::asciidoc/best_practices.adoc[leveloffset=+1]
+* xref::asciidoc/index.adoc[AsciiDoc Best Practices]
+* xref::document_standards/index.adoc[Document Standards]
+* xref::document_templates/index.adoc[Document Templates]
 

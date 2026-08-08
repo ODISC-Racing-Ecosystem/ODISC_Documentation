@@ -1,6 +1,9 @@
-
-
-== Competition Terminology
+:doctitle: Competition Terminology
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Competition
+[#glossary_competition_terms]
+= {doctitle}
 
 The following terms are used in the context of ODISC competitions. These 
 terms are defined to ensure consistent understanding and communication 

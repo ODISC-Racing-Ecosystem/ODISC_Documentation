@@ -1,7 +1,9 @@
-
-
-
-= Software Terms
+:doctitle: Software Terms
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Software
+[#glossary_software_terms]
+= {doctitle}
 
 Reference Implementation::
 

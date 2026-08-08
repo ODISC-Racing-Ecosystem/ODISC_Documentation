@@ -1,7 +1,10 @@
 
-
-= Appendix
-
+:doctitle: Appendix
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: Appendix
+[#appendix]
+= {doctitle}
 
 == Introduction
 

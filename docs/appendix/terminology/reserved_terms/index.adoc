@@ -1,3 +1,9 @@
+:doctitle: Reserved Terms
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Reserved
+[#glossary_reserved_terms]
+= {doctitle}
 
-= Reserved Terms
+Placeholder for reserved terminology to avoid collisions.
 

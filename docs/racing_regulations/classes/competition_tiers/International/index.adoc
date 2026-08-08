@@ -1,7 +1,11 @@
 
 
+:doctitle: Tier - International Invitationals
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: International Invitationals
 [#competition_tier_invite]
-= Tier: International Invitationals
+= {doctitle}
 
 International Invitationals represent prestige, non-pyramid showcase events 
 bringing together the absolute top-ranked competitors from multiple sovereign 

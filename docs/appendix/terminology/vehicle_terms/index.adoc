@@ -1,7 +1,9 @@
-
-
-
-= Vehicle Terms
+:doctitle: Vehicle Terms
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Vehicle
+[#glossary_vehicle_terms]
+= {doctitle}
 
 Vehicle::
 

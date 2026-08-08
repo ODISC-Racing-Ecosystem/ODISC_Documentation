@@ -1,7 +1,10 @@
 
-
+:doctitle: Tier 5 - Fun Race
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Fun Race
 [#competition_tier5]
-= Tier 5: Fun Race
+= {doctitle}
 
 Tier 5 races are informal events intended exclusively for 
 entertainment, technical experimentation, and casual or 

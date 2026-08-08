@@ -1,0 +1,24 @@
+:fragment:
+
+= Reserved Terminology
+
+The following terms are reserved for use within ODISC 
+documentation and specifications.
+
+These terms are defined to provide consistent meaning across 
+all ODISC documents, ensure broad applicability, and align 
+communication between all participants, manufacturers, 
+developers, and governing bodies.
+
+Terms listed in this section shall be used when referring 
+to ODISC concepts unless a defined exception applies.
+
+Vehicle::
+
+The term "Vehicle" shall be used instead of "Car" or 
+"Slot Car" when referring to an ODISC-compatible racing unit.
+
+Exception::
+
+The terms "Car" or "Slot Car" may be used when specifically referring to legacy equipment, historical systems, or non-ODISC systems where the original terminology is relevant.
+

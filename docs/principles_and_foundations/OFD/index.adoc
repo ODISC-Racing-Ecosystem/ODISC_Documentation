@@ -3,6 +3,7 @@
 :webtitle: {doctitle}
 :webicon: /navigation/folder/green
 :navtitle: Foundational Documents
+[#ofd]
 = {doctitle}
 
 Below you will find the various foundational documents that define how and why the ODISC Racing Ecosystem exists. Combined they provide the structure that defines the project and how it evolves into the best and most complete interoperable system that it can be.

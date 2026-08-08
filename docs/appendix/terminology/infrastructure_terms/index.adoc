@@ -1,7 +1,9 @@
-
-
-
-= Infrastructure Terms
+:doctitle: Infrastructure Terms
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Infrastructure
+[#glossary_infrastructure_terms]
+= {doctitle}
 
 Segment::
 

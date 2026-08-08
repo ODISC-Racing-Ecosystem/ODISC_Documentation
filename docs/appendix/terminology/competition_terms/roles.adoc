@@ -1,7 +1,9 @@
-
-
+:doctitle: Competition Roles
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Competition Roles
 [#competition_roles]
-= Competition Roles
+= {doctitle}
 
 Below are the defined roles within the ODISC competition ecosystem. These roles are essential for the organization, management, and participation in ODISC competitions. Each role has specific responsibilities and expectations to ensure a fair and enjoyable experience for all participants.
 

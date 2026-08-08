@@ -1,6 +1,10 @@
+:doctitle: Architectural Terms
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Architectural
+[#glossary_architectural_terms]
+= {doctitle}
 
-
-= Architectural Terms
 
 Ecosystem::
 The complete collection of subsystems that contribute to the ODISC environment.

@@ -1,7 +1,9 @@
-
-
+:doctitle: Race Scoring
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Race Scoring
 [#race_scoring]
-= Race Scoring
+= {doctitle}
 
 Race scoring defines how individual heat results are converted into race results.
 

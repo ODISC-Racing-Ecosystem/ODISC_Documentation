@@ -1,5 +1,9 @@
 
 
+:doctitle: Performance Level - Stock
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Stock
 [#performance_level_stock]
-= Performance Level: Stock
+= {doctitle}
 

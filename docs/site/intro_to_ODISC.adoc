@@ -1,5 +1,10 @@
 
-= Introduction to the ODISC Ecosystem!
+:doctitle: Introduction to the ODISC Ecosystem!
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: Intro to ODISC
+[#why_odisc]
+= {doctitle}
 
 == Introduction
 

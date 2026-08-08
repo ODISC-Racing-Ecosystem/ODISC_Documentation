@@ -1,6 +1,10 @@
+:doctitle: Core Concepts
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Core Concepts
+[#glossary_core_concepts_terms]
+= {doctitle}
 
-
-= Core Concepts
 Define each concept used throughout ODISC.
 
 Examples:

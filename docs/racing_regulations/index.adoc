@@ -1,9 +1,10 @@
 
 :doctitle: Racing Regulations
 :webtitle: {doctitle}
+:webicon: /navigation/book/red
 :navtitle: Racing Regulations
+[#racing_regulations]
 = {doctitle}
-
 
 == Identification Block
 

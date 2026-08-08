@@ -1,7 +1,9 @@
-
-
+:doctitle: Point Scoring and Calculations
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Points Calculations
 [#point_scoring_calculations]
-= Point Scoring and Calculations
+= {doctitle}
 
 The following standard point calculations are used for all competitions to ensure consistency and fairness.
 

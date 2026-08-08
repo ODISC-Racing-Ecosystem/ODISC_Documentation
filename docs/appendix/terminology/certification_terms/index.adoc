@@ -1,7 +1,10 @@
+:doctitle: Certification Terms
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Certification
+[#glossary_certification_terms]
+= {doctitle}
 
-
-
-= Certification Terms
 
 Certified::
 

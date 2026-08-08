@@ -1,8 +1,10 @@
-
-
-
+:doctitle: Race Scoring
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Race Scoring
 [#race_scoring]
-= Race Scoring
+= {doctitle}
+
 
 Scoring of races allows multi-heat events to take place in order to determine the winner.
 

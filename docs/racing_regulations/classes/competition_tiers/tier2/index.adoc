@@ -1,5 +1,10 @@
+
+:doctitle: Tier 2 - Regional
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Regional
 [#competition_tier2]
-= Tier 2: Regional
+= {doctitle}
 
 Regional racing brings together the strongest competitors from multiple District 
 boundaries, representing an advanced echelon of organized multi-club 

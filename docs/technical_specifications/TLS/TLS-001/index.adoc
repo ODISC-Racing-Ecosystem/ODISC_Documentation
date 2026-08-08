@@ -1,5 +1,6 @@
 :doctitle: TLS-001 - Racetrack with multiple lanes
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Racetrack with multiple lanes
 [#tls-001]
 = {doctitle}

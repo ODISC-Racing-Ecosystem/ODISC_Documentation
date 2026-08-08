@@ -1,0 +1,9 @@
+:doctitle: Future Reserved Terms
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Future Reserved
+[#glossary_future_reserved_terms]
+= {doctitle}
+
+Placeholder for future terminology to avoid collisions.
+

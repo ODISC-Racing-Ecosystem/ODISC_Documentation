@@ -1,5 +1,9 @@
 
 
+:doctitle: Performance Level - Unlimited
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Unlimited
 [#performance_level_unlimited]
-= Performance Level: Unlimited
+= {doctitle}
 

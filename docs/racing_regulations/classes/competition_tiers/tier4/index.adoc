@@ -1,7 +1,10 @@
 
-
+:doctitle: Tier 4 - Club
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Club
 [#competition_tier4]
-= Tier 4: Club
+= {doctitle}
 
 Club racing is the foundational tier of organized ODISC competition. It 
 establishes a structured environment where competitors can systematically 

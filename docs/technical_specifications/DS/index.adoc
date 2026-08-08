@@ -1,7 +1,10 @@
 
-
-[#DS]
-= Domain Standards
+:doctitle: Domain Standards
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: Domain Standards
+[#ds]
+= {doctitle}
 
 The Domain Standards (DS) define the implementation requirements for
 components and capabilities defined by the Technical Library Standards

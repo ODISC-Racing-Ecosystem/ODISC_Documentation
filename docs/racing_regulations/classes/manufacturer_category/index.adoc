@@ -1,4 +1,10 @@
-= Manufacturer Category
+
+:doctitle: Manufacturer Category
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Manufacturer Category
+[#competition_mfg_category]
+= {doctitle}
 
 ODISC recognizes that some manufacturers produce vehicles that are affordable and simple to operate, while others engineer highly customizable racing machines. 
 

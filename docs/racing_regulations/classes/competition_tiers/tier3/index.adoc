@@ -1,7 +1,10 @@
 
-
+:doctitle: Tier 3 - District
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: District
 [#competition_tier3]
-= Tier 3: District
+= {doctitle}
 
 District racing represents organized competition between multiple clubs within a 
 defined geographic boundary. It introduces a broader competitive field where 

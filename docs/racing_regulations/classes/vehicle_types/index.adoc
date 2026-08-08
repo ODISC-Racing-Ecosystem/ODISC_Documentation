@@ -1,6 +1,9 @@
-
+:doctitle: Vehicle Type Requirements
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Vehicle Type
 [#vehicle_type_requirements]
-= Vehicle Type Requirements
+= {doctitle}
 
 ODISC categorizes vehicles based on both historical theme and physical 
 architecture. When establishing a sanctioned racing class, the organizing 

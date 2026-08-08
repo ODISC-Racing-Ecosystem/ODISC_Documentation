@@ -1,8 +1,9 @@
-
-
-
+:doctitle: Lights and their Flag Meanings
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Lights and Flags
 [#flag_colors]
-= Lights and their Flag Meanings
+= {doctitle}
 
 The following standard colors are used for lighting within 
 the ODISC Ecosystem. Each color has a specific meaning and 

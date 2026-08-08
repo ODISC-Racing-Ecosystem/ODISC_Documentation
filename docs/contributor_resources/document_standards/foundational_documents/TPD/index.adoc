@@ -1,0 +1,33 @@
+
+:doctitle: Track Design Principles (TDP) Document Standards
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: TDP Standards
+[#tdp_document_standards]
+= {doctitle}
+ 
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+|Field|Value
+|Title| Track Design Principles (TDP) Document Standards
+|Version| 0.1
+|Status| Stub
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

@@ -1,7 +1,11 @@
 
-
+:doctitle: Competition Tiers
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Competition Tiers
 [#competition_tiers]
-= Competition Tiers
+= {doctitle}
+ 
 
 ODISC implements a tiered pyramid system of racing, descending from elite 
 national competition at Tier 1 down to casual recreational events at Tier 5.

@@ -1,0 +1,14 @@
+
+:doctitle: Foundational Documents Standards
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Foundational Documents
+[#contributor_resources]
+= {doctitle}
+
+
+The following document standards have been established for the various founding documents of the ODISC project.
+
+* xref::OFD/index.adoc[OFD]
+* xref::TDP/index.adoc[TDP]
+

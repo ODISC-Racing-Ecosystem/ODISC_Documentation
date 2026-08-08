@@ -1,5 +1,9 @@
 
 
+:doctitle: Performance Level - Tuned
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Tuned
 [#performance_level_tuned]
-= Performance Level: Tuned
+= {doctitle}
 

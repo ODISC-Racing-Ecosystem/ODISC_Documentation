@@ -1,0 +1,84 @@
+
+:doctitle: Technical Library Group (TLG) Document Standards
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: TLG Standards
+[#tlg_document_standards]
+= {doctitle}
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+|Field|Value
+|Title| Technical Library Group (TLG) Document Standards
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+High-level standards defining the architecture, requirements, and
+behavior of major parts of the ODISC Ecosystem.
+
+Technical Library Groups establish a collection of 
+Technical Library Standards(TLS) that together define a working 
+system of the ODISC Ecosystem.
+
+Technical Library Groups use the following numbering scheme:
+
+[source,text]
+----
+TLG-NNN
+----
+
+Where:
+
+* `TLG` identifies the document as a Technical Library Group.
+* `NNN` identifies the sequential Technical Library Group number.
+
+Example:
+
+[source,text]
+----
+TLG-001 Racetrack Installation
+----
+
+== Required Sections
+
+See the Global Document Standards for the additional required items.
+
+== Introduction
+
+The Introduction section provides a high-level overview of the
+document, including its purpose, scope, and context within the 
+ODISC ecosystem. It should also include any relevant background 
+information, definitions, and references to related documents.
+
+== Functional Items
+
+The Functional Items section defines the list of 
+Technical Library Standards that are included in the 
+Technical Library Group. 
+
+The section should explain why those Technical Library Standards are necessary, 
+unless their use is self-evident.
+
+Exceptions or determinations for the inclusion or exclusion of specific 
+Technical Library Standards should be documented in this section.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

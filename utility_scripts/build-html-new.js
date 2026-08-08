@@ -2,8 +2,41 @@ const fs = require("fs");
 const path = require("path");
 const { globSync } = require("glob");
 const asciidoctor = require("@asciidoctor/core")();
-const config = require("./build-config.json");
 
+const SCRIPT_DIR = __dirname;
+const REPOSITORY_ROOT = path.resolve(
+    SCRIPT_DIR,
+    ".."
+);
+
+const config = require(
+    path.join(
+        SCRIPT_DIR,
+        "build-config.json"
+    )
+);
+
+const resolvedPaths = {
+    docsDir: path.resolve(
+        REPOSITORY_ROOT,
+        config.paths.docsDir
+    ),
+
+    publicationsDir: path.resolve(
+        REPOSITORY_ROOT,
+        config.paths.publicationsDir
+    ),
+
+    htmlOutputDir: path.resolve(
+        REPOSITORY_ROOT,
+        config.paths.htmlOutputDir
+    ),
+
+    pdfOutputDir: path.resolve(
+        REPOSITORY_ROOT,
+        config.paths.pdfOutputDir
+    )
+};
 
 /******************************************************************************
  * Console Colours
@@ -30,6 +63,7 @@ const RESOURCE_FOLDERS = [
 ];
 
 const TEMPLATE_FILE = path.join(
+    REPOSITORY_ROOT,
     "resources",
     "templates",
     "web_template.html"
@@ -475,7 +509,7 @@ function scanRepository() {
 
     const pattern =
         path.join(
-            config.paths.docsDir,
+            resolvedPaths.docsDir,
             "**/*.adoc"
         ).replace(
             /\\/g,
@@ -491,7 +525,7 @@ function scanRepository() {
                 createDocument(
                     file,
                     path.resolve(
-                        config.paths.docsDir
+                        resolvedPaths.docsDir
                     )
                 )
         );
@@ -572,13 +606,14 @@ function copyResources() {
     );
 
     const resourcesRoot =
-        path.resolve(
+        path.join(
+            REPOSITORY_ROOT,
             "resources"
         );
 
     const outputRoot =
         path.resolve(
-            config.paths.htmlOutputDir
+            resolvedPaths.htmlOutputDir
         );
 
     for (const folder of RESOURCE_FOLDERS) {
@@ -932,7 +967,7 @@ function sortSiteTree(node) {
 function getOutputDirectory(document) {
 
     return path.resolve(
-        config.paths.htmlOutputDir,
+        resolvedPaths.htmlOutputDir,
         document.outputDirectory
     );
 
@@ -948,7 +983,7 @@ function getRootPath(document) {
 
     const outputRoot =
         path.resolve(
-            config.paths.htmlOutputDir
+            resolvedPaths.htmlOutputDir
         );
 
     let relative =
@@ -1383,9 +1418,9 @@ function renderGlobalNavigation() {
 
     const sections =
         config.navigation &&
-        Array.isArray(
-            config.navigation.sections
-        )
+            Array.isArray(
+                config.navigation.sections
+            )
             ? config.navigation.sections
             : [];
 
@@ -1453,7 +1488,7 @@ function compileDocument(document) {
 
     const asciidocOptions =
         config.html &&
-        config.html.asciidocOptions
+            config.html.asciidocOptions
             ? config.html.asciidocOptions
             : {};
 
@@ -1652,15 +1687,36 @@ function buildPage(
  * Document Validation
  *****************************************************************************/
 
-function validateDocuments(
-    documents
-) {
+function validateDocuments(documents) {
 
     const warnings = [];
 
     for (const document of documents) {
 
         if (document.fragment) {
+            continue;
+        }
+
+        /*
+         * License directories contain a structural index.adoc whose
+         * only purpose is to include the applicable license text.
+         *
+         * These files intentionally have neither a doctitle nor
+         * document ID.
+         */
+
+        const parentDirectory =
+            path.basename(
+                path.dirname(
+                    document.sourceRelative
+                )
+            ).toLowerCase();
+
+        const isLicenseIndex =
+            document.isIndex &&
+            parentDirectory === "license";
+
+        if (isLicenseIndex) {
             continue;
         }
 
@@ -1702,7 +1758,6 @@ function validateDocuments(
 
 }
 
-
 /******************************************************************************
  * Write Document
  *****************************************************************************/
@@ -1741,7 +1796,7 @@ function writeDocument(
 
     const outputFile =
         path.resolve(
-            config.paths.htmlOutputDir,
+            resolvedPaths.htmlOutputDir,
             document.outputRelative
         );
 
@@ -1780,7 +1835,7 @@ function buildHtml() {
 
     const outputRoot =
         path.resolve(
-            config.paths.htmlOutputDir
+            resolvedPaths.htmlOutputDir
         );
 
     /*

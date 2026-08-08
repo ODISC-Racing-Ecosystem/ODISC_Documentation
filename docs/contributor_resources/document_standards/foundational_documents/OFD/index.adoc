@@ -1,0 +1,33 @@
+
+:doctitle: ODISC Foundational Document (OFD) Standards
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: OFD Standards
+[#ofd_document_standards]
+= {doctitle}
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+|Field|Value
+|Title| ODISC Foundational Document Standards
+|Version| 0.1
+|Release Date| TBD
+|Status| Stub
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

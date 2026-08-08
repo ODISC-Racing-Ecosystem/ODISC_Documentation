@@ -1,5 +1,6 @@
 :doctitle: Racing Classes
 :webtitle: {doctitle}
+:webicon: /navigation/document/published
 :navtitle: Racing Classes
 [#racing_classes]
 = {doctitle}

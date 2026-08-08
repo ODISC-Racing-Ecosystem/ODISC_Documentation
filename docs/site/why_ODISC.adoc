@@ -1,4 +1,9 @@
-= Why does ODISC exist?
+:doctitle: Why does ODISC exist?
+:webtitle: {doctitle}
+:webicon: /navigation/folder_group/ACTIVE_STATUS
+:navtitle: Why ODISC?
+[#why_odisc]
+= {doctitle}
 
 == Introduction
 The goal is not to build a better slot car. The goal is to build better racing. When driver decisions matter, every race tells a story.

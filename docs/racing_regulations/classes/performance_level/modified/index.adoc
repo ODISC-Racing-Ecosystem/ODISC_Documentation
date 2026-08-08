@@ -1,5 +1,9 @@
 
 
+:doctitle: Performance Level - Modified
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Modified
 [#performance_level_modified]
-= Performance Level: Modified
+= {doctitle}
 

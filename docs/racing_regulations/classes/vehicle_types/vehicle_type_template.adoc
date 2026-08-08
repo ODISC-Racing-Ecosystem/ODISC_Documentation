@@ -1,7 +1,9 @@
-
-
+:doctitle: Vehicle Type Template
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Vehicle Type Template
 [#template_vehicle_spec]
-= Vehicle Type Specification Template
+= {doctitle}
 
 When publishing a sanctioned class definition, the organizing authority must 
 populate the template table below. Missing parameters will render the class 
