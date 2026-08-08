@@ -1,0 +1,22 @@
+:doctitle: ODISC Complete Documentation
+:output_file_name: {doctitle}
+:toc:
+:sectnums:
+:toclevels: 3
+:doctype: book
+= {doctitle}
+
+
+PRINCIPLES_AND_FOUNDATIONS[leveloffset=1]
+
+include::../../docs/technical_specifications/index.adoc[leveloffset=1]
+
+ALL_TLG_CONTENT[leveloffset=2]
+
+ALL_TLS_CONTENT[leveloffset=2]
+
+ALL_DS_CONTENT[leveloffset=2]
+
+
+// Last item in file
+include::../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

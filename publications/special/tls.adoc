@@ -1,0 +1,13 @@
+:doctitle: ODISC TLS-???
+:output_file_path: technical_documentation/TLS-???/
+:output_file_name: {doctitle}
+:toc:
+:sectnums:
+:toclevels: 2
+:doctype: book
+= {doctitle}
+
+TLS_CONTENT[leveloffset=1]
+
+// Last item in file
+include::../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

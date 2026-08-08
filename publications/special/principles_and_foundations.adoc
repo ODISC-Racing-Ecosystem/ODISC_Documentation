@@ -1,0 +1,13 @@
+:doctitle: ODISC Principles and Foundations
+:output_file_path: /
+:output_file_name: {doctitle}
+:toc:
+:sectnums:
+:toclevels: 3
+:doctype: book
+= {doctitle}
+
+PRINCIPLES_AND_FOUNDATIONS[leveloffset=1]
+
+// Last item in file
+include::../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

@@ -4,7 +4,7 @@
 :webtitle: {doctitle}
 :webicon: /navigation/folder_group/ACTIVE_STATUS
 :navtitle: {doctitle}
-[#tls]
+[#tlg]
 = {doctitle}
 
 The Technical Library Groups (TLG) provide groupings of Technical Library Standards (TLS) as functional units, such as a racetrack.
@@ -13,4 +13,5 @@ This allows TLS documents to be included by reference into multiple TLGs based u
 
 * xref:TLG-001/index.adoc[TLG-001]: Racetrack Installation
 * xref:TLG-002/index.adoc[TLG-002]: Multi-Racetrack Venue
+* xref:TLG-003/index.adoc[TLG-003]: Global Website and Data Repository
 

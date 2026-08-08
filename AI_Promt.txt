@@ -34,53 +34,21 @@ Documentation Requirements:
 -- 3xx documents define communication requirements.
 -- 4xx documents define data structures.
 
-Current list of documents (Outline, Draft or Review status):
-- Principles and Foundation
--- OFD-001: Overview and Vision for ODISC
--- OFD-002: Introduction to the ODISC Ecosystem!
--- OFD-003: Ecosystem Architecture
--- OFD-004: Reference Designs
--- OFD-005: Governance Framework
--- GP-01: Racing Intent and Vision
--- GP-02: Documentation and Governance Principles
--- GP-03: System Design Principles
--- GP-04: Engineering Principles
-- Technical Documentation
--- TLS-001: Racetrack with multiple lanes
---- DS-001-100: Track Dimensions
---- DS-001-110: Power Rails
---- DS-001-120: Power Tap Assembly
--- TLS-002: Race Management System
---- DS-002-100: Race Management System Hardware
---- DS-002-110: Power Controller with Data Modulation
---- DS-002-120: Hardware Identification Dolly
---- DS-002-200: Race Management System Software
--- TLS-003: Detection Points
--- TLS-004: Start/Finish Line and Race Timing
--- TLS-005: Lane Changers
--- TLS-006: Pit Lane
--- TLS-007: Track Lighting and flag signals
--- TLS-008: Docking Station
--- TLS-009: Driver Station
--- TLS-010: Vehicle Decoder
--- TLS-011: Data Standards and Protocols
---- DS-011-300: Global Data Basics
---- DS-011-310: JSON Format and Schema Standards
-
-If you need access to another document to evaluate a requirement, ask for it
-and I will provide it.
-
-If you have questions about how systems interact, request more information. Not 
-all items have been defined, but all information will be shared with you as needed.
-
 The current documentation exists in a github repository:
 https://github.com/ODISC-Racing-Ecosystem/ODISC_Documentation
 Please refer to this if you have questions about file/folder structures or want to 
 absorb knowledge on your own.
 
-Within the repository, the following locations are extra useful to know:
+Within the repository, the following locations are useful to know:
 docs/contributor_resources/document_standards
 docs/contributor_resources/document_templates
+
+Please view the following documents to understand what TLS/DS exist in the system:
+docs/technical_specifications/TLS/index.adoc
+docs/technical_specifications/DS/index.adoc
+
+If you have questions about how systems interact, request more information. Not 
+all items have been defined, but all information will be shared with you as needed.
 
 Do you have any questions about your role, the project, or the expectations 
 that I have of you?
