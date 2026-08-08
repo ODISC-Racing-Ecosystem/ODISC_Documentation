@@ -1,6 +1,7 @@
 
 :doctitle: OFD-002 - Introduction to the ODISC Ecosystem
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Introduction
 [#ofd-002]
 = {doctitle}

@@ -1,5 +1,6 @@
 :doctitle: TLS-001 - Venue Infrastructure
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Venue Infrastructure
 [#tls-101]
 = {doctitle}

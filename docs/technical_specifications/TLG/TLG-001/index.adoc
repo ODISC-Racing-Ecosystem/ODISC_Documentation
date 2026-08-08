@@ -1,6 +1,7 @@
 
 :doctitle: TLG-001 - Racetrack Installation
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Racetrack Installation
 [#tlg-001]
 = {doctitle}

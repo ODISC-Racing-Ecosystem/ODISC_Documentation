@@ -1,5 +1,6 @@
 :doctitle: DS-002-501 - Race Director
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Race Director
 [#DS-002-501]
 = {doctitle}

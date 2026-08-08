@@ -1,6 +1,6 @@
 :doctitle: GP-01 - Racing Intent and Vision
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: Racing Intent and Vision
 [#gp-01]
 = {doctitle}

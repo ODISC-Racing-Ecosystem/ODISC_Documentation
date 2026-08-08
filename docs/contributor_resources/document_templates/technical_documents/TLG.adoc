@@ -1,7 +1,7 @@
 
 :doctitle: TLG-??? - TLG Name
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: TLG Name
 [#TLG-???]
 = {doctitle}

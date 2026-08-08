@@ -1,6 +1,6 @@
 :doctitle: DS-011-300 - Global Data Basics
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: Global Data Basics
 [#ds-011-300]
 = {doctitle}

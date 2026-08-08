@@ -1,6 +1,7 @@
 :doctitle: DS-002-120 - Hardware Identification Dolly
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+
+:webicon: /navigation/document/STATUS
 :navtitle: Hardware Identification Dolly
 [#ds-002-120]
 = {doctitle}

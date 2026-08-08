@@ -1,5 +1,6 @@
 :doctitle: TLS-008 - Docking Station
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Docking Station
 [#tls-008]
 = {doctitle}

@@ -1,5 +1,6 @@
 :doctitle: TLS-004 - Start/Finish Line and Race Timing
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Start/Finish Line and Race Timing
 [#tls-004]
 = {doctitle}

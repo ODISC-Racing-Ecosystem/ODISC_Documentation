@@ -1,5 +1,6 @@
 :doctitle: TLS-006 - Pit Lane
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Pit Lane
 [#tls-006]
 = {doctitle}

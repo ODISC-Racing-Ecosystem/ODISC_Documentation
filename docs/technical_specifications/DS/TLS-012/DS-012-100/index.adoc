@@ -1,7 +1,7 @@
 
 :doctitle: DS-012-100 - Registry Objects
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: DS Name
 [#ds-012-100]
 = {doctitle}

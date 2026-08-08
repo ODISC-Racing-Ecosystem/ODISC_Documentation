@@ -1,5 +1,6 @@
 :doctitle: OFD-004 - Reference Designs
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Reference Designs
 [#ofd-004]
 = {doctitle}

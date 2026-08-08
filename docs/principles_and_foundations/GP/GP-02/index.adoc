@@ -1,6 +1,6 @@
 :doctitle: GP-02 - Documentation and Governance Principles
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: Documentation and Governance
 [#gp-02]
 = {doctitle}

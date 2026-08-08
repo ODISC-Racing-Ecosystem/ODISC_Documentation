@@ -1,6 +1,7 @@
 
 :doctitle: OFD-005 - Governance Framework
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Governance Framework
 [#ofd-005]
 = {doctitle}

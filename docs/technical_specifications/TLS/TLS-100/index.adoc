@@ -1,5 +1,6 @@
 :doctitle: TLS-100 - Racing Regulation Options
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Racing Regulation Options
 [#tls-100]
 = {doctitle}

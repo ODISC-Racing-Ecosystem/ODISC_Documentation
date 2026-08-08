@@ -1,7 +1,7 @@
 
 :doctitle: DS-???-??? - DS-Name
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: DS Name
 [#ds-???-???]
 = {doctitle}

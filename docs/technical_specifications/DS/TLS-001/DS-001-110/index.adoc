@@ -1,6 +1,7 @@
 
 :doctitle: DS-001-110 - Power Rails
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Power Rails
 :TLS-LOCATION: ../../../TLS/
 [#ds-001-110]

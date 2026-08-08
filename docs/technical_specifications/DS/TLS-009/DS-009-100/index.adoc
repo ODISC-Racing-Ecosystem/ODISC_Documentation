@@ -1,6 +1,7 @@
 
 :doctitle: DS-009-100 - DS-Name
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: DS-Name
 :TLS-LOCATION: ../../../TLS/
 [#ds-009-100]

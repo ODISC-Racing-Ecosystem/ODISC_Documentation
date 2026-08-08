@@ -1,6 +1,6 @@
 :doctitle: GP-03 - System Design Principles
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: System Design
 [#gp-03]
 = {doctitle}

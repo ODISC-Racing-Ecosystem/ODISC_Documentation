@@ -1,5 +1,6 @@
 :doctitle: TLS-002 - Race Management System
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Race Management System
 [#tls-002]
 = {doctitle}

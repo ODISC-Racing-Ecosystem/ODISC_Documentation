@@ -1,5 +1,6 @@
 :doctitle: TLS-012 - Global Registry 
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Global Registry 
 [#tls-012]
 = {doctitle}

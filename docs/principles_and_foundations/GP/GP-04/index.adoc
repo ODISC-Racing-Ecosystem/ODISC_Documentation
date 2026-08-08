@@ -1,6 +1,6 @@
 :doctitle: GP-04 - Engineering Principles
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: Engineering
 [#gp-04]
 = {doctitle}

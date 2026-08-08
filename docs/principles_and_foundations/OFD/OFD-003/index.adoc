@@ -1,5 +1,6 @@
 :doctitle: OFD-003 - Ecosystem Architecture
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Ecosystem Architecture
 [#ofd-003]
 = {doctitle}

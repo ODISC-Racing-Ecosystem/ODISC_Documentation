@@ -1,5 +1,6 @@
 :doctitle: TLS-007 - Track Lighting and flag signals
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Track Lighting and flag signals
 [#tls-007]
 = {doctitle}

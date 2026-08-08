@@ -1,6 +1,7 @@
 
 :doctitle: TLG-002 - Multi-Racetrack Venue
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Multi-Racetrack Venue
 [#tlg-002]
 = {doctitle} Multi-Racetrack Venue

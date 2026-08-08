@@ -1,5 +1,6 @@
 :doctitle: DS-001-200 - Race Management System Software
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Race Management System Software
 [#ds-001-200]
 = {doctitle}

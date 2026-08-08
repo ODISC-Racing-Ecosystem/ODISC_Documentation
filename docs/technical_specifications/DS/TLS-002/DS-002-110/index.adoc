@@ -1,5 +1,6 @@
 :doctitle: DS-002-110 - Power Controller with Data Modulation
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Power Controller with Data Modulation
 [#ds-002-110]
 = {doctitle}

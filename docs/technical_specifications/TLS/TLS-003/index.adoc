@@ -1,5 +1,6 @@
 :doctitle: TLS-003 - Detection Points
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Detection Points
 [#tls-003]
 = {doctitle}

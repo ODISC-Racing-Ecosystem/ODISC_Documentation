@@ -1,5 +1,6 @@
 :doctitle: OFD-001 - Overview and Vision for ODISC
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Overview and Vision
 [#ofd-001]
 = {doctitle}

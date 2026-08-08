@@ -1,6 +1,6 @@
 :doctitle: DS-011-310 - JSON Format and Schema Standards
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: JSON Format Standards
 [#ds-011-310]
 = {doctitle}

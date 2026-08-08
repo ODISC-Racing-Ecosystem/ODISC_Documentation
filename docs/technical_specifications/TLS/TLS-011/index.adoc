@@ -1,5 +1,6 @@
 :doctitle: TLS-011 - Data Standards and Protocols
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Data Standards and Protocols
 [#tls-011]
 = {doctitle}

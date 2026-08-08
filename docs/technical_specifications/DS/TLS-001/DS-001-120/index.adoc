@@ -1,6 +1,7 @@
 
 :doctitle: DS-001-120 - Power Tap Assembly
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Power Tap Assembly
 :TLS-LOCATION: ../../../TLS/
 [#ds-001-120]

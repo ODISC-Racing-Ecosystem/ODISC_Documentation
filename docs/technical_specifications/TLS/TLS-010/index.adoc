@@ -1,5 +1,6 @@
 :doctitle: TLS-010 - Vehicle Decoder
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Vehicle Decoder
 [#tls-010]
 = {doctitle}

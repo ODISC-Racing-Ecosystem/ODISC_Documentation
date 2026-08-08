@@ -1,6 +1,7 @@
 
 :doctitle: TLG-003 - Global Website
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Global Website
 [#tlg-003]
 = {doctitle}

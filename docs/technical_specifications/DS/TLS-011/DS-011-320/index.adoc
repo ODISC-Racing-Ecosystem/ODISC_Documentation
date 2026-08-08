@@ -1,6 +1,6 @@
 :doctitle: DS-011-320 - Global Database Tables
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: Global Database Tables
 [#ds-011-320]
 = {doctitle}

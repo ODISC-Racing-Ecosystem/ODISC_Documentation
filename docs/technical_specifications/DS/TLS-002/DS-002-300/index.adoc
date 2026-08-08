@@ -1,6 +1,6 @@
 :doctitle: DS-002-300 - Track Definition Standard
 :webtitle: {doctitle}
-:webicon: /navigation/document/DOCUMENT_STATUS
+:webicon: /navigation/document/STATUS
 :navtitle: Track Definition Standard
 [#ds-002-300]
 = {doctitle}

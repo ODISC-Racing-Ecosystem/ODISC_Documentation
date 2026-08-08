@@ -1,5 +1,6 @@
 :doctitle: DS-002-100: Race Management System Hardware
 :webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
 :navtitle: Race Management System Hardware
 [#ds-002-100]
 = {doctitle}
