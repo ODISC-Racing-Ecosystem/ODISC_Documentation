@@ -1,8 +1,8 @@
-:doctitle: TLS-002 - Race Management System
+:doctitle: TLS-301 - Race Management System
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Race Management System
-[#tls-002]
+[#tls-301]
 = {doctitle}
 
 == Identification Block
@@ -111,7 +111,7 @@ The local repository may synchronize with the global repository and contain
 ecosystem data, including firmware packages required to maintain compatible 
 versions across vehicles and track components.
 
-[#tls-002_race_director]
+[#tls-301_race_director]
 === Race Director Interface
 
 The Race Management System shall provide an interface for race officials to
@@ -123,7 +123,7 @@ The Race Director interface enables:
 * Stopping race operation
 * Monitoring vehicle and track state
 
-[#tls-002_venue_management]
+[#tls-301_venue_management]
 === Venue Management
 
 The Race Management System needs to be able to manage multiple racetracks within a venue. 

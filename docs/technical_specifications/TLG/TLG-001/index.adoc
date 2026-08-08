@@ -1,8 +1,8 @@
 
-:doctitle: TLG-001 - Racetrack Installation
+:doctitle: TLG-001 - Global Website and Data Repository
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
-:navtitle: Racetrack Installation
+:navtitle: Website and Repository
 [#tlg-001]
 = {doctitle}
 
@@ -20,42 +20,41 @@
 
 == Introduction
 
-A racetrack installation is the physical environment in which races are
-conducted. It includes the minimum amount of hardware that makes the ODISC
-system able to race your friends at home or organize an international competition.
+The ODISC Global Website and Data Repository is the ultimate digital hangout 
+and cloud-powered brain of the ODISC Racing Ecosystem. It is where drivers, 
+clubs, tracks, and developers come together to share the racing love, track 
+stats, and publish open standards.
+
+While ODISC racing systems are built to run perfectly offline at your local track with 
+zero internet beyond the initial setup phase, hooking up to the global ecosystem 
+supercharges the experience. Connecting lets you automatically sync driver 
+profiles, grab certified track layouts, download the latest firmware, and 
+show off race results to the world.
+
+Think of it as the ultimate pit-stop crew in the cloud, linking physical racing 
+with global leaderboards and standards!
 
 == Functional Areas
 
-A racetrack installation consists of the following components:
+The Global Website and Data Repository is split into a few key areas, each 
+defined by their own Technical Library Standards (TLS):
 
-* xref:../../TLS/TLS-001/index.adoc[TLS-001]: Racetrack with multiple lanes
-* xref:../../TLS/TLS-002/index.adoc[TLS-002]: Race Management System
-** Hardware and software that controls the active race
-** Contains the local repository of firmware updates, race results, and
-driver profiles.
-* xref:../../TLS/TLS-003/index.adoc[TLS-003]: Detection Points
-* xref:../../TLS/TLS-004/index.adoc[TLS-004]: Start/Finish Line and Race Timing
-* xref:../../TLS/TLS-005/index.adoc[TLS-005]: Lane Changers
-* xref:../../TLS/TLS-006/index.adoc[TLS-006]: Pit Lane
-* xref:../../TLS/TLS-007/index.adoc[TLS-007]: Track Lighting and flag signals
-* xref:../../TLS/TLS-008/index.adoc[TLS-008]: Docking Station
-* xref:../../TLS/TLS-009/index.adoc[TLS-009]: Driver Station
+Global Web Portal::
+xref:../../TLS/TLS-100/index.adoc[TLS-100] defines the public-facing 
+website. It hosts the landing page, documentation for contributors, easy 
+software downloads, and portals for drivers to manage their profiles.
 
-The following optional items can be added at a later time to expand the
-functionality and appearance of a racetrack installation and may be required
-for higher tiers of racing:
+Data Standards and Protocols::
+xref:../../TLS/TLS-101/index.adoc[TLS-101] defines the "secret handshake" 
+or common language that local tracks and global databases use to talk to each 
+other cleanly, using nice and neat camelCase structures.
 
-* Race Director Interface (defined within xref:../../TLS/TLS-002/index.adoc#tls-002_race_director[TLS-002])
-* Additional Driver Stations
-* Scenery
-
-== Excluded Items
-
-The following items are not considered part of the racetrack installation,
-even if they are needed to conduct a race:
-
-* Vehicles
-* xref:../../TLS/TLS-010/index.adoc[TLS-010]: Vehicle Decoder
+Global Registry::
+xref:../../TLS/TLS-102/index.adoc[TLS-102] defines the data-handling 
+muscle. It acts as the single source of truth for physical identities in the 
+ecosystem, keeping track of clubs, drivers, venues, certified tracks, and 
+vehicle profiles. It also handles the synchronization wizardry that keeps local 
+tracks up to date.
 
 == Document Revision History
 

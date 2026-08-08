@@ -1,8 +1,8 @@
-:doctitle: TLS-010 - Vehicle Decoder
+:doctitle: TLS-309 - Vehicle Decoder
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Vehicle Decoder
-[#tls-010]
+[#tls-309]
 = {doctitle}
 
 == Identification Block
@@ -27,7 +27,7 @@ The decoder is what enables the vehicle to execute ODISC commands.
 ____
 
 The Vehicle Decoder provides the interface between an ODISC vehicle and the
-Race Management System (xref:../TLS-002/index.adoc#tls-002[TLS-002]).
+Race Management System (xref:../TLS-300/index.adoc[TLS-300]).
 
 The decoder receives commands from the Race Management System, controls vehicle
 behavior, and provides the interfaces required for vehicle identification
@@ -144,7 +144,7 @@ operate within their defined electrical requirements.
 === Firmware and Configuration
 
 The Vehicle Decoder shall support firmware updates using the
-ODISC Docking Station (xref:../TLS-008/index.adoc#tls-008[TLS-008]).
+ODISC Docking Station (xref:../TLS-307/index.adoc#tls-008[TLS-307]).
 
 Firmware versions shall be identifiable to allow verification of
 compatibility with the current ODISC racetrack firmware and communication

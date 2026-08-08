@@ -1,8 +1,8 @@
-:doctitle: TLS-008 - Docking Station
+:doctitle: TLS-307 - Docking Station
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Docking Station
-[#tls-008]
+[#tls-307]
 = {doctitle}
 
 == Identification Block
@@ -25,12 +25,12 @@ Before a driver can race, the vehicle and driver must first be introduced.
 ____
 
 The Docking Station provides the interface used to associate a Vehicle
-Decoder (xref:../TLS-010/index.adoc#tls-010[TLS-010]) with a Driver Station
-(xref:../TLS-009/index.adoc#tls-009[TLS-009]).
+Decoder (xref:../TLS-309/index.adoc[TLS-309]) with a Driver Station
+(xref:../TLS-308/index.adoc[TLS-308]).
 
 A vehicle needs to be paired with a Driver Station before it can
 participate in a race. Otherwise, the Race Management System
-(xref:../TLS-002/index.adoc#tls-002[TLS-002])
+(xref:../TLS-300/index.adoc[TLS-300])
 does not transmit vehicle control commands to the decoder for safety
 reasons.
 

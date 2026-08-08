@@ -1,8 +1,8 @@
-:doctitle: TLS-003 - Detection Points
+:doctitle: TLS-302 - Detection Points
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Detection Points
-[#tls-003]
+[#tls-302]
 = {doctitle}
 
 == Identification Block
@@ -28,7 +28,7 @@ ____
 
 Detection points provide continuous awareness of vehicle location on the
 racetrack. They allow vehicle decoders to report their presence as they pass
-detection points, enabling the Race Management System (xref:../TLS-002/index.adoc#tls-002[TLS-002]) to update vehicle
+detection points, enabling the Race Management System (xref:../TLS-301/index.adoc#tls-002[TLS-301]) to update vehicle
 positions, register partial timing sectors, and support systems such as lane
 changers.
 

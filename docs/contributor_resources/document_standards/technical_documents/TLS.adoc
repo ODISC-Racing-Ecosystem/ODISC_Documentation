@@ -54,8 +54,23 @@ Example:
 
 [source,text]
 ----
-TLS-001 Sample Name
+TLS-100 Sample Name
 ----
+
+=== Numbering Convention
+
+Technical Library Standards are grouped by category using the following 
+numbering ranges:
+
+* 0xx documents are reserved.
+* 1xx documents define global specifications.
+** Website, Global Repository, etc.
+* 2xx documents define venue specifications.
+** Venue Infrastructure, etc.
+* 3xx documents define racetrack specifications.
+** Racetrack, Components, Decoders, etc.
+* 4xx documents define raceing regulations and competition management.
+** Rulesets, options, requirements, etc.
 
 == Writing Style
 

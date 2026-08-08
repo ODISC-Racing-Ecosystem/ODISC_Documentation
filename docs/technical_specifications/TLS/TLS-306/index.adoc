@@ -1,8 +1,8 @@
-:doctitle: TLS-007 - Track Lighting and flag signals
+:doctitle: TLS-306 - Track Lighting and flag signals
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Track Lighting and flag signals
-[#tls-007]
+[#tls-306]
 = {doctitle}
 
 == Identification Block
@@ -55,7 +55,7 @@ a race condition indication.
 === Race Condition Indicators
 
 The Track Lighting System shall support visual indication of race conditions
-received from the Race Management System (xref:../TLS-002/index.adoc#tls-002[TLS-002]).
+received from the Race Management System (xref:../TLS-301/index.adoc[TLS-301]).
 
 Race conditions may apply to the entire racetrack or to a defined section
 of the racetrack.

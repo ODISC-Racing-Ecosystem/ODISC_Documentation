@@ -1,15 +1,15 @@
-:doctitle: TLS-001 - Venue Infrastructure
+:doctitle: TLS-101 - Data Standards and Protocols
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
-:navtitle: Venue Infrastructure
+:navtitle: Data Standards and Protocols
 [#tls-101]
 = {doctitle}
-
 
 == Identification Block
 
 [cols="2s,6",options="header"]
 |===
+
 |Field|Value
 |Title| {doctitle}
 |Version| 0.1
@@ -18,215 +18,87 @@
 |Maintainer(s)| Designated Maintainer
 |===
 
-WARNING: TLS-101 is a placeholder, exact location in numbering scheme is TBD.
+== Introduction
 
-NOTE: Much of this content should be moved to Multi-Racetrack Venue (TLG-002)
+[quote]
+____
+In racing, data is everything.
 
-== Purpose
+Data standards are how our devices talk to each other without making mistakes.
+____
 
-Documentation of the shared infrastructure that a venue provides to
-support racetracks, the components that make up that infrastructure, and
-how they interact with the racetracks and the global repository of data.
+This Technical Library Standard (TLS) defines the rules for how data shall be 
+handled within ODISC. 
 
-Define the architectural philosophy of an ODISC system venue.
+Our system relies on many different parts working together. Track sensors 
+need to talk to computers, computers need to update databases, and screens 
+need to show live race stats.
 
-Describe how one or more racetracks coexist within a shared facility.
+Because these devices are made by different people and use different software, 
+we need clear rules so that no messages get lost, mixed up, or delayed.
 
-Define the responsibilities of the venue independently of the racetracks
-it contains.
+== Philosophy
 
-Explain that the venue provides shared services and infrastructure while
-allowing each racetrack to operate independently.
+We design our data rules around three simple ideas:
 
-== Scope and Domain
+=== 1. Same Meaning, Different Formats
+A piece of information, like a vehicle's number or a lap time, shall mean the 
+exact same thing everywhere in the system. The information itself matters 
+more than the format used to send it.
 
-This document covers concerns related to shared resources and services
-that span operations of one or more racetracks.
+A race controller might send data as a tiny, fast numeric code, while a 
+web browser displays it as text. No matter the format, the basic rules 
+for the data shall stay the same.
 
-We will look at how we define a venue, the shared infrastructure (used
-for multiple tracks) that exist at that venue, any shared services or
-displays that may operate at the track, single and multi-racetrack
-operations, and certification of venues.
+=== 2. Check the Rules at Every Gate
+In real-time racing, a single corrupted message can cause the system to miss 
+a lap, display a wrong score, or crash the race screen. 
 
-We will not be covering anything related to the actual racetrack system
-and below in the chain of operations as these are covered by later TLS-
-documents.
+To prevent this, every device shall double-check incoming messages 
+against the defined specifications. The system shall use defined error 
+handling procedures to safeguard the process and prevent system crashes.
 
-== Design Philosophy
+=== 3. Use the Right Tool for the Job
+Different parts of the system have different limits. 
 
-When we talk about a venue, we are talking about a physical location
-that has one or more racetracks. This may be in your basement, it may be
-at a club, or it may be a commercial venue that hosts five tracks to
-choose from. They are all venues of different sizes and types.
+A decoder inside a vehicle needs to send data using as few bytes as possible 
+to stay fast.
 
-While a venue can have one or more racetracks, they should always be
-able to operate independently. But they can and should share
-infrastructure to reduce operational costs.
+Meanwhile, a web page setup screen can use larger, easier-to-read text 
+files. We create data rules that fit the job without making things harder than 
+they need to be.
 
-Venues should also be able to expand incrementally and be able to
-support everything from friends gathering on occasion, to weekly club
-races, onto international championships.
+== Capabilities
 
-Beyond that, the system should also support venues that operate on a
-pay-to-drive basis and be able to register time spent on track over a
-day, compiled over multiple tracks and races.
+To meet our goals, all specification documents shall support the following 
+core capabilities:
 
-In short, a venue is where racing occurs. This specification stops short
-of the track but includes all the surrounding support systems.
+=== 1. Universal Data Basics
+The specification shall have a single set of rules for the absolute basics of data. 
+This includes sharing the same rules across the entire system for text 
+styles, how we name fields using standard uppercase and lowercase letters, 
+and how we record dates and times.
 
-== Venue Architecture
+=== 2. Readable Text Specifications
+The specification shall support data formats that are easy for humans to 
+read, write, and edit using a basic text editor. 
 
-So, what is part of the venue? There are several items that are key to a
-venue.
+These text formats shall use strict, pre-defined rules to make sure they 
+are valid before the system accepts them.
 
-=== Minimum System Items
+=== 3. High-Speed Hardware Formats
+The specification shall support ultra-fast, compact data 
+formats designed specifically for small hardware components 
+and track communication.
 
-Racetracks are of course part of the venue. Otherwise, why would you go
-there? But let's leave them for later and focus on the pre- and post-
-race support systems.
-
-The venue will need internet connectivity, at least to get started. It
-will need networking infrastructure for the support systems to talk to
-the racetracks and with the global registry.
-
-==== Race Scheduler
-
-The scheduler is a terminal where the race scheduler (individual) enters
-drivers and adds them to race on the various tracks at different times.
-Drivers may also be added as marshals for races they are not competing
-in.
-
-The scheduler can manage multiple racetracks from a single terminal but
-can also have multiple terminals connected to it for large venues.
-
-==== Race Scheduling Displays
-
-The scheduling display shows when races are expected to start, when
-drivers need to be trackside, and when marshals and other track
-officials should report for duty.
-
-==== Race Result Displays
-
-As the day progresses, races are tallied and the results are displayed
-for all to see. This can be combined with the race scheduling display to
-alternate between the two as well.
-
-=== Optional Items
-
-Beyond the system items listed above, a menu may also have one or more
-of the following items to improve the experience of visiting the venue.
-Note that none of these are necessarily part of the ODISC ecosystem, but
-rather facilities that may be present and tracked in the global
-registry.
-
-* Spectator facilities
-* Workshop and maintenance areas
-* Shared storage
-
-== Shared Services - Race Scheduler
-
-The race scheduler is the brain of the operations. It handles lots of
-little jobs that would otherwise bog down the race controller if
-accessed in the middle of a race.
-
-Beyond scheduling of races, the race scheduler handles synchronization
-with the global registry into the local registry. This may include
-pulling down a driver profile for a guest driver that has just arrived
-in the middle of a session and has never been at this venue before.
-
-The race scheduler also keeps a local repository of the firmware needed
-to run the racetrack. Ie, it has copies of all the firmware that the
-track uses, as well as any firmware required for driver controllers or
-decoders that have been used at the track. Retrieval on demand ensures
-that each component of the system has a valid working firmware.
-
-The scheduler also provides authentication for and time synchronization
-for system components. It can also register and log events that occur
-and ensure data is properly recorded.
-
-And finally, when the race day is over or ongoing during the day, the
-scheduler can push all the changes made during the day to the global
-registry.
-
-If sharing of services improves operation of a racetrack without
-impacting the race experience negatively, it belongs at the venue level.
-
-== Racetrack Independence
-
-Each racetrack can receive a scheduled race from the scheduler, load
-that into the operating profile of all its subsystems, ensure drivers
-get connected, and run the race all the way to the finish flag without
-additional input from the scheduler. Driver authentication is the
-exception to this as they connect their controller.
-
-During operations, the racetrack is an isolated entity that makes all
-decisions on its own. Everything, including driver profiles, is already
-pre-loaded by the scheduler into the packaged race.
-
-If one racetrack goes offline for whatever reason, that should not
-affect the operation of any other racetrack at the venue assuming that
-power is still on.
-
-== Scalability
-
-We see venues as expandable entities. They may start out as a one
-racetrack club, that grows into a two-racetrack regional venue. With
-time they may even grow into a four-racetrack national championship
-venue or a larger international competition venue with eight tracks of
-varying difficulty.
-
-The key to scalability is that expansion should never require redesign
-or replacement of previous implementations.
-
-== Venue Operations
-
-The ODISC ecosystem needs to support venues so that they can support
-drivers and spectators. It should be easy to run multiple races at the
-same time, all while other racers are getting themselves scheduled into
-future heats and performing maintenance on their cars.
-
-The key here is that the ODISC ecosystem is supportive and not hindering
-as it assists in the operation and tracking of races.
-
-== Venue Certification
-
-Certification of venues looks not only at the racetracks, but at the
-venue as a complete entity. Naturally the racetracks matter, and a venue
-cannot be certified at a higher tier than the highest tier racetrack
-that it has.
-
-While much of the certification process is self-reporting of
-capabilities, national and international certification will most
-probably need a manual process to be implemented where drivers that
-compete at a certain tier can be certified to validate venues.
-
-== Future Directions
-
-We have lots of ideas on what venues may want to implement within the
-ODISC ecosystem. While many of these may not come to fruition, it does
-help get the mind thinking about the possibilities as well as ensuring
-that we don't restrict ourselves in one way or another that prevents us
-from reaching for new ideas.
-
-Examples:
-
-* Central replay services
-* Shared media production
-* Live streaming
-
-The examples are intended to illustrate flexibility and are not
-commitments to future implementation.
-
-== References
-
-This document incorporates and abides by the principles and architecture
-set forth in the following documents:
-
+These formats shall prioritize speed and low memory usage while keeping the exact 
+same meanings as our readable text formats.
 
 == Document Revision History
 
 [cols="2,3,8",options="header"]
 |===
+
 | Version | Date | Description
 
 | 0.1 
@@ -234,4 +106,3 @@ set forth in the following documents:
 | Initial Draft.
 
 |===
-

@@ -1,10 +1,10 @@
-:doctitle: TLS-100 - Racing Regulation Options
+
+:doctitle: TLS-100 - Global Web Portal
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
-:navtitle: Racing Regulation Options
+:navtitle: Web Portal
 [#tls-100]
 = {doctitle}
-
 
 == Identification Block
 
@@ -14,37 +14,21 @@
 |Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
-|Status| Draft
+|Status| Stub
 |Maintainer(s)| Designated Maintainer
 |===
 
-WARNING: TLS-100 is a placeholder, exact location in numbering scheme is TBD.
-
 == Introduction
 
-The following items may be configured by racing regulations. Together, they form the basis for how a race is executed within the ODISC Racing Ecosystem.
+== Philosophy
 
-While there may be other racing regulations that affect a race, only those that affect the hardware or software that make up the ODISC Racing Ecosystem are listed here.
+== Capabilities
 
+== Domain Standards for this TLS
 
-== Functional Items
+The following DS documents exist for this TLS:
 
-All racing regulations fall into one of the following categories:
-
-Type::
-Defines the type of race.
-
-Parc Fermé::
-Defines what actions a racer is allowed to perform in regards to vehicle modifications or setup configuration once different stages have begun within a competition.
-
-Example: +
-After qualifying, some rulesets may not allow modifications to the vehicle setup or driver profile.
-
-Flags::
-While all rules use flags, this category allows setting the permissible driving behavior during the time a flag is in effect.
-
-Accident::
-Defines how the system should treat an accident vehicle in regards to counted laps, lap times, etc.
+* \xref:../../DS/TLS-???/DS-???-100/index.adoc[DS-???-100]: DS Name
 
 
 == Document Revision History
@@ -53,9 +37,8 @@ Defines how the system should treat an accident vehicle in regards to counted la
 |===
 | Version | Date | Description
 
-| 0.1 
-| 2026-??-?? 
+| 0.1
+| 2026-??-??
 | Initial Draft.
-
 |===
 

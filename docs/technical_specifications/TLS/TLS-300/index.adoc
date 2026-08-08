@@ -1,8 +1,8 @@
-:doctitle: TLS-001 - Racetrack with multiple lanes
+:doctitle: TLS-300 - Racetrack with multiple lanes
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Racetrack with multiple lanes
-[#tls-001]
+[#tls-300]
 = {doctitle}
 
 == Identification Block

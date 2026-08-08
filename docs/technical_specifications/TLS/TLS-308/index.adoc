@@ -1,8 +1,8 @@
-:doctitle: TLS-009 - Driver Station
+:doctitle: TLS-308 - Driver Station
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Driver Station
-[#tls-009]
+[#tls-308]
 = {doctitle}
 
 == Identification Block
@@ -32,7 +32,7 @@ to bring their preferred controller and personal driving configuration.
 A driver station is more than a controller interface. It provides the 
 processing required to interpret controller input, apply permitted 
 driver-specific configuration, communicate with the Race Management 
-System (xref:../TLS-002/index.adoc#tls-002[TLS-002]), and present race information to the driver.
+System (xref:../TLS-300/index.adoc[TLS-300]), and present race information to the driver.
 
 == Philosophy
 

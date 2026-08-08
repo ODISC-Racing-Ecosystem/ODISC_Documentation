@@ -1,7 +1,7 @@
-:doctitle: TLS-102: Competition Management
+:doctitle: TLS-102 - Global Registry 
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
-:navtitle: Competition Management
+:navtitle: Global Registry 
 [#tls-102]
 = {doctitle}
 
@@ -13,467 +13,351 @@
 |Title| {doctitle}
 |Version| 0.1
 |Release Date| TBD
-|Status| Draft
+|Status| Outline
 |Maintainer(s)| Designated Maintainer
 |===
 
-WARNING: TLS-102 is a placeholder, exact location in numbering scheme is TBD.
-
-NOTE: Much of this content should be moved to Racing Regulations (TBD location).
-
+// TODO: Ensure we follow document standards.
 
 == Purpose
 
+The global registry is the backbone of the ODISC system in that it
+organizes and keeps track of identifications, implementations, track
+designs and more that make up the ODISC ecosystem. The global registry
+is the authoritative source of information that provides a mechanism for
+updating existing tracks with firmware as well as sharing driver
+profiles.
+
+While connecting venues to the global registry is completely optional,
+it provides the venue with multiple additional features via the shared
+development that occurs on firmware.
+
+The global registry also contains reference designs for various
+implementations for components as well as racetrack build instructions
+and definitions.
+
 == Scope
 
-== References
+This standard defines the architecture and responsibilities of the
+global registry. We cover the philosophy behind our identity management
+as well as data ownership. We also look at how synchronization of data
+is handled, as well as how the ODISC global registry can be extended.
 
+This document does not get into the details of implementation, and as
+such database technology, communication protocols, authentication, user
+interfaces, and similar items are all deemed to be out of scope and
+referred to the detailed specification documents (Marked as DS-)
+instead.
 
+== Design Philosophy
 
-== Competition Management Philosophy
+The registry exists to improve the experience of using ODISC and is by
+no means intended to restrict what you can do within the system. The
+ODISC shall be fully operational without an internet connection,
+although having it will provide benefits to both the venue and the
+drivers.
 
-When we look at competitions, we want to ensure that the competition is fair above all else. We want driver skill to be the deciding factor instead of equipment providing an advantage.
-
-By ensuring a consistent application of the rules, we provide repeatable and reproduceable competition. Racetracks are given local autonomy, while enabling global interoperability.
+The software that runs the global registry shall be released under an
+open-source license to allow innovation and collaboration. Pull requests
+from the community to add functionality that has an approved requirement
+are accepted after review by the maintainers of the software.
 
 == Architectural Role
 
-Competition Management covers multiple aspects within the ODISC ecosystem. It affects how venues operate, how the track manager keeps track of races, interacts with the global repository to allow drivers to manage their vehicle setups to provide the same experience at multiple tracks. We ensure that workshop equipment is validated against the ruleset for the current contest, and that officials and marshals know what is expected of them and when.
+The ODISC global registry is the single authoritative source for much of
+the ecosystem. It enables distribution of updated firmware, driver
+profiles, and provides a list of venues where racing occurs.
 
-== Competition Lifecycle
+=== Global Shared Information
 
-A competition event follows roughly the same lifecycle regardless if it is a club training session or an international race.
+The global information includes the driver profiles, manufacturer
+information and the hardware they have created for the ecosystem,
+firmware, and more.
 
-=== Planning
-We start with the planning and configuration. This is where you define the type of contest or session that is being run, the duration, and if drivers can join mid-session (available for practice sessions).
+=== Venue Information
 
-=== Registration
-Drivers register for a race and are slotted into race sessions. Once registered, the system tracks heats and results in order to keep drivers abreast of when they are due to race.
+Each venue may have a profile that contains the location, facilities,
+and similar details that are publicly available.
 
-=== Technical Inspection
-For higher tier racing, a technical inspection may be required to ensure the vehicle complies with the racing regulations. Parc Fermé rules for the competition will determine what the driver can modify after the technical inspection is completed.
+Private venues may choose to list their track with a "private" flag set
+so that they don't get unexpected visitors, while still gaining the
+benefits of being connected to the global registry for updates.
 
-== Practice
-Practice sessions allow drivers to fine-tune their controller settings to the tracks current performance.
+=== Racetrack Information
 
-=== Qualifying
-Once practice sessions are completed, racers may compete in a number of heats to qualify for the main event. The system will keep track of results, and based upon the selected ruleset assign drivers to the later races in order to ensure that drivers compete against similar skilled drivers.
+Each racetrack is linked to the venue it is at. This contains the track
+layout, the certification level (updates over time), and similar data.
+Since the shared systems that are configured at a venue have all this
+information already, it can be automatically updated as things change
+over time.
 
-=== Competition
-After qualifying is completed, the main race heats and finals are run. Once again, the system tracks driver performance and assigns them to heats and races based upon points scored or lap times.
+=== Race Results
 
-=== Results
-Once each heat or race is completed, the Race Director will submit the results back to the Race Management software to ensure that all data is properly recorded.
+Public venues have the option to share race results with the global
+registry. Certain restrictions may be placed on this data transfer to
+require track certification or competition levels (such as district or
+above) or number of drivers that competed to reduce the risk of flooding
+the database with excess information.
 
-=== Publication
-Once data is recorded, it is published and reported for drivers to see their updated rankings.
+=== Local Information
 
-=== Archival
-Upon completion of higher tier races, some results may be published to the Global Repository for regional, national, and international tracking of results.
+While there is a lot of information that is shared with the global
+registry, there is even more that instead kept locally.
 
-== Competition Structure
-Any given competition can be seen as fitting somewhere within the following hierarchy.
+This data is available via terminals and displays at the venue, and
+while useful, are not needed at the global level. This allows venues to
+keep local leaderboards of race results or fastest lap times current,
+without requiring it to be shared with the world.
 
-=== Heat
-A heat is a timed session where multiple drivers are on track at the same time. A heat isn't always a race, but may be a practice session or a qualification run.
+== Registry Domains
 
-=== Race
-A race is just that, a single timed session where drivers race each other based upon the ruleset. This may be first to complete a number of laps, or timed to see who gets the most laps in a specified number of minutes.
+There are many types of data that we envision will end up in the global
+registry. We touched on venues and racetracks earlier as well as
+firmware, but we also see drivers, vehicles, and more being added as
+well.
 
-=== Event
-An event is a combination of heats and races. It includes the practice sessions, the qualification sessions, and the race heats as well as the final race to determine a winner. An event can be one or more consecutive days and may include multiple race classes that compete seperately.
+Please refer to the standards documents (DS-) for more information on
+the exact types of data being stored, and how they are managed.
 
-=== Season
-A season of racing is used to determine who the best driver is over multiple events. The rules for the racing class will determine how points are tallied, as well as if an average score is calculated.
+== Telemetry Definitions
 
-=== Championship
-A championship can occur either at the end of the season to pit the top ranked drivers against each other, or can be an invitational race at the national or international level to ensure the best drivers are racing each other. This is when you truly find out who is the best on the track.
+Beyond the types of data mentioned as registry domains, we can also
+store telemetry in the global registry.
 
-== Competition Tiers
-Not everyone is ready to compete at the international level, nor do they want to. With this in mind, we see competition occuring at various levels.
+Telemetry records are part of the race results and provide a mechanism
+for running a ghost car on track that emulates the recorded race
+session.
 
-=== Casual
-Casual racing is what you do with friends at home, and of course we want ODISC to support you in showing them who the best driver is.
+Telemetry records include throttle positions, lane changes, and timing
+around the track to provide a repeatable vehicle path to race against.
 
-=== Club
-Club racing is the first organized tier of racing. Club racing is organized and run by volunteers that love racing, and get together every so often (weekly, bi-weekly, monthly, etc.) to have fun together.
+== Identity Philosophy
 
-=== District
-District racing is the first tier where you are starting to challenge yourself. Competition will be stiffer, and the rules start tightening on what is allowed during a race event.
+The global registry is the definitive source for identity information.
+Every registered identity shall receive a unique identifier that can be
+used to retrieve records related to that identity from the registry.
 
-District racing will usually be organized by two or more clubs with a rotating schedule of events to ensure track variety and the ability for all racers to have home races.
+Identity does not define implementation and does not change across
+upgrades, unless the identity is used specifically to identify a version
+of something. In that case, the identity provides the version and item
+as a combined record, as opposed to just the item in question that has
+its own identity.
 
-=== Regional
-Regional racing is where the district racers migrate to when they want more of a challenge. Competition at this level will put your skills to the test.
+_Example: +
+A manufacturers implementation of a lane changer has an identifier. If
+the manufacturer releases a new version of that same lane changer and
+wants to track the version due to additional functionality, the lane
+changer identifier remains the same, but there are two different version
+identifiers._
 
-While regional racing may be done at the same events as district racing, especially in smaller countries, the regional races will put more requirements on the track to be certified, as well as add additional limitations on the drivers and their vehicles.
+This provides a persistent identity for all items, allowing the
+ecosystem to query and identify all items connected to the system at a
+racetrack. This allows the system to create an automated picture of what
+the racetrack is as a monolithic definition.
 
-=== National
-Nationals is where the really good racers go to find out who is the best in the country. Do you have what it takes?
+Notice that the identity does not define implementation but rather
+provides the needed support for interoperability between the various
+systems that make up the ODISC system.
 
-=== International
-The truly top tier of racers will reach the international races. These will have the strictest requirements on the race track, as well as on the drivers and their vehicles in order to ensure fair racing to truly determine who is the best in the world.
+== Data Ownership
 
-== Roles and Responsibilities
-In order for races to be run in a fair and equitable manner, everyone involved is expected to perform their role as follows. Each role also has a number of responsibilities that each individual is expected to fulfill.
+For any distributed system to work, there is one rule that must be
+followed and the ODISC ecosystem is no different.
 
-In broad terms, everyone is expected to:
+That rule is that every piece of data has one authoritative owner. Other
+systems may cache the data, but only one system owns the true and final
+determination of what that data is. Cached data can be referenced and
+evaluated, but only the authoritative data can be used to determine the
+final actual value of data. Any conflict is resolved by looking at the
+authoritative source.
 
-* Be courteous to others
-* Promote the ODISC Racing Ecosystem to others
-* Promote a fun and fair environment where everyone feels welcome
-* Be on time to their responsibilities
-* Self report any violations to the rulebook
-* Attend any meetings they are summoned to.
+That said, there are situations where the owner changes such as when
+race control submits a finished race package back to race scheduling to
+record the results. When this occurs, the authoritative owner changes.
+Put another way, race control is the authoritative voice over an ongoing
+race, whereas race scheduling is the authoritative voice of races that
+have already happened.
 
-=== Racing Team Members
-While we list these as separate roles, they may be fulfilled by a single individual such as cases where a separate mechanic or team manager doesn't exist. For larger events at higher tiers, such as endurance racing, there may be multiple individuals for each role except the coach/manager.
+This key philosophy must influence all the downstream standards that
+follow.
 
-==== Driver
-The driver is responsible for navigating the vehicle around the racetrack.
+== REVIEW - Data Quality
 
-Drivers are expected to:
+Every Registry Object shall possess a defined level of trust that
+reflects the confidence in the accuracy of its information.
 
-* Attend all driver briefings, if any
-* Avoid collisions on track
-* Race in tiers that are appropriate for their skill level
-** While participation in lower tiers may be permissible to gain experience and practice races, consider registering as a non-scoring driver (no points earned towards tier cup).
+Data Quality defines the confidence that consumers may place in Registry
+Objects when making operational or competition decisions. It does not
+indicate ownership or authority, only the degree to which the
+information has been verified.
 
-==== Mechanic
-The mechanic is responsible for tuning and repairing the vehicle when not on the racetrack.
+Suggested quality levels:
 
-Mechanics are expected to:
+=== Level 1 — Authoritative
 
-* Attend all mechanics briefings, if any
-* Ensure that the current ruleset is adhered to.
-* Ensure that Parc Fermé rules are followed. 
-* Assist other racers that need assistance in order to be able to race.
-** As appropriate for the tier of racing.
+Information supplied or directly approved by the authoritative source
+for that object.
 
-==== Coach / Manager
-The manager is responsible for ensuring the team is properly registered in appropriate race classes, at a tier that is compatible with their skillset, and that the team is prepared to race when the racing event kicks off.
+Examples:
 
-Managers are expected to:
+* Manufacturer specifications
+* Official firmware releases
+* Official racetrack reference definitions
+* Certified competition rules
 
-* Attend all manager briefings, if any
-* Ensure team members are aware of their responsibilities 
-* Be the sole team-member responsible for filing petitions or protests with race management
-** While a driver or mechanic may participate in the process, the filing of the petition is done by the manager.
-
-=== Race Management
-When organizing a race, there are several roles that need to be filled. At the club level many of these can be filled by team members that are not currently racing. At higher tiers, these become individual roles that must be assigned to ensure consistency across the racing event.
+This represents the highest level of confidence.
 
-==== Competition Organization
-While this is most often an actual organization (club, venue operator, etc.), it can in some cases be done by an individual (racing at home).
+=== Level 2 — Verified
 
-The organization is responsible for ensuring:
+Information submitted by users or organizations that has subsequently
+been reviewed and approved by an appropriate authority.
 
-* The event is held when advertized
-* The ruleset is announced when advertized
-** For lower tiers, this can be done by setting fixed race times
-*** Example: Tue 8pm 1/32 Stock, Thu 7pm 1/32 Modified
-* Registering teams to participate in the event
-** This includes waitlisting teams to participate in the event once it is full
-* The venue and racetrack(s) meet the requirements for the tier of racing to be performed
-** Enough spare parts are available to repair the racetrack(s) and continue racing (based on tier)
-* All required surrounding equipment is in good working order
-* All signage is correct, readable, and in appropriate languages
-* Individuals working the information counters are knowledgeable about the venue and competition in order to answer broad questions
-
-==== Race Director - Event
-While an organization may be putting on a competition, there still needs to be a single individual in charge of the event: The Race Director
+Examples:
 
-The Race Director for the event is the final arbitrator for any issues that arise during the competition. They must ensure that:
+* Vehicle measurements verified by technical inspection
+* Driver identity verified by a venue
+* Certified venue information
+* Competition inspection records
 
-* Racing is fair
-* Information flow is working
-** This includes not only data packets within the ODISC system, but also verbal and written communication that is required for the event to be executed properly.
-* Members of race management are properly trained to ensure they know the rulesets being used, how to apply them, and how to deal with any appeals.
-* They are ready to rule on any appeals that are elevated to their level during the racing event.
-
-==== Race Information Counter
-The race information counter is optional at lower tiers, but becomes highly recommended followed by mandatory as you climb through the racing tiers. This is where team members that are racing can get information on when they are due at various tracks, when meetings occur, and more.
-
-If present, the race information center, or the manager thereof, is responsible to ensure that:
-
-* Staff are knowledgeable enough to answer questions about the racing event and the venue
-* Staff are aware of their schedule to ensure the counter is manned as determined by the needs of the event, as well as requirements based upon the tier of racing
-* All equipment is in working order
-
-==== Technical Inspector
-In order to ensure compliance technical inspectors will examine and measure vehicles to verify that they comply with specific rulesets for the racing event.
+=== Level 3 — Community
 
-Technical inspectors are responsible for ensuring that:
+Information supplied by users without independent verification.
 
-* They are well versed in the ruleset, and how it is to be applied to the technical inspection process
-* All inspections are conducted in a fair and standard manner
-* The team is properly registered for the current event
-* Competitors are provided the opportunity to correct any issues prior to the end of the pre-race technical inspection window
-** At lower tiers, racers may be assisted in this process by the inspector to ensure that everyone can participate in racing
-* Any violations of Parc Fermé rules discovered during post-race inspections are reported to the race director in a timely fashion
-** Post-race inspections are carried out if the ruleset so specifies it (mandatory or random)
-* Marks teams in the ODISC system as "Ready to Race" after the technical inspection is completed.
-** If no technical inspection is required for the race, this is instead just adding the team to the racing event in the appropriate category.
+Examples:
 
-==== Race Scheduler (virtual)
-The race scheduling algorithm assigns teams to various heats based upon the scheduled race classes.
-
-The race scheduler is responsible for ensuring that:
-
-* The team has been marked as "Ready to Race"
-* The team is assigned to race heats and finals based upon their registration and the stage of the race
-** Initial heat assignments are to be randomly assigned
-** Final races are assigned based upon performance in earlier heats
-* Any team members assigned to be track marshals during a race are not marshalling a race their team is racing in
+* Vehicle setup information
+* Community supplied dimensions
+* Suggested tuning values
+* User maintained reference information
 
-The race scheduler may be overridden by the Race Director to move teams betwen races as required by external requirements.
+While useful, this information should not be relied upon where
+verification is required.
 
+== Synchronization Philosophy
 
-==== Race Director - Heat
-For any given race, a single person acts as the Race Director. The race director manages the racetrack during the race, evaluates penalties, and triggers various flags for the race track.
-
-The Race Director is responsible for ensuring that:
+Internet traffic is slow, while racing is not. For that reason, there
+needs to be the ability to synchronize data from the global repository
+down to the local installation, as well as the ability to return any
+changes made back to the global repository.
 
-* They are well versed in the ruleset, and how it is to be applied to the race they are managing
-* All decisions are made in a fair and consistent manner
-* Loads the race data from the race scheduler to initiate the racetrack.
-* Ensures all drivers are given the opportunity to connect to the driver station and synchronize their vehicles.
-** Rulesets may specify a minimum timeframe for this to occur
-** If all drivers are ready, as well as the track marshals, a race director may start the race at that point in time
-* Any automated penalty suggestions from the ODISC system are evaluated and decided in a timely fashion
-* Flags for racing events (Red flag, etc.) are triggered in a quick and efficient manner.
-* That a track marshal briefing is conducted at with all currently scheduled track marshals present
-** The start of the raceday 
-** At the start of a new race directors shift
-** With any incoming marshal that is replacing an existing marshal (can be done one on one)
-* Confirms the race results and submits them to the race scheduler upon the completion of a race.
+For most items registration and creation can be done at the local level.
+For some items, that feature may only be available at the global level.
+This is determined on a case-by-case basis depending on the needs of the
+system, and where it makes the most sense for someone to perform the
+action.
 
-==== Track Marshal
-Accidents happen, and track marshals are there to clear the track when it does.
+By synchronizing data from the global repository to the local
+installation, we enable the ODISC ecosystem to execute in an offline
+mode. This removes the latency of internet operations from races as we
+keep everything needed to run the system in a closed off circuit.
 
-Track marshals are responsible for ensuring that they:
+Because we are using asynchronous operations, there is a need for
+conflict resolution. This may be implemented at a field level by
+tracking the timestamp for each changed field, or it may be done at the
+record level. Conflict detection and resolution are a must, and the
+solution to that problem must provide a graceful recovery, potentially
+asking the operator to choose what record to keep, or provide notice of
+what was done to resolve the conflict.
 
-* Know the ruleset for the race they are marshalling as it pertains to the activity of marshalling
-** Some rulesets may require yellow flag before dealing with cars that have crashed (higher tiers), while others focus more on getting back on track (lower tiers)
-** Some rulesets may allow reslotting cars while others require the removal of the car from the track
-* Are able to reach the areas they are responsible for marshaling, and if not to notify the race director
-* Know how to trigger a yellow flag for their sector, as well as how to clear any yellow flag they have themselves initiated
-** Even after the marshal has cleared a yellow flag, they system may retain the yellow caution flag until such time the race director indicates they concur that the caution is not longer valid.
+The key takeaway here is that we need to be cognizant of issues that
+will arise due to synchronization and do everything we can to limit the
+impact of those issues. Both on the quality of the resulting data, as
+well as on the users of the system.
 
-=== Location Management
-Without a location that has racetracks, there is no racing. So as racers we are very dependent upon venues. But venues also have responsibilities that they need to ensure are met in order for a competition to occur.
+== Version Management
 
-==== Venue Operator
-The venue operator may be a club, or it can be a commercial entity. They are the ones that have the building and the racetracks the racing event is held on. Often times the venue operator and the competition organizer are one and the same.
+To determine what items are compatible with each other, including
+historically, we must use versioning of most items.
 
-The venue operator is responsible to ensure that:
+=== Standards versions
 
-* Racetracks are in a good working condition
-* Surrounding ODISC ecosystem equipment is in a good working condition
-* Adequate facilities exist for
-** Mechanics to do repairs and tuning of vehicles
-** Race officials to administer the race
-** Competitors to have space away from visitors
-*** This may not be required at lower tiers, but is required for higher tiers. Check the ruleset for more information.
-** Everyone to have access to restrooms
-*** For larger events, consider having separate areas for visitors compared to competitors and staff
-** Parking for the amount of attendees that are expected
+All documented standards must be given a version number.
 
-==== Vendor Areas
-Larger racing events may attract vendors. While vendors are needed to ensure that people can get the items they need to participate in the ODISC racing ecosystem, on raceday they need to be viewed as a secondary party.
+=== Firmware versions
 
-Vendors must ensure that:
+All firmware releases must have a version number that is interrogatable
+by the bootloader, as well as a checksum.
 
-* They do not distract (visually, audibly, or otherwise)
-** Any team members that are racing or preparing for a race
-** Any staff that are administering a race or race preparations
-** Any spectators that are watching race event activities
-* They treat all attendees with respect
-* Not provide a competitive advantage to one team over another
-** Exception: Teams registered as "Sponsored" by the vendor are exempt from this, but are instead regulated by the ruleset for sponsored teams
+=== Software versions
 
-For larger events we highly suggest that separate hall is used for vendors if available. This helps keep the distractions from vendors at a minimum impact for the racing event that is going on.
+All software releases must have a version number associated with it.
 
-=== Non-Racing Roles
-In addition to the above listed items, the following may be needed depending on the venue, size of competition, and the area it is being held in.
+=== Compatibility information
 
-==== Information Counter
-The information center is where visitors can get information about the venue, where to find things, etc. Please note that this is different from the Race Information Counter mentioned earlier.
+For the ODISC ecosystem to be able to self-validate, there needs to be a
+versioned list of compatible items. This includes what software can be
+used with which hardware reference implementations to work together, as
+well as the firmware that is compatible.
 
-Staff are responsible for ensuring that they are knowledgeable about the:
+=== Deprecation
 
-* Schedule of the event
-* Event and the classes being raced
-* Venue
-** This includes what areas are off-limits to visitors
-* Rules that are expected of spectators
-* Surrounding area
-** Where to get food and drinks, if not available at the venue
-** Where to get fuel
-
-In addition, the Information Counter planning group/persons should ensure that:
-
-* Staff can communicate easily with visitors
-* An evaluation of language needs is done in advance
-** For lower tiers, it is recommended that the host nation language(s) or English are covered. Preferably both.
-** For higher tiers, the host nation language(s) and English (ODISC standard language) must be covered.
-* Appropriate languages are available among the staff manning the counter at all times
-
-If the contest is expecting additional visitors from neighboring countries, consider what languages may arrive, as well as the expected language skills of the visitors.
-
-==== Spectator
-Spectators are how we get more people interested in the ODISC Racing Ecosystem.
-
-Spectators are expected to:
-
-* Above all else, Have fun!
-* Not interfere with
-** Racing in progress
-** Administration of the racing event
-* Not enter restricted areas
-
-== Vehicle Compliance
-
-Introduce the concept that vehicles must satisfy the competition rules.
-
-Reference:
-
-* Technical Inspection
-* Vehicle Requirements
-* Data Quality
-
-Do not define inspection procedures here.
-
-== Driver Eligibility
-
-High-level concepts only.
-
-* Registration
-* Driver identity
-* Vehicle ownership
-* Driver licensing (future)
-
-== Workshop Activities
-
-Introduce Workshop Activity Categories (WAC).
-
-Explain that:
-
-* Competition rules reference WAC.
-* Different competition tiers permit different activities.
-* WAC provides a standardized way to express permitted maintenance.
-
-Reference:
-
-* DS-006-070 - Workshop Activity Categories
-
-== Technical Inspection
-
-High-level overview.
-
-Purpose.
-
-Relationship to:
-
-* Competition Rules
-* Data Quality
-* Vehicle Compliance
-
-== Race Control
-
-Introduce race operation.
-
-Reference:
-
-* Race Director
-* Flag Conditions
-* Penalties
-* Marshal Stations
-
-== Results
-
-High-level concepts.
-
-* Official results
-* Validation
-* Publication
-* Historical preservation
-
-== Competition Integrity
-
-Discuss:
-
-* Fairness
-* Transparency
-* Auditability
-* Deterministic operation
-* Repeatability
-
-== Safety
-
-High-level principles.
-
-* Driver safety
-* Marshal safety
-* Spectator safety
-* Equipment safety
-
-Reference detailed standards.
-
-== Certification
-
-Relationship between competition tier and:
-
-* Venue Certification
-* Track Certification
-* Equipment Certification
+Certain items may become obsolete, either due to updated standards that
+they no longer meet, or that the manufacturer has decided to longer
+produce that item. In these situations, there needs to be a way to mark
+an item as deprecated in order for the ODISC ecosystem to alert the
+track venues or other affected party of not only what is deprecated, but
+also the reason and how to remedy it.
 
 == Extensibility
 
-State that future competition formats, technologies, and officiating
-methods may be added without affecting existing competitions.
+At no point in time shall the global registry be considered a locked and
+immutable item. Instead, it should be viewed as a living growing
+collection of data related to how racing is done within the ODISC
+ecosystem.
 
-== Security Considerations
+Changes to the global registry must be made in a manner that addresses
+not only the new requirements, but also the need for both backward
+compatibility and future standards. This same policy must also be
+applied to any communication interface that is put in place for
+transmitting data between the global registry and venue systems.
 
-High level only.
+Not all data in the global registry shall be considered mandatory, as
+there will be times when optional metadata or telemetry values are
+collected. The goal here is interoperability with offline local
+operations.
 
-* Authentication
-* Authorization
-* Data integrity
-* Audit trail
+== Security Philosophy
 
-== Related Domain Standards
+Computer security is of utmost importance, and we do not take it
+lightly. The ecosystem must be built in a manner that conveys trust in
+the system. This is done via advanced authentication systems and robust
+adherence to international laws and regulations such as the EU GDPR
+doctrines. Privacy must be maintained and always respected.
 
-* DS-006-010 - Competition Rules
-* DS-006-020 - Race Director
-* DS-006-030 - Marshal Stations
-* DS-006-040 - Flag Conditions
-* DS-006-050 - Penalties
-* DS-006-060 - Parc Fermé
-* DS-006-070 - Workshop Activity Categories
-* DS-006-080 - Race Formats
-* DS-006-090 - Championships
-* DS-006-100 - Driver Licensing
-* DS-006-110 - Technical Inspection
-* DS-006-120 - Race Result Certification
+The implementations and protocols must ensure authentication is done in
+a manner that ensures data integrity and traceability. Consumers of the
+global registry need to be able to trust that the data is valid and
+authenticated.
 
-== Discussion
+All systems should operate based upon the lowest level of required
+privileges to perform operations. If a system can be locked down by
+providing an authenticated service instead of direct access to external
+actors, that is a step worth taking.
 
-Explain why competition management is separated from racetrack
-infrastructure.
+== Registry Availability
 
-The racetrack is responsible for executing a race.
+At no point shall the lack of connectivity to the global registry
+prevent local racing from taking place, if the racetrack has been
+synchronized with the global registry during its original initialization
+phase.
 
-Competition Management is responsible for governing a race.
+Local operations always take precedence over the global registry which
+is there to provide improvements to the ecosystem. If the global
+registry is not available, then the local system gracefully falls back
+to a lower tier of interoperability without access to data in the global
+registry.
 
-This separation allows a single racetrack infrastructure to support many
-different race formats, regulations, and competition tiers without
-modifying the underlying control systems. It also ensures that
-competition rules evolve independently from the physical implementation
-of the track, maintaining a clear separation between operational
-infrastructure and sporting regulations.
+== Future Directions
 
+As mentioned earlier, we know that this global registry will grow.
+Whether that is from the addition of shared ghost racing profiles,
+public racetrack templates, or championship rankings with historical
+statistics, we want to make room for them in a sound manner.
 
+The goal here is that we want this to be expandable in the future,
+because someone will come up with more ideas that make sense. Note that
+the listed items are used as examples and are not commitments to
+implement them immediately or in the next version.
 
 == Document Revision History
 
@@ -486,5 +370,4 @@ infrastructure and sporting regulations.
 | Initial Draft.
 
 |===
-
 

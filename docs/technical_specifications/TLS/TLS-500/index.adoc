@@ -1,0 +1,61 @@
+:doctitle: TLS-500 - Racing Regulation Options
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: Racing Regulation Options
+[#tls-500]
+= {doctitle}
+
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+WARNING: TLS-5NN is a placeholder, exact location in numbering scheme is TBD.
+
+== Introduction
+
+The following items may be configured by racing regulations. Together, they form the basis for how a race is executed within the ODISC Racing Ecosystem.
+
+While there may be other racing regulations that affect a race, only those that affect the hardware or software that make up the ODISC Racing Ecosystem are listed here.
+
+
+== Functional Items
+
+All racing regulations fall into one of the following categories:
+
+Type::
+Defines the type of race.
+
+Parc Fermé::
+Defines what actions a racer is allowed to perform in regards to vehicle modifications or setup configuration once different stages have begun within a competition.
+
+Example: +
+After qualifying, some rulesets may not allow modifications to the vehicle setup or driver profile.
+
+Flags::
+While all rules use flags, this category allows setting the permissible driving behavior during the time a flag is in effect.
+
+Accident::
+Defines how the system should treat an accident vehicle in regards to counted laps, lap times, etc.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+
