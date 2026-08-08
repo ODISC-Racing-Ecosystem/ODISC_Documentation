@@ -1,0 +1,584 @@
+/* ==========================================================================
+   ODISC Documentation - Site Base
+   ========================================================================== */
+
+:root {
+    --odisc-content-width: 1200px;
+    --odisc-text-width: 900px;
+    --odisc-sidebar-width: 280px;
+
+    --odisc-font-body:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    --odisc-font-heading:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    --odisc-font-mono:
+        "Cascadia Code",
+        "Cascadia Mono",
+        "Consolas",
+        "Courier New",
+        monospace;
+
+    --odisc-text: #222;
+    --odisc-text-muted: #666;
+    --odisc-heading: #111;
+
+    --odisc-link: #1558a6;
+    --odisc-link-hover: #0b3d78;
+
+    --odisc-border: #d5d9de;
+    --odisc-border-light: #e5e7eb;
+
+    --odisc-background: #fff;
+    --odisc-background-alt: #f5f6f8;
+    --odisc-background-code: #f3f4f6;
+
+    --odisc-header-background: #17202a;
+    --odisc-header-text: #fff;
+
+    --odisc-radius: 4px;
+
+    --odisc-spacing-xs: 0.25rem;
+    --odisc-spacing-sm: 0.5rem;
+    --odisc-spacing-md: 1rem;
+    --odisc-spacing-lg: 1.5rem;
+    --odisc-spacing-xl: 2rem;
+    --odisc-spacing-xxl: 3rem;
+}
+
+
+/* ==========================================================================
+   Reset / Base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--odisc-background);
+    color: var(--odisc-text);
+    font-family: var(--odisc-font-body);
+    line-height: 1.6;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--odisc-link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--odisc-link-hover);
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Site Header
+   ========================================================================== */
+
+.site-header {
+    background: var(--odisc-header-background);
+    color: var(--odisc-header-text);
+    border-bottom: 1px solid #000;
+}
+
+.site-header-inner {
+    width: min(
+        100% - 2rem,
+        var(--odisc-content-width)
+    );
+
+    min-height: 4rem;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--odisc-spacing-lg);
+}
+
+.site-logo {
+    color: var(--odisc-header-text);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.site-logo:hover {
+    color: var(--odisc-header-text);
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   Global Navigation
+   ========================================================================== */
+
+.site-navigation {
+    display: flex;
+    align-items: center;
+    gap: var(--odisc-spacing-lg);
+}
+
+.site-navigation a {
+    color: var(--odisc-header-text);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.site-navigation a:hover {
+    color: var(--odisc-header-text);
+}
+
+
+/* ==========================================================================
+   Main Site Layout
+   ========================================================================== */
+
+.site-main {
+    width: min(
+        100% - 2rem,
+        var(--odisc-content-width)
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        var(--odisc-sidebar-width)
+        minmax(0, 1fr);
+
+    gap: var(--odisc-spacing-xxl);
+
+    padding:
+        var(--odisc-spacing-xl)
+        0
+        var(--odisc-spacing-xxl);
+}
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.site-sidebar {
+    min-width: 0;
+}
+
+.site-sidebar nav {
+    position: sticky;
+    top: 1rem;
+}
+
+.site-sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-sidebar li {
+    margin: 0;
+    padding: 0;
+}
+
+.site-sidebar li ul {
+    margin-left: 0.75rem;
+}
+
+.site-sidebar a {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    color: var(--odisc-text);
+    border-radius: var(--odisc-radius);
+}
+
+.site-sidebar a:hover {
+    background: var(--odisc-background-alt);
+    text-decoration: none;
+}
+
+.site-sidebar .current > a {
+    background: var(--odisc-background-alt);
+    color: var(--odisc-link);
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   Breadcrumbs
+   ========================================================================== */
+
+.breadcrumbs {
+    margin-bottom: var(--odisc-spacing-lg);
+    color: var(--odisc-text-muted);
+    font-size: 0.9rem;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs li + li::before {
+    content: "/";
+    margin: 0 0.5rem;
+    color: var(--odisc-text-muted);
+}
+
+
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+.document-content {
+    min-width: 0;
+    max-width: var(--odisc-text-width);
+}
+
+.document-content > :first-child {
+    margin-top: 0;
+}
+
+
+/* ==========================================================================
+   Document Title
+   ========================================================================== */
+
+.document-content .sect1:first-child > h2,
+.document-content > h1:first-child {
+    margin-top: 0;
+}
+
+.document-content h1,
+.document-content h2,
+.document-content h3,
+.document-content h4,
+.document-content h5,
+.document-content h6 {
+    color: var(--odisc-heading);
+    font-family: var(--odisc-font-heading);
+    line-height: 1.25;
+}
+
+.document-content h1 {
+    margin:
+        0
+        0
+        var(--odisc-spacing-lg);
+
+    font-size: 2.25rem;
+}
+
+.document-content h2 {
+    margin:
+        var(--odisc-spacing-xxl)
+        0
+        var(--odisc-spacing-md);
+
+    font-size: 1.75rem;
+}
+
+.document-content h3 {
+    margin:
+        var(--odisc-spacing-xl)
+        0
+        var(--odisc-spacing-sm);
+
+    font-size: 1.4rem;
+}
+
+.document-content h4 {
+    margin:
+        var(--odisc-spacing-lg)
+        0
+        var(--odisc-spacing-sm);
+
+    font-size: 1.2rem;
+}
+
+.document-content h5,
+.document-content h6 {
+    margin:
+        var(--odisc-spacing-lg)
+        0
+        var(--odisc-spacing-sm);
+
+    font-size: 1rem;
+}
+
+
+/* ==========================================================================
+   Paragraphs
+   ========================================================================== */
+
+.document-content p {
+    margin:
+        0
+        0
+        var(--odisc-spacing-md);
+}
+
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+.document-content ul,
+.document-content ol {
+    margin:
+        0
+        0
+        var(--odisc-spacing-md);
+
+    padding-left: 2rem;
+}
+
+.document-content li + li {
+    margin-top: 0.25rem;
+}
+
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+.document-content table {
+    width: 100%;
+    margin:
+        var(--odisc-spacing-lg)
+        0;
+
+    border-collapse: collapse;
+}
+
+.document-content th,
+.document-content td {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--odisc-border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.document-content th {
+    background: var(--odisc-background-alt);
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   Code
+   ========================================================================== */
+
+.document-content code {
+    padding:
+        0.1rem
+        0.3rem;
+
+    background: var(--odisc-background-code);
+    border-radius: 3px;
+
+    font-family: var(--odisc-font-mono);
+    font-size: 0.9em;
+}
+
+.document-content pre {
+    margin:
+        var(--odisc-spacing-lg)
+        0;
+
+    padding: var(--odisc-spacing-md);
+
+    overflow-x: auto;
+
+    background: var(--odisc-background-code);
+    border: 1px solid var(--odisc-border-light);
+    border-radius: var(--odisc-radius);
+
+    line-height: 1.45;
+}
+
+.document-content pre code {
+    padding: 0;
+    background: transparent;
+}
+
+
+/* ==========================================================================
+   Blockquotes
+   ========================================================================== */
+
+.document-content blockquote {
+    margin:
+        var(--odisc-spacing-lg)
+        0;
+
+    padding:
+        var(--odisc-spacing-sm)
+        var(--odisc-spacing-lg);
+
+    border-left: 4px solid var(--odisc-border);
+
+    color: var(--odisc-text-muted);
+}
+
+
+/* ==========================================================================
+   Images / Diagrams
+   ========================================================================== */
+
+.document-content .imageblock {
+    margin:
+        var(--odisc-spacing-lg)
+        0;
+}
+
+.document-content .imageblock img {
+    display: block;
+    margin: 0 auto;
+}
+
+.document-content .image-title {
+    margin-top: var(--odisc-spacing-sm);
+    color: var(--odisc-text-muted);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   Horizontal Rules
+   ========================================================================== */
+
+.document-content hr {
+    margin:
+        var(--odisc-spacing-xl)
+        0;
+
+    border: 0;
+    border-top: 1px solid var(--odisc-border);
+}
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    border-top: 1px solid var(--odisc-border);
+    background: var(--odisc-background-alt);
+}
+
+.site-footer-inner {
+    width: min(
+        100% - 2rem,
+        var(--odisc-content-width)
+    );
+
+    margin: 0 auto;
+    padding:
+        var(--odisc-spacing-lg)
+        0;
+
+    color: var(--odisc-text-muted);
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   Responsive Layout
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .site-main {
+        grid-template-columns: 1fr;
+        gap: var(--odisc-spacing-lg);
+    }
+
+    .site-sidebar nav {
+        position: static;
+    }
+
+    .site-navigation {
+        gap: var(--odisc-spacing-md);
+        overflow-x: auto;
+    }
+
+    .document-content {
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .site-header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding:
+            var(--odisc-spacing-md)
+            0;
+    }
+
+    .site-navigation {
+        width: 100%;
+        padding-bottom: var(--odisc-spacing-xs);
+    }
+
+    .site-main {
+        width: min(
+            100% - 1.5rem,
+            var(--odisc-content-width)
+        );
+
+        padding-top: var(--odisc-spacing-lg);
+    }
+
+    .document-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .document-content h2 {
+        font-size: 1.5rem;
+    }
+
+}
