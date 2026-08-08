@@ -79,8 +79,8 @@ defined in their respective TLS documents rather than this document.
 
 The following DS documents exist for this TLS:
 
-* xref:../../DS/TLS-001/DS-001-100/index.adoc[DS-001-100]: Track Dimensions
-* xref:../../DS/TLS-001/DS-001-110/index.adoc[DS-001-110]: Power Rails
+* xref:../../DS/TLS-300/DS-300-100/index.adoc[DS-300-100]: Track Dimensions
+* xref:../../DS/TLS-300/DS-300-110/index.adoc[DS-300-110]: Power Rails
 
 == Document Revision History
 

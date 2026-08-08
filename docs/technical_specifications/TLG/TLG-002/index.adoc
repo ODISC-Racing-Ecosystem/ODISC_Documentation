@@ -28,11 +28,11 @@ for larger events, such as tournaments, to be held at a single location.
 == Functional Areas
 
 A multi-racetrack venue consists of two or more racetracks in accordance
-with the Racetrack Installation (xref:../TLG-003/index.adoc#tlg-001[TLG-003]).
+with the Racetrack Installation (xref:../TLG-003/index.adoc#tlg-003[TLG-003]).
 
 A multi-racetrack venue may include Venue Management capabilities as
 defined by the Race Management System
-(xref:../../TLS/TLS-001/index.adoc#tls-002_venue_management[TLS-002]).
+(xref:../../TLS/TLS-301/index.adoc#tls-301_venue_management[TLS-301]).
 
 Venue Management is not a requirement for a multi-racetrack venue, but is
 highly recommended for managing multiple racetracks.

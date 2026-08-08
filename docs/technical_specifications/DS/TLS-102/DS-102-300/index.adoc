@@ -1,0 +1,196 @@
+:doctitle: DS-102-300 - Global Database Tables
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: Global Database Tables
+[#ds-102-300]
+= {doctitle}
+
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+This Domain Specification defines the core foundational lookup tables and master 
+registries shared across all software domains in the ODISC Racing Ecosystem. 
+By centralizing data entities such as organizational registries, system lifecycles, 
+and synchronization states into singular relational definitions, the ecosystem 
+guarantees complete transactional normalization and consistent global entity references.
+
+To ensure ecosystem interoperability, all schemas adhere strictly to the 
+foundational camelCase and text encoding rules established in the Global Data 
+Basics specification (xref:../../TLS-101/DS-101-300/index.adoc[DS-101-300]).
+
+== Functional Requirements
+
+=== System Reference Enumeration Tables
+
+==== The Record Status Table (`recordStatus`)
+A global reference enum lookup table defining synchronization states for local 
+distributed replication loops.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| recordStatusId | INTEGER | NOT NULL | PK | Unique integer key identifier.
+| name | VARCHAR(30) | NOT NULL | - | State designation: 'ARCHIVED', 'LOCAL_ONLY', 'GLOBALLY_SYNCED'.
+|===
+
+==== The Lifecycle Table (`lifecycle`)
+A centralized lookup dictionary regulating the publication lifecycle states of 
+system design assets, vehicle profiles, and track definitions.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| lifecycleId | INTEGER | NOT NULL | PK | Unique integer key identifier.
+| name | VARCHAR(20) | NOT NULL | - | Lifecycle designation: 'DRAFT', 'REVIEW', 'PUBLISHED', 'DEPRECATED', 'ARCHIVED'.
+|===
+
+==== The Location Type Table (`locationType`)
+A global lookup reference table defining the operational use case of a specific 
+address entry.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| locationTypeId | INTEGER | NOT NULL | PK | Unique integer key identifier.
+| name | VARCHAR(30) | NOT NULL | - | Intended usage token (e.g., 'BILLING', 'SHIPPING', 'VENUE_TRACK').
+|===
+
+=== Master Entity Registries
+
+==== The Organization Table (`organization`)
+A centralized master registry tracking participating racing entities, including 
+hobby clubs, commercial venues, manufacturers, and institutional bodies.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| organizationId | VARCHAR(36) | NOT NULL | PK | Universally Unique ID (UUIDv7 format).
+| name | VARCHAR(100) | NOT NULL | - | Official name of the club, venue, or entity.
+| description | TEXT | NULLABLE | - | Narrative or location context for the group.
+| regionCode | VARCHAR(10) | NULLABLE | - | Regional identifier for event clustering.
+|===
+
+==== The Address Table (`address`)
+A master directory hosting isolated geographic locations. To guarantee global format 
+compatibility, the layout utilizes sequenced freeform rows rather than rigid property 
+structures. 
+
+Each row belongs strictly to a single entity record. Shared multi-tenant locations 
+must be duplicated as distinct rows to isolate mutations.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| addressId | VARCHAR(36) | NOT NULL | PK | Universally Unique ID (UUIDv7 format).
+| addressLine1 | VARCHAR(100) | NOT NULL | - | Core delivery data (e.g., street name, house number, or block numbers).
+| addressLine2 | VARCHAR(100) | NULLABLE | - | Secondary delivery descriptors (e.g., suite, unit, building tier).
+| addressLine3 | VARCHAR(100) | NULLABLE | - | Tertiary regional or dependent location identifiers if required.
+| city | VARCHAR(60) | NOT NULL | - | Primary municipal population hub (e.g., city, town, or village).
+| region | VARCHAR(60) | NULLABLE | - | Secondary territorial administrative area (e.g., state, province, or county).
+| postalCode | VARCHAR(20) | NULLABLE | - | Local routing alphanumeric postal tracking codes; NULL for non-participating nations.
+| countryIso | CHAR(2) | NOT NULL | - | Strict ISO 3166-1 alpha-2 uniform nation code.
+|===
+
+=== Entity Intersection Link Tables
+
+==== The Organization Address Table (`organizationAddress`)
+An intersection table linking organizations to their isolated geographic locations 
+while enforcing a strict unique constraint to maintain solitary entry use.
+
+[cols="2,2,2,1,5",options="header"]
+|===
+
+| Column | Type | Nullability | Key | Description
+| organizationAddressId | INTEGER | NOT NULL | PK | Auto-incrementing relational row index.
+| organizationId | VARCHAR(36) | NOT NULL | FK | Links to the parent master organization record.
+| addressId | VARCHAR(36) | NOT NULL | FK | Links to the isolated destination address record.
+| locationTypeId | INTEGER | NOT NULL | FK | References the verified locationType master entry.
+|===
+
+Note: +
+A database-level unique key constraint shall be applied to the `addressId` column 
+inside the `organizationAddress` table. This programmatically blocks any separate 
+entity row from referencing an address already bound to an organization.
+
+
+== Requirements Checklist
+
+.Checklist to ensure all requirements are met
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| GLOBAL_DB_SINGULAR
+| All table names utilize strict singular naming conventions to match relational standards.
+| ✅
+| ☐
+
+| GLOBAL_DB_ORGANIZATION
+| Master entity storage implements a singular organization registry to track clubs and venues uniformly.
+| ✅
+| ☐
+
+| GLOBAL_DB_LOOKUP_IDS
+| Shared system lifecycle states use narrow, performance-optimized integer keys.
+| ✅
+| ☐
+
+| GLOBAL_DB_ADDRESS_GLOBAL
+| Address fields use three sequential lines plus explicit sorting keys to accept any global address configuration.
+| ✅
+| ☐
+
+| GLOBAL_DB_ADDRESS_ISOLATION
+| Geographic address rows enforce strict unique database constraints preventing shared cross-entity usage.
+| ✅
+| ☐
+
+| GLOBAL_DB_LINK_TYPES
+| Intersection tables utilize specific lookup IDs to handle billing, shipping, or venue designations cleanly.
+| ✅
+| ☐
+
+| GLOBAL_DB_UUID_MASTERS
+| Broad external entities utilize time-ordered UUIDv7 definitions for master identity indices.
+| ✅
+| ☐
+
+| GLOBAL_DB_CAMELCASE
+| All database columns and table identifiers conform strictly to camelCase conventions.
+| ✅
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+
+| Version | Date | Description
+
+| 0.1
+| 2026-??-??
+| Initial Draft.
+|===

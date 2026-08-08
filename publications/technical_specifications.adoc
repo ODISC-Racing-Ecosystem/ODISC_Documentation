@@ -14,47 +14,59 @@ include::../docs/technical_specifications/TLG/TLG-002/index.adoc[leveloffset=2]
 
 
 include::../docs/technical_specifications/TLS/index.adoc[leveloffset=1]
-include::../docs/technical_specifications/TLS/TLS-001/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-002/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-003/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-004/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-005/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-006/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-007/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-008/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-009/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-010/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-011/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-012/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/TLS/TLS-013/index.adoc[leveloffset=2]
+
+include::../docs/technical_specifications/TLS/TLS-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-101/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-102/index.adoc[leveloffset=2]
+
+include::../docs/technical_specifications/TLS/TLS-200/index.adoc[leveloffset=2]
+
+include::../docs/technical_specifications/TLS/TLS-300/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-301/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-302/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-303/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-304/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-305/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-306/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-307/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/TLS/TLS-308/index.adoc[leveloffset=2]
+
+
 
 include::../docs/technical_specifications/DS/index.adoc[leveloffset=1]
-include::../docs/technical_specifications/DS/TLS-001/DS-001-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-001/DS-001-110/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-001/DS-001-120/index.adoc[leveloffset=2]
 
-include::../docs/technical_specifications/DS/TLS-002/DS-002-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-002/DS-002-110/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-002/DS-002-120/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-002/DS-002-200/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-002/DS-002-300/index.adoc[leveloffset=2]
+// Global Items
+include::../docs/technical_specifications/DS/TLS-100/DS-100-200/index.adoc[leveloffset=2]
 
-include::../docs/technical_specifications/DS/TLS-003/DS-003-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-004/DS-004-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-005/DS-005-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-006/DS-006-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-007/DS-007-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-008/DS-008-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-009/DS-009-100/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-010/DS-010-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-101/DS-101-300/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-101/DS-101-310/index.adoc[leveloffset=2]
 
-include::../docs/technical_specifications/DS/TLS-011/DS-011-300/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-011/DS-011-310/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-011/DS-011-320/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-102/DS-102-200/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-102/DS-102-300/index.adoc[leveloffset=2]
 
-include::../docs/technical_specifications/DS/TLS-012/DS-012-100/index.adoc[leveloffset=2]
+// Venue Items
 
-include::../docs/technical_specifications/DS/TLS-013/DS-013-200/index.adoc[leveloffset=2]
+
+// Racetrack Items
+include::../docs/technical_specifications/DS/TLS-300/DS-300-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-300/DS-300-110/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-300/DS-300-120/index.adoc[leveloffset=2]
+
+include::../docs/technical_specifications/DS/TLS-301/DS-301-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-301/DS-301-110/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-301/DS-301-120/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-301/DS-301-200/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-301/DS-301-300/index.adoc[leveloffset=2]
+
+include::../docs/technical_specifications/DS/TLS-302/DS-302-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-303/DS-303-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-304/DS-304-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-305/DS-305-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-306/DS-306-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-307/DS-307-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-308/DS-308-100/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-309/DS-309-100/index.adoc[leveloffset=2]
+
 
 // Last item in file
 include::../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

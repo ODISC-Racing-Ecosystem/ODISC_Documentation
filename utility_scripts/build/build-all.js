@@ -1,3 +1,5 @@
+process.stdout.write('\u001b[2J\u001b[0;0H\u001b[3J');
+
 const buildHtml = require('./build-html.js');
 const buildPdf = require('./build-pdf.js');
 const verifyLinks = require('./verify-links.js');

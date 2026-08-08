@@ -1,0 +1,165 @@
+:doctitle: DS-301-200 - Race Management System Software
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: Race Management System Software
+[#ds-301-200]
+= {doctitle}
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+// TODO: Ensure we follow documentation standards.
+
+== Definition
+This Domain Specification deals with the software aspects of the Race Management System.
+
+== General Requirements
+
+=== Open Source
+Any official release of software to run the race management system shall be released under an open-source license in a repository maintained by the ODISC Governing Group.
+
+Note: +
+This is to ensure that any hardware purchased to run the Race Management System can be upgraded as features are added to the ODISC Racing Ecosystem, without concern for a company continuing support for their hardware solution.
+
+==== Additional Versions
+The ODISC Governing Group is not required to make a release official as maintaining multiple copies of software for various platforms adds complexity to the project.
+
+=== Target Platforms
+If at all possible, any and all code that targets a specific platform shall be isolated in order to make as much of the code reusable on the variety of supported hardware platforms.
+
+=== Configuration Files are Key
+Any items that are not hardware specific, but can instead be managed via configuration files to ensure proper startup of the software should be included via such configuration settings.
+
+=== Database
+The system will require a database for storing data. The exact implementation is not specified as a requirement, but the ability to store data for later retrieval and reporting is a requirement.
+
+Please see DS-001-110 for detailed information about the data structures that need to be stored.
+
+== Functional Requirements
+
+=== Race Session Management
+
+The Race Management System shall provide the ability to configure and operate racing events.
+
+A session configuration shall define:
+
+* Racetrack to be used
+* Participating drivers
+* Assigned driver stations for each driver
+* Race format and applicable competition rules
+** Race format includes the number of preliminary heats and final races
+
+The Race Management System shall maintain the active session configuration during racing.
+
+==== Racing Season 
+
+The Race Management System shall support the ability to manage a race season.
+
+A season configuration shall define:
+
+* Race sessions included
+* Race format and applicable competition rules
+** Season race format defines which tracks are used for which races
+
+=== Vehicle Command Management
+
+The Race Management System shall generate vehicle commands according to the ODISC Data Encoding Scheme based upon inputs received from each driver station.
+
+The Race Management System shall continuously transmit valid vehicle commands to active vehicles during racing.
+
+=== Track Controller Communication
+
+The Race Management System shall communicate with connected track controllers through the defined track hardware interface.
+
+The system shall:
+
+* Receive and track vehicle position information from in-track sensors
+* Receive and record lap time information from the start/finish controller
+* Receive and monitor pit lane activities
+* Monitor the status of all connected track controllers
+* Request connected controllers to execute track functions as needed
+
+=== Race Timing
+
+The Race Management System shall record timing information required to determine race results.
+
+The system shall:
+
+* Count complete laps based upon the applied ruleset
+** Rules may void laps with de-slotting of a vehicle
+* Record lap times for each vehicle
+** All laps are to be recorded, even if ruleset voids a lap
+* Manage the start and finish of the race
+* Track and record sector timing intervals per in-track sensor data
+
+=== Race Control
+
+The Race Management System shall provide the ability to control an active race.
+
+The system shall support:
+
+* Starting and Completing a race
+* Pausing and Contineing a race
+** Based upon the defined ruleset
+* Flag Management
+** Rules dictate how vehicles are affected by various flag events
+* Emergency stop handling
+
+=== Result Validation and Audit
+The Race Management System shall provide a process for reviewing and validating race results before they become official.
+
+The system shall maintain the information required to verify the full race results, including timing data, penalties, rule violations, and recorded race events.
+
+The Race Director shall have the ability to review results before they are finalized.
+
+Once results have been validated and committed, official results shall be protected from unintended modification.
+
+The Race Management System shall maintain an audit record of changes made to official results.
+
+=== Scoring Integration
+The Race Management System shall calculate competition results according to ODISC scoring specifications.
+
+The system shall support:
+
+* Heat results
+* Race Championship standings
+* Season Championship standings
+* Tie-breaking procedures
+
+=== Data Storage
+
+The Race Management System shall store race data required for review, reporting, and championship tracking.
+
+Stored data shall include all data types listed in DS-001-110.
+
+
+== Notes to consider:
+
+Vector Geometry Support: The software shall support the creation or import of continuous vector-based track layouts to accurately represent custom wood-routed track lanes.
+
+Logical Sectoring: The software shall allow users to place virtual markers on the track layout representing physical Detection Points, automatically dividing the track into calculated logical sectors.
+
+Junction Mapping Interface: The configuration interface shall allow a user to bind an actuated CAN-bus node ID to an explicit coordinate junction on the vector map by clicking the corresponding graphic element.
+
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

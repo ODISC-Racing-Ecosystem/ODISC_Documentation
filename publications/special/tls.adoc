@@ -8,6 +8,7 @@
 = {doctitle}
 
 TLS_CONTENT[leveloffset=1]
+// include::../../docs/technical_specifications/TLS/TLS-300/index.adoc[leveloffset=1]
 
 // Last item in file
 include::../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]

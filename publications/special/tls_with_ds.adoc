@@ -11,6 +11,12 @@ TLS_CONTENT[leveloffset=1]
 
 DS_CONTENT[leveloffset=1]
 
+// include::../../docs/technical_specifications/TLS/TLS-300/index.adoc[leveloffset=1]
+// include::../../docs/technical_specifications/DS/TLS-300/DS-300-100/index.adoc[leveloffset=1]
+// include::../../docs/technical_specifications/DS/TLS-300/DS-300-110/index.adoc[leveloffset=1]
+// include::../../docs/technical_specifications/DS/TLS-300/DS-300-120/index.adoc[leveloffset=1]
+
+
 // Last item in file
 include::../../resources/includes/licenses/documentation_license.adoc[leveloffset=1]
 

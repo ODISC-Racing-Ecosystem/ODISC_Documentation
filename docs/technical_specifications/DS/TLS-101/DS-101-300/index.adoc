@@ -1,0 +1,97 @@
+:doctitle: DS-101-300 - Global Data Basics
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: Global Data Basics
+[#ds-101-300]
+= {doctitle}
+
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+This Domain Standard defines the foundational data primitives that all 
+specification documents within ODISC shall share. By standardizing how we 
+read letters, write names, and track time, we make sure that data looks 
+identical whether it flows over a hardware radio or drops into a central 
+database.
+
+== Functional Requirements
+
+=== Text Encoding
+All text-based data payloads within the ODISC system shall use UTF-8 text 
+encoding. Payloads shall not include a Byte Order Mark (BOM).
+
+=== Naming Conventions
+All data field keys shall use camelCase formatting rules. Key names shall 
+start with a lowercase letter (e.g., `vehicleId`, `lapTime`).
+
+All acronyms and abbreviations shall be treated as standard words for casing 
+purposes, regardless of length. Only the first letter of an acronym shall 
+be capitalized if it occurs at a word boundary (e.g., `controllerId`, 
+`targetIp`, `htmlSnippet`, `useSsl`).
+
+=== Dates and Timestamps
+All date and time representations shall conform strictly to the ISO 8601 
+combined date and time standard. Timestamps shall include the UTC offset 
+or the `Z` (Zulu) designator to show timezone context clearly.
+
+== Requirements Checklist
+
+.Checklist to ensure all requirements are met
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| UTF-8 Encoding
+| Text payloads are formatted in plain UTF-8 without a BOM.
+| ✅
+| ☐
+
+| camelCase Keys
+| Keys start with lowercase and uppercase starts new words.
+| ✅
+| ☐
+
+| Cased Acronyms
+| Acronyms are treated as normal words (e.g., controllerId).
+| ✅
+| ☐
+
+| ISO 8601 Timestamps
+| Dates and times use the strict combined ISO 8601 format.
+| ✅
+| ☐
+
+| Timezone Context
+| Timestamps contain explicit UTC offset or Z identifiers.
+| ✅
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+
+| Version | Date | Description
+
+| 0.1
+| 2026-??-??
+| Initial Draft.
+|===

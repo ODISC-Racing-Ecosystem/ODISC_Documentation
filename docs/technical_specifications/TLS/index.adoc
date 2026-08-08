@@ -16,8 +16,8 @@ on its specific area of responsibility.
 Global Specifications::
 
 * xref:TLS-100/index.adoc[TLS-100]: Global Web Portal
-* xref:TLS-011/index.adoc[TLS-101]: Data Standards and Protocols
-* xref:TLS-101/index.adoc[TLS-102]: Global Data Repository
+* xref:TLS-101/index.adoc[TLS-101]: Data Standards and Protocols
+* xref:TLS-102/index.adoc[TLS-102]: Global Data Repository
 
 Venue Specifications::
 

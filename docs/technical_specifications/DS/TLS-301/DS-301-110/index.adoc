@@ -1,0 +1,58 @@
+:doctitle: DS-301-110 - Power Controller with Data Modulation
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: Power Controller with Data Modulation
+[#ds-301-110]
+= {doctitle}
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+== Physical Requirements
+
+== Functional Requirements
+
+
+
+== Visualizations
+
+== Requirements Checklist
+
+.Race Management System Checklist
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| ITEM_NAME
+| ITEM_DESCRIPTION
+| ✅ / ℹ️
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+| Version | Date | Description
+
+| 0.1 
+| 2026-??-?? 
+| Initial Draft.
+
+|===
+

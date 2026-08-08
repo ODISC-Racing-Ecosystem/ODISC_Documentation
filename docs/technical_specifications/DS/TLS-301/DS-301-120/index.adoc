@@ -1,0 +1,125 @@
+:doctitle: DS-301-120 - Hardware Identification Dolly
+:webtitle: {doctitle}
+:webicon: /navigation/document/STATUS
+:navtitle: Hardware Identification Dolly
+[#ds-301-120]
+= {doctitle}
+
+
+== Identification Block
+
+[cols="2s,6",options="header"]
+|===
+
+|Field|Value
+|Title| {doctitle}
+|Version| 0.1
+|Release Date| TBD
+|Status| Draft
+|Maintainer(s)| Designated Maintainer
+|===
+
+== Introduction
+
+This Domain Specification sets out the functionality of the Hardware 
+Identification Dolly (hereafter the HID), an instrument used by the 
+Race Management System (xref:../../../TLS/TLS-301/index.adoc[TLS-301]) 
+to identify connected track components that lack moving parts.
+
+== Physical Requirements
+
+The HID resembles a regular vehicle, but lacks a motor. Wheels are optional, 
+but can assist in moving the HID over track components to trigger the 
+synchronization process.
+
+The HID shall use a standard guide pin and braid pickup system as is found 
+on any standard vehicle.
+
+That said, a HID does not need to be a full-sized vehicle. It can be scaled 
+down size-wise to the bare minimum required to contain the electronics.
+
+== Functional Requirements
+
+The HID shall contain a decoder and a transmitter diode placed directly 
+over the slot. These can be a standard vehicle decoder that is set to 
+an HID mode, or it can be a custom-designed decoder.
+
+=== Transmit Synchronization ID
+
+The HID does not actually need to decode anything. It is powered from the 
+rails and transmits the predefined "Synchronization ID" to any sensor that 
+is below it.
+
+=== Power Rectification and Regulation
+
+The onboard electronics shall tolerate up to a 24V nominal track power band. 
+The internal power circuit must include regulation to step down voltage and 
+withstand any data packets or other signal noise.
+
+== Usage
+
+During synchronization of hardware components with the Race Management System, 
+the HID is moved across a sensor location to trigger the workflow of 
+identifying it in the RMS.
+
+== Requirements Checklist
+
+.Checklist to ensure all requirements are met
+[cols="3,5,1,1", options="header"]
+|===
+
+| Name | Description | Required | Complete
+
+| Standard Pickup Setup
+| Use a standard guide pin and braid pickup system found on standard 
+vehicles.
+| ✅
+| ☐
+
+| Embedded Subsystems
+| Must contain a decoder (standard or custom) and a transmitter diode.
+| ✅
+| ☐
+
+| Diode Alignment
+| Ensure the transmitter diode is placed directly over the track slot.
+| ✅
+| ☐
+
+| Synchronization Broadcast
+| Draw power from the rails and transmit a predefined Synchronization ID to 
+target sensors.
+| ✅
+| ☐
+
+| Power Regulation
+| Onboard circuit must regulate up to 24V rails and tolerate active data 
+packets or noise.
+| ✅
+| ☐
+
+| Scale Optimization
+| Chassis footprint can be minimized to the bare electronic requirements.
+| ℹ️
+| ☐
+
+| Optional Rolling Chassis
+| Inclusion of passive wheels to ease movement over track sensors.
+| ℹ️
+| ☐
+
+|===
+[.text-left]
+_Note: This is provided as a reference and not as an active form for tracking data if viewed on the web._
+
+== Document Revision History
+
+[cols="2,3,8",options="header"]
+|===
+
+| Version | Date | Description
+
+| 0.1
+| 2026-??-??
+| Initial Draft.
+|===

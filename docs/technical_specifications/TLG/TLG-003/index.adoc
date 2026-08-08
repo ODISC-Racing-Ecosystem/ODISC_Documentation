@@ -28,24 +28,24 @@ system able to race your friends at home or organize an international competitio
 
 A racetrack installation consists of the following components:
 
-* xref:../../TLS/TLS-300/index.adoc[TLS-001]: Racetrack with multiple lanes
-* xref:../../TLS/TLS-301/index.adoc[TLS-002]: Race Management System
+* xref:../../TLS/TLS-300/index.adoc[TLS-300]: Racetrack with multiple lanes
+* xref:../../TLS/TLS-301/index.adoc[TLS-301]: Race Management System
 ** Hardware and software that controls the active race
 ** Contains the local repository of firmware updates, race results, and
 driver profiles.
-* xref:../../TLS/TLS-302/index.adoc[TLS-003]: Detection Points
-* xref:../../TLS/TLS-303/index.adoc[TLS-004]: Start/Finish Line and Race Timing
-* xref:../../TLS/TLS-304/index.adoc[TLS-005]: Lane Changers
-* xref:../../TLS/TLS-305/index.adoc[TLS-006]: Pit Lane
-* xref:../../TLS/TLS-306/index.adoc[TLS-007]: Track Lighting and flag signals
-* xref:../../TLS/TLS-307/index.adoc[TLS-008]: Docking Station
-* xref:../../TLS/TLS-308/index.adoc[TLS-009]: Driver Station
+* xref:../../TLS/TLS-302/index.adoc[TLS-002]: Detection Points
+* xref:../../TLS/TLS-303/index.adoc[TLS-003]: Start/Finish Line and Race Timing
+* xref:../../TLS/TLS-304/index.adoc[TLS-004]: Lane Changers
+* xref:../../TLS/TLS-305/index.adoc[TLS-005]: Pit Lane
+* xref:../../TLS/TLS-306/index.adoc[TLS-006]: Track Lighting and flag signals
+* xref:../../TLS/TLS-307/index.adoc[TLS-007]: Docking Station
+* xref:../../TLS/TLS-308/index.adoc[TLS-008]: Driver Station
 
 The following optional items can be added at a later time to expand the
 functionality and appearance of a racetrack installation and may be required
 for higher tiers of racing:
 
-* Race Director Interface (defined within xref:../../TLS/TLS-001/index.adoc#tls-001_race_director[TLS-002])
+* Race Director Interface (defined within xref:../../TLS/TLS-301/index.adoc#tls-301_race_director[TLS-301])
 * Additional Driver Stations
 * Scenery
 
