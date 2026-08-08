@@ -1,0 +1,18 @@
+:doctitle: Document Templates
+:webtitle: {doctitle}
+:webicon: /navigation/document/published
+:navtitle: Document Templates
+[#document_templates]
+= {doctitle}
+
+Every document of the ODISC Racing Ecosystem should adhere to the document 
+standards. These templates ensure that all documents have the same core structure.
+
+The document standards are organized into the following categories:
+
+* Global
+** The global document standards apply to all documents within the ODISC Racing Ecosystem.
+* Foundational Documents
+* Technical Documents
+* Competition Documents
+

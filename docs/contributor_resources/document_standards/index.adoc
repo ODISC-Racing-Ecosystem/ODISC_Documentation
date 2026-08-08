@@ -12,9 +12,8 @@ and professional in appearance and content.
 
 The document standards are organized into the following categories:
 
-* Global
+* xref:global/index.adoc[Global]
 ** The global document standards apply to all documents within the ODISC Racing Ecosystem.
-* Foundational Documents
-* Technical Documents
-* Competition Documents
+* xref:foundational_documents/index.adoc[Foundational Documents]
+* xref:technical_documents/index.adoc[Technical Documents]
 

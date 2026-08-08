@@ -40,13 +40,13 @@ the ODISC ecosystem.
 include::abbreviations.adoc[]
 
 
-* xref::core_concepts/index.adoc[Core Concepts]
-* xref::architectural_terms/index.adoc[Architectural Terms]
-* xref::competition_terms/index.adoc[Competition Terms]
-* xref::vehicle_terms/index.adoc[Vehicle Terms]
-* xref::infrastructure_terms/index.adoc[Infrastructure]
-* xref::software_terms/index.adoc[Software Terms]
-* xref::certification_terms/index.adoc[Certification Terms]
-* xref::reserved_terms/index.adoc[Reserved Terms]
-* xref::reserved_terms_future/index.adoc[Future Reserved Terms]
+* xref:core_concepts/index.adoc[Core Concepts]
+* xref:architectural_terms/index.adoc[Architectural Terms]
+* xref:competition_terms/index.adoc[Competition Terms]
+* xref:vehicle_terms/index.adoc[Vehicle Terms]
+* xref:infrastructure_terms/index.adoc[Infrastructure]
+* xref:software_terms/index.adoc[Software Terms]
+* xref:certification_terms/index.adoc[Certification Terms]
+* xref:reserved_terms/index.adoc[Reserved Terms]
+* xref:reserved_terms_future/index.adoc[Future Reserved Terms]
 

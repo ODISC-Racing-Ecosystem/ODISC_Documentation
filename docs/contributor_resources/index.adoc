@@ -7,7 +7,7 @@
 = {doctitle}
 
 
-* xref::asciidoc/index.adoc[AsciiDoc Best Practices]
-* xref::document_standards/index.adoc[Document Standards]
-* xref::document_templates/index.adoc[Document Templates]
+* xref:asciidoc/index.adoc[AsciiDoc Best Practices]
+* xref:document_standards/index.adoc[Document Standards]
+* xref:document_templates/index.adoc[Document Templates]
 
