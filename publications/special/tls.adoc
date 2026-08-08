@@ -1,5 +1,5 @@
-:doctitle: ODISC TLS-???
-:output_file_path: technical_documentation/TLS-???/
+:doctitle: ODISC TLS-NNN
+:output_file_path: technical_documentation/TLS-NNN/
 :output_file_name: {doctitle}
 :toc:
 :sectnums:
