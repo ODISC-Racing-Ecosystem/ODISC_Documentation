@@ -3,6 +3,7 @@
 :webtitle: {doctitle}
 :webicon: /navigation/folder_group/ACTIVE_STATUS
 :navtitle: PDF Documentation
+:navinclude:
 [#tdp]
 = {doctitle}
 

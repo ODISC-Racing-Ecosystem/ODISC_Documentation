@@ -29,7 +29,7 @@ system able to race your friends at home or organize an international competitio
 A racetrack installation consists of the following components:
 
 * xref:../../TLS/TLS-300/index.adoc[TLS-300]: Racetrack with multiple lanes
-* xref:../../TLS/TLS-301/index.adoc[TLS-301]: Race Management System
+* xref:../../TLS/TLS-300/index.adoc[TLS-300]: Race Management System
 ** Hardware and software that controls the active race
 ** Contains the local repository of firmware updates, race results, and
 driver profiles.

@@ -44,7 +44,7 @@ and determines whether the requested path can be safely executed.
 === Controller
 
 The controller manages the operation of the lane changer. It receives a request
-from the Race Management System (xref:../TLS-301/index.adoc[TLS-301]) and evaluates whether the requested lane change
+from the Race Management System (xref:../TLS-300/index.adoc[TLS-300]) and evaluates whether the requested lane change
 can be performed safely.
 
 === Detection Points

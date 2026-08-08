@@ -51,7 +51,7 @@ the timing of that lap, and the associated vehicle progress.
 === Controller
 
 The controller registers when sensors are tripped, and by what vehicle. It 
-works with the Race Management System (xref:../TLS-301/index.adoc[TLS-301]) 
+works with the Race Management System (xref:../TLS-300/index.adoc[TLS-300]) 
 to record the completed lap.
 
 [WARNING]

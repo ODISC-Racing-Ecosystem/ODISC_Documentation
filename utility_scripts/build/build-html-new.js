@@ -6,7 +6,7 @@ const asciidoctor = require("@asciidoctor/core")();
 const SCRIPT_DIR = __dirname;
 const REPOSITORY_ROOT = path.resolve(
     SCRIPT_DIR,
-    ".."
+    "..", ".."
 );
 
 const config = require(

@@ -1,11 +1,10 @@
-
-:doctitle: DS-300-120 - Power Tap Assembly
+:doctitle: DS-300-120 - Hardware Identification Dolly
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
-:navtitle: Power Tap Assembly
-:TLS-LOCATION: ../../../TLS/
+:navtitle: Hardware Identification Dolly
 [#ds-300-120]
 = {doctitle}
+
 
 == Identification Block
 
@@ -22,99 +21,91 @@
 
 == Introduction
 
-This DS defines the physical, electrical, and functional requirements for the 
-standardized Power Tap Assembly module. This module mounts underneath an ODISC 
-track bed to cleanly interface standard power supply wiring harnesses to the 
-track surface power rails defined in xref:../DS-300-110/index.adoc[DS-300-110].
+This Domain Specification sets out the functionality of the Hardware 
+Identification Dolly (hereafter the HID), an instrument used by the 
+Race Management System (xref:../../../TLS/TLS-300/index.adoc[TLS-300]) 
+to identify connected track components that lack moving parts.
 
 == Physical Requirements
 
-=== Mounting Footprint Envelope
+The HID resembles a regular vehicle, but lacks a motor. Wheels are optional, 
+but can assist in moving the HID over track components to trigger the 
+synchronization process.
 
-The power tap assembly shall attach securely to the standardized power tap 
-mount on the underside of the track.
+The HID shall use a standard guide pin and braid pickup system as is found 
+on any standard vehicle.
 
-Dimensions::
-The physical implementation profile envelope of the assembly board should not 
-exceed 50 mm x 20 mm.
-
-Hole Pattern Array::
-The assembly shall feature 4x mounting screw clearance drop holes. The hole 
-centers must be configured to a strict 40 mm x 10 mm +/-0.1mm pattern layout, 
-supporting M3 mounting hardware with a hole diameter profile of 
-Ø 3 mm +/-0.1 mm.
-
-=== Component Interface
-
-Power Connection::
-The power tap assembly shall provide two independent input connection segments 
-for each electrical pole to facilitate clean serial loop-through (daisy 
-chaining) of distribution lines under the track layout. 
-
-Rail Mounting Points::
-The top-side board interface shall include mounting points dedicated to 
-securing and conducting power directly to the track surface rails (tape or 
-braid conductors) passing through the track drop hole cutout.
-
-NOTE: The method of these mounting points (solder, screw terminal, etc.) is 
-explicitly not specified in this standard. Examples may show options, but 
-these shall not be considered part of the specification.
+That said, a HID does not need to be a full-sized vehicle. It can be scaled 
+down size-wise to the bare minimum required to contain the electronics.
 
 == Functional Requirements
 
-=== Power Throughput
+The HID shall contain a decoder and a transmitter diode placed directly 
+over the slot. These can be a standard vehicle decoder that is set to 
+an HID mode, or it can be a custom-designed decoder.
 
-Power tap assemblies shall support continuous, stable power delivery operation 
-at 24 V DC and 20 A.
+=== Transmit Synchronization ID
 
-Transient Hardening::
-Power tap assemblies shall be designed with sufficient thermal and copper mass 
-to withstand power transients and temporary short-circuits that occur during 
-normal racing operations.
+The HID does not actually need to decode anything. It is powered from the 
+rails and transmits the predefined "Synchronization ID" to any sensor that 
+is below it.
 
-=== Integrated Signal Termination
+=== Power Rectification and Regulation
 
-To ensure uniform signal impedance and suppress data packet reflections back 
-into the branching network hubs, high-frequency line termination is managed 
-locally at each power tap site.
+The onboard electronics shall tolerate up to a 24V nominal track power band. 
+The internal power circuit must include regulation to step down voltage and 
+withstand any data packets or other signal noise.
 
-Termination Components::
-Every power tap module *shall* feature an onboard passive termination resistor 
-network (See example assembly, item R1 below) bridged directly across the 
-isolated positive and negative power tracks. This automatically absorbs data 
-signal echoes without requiring track builders to configure external discrete 
-termination components.
+== Usage
 
-== Visualizations
-
-include::../../../../../resources/diagrams/technical_specifications/DS/TLS-001/DS-001-120/power_tap_assembly.adoc[leveloffset=+2]
+During synchronization of hardware components with the Race Management System, 
+the HID is moved across a sensor location to trigger the workflow of 
+identifying it in the RMS.
 
 == Requirements Checklist
 
-.Power Tap Mount Implementation Checklist
+.Checklist to ensure all requirements are met
 [cols="3,5,1,1", options="header"]
 |===
 
 | Name | Description | Required | Complete
 
-| Rail Attachment
-| One attachment point provided for each side of the power rail.
+| Standard Pickup Setup
+| Use a standard guide pin and braid pickup system found on standard 
+vehicles.
 | ✅
 | ☐
 
-| Incoming Power
-| One attachment point provided for each incoming power wire.
+| Embedded Subsystems
+| Must contain a decoder (standard or custom) and a transmitter diode.
 | ✅
 | ☐
 
-| Daisy Chaining of Power
-| One attachment point provided for each outgoing power wire.
+| Diode Alignment
+| Ensure the transmitter diode is placed directly over the track slot.
+| ✅
+| ☐
+
+| Synchronization Broadcast
+| Draw power from the rails and transmit a predefined Synchronization ID to 
+target sensors.
+| ✅
+| ☐
+
+| Power Regulation
+| Onboard circuit must regulate up to 24V rails and tolerate active data 
+packets or noise.
+| ✅
+| ☐
+
+| Scale Optimization
+| Chassis footprint can be minimized to the bare electronic requirements.
 | ℹ️
 | ☐
 
-| Signal Termination
-| On-board passive loop termination resistor present.
-| ✅
+| Optional Rolling Chassis
+| Inclusion of passive wheels to ease movement over track sensors.
+| ℹ️
 | ☐
 
 |===
@@ -125,10 +116,10 @@ _Note: This is provided as a reference and not as an active form for tracking da
 
 [cols="2,3,8",options="header"]
 |===
+
 | Version | Date | Description
 
-| 0.1 
-| 2026-??-?? 
+| 0.1
+| 2026-??-??
 | Initial Draft.
-
 |===

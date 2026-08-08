@@ -1,8 +1,8 @@
-:doctitle: DS-301-200 - Race Management System Software
+:doctitle: DS-300-200 - Race Management System Software
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Race Management System Software
-[#ds-301-200]
+[#ds-300-200]
 = {doctitle}
 
 == Identification Block

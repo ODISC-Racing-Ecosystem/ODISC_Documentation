@@ -2,6 +2,7 @@
 :webtitle: {doctitle}
 :webicon: /navigation/folder_group/ACTIVE_STATUS
 :navtitle: Why ODISC?
+:navinclude:
 [#why_odisc]
 = {doctitle}
 

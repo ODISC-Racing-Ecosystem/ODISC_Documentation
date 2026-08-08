@@ -1,8 +1,8 @@
-:doctitle: DS-301-501 - Race Director
+:doctitle: DS-300-501 - Race Director
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Race Director
-[#ds-301-501]
+[#ds-300-501]
 = {doctitle}
 
 == Identification Block

@@ -1,8 +1,8 @@
-:doctitle: DS-301-300 - Track Definition Standard
+:doctitle: DS-300-300 - Track Definition Standard
 :webtitle: {doctitle}
 :webicon: /navigation/document/STATUS
 :navtitle: Track Definition Standard
-[#ds-301-300]
+[#ds-300-300]
 = {doctitle}
 
 

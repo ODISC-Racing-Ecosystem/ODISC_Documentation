@@ -43,7 +43,7 @@ predictable vehicle movement and fair competition.
 === Controller / Integration
 
 The pit lane controller manages pit lane operations and communicates with the
-Race Management System (xref:../TLS-301/index.adoc[TLS-301]). It processes 
+Race Management System (xref:../TLS-300/index.adoc[TLS-300]). It processes 
 Detection Points (xref:../TLS-302/index.adoc[TLS-302]) events, manages 
 configured pit lane behavior, and coordinates Lane Changers 
 (xref:../TLS-304/index.adoc[TLS-304]) within the pit lane.

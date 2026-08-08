@@ -51,12 +51,12 @@ include::../docs/technical_specifications/DS/TLS-102/DS-102-300/index.adoc[level
 include::../docs/technical_specifications/DS/TLS-300/DS-300-100/index.adoc[leveloffset=2]
 include::../docs/technical_specifications/DS/TLS-300/DS-300-110/index.adoc[leveloffset=2]
 include::../docs/technical_specifications/DS/TLS-300/DS-300-120/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-300/DS-300-200/index.adoc[leveloffset=2]
+include::../docs/technical_specifications/DS/TLS-300/DS-300-300/index.adoc[leveloffset=2]
 
 include::../docs/technical_specifications/DS/TLS-301/DS-301-100/index.adoc[leveloffset=2]
 include::../docs/technical_specifications/DS/TLS-301/DS-301-110/index.adoc[leveloffset=2]
 include::../docs/technical_specifications/DS/TLS-301/DS-301-120/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-301/DS-301-200/index.adoc[leveloffset=2]
-include::../docs/technical_specifications/DS/TLS-301/DS-301-300/index.adoc[leveloffset=2]
 
 include::../docs/technical_specifications/DS/TLS-302/DS-302-100/index.adoc[leveloffset=2]
 include::../docs/technical_specifications/DS/TLS-303/DS-303-100/index.adoc[leveloffset=2]

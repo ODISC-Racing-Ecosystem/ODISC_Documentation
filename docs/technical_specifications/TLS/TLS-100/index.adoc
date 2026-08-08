@@ -19,8 +19,36 @@
 |===
 
 == Introduction
+[quote]
+____
+The internet connects us all.
+
+The web is how we view it.
+____
+
+The global web portal may be the first interaction most people will 
+have of the ODISC racing ecosystem. As such, it needs to convey a 
+fun racing environment that is welcoming and open to all.
+
+This technical specification sets out the features that this portal
+needs to contain in order to manage the global ODISC Racing Ecosystem 
+as it relates to data and services.
 
 == Philosophy
+
+This TLS defines the technical requirements places on the global web 
+portal, but it and its Domain Specification (DS) documents do not define 
+the presentation, structure, or User eXperience (UX) of the web portal.
+
+== Unique Entity
+
+The global web portal is a unique entity, in that there is only one 
+operating instance of it.
+
+While additional instances may exist for testing, they shall never be 
+considered live and allow data to intermix between live and testing 
+environments. Safeguards must be put in place to ensure a production 
+instances of ODISC software communicate with the test instance.
 
 == Capabilities
 
