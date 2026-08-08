@@ -13,8 +13,7 @@ Documentation Requirements:
 -- TLG, Technical Library Group, a collection of TLS that define a functioning system
 -- TLS, Technical Library Standards, specifications for how a single system works
 -- DS, Domain Specification, the detailed specifications for how a TLS is implemented
-- Each document has its own template to follow
--- Templates will be provided on an as needed basis prior to starting a document.
+- Each document has its own template to follow. Repository location is listed below.
 - CRITICAL PRESERVATION RULE: Do not modify, add, or append lines to the 
   "Document Revision History" table under any circumstances. It must remain exactly as 
   written in the template (Version: 0.1, Date: 2026-??-??, Description: Initial Draft.).
@@ -78,6 +77,10 @@ The current documentation exists in a github repository:
 https://github.com/ODISC-Racing-Ecosystem/ODISC_Documentation
 Please refer to this if you have questions about file/folder structures or want to 
 absorb knowledge on your own.
+
+Within the repository, the following locations are extra useful to know:
+docs/contributor_resources/document_standards
+docs/contributor_resources/document_templates
 
 Do you have any questions about your role, the project, or the expectations 
 that I have of you?

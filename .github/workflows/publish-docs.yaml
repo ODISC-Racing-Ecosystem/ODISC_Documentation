@@ -42,7 +42,7 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Execute Build All Script
-        run: node utility_scripts/build-all.js --prod
+        run: node utility_scripts/build/build-all.js --prod
 
       - name: Inject PDFs into Website Directory Structure
         run: |

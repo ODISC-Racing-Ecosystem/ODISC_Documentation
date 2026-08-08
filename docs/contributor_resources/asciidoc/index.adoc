@@ -9,56 +9,11 @@
 == File Structure within the Docs folder
 The following file structure is being used for the AsciiDoc files in this repository. The structure is based on the AsciiDoc best practices and the AsciiDoc file structure used in the ODISC project.
 
-=== Modules
-// TODO: Update with latest repository structure
-
-The following modules are used by the ODISC project.
-
-==== Asciidoc Best Practices
-A list of best practices to help people get up to speed on writing documentation.
-
-==== Root
-The root module. This is the primary entry point for Ascii Docs documentation.
-
-===== Appendices
-The appendices directory contains files that provide additional information and context for the ODISC specification. The appendices directory contains the following subdirectories in alphabetical order.
-
-====== Naming Conventions
-The naming_conventions directory contains files that define the naming conventions used throughout the ODISC specification.
-
-====== Terminology
-The terminology directory contains files that define the terminology used throughout the ODISC specification.
-
-===== Guiding Principles
-The guiding_principles directory contains files that list our guiding principles used when developing the ODISC specification.
-
-===== Introduction
-This directory contains files that provide an introduction of the ODISC racing ecosystem.
-
-===== Overview
-This directory contains files that provide an overview of the ODISC racing ecosystem and is the starting point for understanding the specification. The index.adoc file incorporates the other files in this directory to provide a complete introduction to the system.
-
-===== Technical Specifications
-This directory contains files that define the technical specifications for the ODISC specification. The technical_specifications directory contains the following subdirectories in alphabetical order.
-
-====== DS
-The DS directory contains files that define the domain standards for the ODISC specification. The DS directory contains one directory for each TLS, named as TLS-??? where ??? is the TLS number. Each TLS directory contains one directory for each DS, named as DS-???-??? where the first ??? is the TLS number and the second ??? is the DS number.
-
-====== TLS
-This directory contains files that define the technical library standards for the ODISC specification. The TLS directory contains one directory for each TLS, named as TLS-??? where ??? is the TLS number. Each TLS may be broken into multiple files to make it easier to focus during editing. 
-
-Each TLS file is named as TLS-??? Name where ??? is the TLS number and Name is a short description of the section of the TLS that is contained in it. The TLS-???_index.adoc file is the main file for the TLS and incorporates the other files in the TLS directory to provide a complete specification for that TLS.
-
-====== [red]#PENDING# -  WAC
-The WAC directory contains files that define the workshop activity categories for the ODISC specification. The WAC directory contains one directory for each WAC, named as WAC-??? where ??? is the WAC number. Each WAC may be broken into multiple files to make it easier to focus during editing.
-
-=== Publications
-The publications directory contains files that generate the finished output of the various versions of the ODISC specification. The publications directory contains the following files.
-
-Technical Reference: `publications/technical-reference.adoc` - This file contains the technical reference for the ODISC specification. It is generated from the AsciiDoc files in the `docs` directory.
-
-== Naming Conventions
-All documents must follow the listed naming conventions above in this document. The naming conventions are designed to make it easier to find and understand the documents in the ODISC specification.
+build:: Contains the build output. Not in source control.
+docs:: Contains all documents that generate into HTML.
+publications:: Contains all documents that generate into PDF. These utilize the files in `docs` for content.
+resources:: Utility files that are included into the finished product in some way.
+utility_scripts:: The build process and other utility scripts live here.
 
 
 == File Contents
